@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domo IA — Trabajadores digitales para tu corredora</title>
+<meta name="description" content="Instalamos un equipo de trabajadores digitales que contesta tu WhatsApp en menos de 1 minuto, califica a cada lead y te deja las reuniones agendadas. Método DOMO, medido con datos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  /* ===== Tokens — manual de marca Domo IA v1 ===== */
+  :root{
+    --bg:#F6F3EC; --surface:#FFFFFF; --surface2:#F0EBE0;
+    --text:#1C2340; --muted:#5D6478; --border:#E2DCCC;
+    --brand:#33508F; --brand2:#D98E3A; --accent:#0E9F6E; --warn:#D97706;
+    --chip:#F3E8D2; --chipText:#A06A1F;
+    --deep:#1B2340; --deepSurface:#252F55; --deepText:#F2EDE4; --deepMuted:#A7B0CC; --deepBorder:#3D4A7A; --deepBrand:#7E9BDE; --deepAmber:#E8A951;
+    --shadow:0 2px 10px rgba(40,40,80,.08);
+    --radius-pill:99px; --radius-card:14px; --radius-md:12px; --radius-sm:10px; --radius-xs:8px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.6;
+  }
+  .display{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 118;letter-spacing:-.02em;line-height:1.08;margin:0}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  img{max-width:100%;height:auto;display:block}
+  :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand2);margin:0 0 16px}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .bar{display:flex;align-items:center;gap:16px;padding:14px 0}
+  .mark{display:flex;align-items:center;gap:9px;font-family:"Archivo";font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--text);text-decoration:none}
+  .mark .ia{color:var(--brand2)}
+  .mark svg{flex:none}
+  .bar nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  .bar nav a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:var(--radius-pill)}
+  .bar nav a:hover{color:var(--text);background:var(--surface2)}
+  @media(max-width:820px){.bar nav{display:none}}
+
+  /* ===== Botones (manual: azul=avanzar, un primario por pantalla) ===== */
+  .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:var(--radius-sm);padding:13px 22px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;text-align:center;min-height:48px;transition:transform .18s ease}
+  .btn:hover{transform:translateY(-3px)}
+  .btn.ghost{background:transparent;color:var(--brand)}
+  .btn.ghost.on-dark{color:var(--deepText);border-color:var(--deepBorder)}
+  /* CTA del header: fantasma mientras el hero está en pantalla; primario después (JS) */
+  #headerCta{padding:9px 16px;min-height:auto;font-size:13px}
+  #headerCta.ghost{background:transparent;color:var(--brand)}
+
+  /* ===== Hero (azul noche, manual §08) ===== */
+  .hero{position:relative;background:var(--deep);color:var(--deepText);overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero-media{position:absolute;inset:0;z-index:0;transform-origin:62% 42%;animation:heroDrift 22s ease-in-out infinite alternate}
+  .hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;object-position:right center}
+  .hero-media video{display:none}
+  /* Deriva lenta tipo Ken Burns sobre TODO el fondo del hero (imagen o video):
+     se mueve siempre, aunque el navegador bloquee el autoplay del video */
+  @keyframes heroDrift{
+    from{transform:scale(1.02) translateX(0)}
+    to{transform:scale(1.10) translateX(-1.8%)}
+  }
+  /* Scrim fijo: garantiza contraste AA del titular sobre el video */
+  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg, rgba(27,35,64,.96) 0%, rgba(27,35,64,.86) 42%, rgba(27,35,64,.30) 75%, rgba(27,35,64,.15) 100%)}
+  .hero-inner{position:relative;z-index:2;padding:96px 0 88px;max-width:56%}
+  .hero h1{font-size:clamp(38px,5.6vw,64px);font-weight:800;max-width:16ch;color:var(--deepText)}
+  .hero .lede{color:var(--deepMuted);font-size:18px;max-width:46ch;margin:20px 0 28px}
+  .hero .lede b{color:var(--deepText);font-weight:600}
+  .hero .eyebrow{color:var(--deepAmber)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .metodo-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:40px}
+  .metodo-chips span{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;border:1px solid var(--deepBorder);border-radius:var(--radius-pill);padding:6px 14px;color:var(--deepMuted)}
+  .metodo-chips span b{color:var(--deepAmber);font-weight:600}
+  @media(max-width:820px){
+    .hero-inner{max-width:100%;padding:64px 0 320px}
+    .hero-media img{object-position:center bottom;-webkit-mask-image:linear-gradient(180deg,transparent 30%,#000 60%);mask-image:linear-gradient(180deg,transparent 30%,#000 60%)}
+    .hero-scrim{background:linear-gradient(180deg, rgba(27,35,64,.97) 0%, rgba(27,35,64,.85) 45%, rgba(27,35,64,.20) 80%)}
+  }
+
+  /* ===== Secciones ===== */
+  section{padding:72px 0;border-bottom:1px solid var(--border)}
+  .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .num{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--brand2);letter-spacing:.1em}
+  h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin:0}
+  .sub{color:var(--muted);max-width:66ch;margin:8px 0 40px}
+
+  /* ===== Barra de datos del piloto ===== */
+  .stats{background:var(--surface);border-bottom:1px solid var(--border);padding:28px 0}
+  .stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+  .stat{border-left:3px solid var(--border);padding:4px 16px}
+  .stat .val{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:26px}
+  .stat .lbl{font-size:13px;color:var(--muted);line-height:1.45}
+  .stat.kpi{border-left-color:var(--accent)} .stat.kpi .val{color:var(--accent)}
+  .stat.act{border-left-color:var(--brand)} .stat.act .val{color:var(--brand)}
+  .stats .fuente{grid-column:1/-1;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.06em;margin-top:2px}
+
+  /* ===== Problema ===== */
+  .crit{display:block;background:color-mix(in srgb,var(--warn) 10%,transparent);border-left:3px solid var(--warn);padding:14px 16px;border-radius:0 var(--radius-xs) var(--radius-xs) 0;font-size:15px;max-width:62ch}
+  .antes-despues{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px}
+  .ad-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px;box-shadow:var(--shadow)}
+  .ad-card h3{margin:0 0 8px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .ad-card .big{font-family:"IBM Plex Mono",monospace;font-size:32px;font-weight:600}
+  .ad-card p{margin:6px 0 0;font-size:14px;color:var(--muted)}
+
+  /* ===== Equipo ===== */
+  .equipo{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .agente{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow);transition:transform .18s ease,border-color .18s ease}
+  .agente:hover{transform:translateY(-3px);border-color:var(--brand)}
+  .agente img{aspect-ratio:3/4;object-fit:cover;background:#F1EDE3}
+  .agente .info{padding:16px 18px 18px}
+  .agente .cargo{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand2);display:flex;align-items:center;gap:7px}
+  .agente .cargo svg{flex:none}
+  .agente h3{margin:6px 0 6px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px}
+  .agente p{margin:0;font-size:13.5px;color:var(--muted)}
+
+  /* ===== Capas ===== */
+  .capa{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:36px 0}
+  .capa + .capa{border-top:1px dashed var(--border)}
+  .capa:nth-child(even) .capa-img{order:2}
+  .capa img{border-radius:var(--radius-md);border:1px solid var(--border);box-shadow:var(--shadow)}
+  .capa h3{font-size:22px;margin:0 0 10px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700}
+  .capa p{margin:0;color:var(--muted);font-size:15px;max-width:48ch}
+  .capa .quien{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin-top:12px}
+  @media(max-width:820px){.capa{grid-template-columns:1fr;gap:18px}.capa:nth-child(even) .capa-img{order:0}}
+
+  /* ===== Cómo funciona ===== */
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .paso{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:22px;box-shadow:var(--shadow)}
+  .paso .n{font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:13px;letter-spacing:.1em}
+  .paso h3{margin:10px 0 8px;font-size:18px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700}
+  .paso p{margin:0;font-size:14px;color:var(--muted)}
+
+  /* ===== Video ===== */
+  .video-frame{border-radius:var(--radius-card);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#000}
+  .video-frame video{width:100%;display:block}
+
+  /* ===== FAQ ===== */
+  .faq details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:10px;box-shadow:var(--shadow)}
+  .faq summary{cursor:pointer;padding:16px 18px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:48px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:18px;flex:none}
+  .faq details[open] summary::after{content:"−"}
+  .faq .resp{padding:0 18px 16px;color:var(--muted);font-size:14.5px;max-width:70ch}
+
+  /* ===== CTA final ===== */
+  .final{background:var(--deep);color:var(--deepText);border-bottom:none}
+  .final h2{color:var(--deepText);max-width:20ch}
+  .final .sub{color:var(--deepMuted)}
+  .final .eyebrow{color:var(--deepAmber)}
+
+  footer{padding:40px 0 96px;color:var(--muted);font-size:13px;background:var(--deep)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer span{color:var(--deepMuted)}
+
+  /* ===== CTA sticky mobile ===== */
+  .sticky-cta{display:none}
+  @media(max-width:820px){
+    .sticky-cta{display:block;position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-top:1px solid var(--border);transform:translateY(110%);transition:transform .3s ease}
+    .sticky-cta.on{transform:translateY(0)}
+    .sticky-cta .btn{width:100%}
+    footer{padding-bottom:120px}
+  }
+
+  /* ===== Entradas (manual §07: un momento por pantalla, 350ms, fade + 12px) ===== */
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- TODO(Rodrigo): cuando exista número de WhatsApp comercial, cambiar los 4 CTA mailto: por
+     https://wa.me/<numero>?text=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20para%20mi%20corredora -->
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top" aria-label="Domo IA — inicio">
+      <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--text)" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="50" cy="74" r="13" fill="var(--brand2)"/>
+      </svg>
+      <span>DOMO<span class="ia">&nbsp;IA</span></span></a>
+    <nav aria-label="Secciones">
+      <a href="#equipo">Equipo</a>
+      <a href="#capas">Capas</a>
+      <a href="#como">Cómo funciona</a>
+      <a href="#video">Video</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a id="headerCta" class="btn ghost" href="mailto:contacto@domoia-chile.com?subject=Diagn%C3%B3stico%20domo%20IA&body=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20para%20mi%20corredora.">Agendar diagnóstico</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<div class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <img src="assets/web/hero-1920.jpg" srcset="assets/web/hero-900.jpg 900w, assets/web/hero-1920.jpg 1920w" sizes="100vw" alt="" fetchpriority="high">
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/web/hero-1920.jpg">
+      <source src="assets/web/video-hero-loop.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow">Trabajadores digitales · corredoras de propiedades · Chile</p>
+      <h1 class="display">Instala un equipo que atiende, califica y agenda por ti</h1>
+      <p class="lede">Antonia contesta tu WhatsApp <b>en menos de 1 minuto, a cualquier hora</b>, califica a cada lead y te deja la reunión agendada en el calendario. Tú llegas a vender, no a perseguir.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:contacto@domoia-chile.com?subject=Diagn%C3%B3stico%20domo%20IA&body=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20para%20mi%20corredora.">Agendar diagnóstico</a>
+        <a class="btn ghost on-dark" href="#video">Ver cómo funciona</a>
+      </div>
+      <div class="metodo-chips" aria-label="Método DOMO">
+        <span><b>D</b>iagnosticar</span>
+        <span><b>O</b>rquestar</span>
+        <span><b>M</b>edir</span>
+        <span><b>O</b>ptimizar</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DATOS DEL PILOTO ===== -->
+<div class="stats" role="region" aria-label="Datos del piloto">
+  <div class="wrap">
+    <div class="stat kpi">
+      <div class="val">438</div>
+      <div class="lbl">leads procesados en un mes por un solo equipo instalado</div>
+    </div>
+    <div class="stat act">
+      <div class="val">&lt; 1 min</div>
+      <div class="lbl">primera respuesta por WhatsApp, de día y de noche</div>
+    </div>
+    <div class="stat act">
+      <div class="val">24/7</div>
+      <div class="lbl">sin turnos, sin vacaciones, sin leads esperando al lunes</div>
+    </div>
+    <div class="fuente">FUENTE: PILOTO CON CORREDORA DE PROPIEDADES · MEDICIÓN JUL-2026</div>
+  </div>
+</div>
+
+<!-- ===== PROBLEMA ===== -->
+<section id="problema">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">01</span><h2 class="display">El lead que llega a las 21:40 no espera hasta mañana</h2></div>
+    <p class="sub">Antes de instalar nada, medimos un embudo real de corredora durante un mes. Los números del punto de partida:</p>
+    <div class="antes-despues">
+      <div class="ad-card">
+        <h3>Punto de partida</h3>
+        <div class="big">48<span style="font-size:18px">%</span></div>
+        <p>De cada 100 leads que llegaron, solo 48 lograron una conversación. El resto se enfrió antes de la primera respuesta.</p>
+      </div>
+      <div class="ad-card">
+        <h3>Punto de partida</h3>
+        <div class="big">6<span style="font-size:18px">%</span></div>
+        <p>Solo 6 de cada 100 terminaron en una reunión agendada. No por falta de interés: por demora y seguimiento a mano.</p>
+      </div>
+      <div class="ad-card">
+        <h3>La causa</h3>
+        <div class="big">⏱</div>
+        <p>Los leads llegan de noche, en fin de semana y en medio de tus visitas. Nadie puede contestar todos, siempre, en minutos. Un equipo digital sí.</p>
+      </div>
+    </div>
+    <p style="margin-top:28px"><span class="crit">⚠ Cada lead sin contestar es plata que ya pagaste — en portal, en aviso o en referido — y que se va donde el corredor que contestó primero.</span></p>
+  </div>
+</section>
+
+<!-- ===== EQUIPO ===== -->
+<section id="equipo">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">02</span><h2 class="display">No vendemos un software. Instalamos un equipo.</h2></div>
+    <p class="sub">Cada trabajador digital tiene nombre, cargo y una sola pega que hace bien. Los contratas de a uno, a medida que tu operación crece.</p>
+    <div class="equipo">
+      <article class="agente">
+        <img src="assets/web/retrato-antonia.jpg" alt="Antonia, recepcionista digital" loading="lazy" width="640" height="857">
+        <div class="info">
+          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Recepcionista · SDR</span>
+          <h3>Antonia</h3>
+          <p>Contesta tu WhatsApp en segundos, califica al lead con criterio y agenda la reunión directo en tu calendario.</p>
+        </div>
+      </article>
+      <article class="agente">
+        <img src="assets/web/retrato-matias.jpg" alt="Matías, media buyer digital" loading="lazy" width="640" height="857">
+        <div class="info">
+          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Media buyer</span>
+          <h3>Matías</h3>
+          <p>Vigila tus campañas todos los días y mueve el presupuesto hacia los avisos que sí traen leads que contestan.</p>
+        </div>
+      </article>
+      <article class="agente">
+        <img src="assets/web/retrato-clara.jpg" alt="Clara, auditora de conversaciones" loading="lazy" width="640" height="857">
+        <div class="info">
+          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Auditora</span>
+          <h3>Clara</h3>
+          <p>Revisa las conversaciones de Antonia todas las semanas: detecta errores, leads mal calificados y qué mejorar.</p>
+        </div>
+      </article>
+      <article class="agente">
+        <img src="assets/web/retrato-sofia.jpg" alt="Sofía, diseñadora" loading="lazy" width="640" height="857">
+        <div class="info">
+          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L15 12l-4 1 1-4Z"/><path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/></svg>Diseñadora</span>
+          <h3>Sofía</h3>
+          <p>Diseña las piezas y variantes de tus avisos, alineadas a tu marca, para que Matías siempre tenga algo nuevo que probar.</p>
+        </div>
+      </article>
+      <article class="agente">
+        <img src="assets/web/retrato-amanda.jpg" alt="Amanda, notas de reuniones" loading="lazy" width="640" height="857">
+        <div class="info">
+          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Notas de reunión</span>
+          <h3>Amanda</h3>
+          <p>Toma nota de cada reunión comercial y deja el registro ordenado: nada de lo que se conversó se pierde.</p>
+        </div>
+      </article>
+      <article class="agente">
+        <img src="assets/web/retrato-lucas.jpg" alt="Lucas, evaluador de ventas" loading="lazy" width="640" height="857">
+        <div class="info">
+          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Evaluador de ventas</span>
+          <h3>Lucas</h3>
+          <p>Evalúa cada reunión con una rúbrica de venta profesional y te dice, con nota, qué se hizo bien y qué faltó.</p>
+        </div>
+      </article>
+      <article class="agente">
+        <img src="assets/web/retrato-laura.jpg" alt="Laura, coach de vendedores" loading="lazy" width="640" height="857">
+        <div class="info">
+          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Coach comercial</span>
+          <h3>Laura</h3>
+          <p>Junta los patrones de todas tus reuniones y entrena a tu equipo humano con lo que funciona en tu rubro.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAPAS ===== -->
+<section id="capas">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">03</span><h2 class="display">Se construye por capas, como un equipo real</h2></div>
+    <p class="sub">Nadie contrata cuatro personas el primer día. El domo se arma capa por capa: partes por donde más te duele y sumas la siguiente cuando la anterior ya se pagó sola.</p>
+
+    <div class="capa">
+      <div class="capa-img"><img src="assets/web/ilustracion-capa2-recepcion.jpg" alt="Antonia atendiendo WhatsApp mientras Clara audita las conversaciones" loading="lazy" width="1200" height="670"></div>
+      <div>
+        <p class="eyebrow">Capa 1 · Recepción y calificación</p>
+        <h3>Ningún lead vuelve a quedar sin respuesta</h3>
+        <p>Antonia atiende, califica y agenda. Clara la audita cada semana. Es la capa por la que parten todos: es donde hoy se te va la plata.</p>
+        <p class="quien">Antonia + Clara</p>
+      </div>
+    </div>
+
+    <div class="capa">
+      <div class="capa-img"><img src="assets/web/ilustracion-capa1-adquisicion.jpg" alt="Matías gestionando campañas con paneles de métricas" loading="lazy" width="1200" height="670"></div>
+      <div>
+        <p class="eyebrow">Capa 2 · Adquisición</p>
+        <h3>Que la plata de avisos trabaje con supervisión diaria</h3>
+        <p>Matías revisa tus campañas todos los días y reasigna el presupuesto según los leads que realmente conversan y agendan — no según los clics. Sofía le renueva las piezas para probar ángulos nuevos.</p>
+        <p class="quien">Matías + Sofía</p>
+      </div>
+    </div>
+
+    <div class="capa">
+      <div class="capa-img"><img src="assets/web/ilustracion-capa3-reuniones.jpg" alt="Amanda tomando notas mientras Lucas evalúa la reunión" loading="lazy" width="1200" height="670"></div>
+      <div>
+        <p class="eyebrow">Capa 3 · Inteligencia de reuniones</p>
+        <h3>Cada reunión deja registro y nota</h3>
+        <p>Amanda documenta lo conversado; Lucas lo evalúa con rúbrica profesional. Dejas de depender de la memoria del vendedor.</p>
+        <p class="quien">Amanda + Lucas</p>
+      </div>
+    </div>
+
+    <div class="capa">
+      <div class="capa-img"><img src="assets/web/ilustracion-capa4-coaching.jpg" alt="Laura entrenando al equipo de ventas frente a una pizarra" loading="lazy" width="1200" height="670"></div>
+      <div>
+        <p class="eyebrow">Capa 4 · Coaching</p>
+        <h3>Tu equipo humano mejora con datos de tu propia operación</h3>
+        <p>Con 15 reuniones auditadas, Laura sabe qué secuencia cierra más en tu rubro — y entrena a tus vendedores con eso, no con teoría.</p>
+        <p class="quien">Laura</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CÓMO FUNCIONA ===== -->
+<section id="como">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">04</span><h2 class="display">Cómo se instala</h2></div>
+    <p class="sub">El motor es el mismo; lo que cambia es la configuración para tu negocio.</p>
+    <div class="pasos">
+      <div class="paso">
+        <span class="n">PASO 1</span>
+        <h3>Diagnóstico</h3>
+        <p>Medimos tu embudo real: cuántos leads llegan, cuántos contestas y cuántos terminan en reunión. Sin ese número, no hay promesa.</p>
+      </div>
+      <div class="paso">
+        <span class="n">PASO 2</span>
+        <h3>Instalación</h3>
+        <p>Antonia entra a tu WhatsApp con tu forma de hablar y tus reglas de calificación. Tú apruebas cómo responde antes de que atienda sola.</p>
+      </div>
+      <div class="paso">
+        <span class="n">PASO 3</span>
+        <h3>Medición semanal</h3>
+        <p>Cada semana recibes el embudo medido: qué entró, qué se agendó y qué mejorar. Lo que no se mide, no se cobra ni se promete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO ===== -->
+<section id="video">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">05</span><h2 class="display">El método, en 2 minutos</h2></div>
+    <p class="sub">Así funciona el Método DOMO: diagnosticar, orquestar, medir y optimizar — contado simple.</p>
+    <div class="video-frame">
+      <video controls preload="none" poster="assets/web/poster-video-metodo.jpg" width="1280" height="720">
+        <source src="media/video-metodo-domo.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIO: pendiente cita real autorizada del piloto. NO publicar sin aprobación.
+<section id="testimonio"> ... </section>
+===== -->
+
+<!-- ===== PLANES: pendiente definición de precio (~24-jul). Estructura sugerida: 1 card por capa,
+precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
+<section id="planes"> ... </section>
+===== -->
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">06</span><h2 class="display">Preguntas directas, respuestas directas</h2></div>
+    <div class="faq" style="max-width:760px">
+      <details>
+        <summary>¿Esto reemplaza a mi gente?</summary>
+        <p class="resp">No. Antonia toma la pega que hoy nadie alcanza a hacer: contestar en segundos a toda hora. Tus corredores dejan de perseguir leads fríos y llegan a reuniones ya agendadas. Es ampliar el equipo, no reemplazarlo.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa con los datos de mis clientes?</summary>
+        <p class="resp">Tus conversaciones y contactos son tuyos. Operamos bajo la ley chilena de protección de datos (Ley 21.719), con acceso restringido y sin compartir información con terceros. En el diagnóstico revisamos esto contigo, por escrito.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto demora la instalación?</summary>
+        <p class="resp">El diagnóstico toma una reunión. La instalación de la primera capa se hace en días, no meses, porque el motor ya existe: lo que se configura es tu forma de hablar, tus reglas y tu calendario.</p>
+      </details>
+      <details>
+        <summary>¿Sirve si no soy corredora de propiedades?</summary>
+        <p class="resp">El método está probado primero en corredoras, y ahí es donde más evidencia tenemos. Si tu negocio vive de leads por WhatsApp y reuniones, conversemos: el diagnóstico te dice con números si te sirve o no.</p>
+      </details>
+      <details>
+        <summary>¿Y si la IA se equivoca con un cliente?</summary>
+        <p class="resp">Para eso existe Clara: audita las conversaciones cada semana y detecta errores antes de que se repitan. Además defines desde el día uno qué casos Antonia deriva a un humano sin intentar resolverlos sola.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="final">
+  <div class="wrap reveal">
+    <p class="eyebrow">Diagnóstico inicial · una reunión · con tus números</p>
+    <h2 class="display">Parte por saber cuántos leads estás perdiendo hoy</h2>
+    <p class="sub">Agenda el diagnóstico: medimos tu embudo y te mostramos, con cifras tuyas, qué haría un equipo digital en tu corredora. Si los números no dan, también te lo decimos.</p>
+    <a class="btn" href="mailto:contacto@domoia-chile.com?subject=Diagn%C3%B3stico%20domo%20IA&body=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20para%20mi%20corredora.">Agendar diagnóstico</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">DOMO IA · Chile</span>
+    <span>Trabajadores digitales que se miden a sí mismos.</span>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn" href="mailto:contacto@domoia-chile.com?subject=Diagn%C3%B3stico%20domo%20IA&body=Hola%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20para%20mi%20corredora.">Agendar diagnóstico</a>
+</div>
+
+<script>
+  // Video del hero: solo desktop y solo si el usuario no pidió menos movimiento.
+  // Si el navegador bloquea el autoplay, NO se esconde: reintenta al cargar y al primer gesto del usuario.
+  (function(){
+    var mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var mqDesktop = window.matchMedia('(min-width: 821px)');
+    var v = document.getElementById('heroVideo');
+    if (!v || !mqDesktop.matches || mqMotion.matches) return;
+    v.style.display = 'block';
+    function intentar(){ if (v.paused) v.play().catch(function(){}); }
+    v.addEventListener('canplay', intentar);
+    ['pointerdown','touchstart','scroll','keydown'].forEach(function(ev){
+      window.addEventListener(ev, intentar, {once:true, passive:true});
+    });
+    v.load();
+    intentar();
+  })();
+
+  // Header CTA: fantasma sobre el hero, primario después. Sticky CTA mobile igual.
+  (function(){
+    var hero = document.getElementById('top');
+    var headerCta = document.getElementById('headerCta');
+    var sticky = document.getElementById('stickyCta');
+    if (!('IntersectionObserver' in window)) { headerCta.classList.remove('ghost'); return; }
+    new IntersectionObserver(function(entries){
+      var visible = entries[0].isIntersecting;
+      headerCta.classList.toggle('ghost', visible);
+      if (sticky) sticky.classList.toggle('on', !visible);
+    }, {threshold: 0.15}).observe(hero);
+  })();
+
+  // Entrada por sección: fade + 12px, una sola vez (manual §07)
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  })();
+</script>
+</body>
+</html>
