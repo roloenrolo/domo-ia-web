@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Caso Nuevo Norte — domo IA</title>
+
+<!-- Open Graph: así se ve la preview al mandar el link por WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nuevo Norte contrató un equipo de empleados digitales">
+<meta property="og:description" content="402 conversaciones atendidas al instante, calificadas por renta y agendadas solas. Cifras reales de julio 2026.">
+<meta property="og:site_name" content="domo IA">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- PostHog — analítica de apertura (key pública de proyecto, va en el cliente por diseño) -->
+<script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_kjGWxt2x6uTkbLYvgTqDhs9bZRkWi6Kw7W7vafNfJ2cX',{api_host:'https://us.i.posthog.com',person_profiles:'identified_only'});
+
+// Marca de qué tan lejos leyeron: el prospecto que llega al final es el interesado de verdad.
+window.addEventListener('load',function(){
+  var hitos={25:false,50:false,75:false,100:false};
+  function ver(){
+    var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+    var pct=alto>0?Math.round((h.scrollTop||document.body.scrollTop)/alto*100):100;
+    [25,50,75,100].forEach(function(m){
+      if(!hitos[m] && pct>=m){hitos[m]=true; posthog.capture('onepager_scroll',{hito:m});}
+    });
+  }
+  window.addEventListener('scroll',ver,{passive:true}); ver();
+  setTimeout(function(){posthog.capture('onepager_15s');},15000);
+});
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Helvetica Neue",Arial,sans-serif;background:#0e1b3d;color:#f2f4fa;display:flex;justify-content:center;padding:40px 24px}
+.lamina{max-width:900px;width:100%}
+.kicker{color:#f5a623;font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+h1{font-size:32px;font-weight:800;line-height:1.15;margin-bottom:12px}
+.frase{font-size:16.5px;color:#b8c2dd;line-height:1.55;margin-bottom:30px;max-width:760px}
+.frase strong{color:#f5a623}
+h2{font-size:15px;color:#f5a623;text-transform:uppercase;letter-spacing:2px;margin:26px 0 14px}
+.tiles{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.tile{flex:1;min-width:180px;background:rgba(255,255,255,.06);border:1px solid rgba(245,166,35,.35);border-radius:12px;padding:18px 20px}
+.tile .num{font-size:34px;font-weight:800;color:#f5a623;line-height:1}
+.tile .lbl{font-size:13.5px;color:#d7ddef;margin-top:8px;line-height:1.4}
+.funnel{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap;margin-bottom:8px}
+.paso{flex:1;min-width:150px;background:rgba(255,255,255,.05);border-radius:10px;padding:14px 16px;border-left:4px solid #f5a623}
+.paso .num{font-size:26px;font-weight:800;color:#f2f4fa}
+.paso .lbl{font-size:12.5px;color:#8f9bbd;margin-top:4px}
+.equipo{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:rgba(255,255,255,.05);border-radius:10px;padding:14px 16px}
+.card b{color:#f5a623}
+.card p{font-size:13.5px;color:#b8c2dd;line-height:1.45;margin-top:4px}
+.medida{background:rgba(245,166,35,.10);border-left:4px solid #f5a623;border-radius:0 10px 10px 0;padding:14px 18px;font-size:15px;line-height:1.55;margin:22px 0}
+.cta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15)}
+.cta .oferta{flex:1;min-width:260px;font-size:14.5px;color:#d7ddef;line-height:1.5}
+.cta .contacto{font-size:14.5px;font-weight:700;color:#f5a623;text-align:right}
+.pie{font-size:12px;color:#7f8bac;margin-top:14px;line-height:1.5}
+@media print{body{background:#0e1b3d !important;-webkit-print-color-adjust:exact}}
+</style></head><body><div class="lamina">
+
+<div class="kicker">domo IA · caso real en producción</div>
+<h1>Nuevo Norte contrató un equipo de empleados digitales.<br>Esto es lo que pasó.</h1>
+<p class="frase">Una corredora de propiedades que invierte en Meta Ads tenía el problema de
+siempre: leads que llegan a toda hora, se responden tarde y se califican a mano.
+Hoy un equipo digital <strong>atiende al instante 24/7, califica por renta y agenda solo
+las reuniones que valen la pena</strong> — y el equipo humano solo ve leads filtrados.</p>
+
+<h2>La operación de julio, en números</h2>
+<div class="tiles">
+  <div class="tile"><div class="num">402</div><div class="lbl">conversaciones atendidas al instante (1–20 jul)</div></div>
+  <div class="tile"><div class="num">24/7</div><div class="lbl">respuesta inmediata por WhatsApp, también de noche y fin de semana</div></div>
+  <div class="tile"><div class="num">US$1,64</div><div class="lbl">costo por conversación gestionada</div></div>
+  <div class="tile"><div class="num">US$2,16</div><div class="lbl">costo por lead de formulario</div></div>
+</div>
+
+<h2>El embudo que ve el equipo humano</h2>
+<div class="funnel">
+  <div class="paso"><div class="num">402</div><div class="lbl">escribieron</div></div>
+  <div class="paso"><div class="num">222</div><div class="lbl">declararon presupuesto</div></div>
+  <div class="paso"><div class="num">36</div><div class="lbl">calificaron por renta</div></div>
+  <div class="paso"><div class="num">8</div><div class="lbl">agendaron reunión</div></div>
+</div>
+<p class="frase" style="margin-bottom:0">El filtro es duro <strong>a propósito</strong>: el
+vendedor deja de perder horas en leads que no compran, y cada reunión llega con la
+información ya levantada.</p>
+
+<h2>Quiénes trabajan en el equipo</h2>
+<div class="equipo">
+  <div class="card"><b>Antonia — recepcionista</b><p>Atiende WhatsApp 24/7, califica
+  (presupuesto, renta, urgencia) y agenda directo en el calendario del vendedor.</p></div>
+  <div class="card"><b>Matías — analista de pauta</b><p>Reporte diario de campañas con
+  hallazgos y propuestas de optimización; cada cambio se aprueba con un botón.</p></div>
+  <div class="card"><b>Clara — auditora de calidad</b><p>Revisa TODAS las conversaciones
+  cada mañana y avisa de leads atascados o mal atendidos, con el caso exacto.</p></div>
+</div>
+
+<div class="medida">📊 <b>Todo es verificable en vivo:</b> el cliente ve su embudo en un
+dashboard público actualizado — sin prometer, mostrando.
+&nbsp;→&nbsp;<a href="https://roloenrolo.github.io/embudo-nuevonorte/" target="_blank" rel="noopener"
+   onclick="if(window.posthog)posthog.capture('click_dashboard')"
+   style="color:#f5a623;font-weight:700">ver el embudo en vivo →</a></div>
+
+<div class="cta">
+  <div class="oferta"><b style="color:#f5a623">Programa Fundador — 2 cupos:</b>
+  implementación gratis (valor UF 10) + $500.000/mes por 60 días, sin permanencia,
+  a cambio de testimonio y caso con métricas. Precio de lista visible en contrato desde el día 1.</div>
+  <div class="contacto">contacto@domoia-chile.com<br>domo-ia.com</div>
+</div>
+
+<p class="pie">Cifras reales de la operación Nuevo Norte: embudo al 20-jul-2026; costos por
+conversación/lead de la semana del 14-jul (medición interna). Los agentes declaran ser
+asistentes digitales en cada conversación. domo IA SpA · Santiago de Chile.</p>
+
+</div></body></html>
