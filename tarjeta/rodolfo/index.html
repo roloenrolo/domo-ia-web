@@ -184,6 +184,7 @@ h1{margin:0;font-family:var(--font-display);font-variation-settings:"wdth" 118;f
 .linea{margin:12px 0 0;color:var(--muted);max-width:34ch}
 .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .action{min-height:50px;border-radius:var(--radius-sm);border:var(--border-w) solid var(--border);display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;font-weight:600;padding:12px 14px;transition:transform var(--dur-hover) var(--ease),border-color var(--dur-hover) var(--ease),background var(--dur-hover) var(--ease);overflow-wrap:anywhere}
+button.action{font:inherit;cursor:pointer}
 .action:hover{transform:translateY(-3px);border-color:var(--brand)}
 .primary{grid-column:1/-1;background:var(--brand);border-color:var(--brand);color:var(--surface)}
 .secondary{background:var(--surface2);color:var(--text)}
@@ -192,6 +193,14 @@ h1{margin:0;font-family:var(--font-display);font-variation-settings:"wdth" 118;f
 .row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;color:var(--muted)}
 .row b{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--text)}
 .mono{font-family:var(--font-data);font-variant-numeric:tabular-nums}
+.qr-overlay{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:color-mix(in srgb,var(--text) 64%,transparent);opacity:0;pointer-events:none;transition:opacity var(--dur-enter) var(--ease)}
+.qr-overlay[hidden]{display:none}
+.qr-overlay.is-open{opacity:1;pointer-events:auto}
+.qr-dialog{position:relative;width:min(100%,440px);display:grid;gap:16px;justify-items:center;background:#FFFFFF;color:#1C2340;border:var(--border-w) solid #E2DCCC;border-radius:var(--radius-card);box-shadow:var(--shadow);padding:28px}
+.qr-close{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:var(--radius-pill);border:var(--border-w) solid #E2DCCC;background:#F0EBE0;color:#1C2340;font:inherit;font-size:28px;line-height:1;cursor:pointer}
+.qr-frame{width:min(100%,340px);background:#FFFFFF;border:var(--border-w) solid #E2DCCC;border-radius:var(--radius-sm);padding:14px}
+.qr-frame img{display:block;width:100%;height:auto;background:#FFFFFF}
+.qr-name{margin:0;font-family:var(--font-display);font-variation-settings:"wdth" 112;font-weight:800;font-size:24px;line-height:1.1;text-align:center}
 footer{padding:20px 0 32px;color:var(--muted);font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 footer a{color:var(--muted);text-underline-offset:3px}
@@ -235,13 +244,14 @@ footer a{color:var(--muted);text-underline-offset:3px}
           </div>
         </div>
         <nav class="actions" aria-label="Acciones de contacto">
-          <a class="action primary" href="https://wa.me/56936956065?text=Hola%20Rodolfo%2C%20vi%20tu%20tarjeta%20de%20domo%20IA%20y%20quiero%20conversar." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="action primary" href="../rodolfo.vcf" download>Guardar contacto</a>
+          <button class="action secondary" type="button" data-qr-open>Mostrar mi QR</button>
+          <a class="action secondary" href="https://wa.me/56936956065?text=Hola%20Rodolfo%2C%20vi%20tu%20tarjeta%20de%20domo%20IA%20y%20quiero%20conversar." target="_blank" rel="noopener">WhatsApp</a>
           <a class="action secondary mono" href="mailto:rodolfo@domo-ia.com">Correo</a>
           <a class="action secondary" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar</a>
           <a class="action secondary" href="https://domo-ia.com/">Sitio</a>
           <a class="action secondary" href="https://www.linkedin.com/company/domoia/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="action secondary" href="https://instagram.com/domoia.cl" target="_blank" rel="noopener">Instagram</a>
-          <a class="action ghost" href="../rodolfo.vcf" download>Guardar contacto</a>
         </nav>
         <div class="contact">
           <div class="row"><b>Telefono</b><span class="mono">+56 9 3695 6065</span></div>
@@ -257,5 +267,74 @@ footer a{color:var(--muted);text-underline-offset:3px}
     </div>
   </footer>
 </div>
+<div class="qr-overlay" id="qr-dialog-rodolfo" role="dialog" aria-modal="true" aria-labelledby="qr-title-rodolfo" hidden>
+  <div class="qr-dialog">
+    <button class="qr-close" type="button" aria-label="Cerrar QR" data-qr-close>×</button>
+    <div class="qr-frame">
+      <img src="../qr/qr-rodolfo-web.svg" alt="QR web de Rodolfo Alfaro" width="340" height="340">
+    </div>
+    <p class="qr-name" id="qr-title-rodolfo">Rodolfo Alfaro</p>
+  </div>
+</div>
+<script>
+(() => {
+  const openButton = document.querySelector("[data-qr-open]");
+  const dialog = document.getElementById("qr-dialog-rodolfo");
+  if (!openButton || !dialog) return;
+
+  const closeButton = dialog.querySelector("[data-qr-close]");
+  let previousFocus = null;
+
+  function focusableElements() {
+    return Array.from(dialog.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"))
+      .filter((element) => !element.disabled && element.offsetParent !== null);
+  }
+
+  function closeDialog() {
+    dialog.classList.remove("is-open");
+    dialog.hidden = true;
+    document.removeEventListener("keydown", onKeydown);
+    if (previousFocus && typeof previousFocus.focus === "function") {
+      previousFocus.focus({ preventScroll: true });
+    }
+  }
+
+  function onKeydown(event) {
+    if (event.key === "Escape") {
+      closeDialog();
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const focusable = focusableElements();
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  function openDialog() {
+    previousFocus = document.activeElement;
+    dialog.hidden = false;
+    dialog.classList.add("is-open");
+    document.addEventListener("keydown", onKeydown);
+    closeButton.focus({ preventScroll: true });
+  }
+
+  openButton.addEventListener("click", openDialog);
+  closeButton.addEventListener("click", closeDialog);
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeDialog();
+  });
+})();
+</script>
 </body>
 </html>
