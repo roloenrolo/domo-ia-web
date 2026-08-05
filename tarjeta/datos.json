@@ -1,0 +1,20 @@
+{
+  "rodrigo": {
+    "nombre": "Rodrigo González",
+    "cargo": "Fundador",
+    "linea": "Construyo trabajadores digitales para equipos comerciales.",
+    "email": "rodrigo@domo-ia.com",
+    "tel": "+56936956065",
+    "agenda": "",
+    "foto": ""
+  },
+  "rodolfo": {
+    "nombre": "Rodolfo Alfaro",
+    "cargo": "Socio comercial",
+    "linea": "Acompaño a las corredoras que trabajan con la flota.",
+    "email": "rodolfo@domo-ia.com",
+    "tel": "+56936956065",
+    "agenda": "https://calendar.app.google/ZrWkQ3EYryRowUub6",
+    "foto": ""
+  }
+}

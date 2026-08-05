@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rodrigo González — tarjeta domo IA</title>
+<meta name="description" content="Rodrigo González, Fundador en domo IA. WhatsApp, correo y contacto descargable.">
+<link rel="canonical" href="https://domo-ia.com/tarjeta/rodrigo/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="domo IA">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="Rodrigo González — domo IA">
+<meta property="og:description" content="Construyo trabajadores digitales para equipos comerciales.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* domo IA — tokens de marca v1 (julio 2026)
+   Fuente única: manual de marca v1 (identidad A "editorial cálida" + su modo oscuro).
+   No editar valores aquí sin actualizar el manual. Ver DESIGN.md. */
+
+:root {
+  /* Color — modo claro */
+  --bg:        #F6F3EC;  /* fondo general de página */
+  --surface:   #FFFFFF;  /* tarjetas y paneles */
+  --surface2:  #F0EBE0;  /* superficie secundaria, hover */
+  --text:      #1C2340;  /* texto principal */
+  --muted:     #5D6478;  /* texto secundario y captions */
+  --border:    #E2DCCC;  /* bordes, divisores */
+  --brand:     #33508F;  /* primario: acciones, enlaces, notas de auditoría */
+  --brand2:    #D98E3A;  /* secundario: chips de metodología, eyebrows */
+  --accent:    #0E9F6E;  /* KPI cumplido, estados de éxito */
+  --warn:      #D97706;  /* punto crítico, alertas */
+  --crit:      #B3453A;  /* crítico: pérdida, caída, estado que exige acción */
+  --chip:      #F3E8D2;  /* fondo de chip */
+  --chipText:  #905F1C;  /* texto de chip: 4,50:1 sobre --chip */
+  --brand-tint:#E4E8F4;  /* fondo callout brand: --text encima = 12,57:1 */
+  --accent-tint:#D9E8E3; /* fondo callout KPI: --text encima = 12,17:1 */
+  --warn-tint: #F3E4D2;  /* fondo callout alerta: --text encima = 12,35:1 */
+  --crit-tint: #F5E0DC;  /* fondo callout crítico: --text encima = 12,16:1 */
+  --deep:      #1F2C52;  /* azul profundo de apoyo */
+  --brandMid:  #5D7FC9;  /* azul intermedio */
+  --shadow:    0 2px 10px rgba(40,40,80,.08);
+
+  /* Serie de gráficos — modo claro (token 14, 28-jul-2026).
+     Deriva de --brand/--brand2/--accent/--brandMid, en ESTE orden fijo: nunca se cicla,
+     nunca se asigna por ranking (el color sigue a la entidad, no a su posición).
+     Validada con dataviz/validate_palette.js --mode light --surface #FFFFFF --pairs all:
+     todos los checks PASS. Dos advertencias que son OBLIGACIONES de uso, no opcionales:
+       · --serie-2 (ámbar) tiene 2,66:1 contra blanco ⇒ exige etiqueta directa visible o vista de tabla.
+       · --serie-2 ↔ --serie-3 quedan en ΔE 6,4 bajo protanopía ⇒ legal SOLO con encoding
+         secundario (etiqueta directa, separación de 2px o textura). Nunca color solo.
+     A partir de 5 categorías NO se inventa un quinto color: se agrupa en "Otros",
+     se usa small multiples, o se factoriza el gráfico. */
+  --serie-1: #33508F;  /* = --brand */
+  --serie-2: #D98E3A;  /* = --brand2 */
+  --serie-3: #0E9F6E;  /* = --accent */
+  --serie-4: #5D7FC9;  /* = --brandMid */
+
+  /* Tipografía */
+  --font-display: 'Archivo', system-ui, sans-serif;      /* titulares, wordmark, números grandes */
+  --font-text:    'IBM Plex Sans', system-ui, sans-serif; /* cuerpo, listas, interfaz */
+  --font-data:    'IBM Plex Mono', ui-monospace, monospace; /* cifras, tokens, eyebrows */
+
+  /* Forma */
+  --radius-pill: 99px;  /* chips, botones redondos, badges de KPI */
+  --radius-card: 14px;  /* tarjetas de módulo, paneles principales */
+  --radius-md:   12px;  /* tablas, bloques de código, swatches */
+  --radius-sm:   10px;  /* botones rectangulares, inputs */
+  --radius-xs:    8px;  /* callouts, etiquetas internas */
+  --border-w:    1px;   /* siempre 1px: no existe borde de 2px en el sistema */
+
+  /* Espacio — escala base 4 */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3: 12px;
+  --sp-4: 20px;
+  --sp-5: 36px;
+  --sp-6: 72px; /* separación entre secciones */
+
+  /* Movimiento */
+  --dur-enter: 350ms; /* fade + 12px de subida */
+  --dur-hover: 180ms; /* -3px en Y, el borde pasa a --brand, sin escalado */
+  --ease: cubic-bezier(.4,0,.2,1);
+}
+
+[data-theme="dark"] {
+  --bg:       #1B2340;
+  --surface:  #252F55;
+  --surface2: #2D3963;
+  --text:     #F2EDE4;
+  --muted:    #A7B0CC;
+  --border:   #3D4A7A;
+  --brand:    #7E9BDE;
+  --brand2:   #E8A951;
+  --accent:   #3ECF94;
+  --warn:     #F0A44A;
+  --crit:     #E8827A;
+  --chip:     #2D3963;
+  --chipText: #F0C384;
+  --brand-tint:#293247;  /* superficie callout brand: --brand encima = 4,65:1; --text = 10,97:1 */
+  --accent-tint:#29473B; /* superficie callout KPI: --accent encima = 5,13:1; --text = 8,75:1 */
+  --warn-tint: #4D3A23;  /* superficie callout alerta: --warn encima = 5,20:1; --text = 9,26:1 */
+  --crit-tint: #4A2926;  /* superficie callout crítico: --crit encima = 4,83:1; --text = 11,01:1 */
+  --deep:     #141B33;
+  --brandMid: #5D7FC9;
+  --shadow:   0 2px 10px rgba(0,0,0,.35);
+
+  /* Serie de gráficos — modo oscuro. NO es el flip automático de los tokens dark:
+     --brand/--brand2/--accent oscuros están hechos para texto y acciones (L 0,69–0,78)
+     y quedan FUERA de la banda que exige un relleno de serie (L 0,48–0,67).
+     Estos 4 conservan el hue de cada token y bajan L a la banda.
+     Validada con --mode dark --surface #252F55 --pairs all: todos los checks PASS
+     (peor par CVD ΔE 10,0). Obligación: --serie-1 tiene 2,11:1 contra la superficie
+     oscura ⇒ etiqueta directa visible o vista de tabla. */
+  --serie-1: #3F5EAD;
+  --serie-2: #C18004;
+  --serie-3: #08A973;
+  --serie-4: #608BEA;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  --bg:       #1B2340;
+  --surface:  #252F55;
+  --surface2: #2D3963;
+  --text:     #F2EDE4;
+  --muted:    #A7B0CC;
+  --border:   #3D4A7A;
+  --brand:    #7E9BDE;
+  --brand2:   #E8A951;
+  --accent:   #3ECF94;
+  --warn:     #F0A44A;
+  --crit:     #E8827A;
+  --chip:     #2D3963;
+  --chipText: #F0C384;
+  --brand-tint:#293247;  /* superficie callout brand: --brand encima = 4,65:1; --text = 10,97:1 */
+  --accent-tint:#29473B; /* superficie callout KPI: --accent encima = 5,13:1; --text = 8,75:1 */
+  --warn-tint: #4D3A23;  /* superficie callout alerta: --warn encima = 5,20:1; --text = 9,26:1 */
+  --crit-tint: #4A2926;  /* superficie callout crítico: --crit encima = 4,83:1; --text = 11,01:1 */
+  --deep:     #141B33;
+  --brandMid: #5D7FC9;
+  --shadow:   0 2px 10px rgba(0,0,0,.35);
+
+  /* Serie de gráficos — modo oscuro. NO es el flip automático de los tokens dark:
+     --brand/--brand2/--accent oscuros están hechos para texto y acciones (L 0,69–0,78)
+     y quedan FUERA de la banda que exige un relleno de serie (L 0,48–0,67).
+     Estos 4 conservan el hue de cada token y bajan L a la banda.
+     Validada con --mode dark --surface #252F55 --pairs all: todos los checks PASS
+     (peor par CVD ΔE 10,0). Obligación: --serie-1 tiene 2,11:1 contra la superficie
+     oscura ⇒ etiqueta directa visible o vista de tabla. */
+  --serie-1: #3F5EAD;
+  --serie-2: #C18004;
+  --serie-3: #08A973;
+  --serie-4: #608BEA;
+  }
+}
+
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--text)}
+body{margin:0;min-width:0;background:var(--bg);color:var(--text);font-family:var(--font-text);font-size:16px;line-height:1.6}
+a{color:inherit}
+.shell{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto}
+.wrap{width:min(100% - 40px,720px);margin:0 auto}
+.top{padding:20px 0;border-bottom:var(--border-w) solid var(--border)}
+.mark{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:18px;text-decoration:none;color:var(--text)}
+.mark svg{flex:none}
+.mark .ia{color:var(--brand2)}
+main{display:grid;align-items:center;padding:36px 0}
+.card{background:var(--surface);border:var(--border-w) solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow);padding:28px;display:grid;gap:24px}
+.identity{display:grid;gap:20px;grid-template-columns:auto 1fr;align-items:center}
+.avatar,.avatar-mark{width:132px;height:132px;border-radius:var(--radius-card);border:var(--border-w) solid var(--border);background:var(--surface2);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar-mark{display:grid;place-items:center;position:relative}
+.avatar-mark svg{width:76px;height:76px}
+.avatar-mark span{position:absolute;bottom:12px;right:12px;font-family:var(--font-data);font-weight:600;color:var(--brand2);background:var(--chip);border:var(--border-w) solid var(--border);border-radius:var(--radius-pill);padding:2px 8px;font-size:13px}
+.eyebrow{margin:0 0 8px;font-family:var(--font-data);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand2)}
+h1{margin:0;font-family:var(--font-display);font-variation-settings:"wdth" 118;font-weight:800;letter-spacing:0;font-size:clamp(32px,8vw,48px);line-height:1.04}
+.linea{margin:12px 0 0;color:var(--muted);max-width:34ch}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.action{min-height:50px;border-radius:var(--radius-sm);border:var(--border-w) solid var(--border);display:inline-flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;font-weight:600;padding:12px 14px;transition:transform var(--dur-hover) var(--ease),border-color var(--dur-hover) var(--ease),background var(--dur-hover) var(--ease);overflow-wrap:anywhere}
+.action:hover{transform:translateY(-3px);border-color:var(--brand)}
+.primary{grid-column:1/-1;background:var(--brand);border-color:var(--brand);color:var(--surface)}
+.secondary{background:var(--surface2);color:var(--text)}
+.ghost{background:transparent;color:var(--brand)}
+.contact{display:grid;gap:8px;border-top:var(--border-w) solid var(--border);padding-top:20px}
+.row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;color:var(--muted)}
+.row b{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--text)}
+.mono{font-family:var(--font-data);font-variant-numeric:tabular-nums}
+footer{padding:20px 0 32px;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--muted);text-underline-offset:3px}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]){color-scheme:dark}html:not([data-theme="light"]) body{background:var(--bg)}}
+@media (max-width:520px){
+  .wrap{width:min(100% - 28px,720px)}
+  main{padding:20px 0}
+  .card{padding:20px;gap:20px}
+  .identity{grid-template-columns:1fr;text-align:left}
+  .avatar,.avatar-mark{width:112px;height:112px}
+  .actions{grid-template-columns:1fr}
+  .row{display:grid;gap:2px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="top">
+    <div class="wrap">
+      <a class="mark" href="https://domo-ia.com/" aria-label="domo IA">
+        <svg width="32" height="32" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--text)" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="50" cy="74" r="13" fill="var(--brand2)"/>
+      </svg>
+        <span>DOMO<span class="ia">&nbsp;IA</span></span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="card" aria-label="Tarjeta de contacto">
+        <div class="identity">
+          <div class="avatar avatar-mark" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--text)" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="50" cy="74" r="13" fill="var(--brand2)"/>
+      </svg><span>RG</span></div>
+          <div>
+            <p class="eyebrow">Fundador</p>
+            <h1>Rodrigo González</h1>
+            <p class="linea">Construyo trabajadores digitales para equipos comerciales.</p>
+          </div>
+        </div>
+        <nav class="actions" aria-label="Acciones de contacto">
+          <a class="action primary" href="https://wa.me/56936956065?text=Hola%20Rodrigo%2C%20vi%20tu%20tarjeta%20de%20domo%20IA%20y%20quiero%20conversar." target="_blank" rel="noopener">WhatsApp</a>
+          <a class="action secondary mono" href="mailto:rodrigo@domo-ia.com">Correo</a>
+          
+          <a class="action secondary" href="https://domo-ia.com/">Sitio</a>
+          <a class="action secondary" href="https://www.linkedin.com/company/domoia/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="action secondary" href="https://instagram.com/domoia.cl" target="_blank" rel="noopener">Instagram</a>
+          <a class="action ghost" href="../rodrigo.vcf" download>Guardar contacto</a>
+        </nav>
+        <div class="contact">
+          <div class="row"><b>Telefono</b><span class="mono">+56 9 3695 6065</span></div>
+          <div class="row"><b>Correo</b><span class="mono">rodrigo@domo-ia.com</span></div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <span>domo IA SpA · Santiago de Chile</span>
+      <a href="/privacidad/">Privacidad</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
