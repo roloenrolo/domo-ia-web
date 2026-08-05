@@ -231,8 +231,12 @@ footer a{{color:var(--muted);text-underline-offset:3px}}
 
 
 def print_page(data: dict[str, dict[str, str]]) -> str:
+    # Solo entran a la hoja de imprimir quienes estén listos para repartir.
+    # Una tarjeta sin foto no se imprime: en papel el monograma no sostiene la pieza.
     cards = []
     for slug, person in data.items():
+        if not person.get("en_hoja", True):
+            continue
         safe_name = html.escape(person["nombre"])
         cards.append(f"""
         <section class="qr-card">

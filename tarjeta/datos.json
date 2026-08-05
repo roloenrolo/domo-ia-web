@@ -6,7 +6,8 @@
     "email": "rodrigo@domo-ia.com",
     "tel": "+56936956065",
     "agenda": "",
-    "foto": "retrato-rodrigo.jpg"
+    "foto": "retrato-rodrigo.jpg",
+    "en_hoja": true
   },
   "rodolfo": {
     "nombre": "Rodolfo Alfaro",
@@ -15,6 +16,7 @@
     "email": "rodolfo@domo-ia.com",
     "tel": "+56936956065",
     "agenda": "https://calendar.app.google/ZrWkQ3EYryRowUub6",
-    "foto": ""
+    "foto": "",
+    "en_hoja": false
   }
 }
