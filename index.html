@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Domo IA — Trabajadores digitales para tu corredora</title>
-<meta name="description" content="Instalamos un equipo de trabajadores digitales que contesta tu WhatsApp en menos de 1 minuto, califica a cada lead y te deja las reuniones agendadas. Método DOMO, medido con datos.">
+<meta name="description" content="Un equipo de trabajadores digitales con nombre y cargo: traen los leads desde tus anuncios, los atienden en menos de 1 minuto, te agendan la reunión y entrenan a tus vendedores.">
 <link rel="canonical" href="https://domo-ia.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Domo IA">
 <meta property="og:locale" content="es_CL">
 <meta property="og:url" content="https://domo-ia.com/">
 <meta property="og:title" content="Domo IA — Trabajadores digitales para tu corredora">
-<meta property="og:description" content="Un equipo de agentes de IA con nombre y cargo: contesta tu WhatsApp en menos de 1 minuto, califica a cada lead y te deja las reuniones agendadas.">
+<meta property="og:description" content="Un equipo de trabajadores digitales con nombre y cargo: traen los leads desde tus anuncios, los atienden en menos de 1 minuto, te agendan la reunión y entrenan a tus vendedores.">
 <meta property="og:image" content="https://domo-ia.com/assets/web/og-domo-ia.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Domo IA — Trabajadores digitales para tu corredora">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Domo IA — Trabajadores digitales para tu corredora">
-<meta name="twitter:description" content="Un equipo de agentes de IA con nombre y cargo: contesta tu WhatsApp en menos de 1 minuto, califica a cada lead y te deja las reuniones agendadas.">
+<meta name="twitter:description" content="Un equipo de trabajadores digitales con nombre y cargo: traen los leads desde tus anuncios, los atienden en menos de 1 minuto, te agendan la reunión y entrenan a tus vendedores.">
 <meta name="twitter:image" content="https://domo-ia.com/assets/web/og-domo-ia.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -58,14 +58,19 @@
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
   }
-  .bar{display:flex;align-items:center;gap:16px;padding:14px 0}
+  .bar{display:flex;align-items:center;gap:16px;padding:14px 24px}
   .mark{display:flex;align-items:center;gap:9px;font-family:"Archivo";font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--text);text-decoration:none}
   .mark .ia{color:var(--brand2)}
   .mark svg{flex:none}
   .bar nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
   .bar nav a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:var(--radius-pill)}
   .bar nav a:hover{color:var(--text);background:var(--surface2)}
-  @media(max-width:820px){.bar nav{display:none}}
+  @media(max-width:820px){.bar{flex-wrap:wrap;row-gap:8px}.bar nav{display:none}.bar #headerCta{margin-left:auto}.aviso-ley{order:3;flex-basis:100%;justify-content:center}}
+  .aviso-ley{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;letter-spacing:.04em;text-decoration:none;color:var(--chipText);
+    background:var(--chip);border-radius:var(--radius-pill);padding:7px 12px;white-space:nowrap;
+    transition:filter .18s ease}
+  .aviso-ley:hover{filter:brightness(.95)}
 
   /* ===== Botones (manual: azul=avanzar, un primario por pantalla) ===== */
   .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:var(--radius-sm);padding:13px 22px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;text-align:center;min-height:48px;transition:transform .18s ease}
@@ -77,62 +82,94 @@
   #headerCta.ghost{background:transparent;color:var(--brand)}
 
   /* ===== Hero (azul noche, manual §08) ===== */
-  .hero{position:relative;background:var(--deep);color:var(--deepText);overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero{position:relative;background:var(--deep);color:var(--deepText);overflow:hidden;border-bottom:1px solid var(--border);min-height:100vh;min-height:100svh;display:flex;align-items:center}
   .hero-media{position:absolute;inset:0;z-index:0;transform-origin:62% 42%;animation:heroDrift 22s ease-in-out infinite alternate}
-  .hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;object-position:right center}
+  .hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
   .hero-media video{display:none}
-  /* Deriva lenta tipo Ken Burns sobre TODO el fondo del hero (imagen o video):
+  /* Deriva lenta tipo Ken Burns sobre todo el fondo del hero (imagen o video):
      se mueve siempre, aunque el navegador bloquee el autoplay del video */
   @keyframes heroDrift{
     from{transform:scale(1.02) translateX(0)}
     to{transform:scale(1.10) translateX(-1.8%)}
   }
-  /* Scrim fijo: garantiza contraste AA del titular sobre el video */
-  .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg, rgba(27,35,64,.96) 0%, rgba(27,35,64,.86) 42%, rgba(27,35,64,.30) 75%, rgba(27,35,64,.15) 100%)}
-  .hero-inner{position:relative;z-index:2;padding:96px 0 88px;max-width:56%}
-  .hero h1{font-size:clamp(38px,5.6vw,64px);font-weight:800;max-width:16ch;color:var(--deepText)}
-  .hero .lede{color:var(--deepMuted);font-size:18px;max-width:46ch;margin:20px 0 28px}
-  .hero .lede b{color:var(--deepText);font-weight:600}
-  .hero .eyebrow{color:var(--deepAmber)}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-  .metodo-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:40px}
-  .metodo-chips span{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;border:1px solid var(--deepBorder);border-radius:var(--radius-pill);padding:6px 14px;color:var(--deepMuted)}
-  .metodo-chips span b{color:var(--deepAmber);font-weight:600}
+  .hero-scrim{position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(180deg, rgba(27,35,64,.45) 0%, rgba(27,35,64,.06) 22%, rgba(27,35,64,0) 55%, rgba(27,35,64,.35) 100%)}
+  .hero-scroll{position:absolute;z-index:3;bottom:28px;left:50%;transform:translateX(-50%);
+    color:var(--deepText);opacity:.85;display:flex;align-items:center;justify-content:center;
+    width:48px;height:48px;border-radius:var(--radius-pill);
+    background:rgba(27,35,64,.35);backdrop-filter:blur(4px);
+    animation:heroBob 2.4s ease-in-out infinite}
+  @keyframes heroBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
   @media(max-width:820px){
-    .hero-inner{max-width:100%;padding:64px 0 320px}
-    .hero-media img{object-position:center bottom;-webkit-mask-image:linear-gradient(180deg,transparent 30%,#000 60%);mask-image:linear-gradient(180deg,transparent 30%,#000 60%)}
-    .hero-scrim{background:linear-gradient(180deg, rgba(27,35,64,.97) 0%, rgba(27,35,64,.85) 45%, rgba(27,35,64,.20) 80%)}
+    .hero-media{animation:none;transform:none}
+    .hero-media img,.hero-media video{object-position:center center}
   }
 
   /* ===== Secciones ===== */
   section{padding:72px 0;border-bottom:1px solid var(--border)}
   .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
   .num{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--brand2);letter-spacing:.1em}
-  h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin:0}
+  h1,h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin:0}
   .sub{color:var(--muted);max-width:66ch;margin:8px 0 40px}
 
-  /* ===== Barra de datos del piloto ===== */
-  .stats{background:var(--surface);border-bottom:1px solid var(--border);padding:28px 0}
-  .stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-  .stat{border-left:3px solid var(--border);padding:4px 16px}
-  .stat .val{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:26px}
-  .stat .lbl{font-size:13px;color:var(--muted);line-height:1.45}
-  .stat.kpi{border-left-color:var(--accent)} .stat.kpi .val{color:var(--accent)}
-  .stat.act{border-left-color:var(--brand)} .stat.act .val{color:var(--brand)}
-  .stats .fuente{grid-column:1/-1;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.06em;margin-top:2px}
-
-  /* ===== Problema ===== */
-  .crit{display:block;background:color-mix(in srgb,var(--warn) 10%,transparent);border-left:3px solid var(--warn);padding:14px 16px;border-radius:0 var(--radius-xs) var(--radius-xs) 0;font-size:15px;max-width:62ch}
-  .antes-despues{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:32px}
-  .ad-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:20px;box-shadow:var(--shadow)}
-  .ad-card h3{margin:0 0 8px;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-  .ad-card .big{font-family:"IBM Plex Mono",monospace;font-size:32px;font-weight:600}
-  .ad-card p{margin:6px 0 0;font-size:14px;color:var(--muted)}
-
   /* ===== Equipo ===== */
-  .equipo{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-  .agente{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow);transition:transform .18s ease,border-color .18s ease}
-  .agente:hover{transform:translateY(-3px);border-color:var(--brand)}
+  /* — utilidad que el archivo no tiene — */
+  .vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+    clip-path:inset(50%);white-space:nowrap;border:0}
+
+  /* — la tira — */
+  .equipo-tira{list-style:none;margin:0;padding:6px 0 12px;display:grid;grid-auto-flow:column;
+    grid-auto-columns:78vw;gap:16px;overflow-x:auto;
+    scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+  .equipo-tira::-webkit-scrollbar{height:6px}
+  .equipo-tira::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
+  .agente-slot{display:grid;scroll-snap-align:start}
+  @media(min-width:821px){.equipo-tira{grid-auto-columns:calc((100% - 48px)/4)}}
+
+  /* — la tarjeta que gira — */
+  .agente{display:grid;height:100%;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;
+    transition:transform .5s ease}
+  .agente[data-flipped="true"]{transform:rotateY(180deg)}
+  .cara{grid-area:1/1;position:relative;display:flex;flex-direction:column;
+    backface-visibility:hidden;-webkit-backface-visibility:hidden;
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);
+    box-shadow:var(--shadow);transition:border-color .18s ease}
+  .dorso{transform:rotateY(180deg);visibility:hidden;transition:border-color .18s ease,visibility 0s linear .25s;padding:20px 18px;overflow-y:auto;
+    overscroll-behavior:contain}
+  .agente[data-flipped="true"] .dorso{visibility:visible;transition:border-color .18s ease}
+  .agente[data-flipped="true"] .frente{visibility:hidden;transition:border-color .18s ease,visibility 0s linear .25s}
+  .frente img{border-radius:calc(var(--radius-card) - 1px) calc(var(--radius-card) - 1px) 0 0}
+  .frente .info{user-select:none}
+  .agente:hover .cara{border-color:var(--brand)}
+  .dorso ul{list-style:none;margin:10px 0 0;padding:0}
+  .dorso li{position:relative;padding-left:14px;font-size:13px;color:var(--muted);
+    margin-bottom:8px;line-height:1.5}
+  .dorso li::before{content:"·";position:absolute;left:2px;color:var(--brand2);font-weight:700}
+
+  /* — el botón, estirado sobre toda la cara — */
+  .flip-btn{background:none;border:0;margin-top:auto;padding:12px 0 0;font:inherit;
+    font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--brand);text-align:left;cursor:pointer}
+  .flip-btn::after{content:"";position:absolute;inset:0}
+  .frente .flip-btn{padding-left:18px;padding-right:18px;padding-bottom:18px}
+
+  /* — sin JS: caras apiladas y legibles, nada se pierde — */
+  .equipo-tira:not(.js) .cara{grid-area:auto;visibility:visible;transform:none}
+  .equipo-tira:not(.js) .flip-btn{display:none}
+  .equipo-tira:not(.js) .agente{transform:none}
+
+  .tira-nav{display:none}
+  @media(min-width:821px){.tira-nav{display:flex;gap:10px;justify-content:flex-end;margin:0 0 16px}}
+  .tira-btn{width:56px;height:56px;border-radius:99px;border:1.5px solid var(--brand);
+    background:var(--surface);color:var(--brand);cursor:pointer;padding:0;
+    display:inline-flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);
+    transition:background .18s ease,color .18s ease,transform .18s ease}
+  .tira-btn svg{width:24px;height:24px;display:block}
+  .tira-btn:hover:not(:disabled){background:var(--brand);color:#fff;transform:translateY(-2px)}
+  .tira-btn:disabled{opacity:.35;cursor:default;border-color:var(--border);color:var(--muted);box-shadow:none}
+
   .agente img{aspect-ratio:3/4;object-fit:cover;background:#F1EDE3}
   .agente .info{padding:16px 18px 18px}
   .agente .cargo{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand2);display:flex;align-items:center;gap:7px}
@@ -140,15 +177,21 @@
   .agente h3{margin:6px 0 6px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px}
   .agente p{margin:0;font-size:13.5px;color:var(--muted)}
 
-  /* ===== Capas ===== */
-  .capa{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:36px 0}
-  .capa + .capa{border-top:1px dashed var(--border)}
-  .capa:nth-child(even) .capa-img{order:2}
-  .capa img{border-radius:var(--radius-md);border:1px solid var(--border);box-shadow:var(--shadow)}
-  .capa h3{font-size:22px;margin:0 0 10px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700}
-  .capa p{margin:0;color:var(--muted);font-size:15px;max-width:48ch}
-  .capa .quien{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin-top:12px}
-  @media(max-width:820px){.capa{grid-template-columns:1fr;gap:18px}.capa:nth-child(even) .capa-img{order:0}}
+  /* ===== Packs ===== */
+  .packs{display:grid;grid-template-columns:1fr;gap:16px;align-items:stretch}
+  @media(min-width:960px){.packs{grid-template-columns:repeat(3,1fr)}}
+  .pack{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:22px;box-shadow:var(--shadow)}
+  .pack h3{margin:0 0 8px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px;line-height:1.2}
+  .pack .promesa{margin:0 0 14px;font-size:15px;font-weight:600;color:var(--text)}
+  .pack .quien{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin:8px 0 12px}
+  .pack ul{list-style:none;margin:0;padding:0}
+  .pack li{position:relative;padding-left:16px;font-size:14px;color:var(--muted);margin-bottom:8px}
+  .pack li::before{content:"·";position:absolute;left:4px;color:var(--brand2);font-weight:700}
+  .pack .nota{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--border);padding-top:10px;margin:12px 0 0}
+  .pack .btn{margin-top:auto;align-self:flex-start}
+  .avatars{display:flex;margin:0 0 4px}
+  .avatars img{width:48px;height:48px;flex:none;border-radius:99px;object-fit:cover;object-position:50% 18%;border:2px solid var(--surface);background:#F1EDE3}
+  .avatars img+img{margin-left:-10px}
 
   /* ===== Cómo funciona ===== */
   .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
@@ -160,14 +203,6 @@
   /* ===== Video ===== */
   .video-frame{border-radius:var(--radius-card);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#000}
   .video-frame video{width:100%;display:block}
-
-  /* ===== FAQ ===== */
-  .faq details{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);margin-bottom:10px;box-shadow:var(--shadow)}
-  .faq summary{cursor:pointer;padding:16px 18px;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:48px}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:18px;flex:none}
-  .faq details[open] summary::after{content:"−"}
-  .faq .resp{padding:0 18px 16px;color:var(--muted);font-size:14.5px;max-width:70ch}
 
   /* ===== CTA final ===== */
   .final{background:var(--deep);color:var(--deepText);border-bottom:none}
@@ -203,6 +238,8 @@
   .reveal{opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease}
   .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){
+    .agente[data-flipped="true"]{transform:none}
+    .dorso{transform:none}
     html{scroll-behavior:auto}
     *{animation:none!important;transition:none!important}
     .reveal{opacity:1;transform:none}
@@ -211,7 +248,7 @@
 </head>
 <body>
 
-<!-- Los 4 CTA "Agendar diagnóstico" apuntan al calendario de citas de rodolfo@domo-ia.com -->
+<!-- CTA de calendario + 4 botones de cotización por WhatsApp -->
 
 <header>
   <div class="wrap bar">
@@ -222,207 +259,202 @@
       </svg>
       <span>DOMO<span class="ia">&nbsp;IA</span></span></a>
     <nav aria-label="Secciones">
-      <a href="#equipo">Equipo</a>
-      <a href="#capas">Capas</a>
+      <a href="#equipo">Plantel</a>
+      <a href="#packs">Equipos</a>
       <a href="#como">Cómo funciona</a>
       <a href="#video">Video</a>
-      <a href="#faq">Preguntas</a>
     </nav>
+    <a class="aviso-ley" href="/privacidad/">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+      <span class="ley-larga">Trabajando en la </span>Ley 21.719
+    </a>
     <a id="headerCta" class="btn ghost" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+  <!-- ===== HERO ===== -->
 <div class="hero" id="top">
   <div class="hero-media" aria-hidden="true">
-    <img src="assets/web/hero-1920.jpg" srcset="assets/web/hero-900.jpg 900w, assets/web/hero-1920.jpg 1920w" sizes="100vw" alt="" fetchpriority="high">
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/web/hero-1920.jpg">
-      <source src="assets/web/video-hero-loop.mp4" type="video/mp4">
-    </video>
+    <picture>
+      <source media="(max-width:820px)" srcset="assets/web/hero-oficina-vertical-v2.jpg">
+      <img src="assets/web/hero-oficina-1920.jpg" srcset="assets/web/hero-oficina-900.jpg 900w, assets/web/hero-oficina-1920.jpg 1920w" sizes="100vw" alt="" fetchpriority="high">
+    </picture>
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto"></video>
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="hero-inner">
-      <p class="eyebrow">Trabajadores digitales · corredoras de propiedades · Chile</p>
-      <h1 class="display">Instala un equipo que atiende, califica y agenda por ti</h1>
-      <p class="lede">Antonia contesta tu WhatsApp <b>en menos de 1 minuto, a cualquier hora</b>, califica a cada lead y te deja la reunión agendada en el calendario. Tú llegas a vender, no a perseguir.</p>
-      <div class="cta-row">
-        <a class="btn" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar diagnóstico</a>
-        <a class="btn ghost on-dark" href="#video">Ver cómo funciona</a>
-      </div>
-      <div class="metodo-chips" aria-label="Método DOMO">
-        <span><b>D</b>iagnosticar</span>
-        <span><b>O</b>rquestar</span>
-        <span><b>M</b>edir</span>
-        <span><b>O</b>ptimizar</span>
-      </div>
-    </div>
-  </div>
+  <a class="hero-scroll" href="#equipo" aria-label="Ver el plantel">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>
+    </svg>
+  </a>
 </div>
-
-<!-- ===== DATOS DEL PILOTO ===== -->
-<div class="stats" role="region" aria-label="Datos del piloto">
-  <div class="wrap">
-    <div class="stat kpi">
-      <div class="val">438</div>
-      <div class="lbl">leads procesados en un mes por un solo equipo instalado</div>
-    </div>
-    <div class="stat act">
-      <div class="val">&lt; 1 min</div>
-      <div class="lbl">primera respuesta por WhatsApp, de día y de noche</div>
-    </div>
-    <div class="stat act">
-      <div class="val">24/7</div>
-      <div class="lbl">sin turnos, sin vacaciones, sin leads esperando al lunes</div>
-    </div>
-    <div class="fuente">FUENTE: PILOTO CON CORREDORA DE PROPIEDADES · MEDICIÓN JUL-2026</div>
-  </div>
-</div>
-
-<!-- ===== PROBLEMA ===== -->
-<section id="problema">
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">01</span><h2 class="display">El lead que llega a las 21:40 no espera hasta mañana</h2></div>
-    <p class="sub">Antes de instalar nada, medimos un embudo real de corredora durante un mes. Los números del punto de partida:</p>
-    <div class="antes-despues">
-      <div class="ad-card">
-        <h3>Punto de partida</h3>
-        <div class="big">48<span style="font-size:18px">%</span></div>
-        <p>De cada 100 leads que llegaron, solo 48 lograron una conversación. El resto se enfrió antes de la primera respuesta.</p>
-      </div>
-      <div class="ad-card">
-        <h3>Punto de partida</h3>
-        <div class="big">6<span style="font-size:18px">%</span></div>
-        <p>Solo 6 de cada 100 terminaron en una reunión agendada. No por falta de interés: por demora y seguimiento a mano.</p>
-      </div>
-      <div class="ad-card">
-        <h3>La causa</h3>
-        <div class="big">⏱</div>
-        <p>Los leads llegan de noche, en fin de semana y en medio de tus visitas. Nadie puede contestar todos, siempre, en minutos. Un equipo digital sí.</p>
-      </div>
-    </div>
-    <p style="margin-top:28px"><span class="crit">⚠ Cada lead sin contestar es plata que ya pagaste — en portal, en aviso o en referido — y que se va donde el corredor que contestó primero.</span></p>
-  </div>
-</section>
 
 <!-- ===== EQUIPO ===== -->
 <section id="equipo">
   <div class="wrap reveal">
-    <div class="shead"><span class="num">02</span><h2 class="display">No vendemos un software. Instalamos un equipo.</h2></div>
-    <p class="sub">Cada trabajador digital tiene nombre, cargo y una sola pega que hace bien. Los contratas de a uno, a medida que tu operación crece.</p>
-    <div class="equipo">
-      <article class="agente">
-        <img src="assets/web/retrato-antonia.jpg" alt="Antonia, recepcionista digital" loading="lazy" width="640" height="857">
-        <div class="info">
-          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Recepcionista · SDR</span>
-          <h3>Antonia</h3>
-          <p>Contesta tu WhatsApp en segundos, califica al lead con criterio y agenda la reunión directo en tu calendario.</p>
-        </div>
-      </article>
-      <article class="agente">
-        <img src="assets/web/retrato-matias.jpg" alt="Matías, media buyer digital" loading="lazy" width="640" height="857">
-        <div class="info">
-          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Media buyer</span>
-          <h3>Matías</h3>
-          <p>Vigila tus campañas todos los días y mueve el presupuesto hacia los avisos que sí traen leads que contestan.</p>
-        </div>
-      </article>
-      <article class="agente">
-        <img src="assets/web/retrato-clara.jpg" alt="Clara, auditora de conversaciones" loading="lazy" width="640" height="857">
-        <div class="info">
-          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Auditora</span>
-          <h3>Clara</h3>
-          <p>Revisa las conversaciones de Antonia todas las semanas: detecta errores, leads mal calificados y qué mejorar.</p>
-        </div>
-      </article>
-      <article class="agente">
-        <img src="assets/web/retrato-sofia.jpg" alt="Sofía, diseñadora" loading="lazy" width="640" height="857">
-        <div class="info">
-          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L15 12l-4 1 1-4Z"/><path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/></svg>Diseñadora</span>
-          <h3>Sofía</h3>
-          <p>Diseña las piezas y variantes de tus avisos, alineadas a tu marca, para que Matías siempre tenga algo nuevo que probar.</p>
-        </div>
-      </article>
-      <article class="agente">
-        <img src="assets/web/retrato-amanda.jpg" alt="Amanda, notas de reuniones" loading="lazy" width="640" height="857">
-        <div class="info">
-          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Notas de reunión</span>
-          <h3>Amanda</h3>
-          <p>Toma nota de cada reunión comercial y deja el registro ordenado: nada de lo que se conversó se pierde.</p>
-        </div>
-      </article>
-      <article class="agente">
-        <img src="assets/web/retrato-lucas.jpg" alt="Lucas, evaluador de ventas" loading="lazy" width="640" height="857">
-        <div class="info">
-          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Evaluador de ventas</span>
-          <h3>Lucas</h3>
-          <p>Evalúa cada reunión con una rúbrica de venta profesional y te dice, con nota, qué se hizo bien y qué faltó.</p>
-        </div>
-      </article>
-      <article class="agente">
-        <img src="assets/web/retrato-laura.jpg" alt="Laura, coach de vendedores" loading="lazy" width="640" height="857">
-        <div class="info">
-          <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Coach comercial</span>
-          <h3>Laura</h3>
-          <p>Junta los patrones de todas tus reuniones y entrena a tu equipo humano con lo que funciona en tu rubro.</p>
-        </div>
-      </article>
+    <div class="shead"><span class="num">01</span><h1 class="display">No vendemos un software. Instalamos un equipo.</h1></div>
+    <p class="sub">Cada trabajador digital tiene nombre, cargo y una sola pega que hace bien. Más abajo los ves agrupados en los equipos que puedes contratar.</p>
+    <div class="tira-nav" aria-hidden="true">
+      <button type="button" class="tira-btn" data-dir="-1" tabindex="-1" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button type="button" class="tira-btn" data-dir="1" tabindex="-1" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
     </div>
+    <ul class="equipo-tira">
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente">
+            <img src="assets/web/retrato-antonia.jpg" alt="Antonia, recepcionista digital" loading="lazy" width="640" height="857">
+            <div class="info">
+              <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Recepcionista · SDR</span>
+              <h3>Antonia</h3>
+              <p>Contesta tu WhatsApp en segundos, califica al lead con criterio y agenda la reunión directo en tu calendario.</p>
+              <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-antonia">Ver qué hace <span class="vh">Antonia</span> en detalle <span aria-hidden="true">↻</span></button>
+            </div>
+          </div>
+          <div class="cara dorso" id="det-antonia">
+            <span class="cargo">Antonia · qué hace</span>
+            <ul><li>Contesta los WhatsApp nuevos en menos de un minuto, a cualquier hora y cualquier día.</li><li>Hace las preguntas de calificación que tú definas —presupuesto, renta, plazo, comuna— sin sonar a formulario.</li><li>Agenda la reunión directo en el calendario del corredor que corresponde, con el detalle del lead.</li><li>Retoma al lead que quedó tibio en vez de dejar la conversación morir.</li><li>Deriva a un humano los casos que tú marcaste como "estos no los toca sola".</li></ul>
+            <button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Antonia</span> <span aria-hidden="true">↺</span></button>
+          </div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-matias.jpg" alt="Matías, media buyer digital" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Media buyer</span><h3>Matías</h3><p>Vigila tus campañas todos los días y mueve el presupuesto hacia los avisos que sí traen leads que contestan.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-matias">Ver qué hace <span class="vh">Matías</span> en detalle <span aria-hidden="true">↻</span></button>
+          </div></div>
+          <div class="cara dorso" id="det-matias"><span class="cargo">Matías · qué hace</span><ul><li>Revisa todas las mañanas cómo rindió cada anuncio: gasto, leads, conversaciones y reuniones.</li><li>Mueve el presupuesto hacia los avisos que traen leads que contestan, no los que traen clics baratos.</li><li>Te avisa qué está quemando plata, con el número a la vista, y lo pausa apenas lo apruebas.</li><li>Define qué probar la semana siguiente y le encarga las piezas a Sofía.</li><li>Trabaja con Clara: ella le avisa qué anuncio trae mensajes pero no reuniones, y él corrige la pauta con eso.</li><li>Te deja un informe semanal en lenguaje humano: qué entró, qué costó y qué sigue.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Matías</span> <span aria-hidden="true">↺</span></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-clara.jpg" alt="Clara, encargada de mejora continua" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Mejora continua</span><h3>Clara</h3><p>Cada semana revisa qué está cambiando en las conversaciones y te deja mejoras concretas para cerrar más.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-clara">Ver qué hace <span class="vh">Clara</span> en detalle <span aria-hidden="true">↻</span></button>
+          </div></div>
+          <div class="cara dorso" id="det-clara"><span class="cargo">Clara · qué hace</span><ul><li>Detecta las tendencias de la semana: qué preguntas nuevas están llegando y qué respuestas están funcionando.</li><li>Encuentra las conversaciones donde se estaba por agendar y no se agendó.</li><li>Las convierte en mejoras concretas: qué frase cambiar, qué pregunta agregar, qué caso derivar antes.</li><li>Trabaja con Matías: le avisa qué anuncio trae muchos mensajes pero casi ninguna reunión, para que deje de gastar ahí.</li><li>Te deja las mejoras listas para aprobar y a la semana siguiente mide si trajeron más reuniones.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Clara</span> <span aria-hidden="true">↺</span></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-sofia.jpg" alt="Sofía, diseñadora" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L15 12l-4 1 1-4Z"/><path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/></svg>Diseñadora</span><h3>Sofía</h3><p>Diseña las piezas y variantes de tus avisos, alineadas a tu marca, para que Matías siempre tenga algo nuevo que probar.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sofia">Ver qué hace <span class="vh">Sofía</span> en detalle <span aria-hidden="true">↻</span></button>
+          </div></div>
+          <div class="cara dorso" id="det-sofia"><span class="cargo">Sofía · qué hace</span><ul><li>Produce las piezas de tus avisos —imagen, video corto y texto— con tu marca.</li><li>Arma variantes del mismo mensaje para poder probar ángulo, gancho y llamada a la acción.</li><li>Mantiene el banco de creatividades vivo para que Matías siempre tenga algo nuevo que probar.</li><li>Reutiliza lo que ya funcionó en vez de partir de cero todos los meses.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Sofía</span> <span aria-hidden="true">↺</span></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-amanda.jpg" alt="Amanda, notas de reuniones" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Notas de reunión</span><h3>Amanda</h3><p>Toma nota de cada reunión comercial y deja el registro ordenado: nada de lo que se conversó se pierde.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-amanda">Ver qué hace <span class="vh">Amanda</span> en detalle <span aria-hidden="true">↻</span></button>
+          </div></div>
+          <div class="cara dorso" id="det-amanda"><span class="cargo">Amanda · qué hace</span><ul><li>Toma nota de cada reunión comercial y deja el resumen ordenado el mismo día.</li><li>Registra lo acordado, las objeciones que aparecieron y el próximo paso comprometido.</li><li>Deja el registro donde tu equipo lo encuentra, sin depender de la memoria del vendedor.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Amanda</span> <span aria-hidden="true">↺</span></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-lucas.jpg" alt="Lucas, evaluador de ventas" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Evaluador de ventas</span><h3>Lucas</h3><p>Evalúa cada reunión con una rúbrica de venta profesional y te dice, con nota, qué se hizo bien y qué faltó.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-lucas">Ver qué hace <span class="vh">Lucas</span> en detalle <span aria-hidden="true">↻</span></button>
+          </div></div>
+          <div class="cara dorso" id="det-lucas"><span class="cargo">Lucas · qué hace</span><ul><li>Evalúa cada reunión con una rúbrica de venta profesional y le pone nota.</li><li>Muestra qué se hizo bien y qué faltó: descubrimiento, manejo de objeciones, cierre.</li><li>Compara reuniones entre sí para que veas quién necesita apoyo y en qué.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Lucas</span> <span aria-hidden="true">↺</span></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-laura.jpg" alt="Laura, coach de vendedores" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Coach comercial</span><h3>Laura</h3><p>Junta los patrones de todas tus reuniones y entrena a tu equipo humano con lo que funciona en tu rubro.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-laura">Ver qué hace <span class="vh">Laura</span> en detalle <span aria-hidden="true">↻</span></button>
+          </div></div>
+          <div class="cara dorso" id="det-laura"><span class="cargo">Laura · qué hace</span><ul><li>Junta los patrones de todas las reuniones evaluadas y saca lo que sí cierra en tu rubro.</li><li>Entrena a tus vendedores con ejemplos de tu propia operación, no con teoría.</li><li>Arma la guía de conversación que tu equipo puede usar mañana.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Laura</span> <span aria-hidden="true">↺</span></button></div>
+        </article>
+      </li>
+    </ul>
   </div>
 </section>
 
-<!-- ===== CAPAS ===== -->
-<section id="capas">
+<!-- ===== PACKS ===== -->
+<section id="packs">
+  <span id="capas" aria-hidden="true"></span>
   <div class="wrap reveal">
-    <div class="shead"><span class="num">03</span><h2 class="display">Se construye por capas, como un equipo real</h2></div>
-    <p class="sub">Nadie contrata cuatro personas el primer día. El domo se arma capa por capa: partes por donde más te duele y sumas la siguiente cuando la anterior ya se pagó sola.</p>
-
-    <div class="capa">
-      <div class="capa-img"><img src="assets/web/ilustracion-capa2-recepcion.jpg" alt="Antonia atendiendo WhatsApp mientras Clara audita las conversaciones" loading="lazy" width="1200" height="670"></div>
-      <div>
-        <p class="eyebrow">Capa 1 · Recepción y calificación</p>
-        <h3>Ningún lead vuelve a quedar sin respuesta</h3>
-        <p>Antonia atiende, califica y agenda. Clara la audita cada semana. Es la capa por la que parten todos: es donde hoy se te va la plata.</p>
-        <p class="quien">Antonia + Clara</p>
-      </div>
+    <div class="shead"><span class="num">02</span>
+      <h2 class="display">Dos equipos, o el domo completo</h2></div>
+    <p class="sub">Cada equipo resuelve una parte distinta del negocio. Casi todos parten por el Equipo Comercial —es donde hoy se va la plata— y suman Coaching cuando ya tienen reuniones que evaluar.</p>
+    <div class="packs">
+      <article class="pack">
+        <p class="eyebrow">EQUIPO 01 · DEL AVISO A LA REUNIÓN</p>
+        <h3>Equipo Comercial</h3>
+        <p class="promesa">Trae los leads, los atiende en menos de 1 minuto y cada semana se corrige para cerrar más.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="assets/web/retrato-matias.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-sofia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-antonia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-clara.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">Matías + Sofía + Antonia + Clara</p>
+        <ul>
+          <li>Matías vigila la pauta todos los días y mueve el presupuesto a los avisos que traen conversaciones.</li>
+          <li>Sofía le renueva las piezas cada semana para probar ángulos nuevos, con tu marca.</li>
+          <li>Antonia contesta cada WhatsApp en menos de un minuto, califica y agenda en el calendario.</li>
+          <li>Clara cruza las dos puntas: le avisa a Matías qué anuncio trae muchos mensajes pero casi ninguna reunión.</li>
+          <li>Cada semana te llega qué entró, qué costó y qué se corrigió.</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20cotizar%20el%20Equipo%20Comercial." target="_blank" rel="noopener">Cotizar este equipo</a>
+      </article>
+      <article class="pack">
+        <p class="eyebrow">EQUIPO 02 · COACHING</p>
+        <h3>Equipo de Coaching Comercial</h3>
+        <p class="promesa">Que cada reunión deje aprendizaje, no solo un correo.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="assets/web/retrato-amanda.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-lucas.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-laura.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">Amanda + Lucas + Laura</p>
+        <ul>
+          <li>Notas y registro ordenado de cada reunión comercial.</li>
+          <li>Evaluación con rúbrica profesional y nota por reunión.</li>
+          <li>La guía de conversación con lo que sí cierra en tu rubro.</li>
+          <li>Entrenamiento a tus vendedores con tus propias reuniones, no con teoría.</li>
+        </ul>
+        <p class="nota">Rinde de verdad desde las 15 reuniones evaluadas en adelante.</p>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20cotizar%20el%20Equipo%20de%20Coaching%20Comercial." target="_blank" rel="noopener">Cotizar este equipo</a>
+      </article>
+      <article class="pack">
+        <p class="eyebrow">EQUIPO 03 · TODO EL PLANTEL</p>
+        <h3>Domo completo</h3>
+        <p class="promesa">Los dos equipos trabajando juntos: del aviso a la reunión, y de la reunión al vendedor que mejora.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="assets/web/retrato-antonia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-matias.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-sofia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-clara.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-amanda.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-lucas.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-laura.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">Los 7 trabajadores</p>
+        <ul>
+          <li>Los 7 trabajadores instalados y configurados para tu negocio.</li>
+          <li>El circuito completo: desde el aviso que pagas hasta la reunión evaluada.</li>
+          <li>Un solo informe semanal con las dos puntas: lo que costó traer el lead y qué pasó en la reunión.</li>
+          <li>Se instala por partes igual: parte por el Equipo Comercial y suma Coaching cuando tengas reuniones que evaluar.</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20cotizar%20el%20Domo%20completo." target="_blank" rel="noopener">Cotizar este equipo</a>
+      </article>
     </div>
-
-    <div class="capa">
-      <div class="capa-img"><img src="assets/web/ilustracion-capa1-adquisicion.jpg" alt="Matías gestionando campañas con paneles de métricas" loading="lazy" width="1200" height="670"></div>
-      <div>
-        <p class="eyebrow">Capa 2 · Adquisición</p>
-        <h3>Que la plata de avisos trabaje con supervisión diaria</h3>
-        <p>Matías revisa tus campañas todos los días y reasigna el presupuesto según los leads que realmente conversan y agendan — no según los clics. Sofía le renueva las piezas para probar ángulos nuevos.</p>
-        <p class="quien">Matías + Sofía</p>
-      </div>
-    </div>
-
-    <div class="capa">
-      <div class="capa-img"><img src="assets/web/ilustracion-capa3-reuniones.jpg" alt="Amanda tomando notas mientras Lucas evalúa la reunión" loading="lazy" width="1200" height="670"></div>
-      <div>
-        <p class="eyebrow">Capa 3 · Inteligencia de reuniones</p>
-        <h3>Cada reunión deja registro y nota</h3>
-        <p>Amanda documenta lo conversado; Lucas lo evalúa con rúbrica profesional. Dejas de depender de la memoria del vendedor.</p>
-        <p class="quien">Amanda + Lucas</p>
-      </div>
-    </div>
-
-    <div class="capa">
-      <div class="capa-img"><img src="assets/web/ilustracion-capa4-coaching.jpg" alt="Laura entrenando al equipo de ventas frente a una pizarra" loading="lazy" width="1200" height="670"></div>
-      <div>
-        <p class="eyebrow">Capa 4 · Coaching</p>
-        <h3>Tu equipo humano mejora con datos de tu propia operación</h3>
-        <p>Con 15 reuniones auditadas, Laura sabe qué secuencia cierra más en tu rubro — y entrena a tus vendedores con eso, no con teoría.</p>
-        <p class="quien">Laura</p>
-      </div>
-    </div>
+    <p class="sub" style="margin:32px 0 16px">¿No sabes por cuál partir? El diagnóstico te lo dice con tus números.</p>
+    <a class="btn ghost" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
 </section>
 
 <!-- ===== CÓMO FUNCIONA ===== -->
 <section id="como">
   <div class="wrap reveal">
-    <div class="shead"><span class="num">04</span><h2 class="display">Cómo se instala</h2></div>
+    <div class="shead"><span class="num">03</span><h2 class="display">Cómo se instala</h2></div>
     <p class="sub">El motor es el mismo; lo que cambia es la configuración para tu negocio.</p>
     <div class="pasos">
       <div class="paso">
@@ -447,7 +479,7 @@
 <!-- ===== VIDEO ===== -->
 <section id="video">
   <div class="wrap reveal">
-    <div class="shead"><span class="num">05</span><h2 class="display">El método, en 2 minutos</h2></div>
+    <div class="shead"><span class="num">04</span><h2 class="display">El método, en 2 minutos</h2></div>
     <p class="sub">Así funciona el Método DOMO: diagnosticar, orquestar, medir y optimizar — contado simple.</p>
     <div class="video-frame">
       <video controls preload="none" poster="assets/web/poster-video-metodo.jpg" width="1280" height="720">
@@ -466,35 +498,6 @@
 precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
 <section id="planes"> ... </section>
 ===== -->
-
-<!-- ===== FAQ ===== -->
-<section id="faq">
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">06</span><h2 class="display">Preguntas directas, respuestas directas</h2></div>
-    <div class="faq" style="max-width:760px">
-      <details>
-        <summary>¿Esto reemplaza a mi gente?</summary>
-        <p class="resp">No. Antonia toma la pega que hoy nadie alcanza a hacer: contestar en segundos a toda hora. Tus corredores dejan de perseguir leads fríos y llegan a reuniones ya agendadas. Es ampliar el equipo, no reemplazarlo.</p>
-      </details>
-      <details>
-        <summary>¿Qué pasa con los datos de mis clientes?</summary>
-        <p class="resp">Tus conversaciones y contactos son tuyos. Operamos bajo la ley chilena de protección de datos (Ley 21.719), con acceso restringido y sin compartir información con terceros. En el diagnóstico revisamos esto contigo, por escrito.</p>
-      </details>
-      <details>
-        <summary>¿Cuánto demora la instalación?</summary>
-        <p class="resp">El diagnóstico toma una reunión. La instalación de la primera capa se hace en días, no meses, porque el motor ya existe: lo que se configura es tu forma de hablar, tus reglas y tu calendario.</p>
-      </details>
-      <details>
-        <summary>¿Sirve si no soy corredora de propiedades?</summary>
-        <p class="resp">El método está probado primero en corredoras, y ahí es donde más evidencia tenemos. Si tu negocio vive de leads por WhatsApp y reuniones, conversemos: el diagnóstico te dice con números si te sirve o no.</p>
-      </details>
-      <details>
-        <summary>¿Y si la IA se equivoca con un cliente?</summary>
-        <p class="resp">Para eso existe Clara: audita las conversaciones cada semana y detecta errores antes de que se repitan. Además defines desde el día uno qué casos Antonia deriva a un humano sin intentar resolverlos sola.</p>
-      </details>
-    </div>
-  </div>
-</section>
 
 <!-- ===== CTA FINAL ===== -->
 <section class="final">
@@ -539,9 +542,11 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
   // Si el navegador bloquea el autoplay, NO se esconde: reintenta al cargar y al primer gesto del usuario.
   (function(){
     var mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var mqDesktop = window.matchMedia('(min-width: 821px)');
     var v = document.getElementById('heroVideo');
-    if (!v || !mqDesktop.matches || mqMotion.matches) return;
+    if (!v || mqMotion.matches) return;
+    var esMovil = window.matchMedia('(max-width:820px)').matches;
+    v.poster = esMovil ? 'assets/web/hero-oficina-vertical-v2.jpg' : 'assets/web/hero-oficina-1920.jpg';
+    v.src    = esMovil ? 'assets/web/video-hero-vertical-v2.mp4'  : 'assets/web/video-hero-oficina.mp4';
     v.style.display = 'block';
     function intentar(){ if (v.paused) v.play().catch(function(){}); }
     v.addEventListener('canplay', intentar);
@@ -574,6 +579,61 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
       });
     }, {threshold: 0.12});
     document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  })();
+
+  (function(){
+    var tira = document.querySelector('.equipo-tira');
+    if (!tira) return;
+    tira.classList.add('js');
+
+    function girar(art, abrir){
+      document.querySelectorAll('.agente[data-flipped="true"]').forEach(function(o){
+        if (o !== art) o.dataset.flipped = 'false';
+      });
+      art.dataset.flipped = abrir ? 'true' : 'false';
+      art.querySelector('.frente .flip-btn').setAttribute('aria-expanded', String(abrir));
+      art.querySelector(abrir ? '.dorso .flip-btn' : '.frente .flip-btn').focus({preventScroll:true});
+    }
+
+    var movido = false, sx = 0, sy = 0;
+    tira.addEventListener('pointerdown', function(e){ movido=false; sx=e.clientX; sy=e.clientY; }, {passive:true});
+    tira.addEventListener('pointermove', function(e){ if (Math.hypot(e.clientX-sx, e.clientY-sy) > 14) movido = true; }, {passive:true});
+    tira.addEventListener('pointercancel', function(){ movido = true; }, {passive:true});
+    tira.addEventListener('click', function(e){
+      var btn = e.target.closest('.flip-btn'); if (!btn) return;
+      if (e.detail !== 0 && movido) return;
+      var art = btn.closest('.agente');
+      girar(art, art.dataset.flipped !== 'true');
+    });
+    tira.addEventListener('keydown', function(e){
+      if (e.key !== 'Escape') return;
+      var art = e.target.closest('.agente[data-flipped="true"]'); if (!art) return;
+      girar(art, false);
+    });
+
+    var nav  = document.querySelector('.tira-nav');
+    var btns = nav ? Array.prototype.slice.call(nav.querySelectorAll('.tira-btn')) : [];
+
+    function paso(){
+      var slot = tira.querySelector('.agente-slot');
+      return slot ? slot.getBoundingClientRect().width + 16 : 266;
+    }
+    function estado(){
+      var max = tira.scrollWidth - tira.clientWidth - 1;
+      btns.forEach(function(b){
+        var dir = Number(b.getAttribute('data-dir'));
+        b.disabled = dir < 0 ? tira.scrollLeft <= 0 : tira.scrollLeft >= max;
+      });
+    }
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        var suave = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+        tira.scrollBy({left: Number(b.getAttribute('data-dir')) * paso(), behavior: suave});
+      });
+    });
+    tira.addEventListener('scroll', estado, {passive:true});
+    window.addEventListener('resize', estado, {passive:true});
+    estado();
   })();
 </script>
 </body>
