@@ -673,15 +673,20 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
       art.querySelector(abrir ? '.dorso .flip-btn' : '.frente .flip-btn').focus({preventScroll:true});
     }
 
-    var movido = false, sx = 0, sy = 0;
-    tira.addEventListener('pointerdown', function(e){ movido=false; sx=e.clientX; sy=e.clientY; }, {passive:true});
-    tira.addEventListener('pointermove', function(e){ if (Math.hypot(e.clientX-sx, e.clientY-sy) > 14) movido = true; }, {passive:true});
-    tira.addEventListener('pointercancel', function(){ movido = true; }, {passive:true});
+    var abajo = false, movido = false, sx = 0, sy = 0;
+    tira.addEventListener('pointerdown', function(e){ abajo = true; movido = false; sx = e.clientX; sy = e.clientY; }, {passive:true});
+    tira.addEventListener('pointermove', function(e){
+      if (!abajo) return;                                    // ignorar el simple hover
+      if (Math.hypot(e.clientX - sx, e.clientY - sy) > 14) movido = true;
+    }, {passive:true});
+    tira.addEventListener('pointerup', function(){ abajo = false; }, {passive:true});
+    tira.addEventListener('pointercancel', function(){ abajo = false; movido = true; }, {passive:true});
     tira.addEventListener('click', function(e){
       var btn = e.target.closest('.flip-btn'); if (!btn) return;
-      if (e.detail !== 0 && movido) return;
       var art = btn.closest('.agente');
-      girar(art, art.dataset.flipped !== 'true');
+      var cerrando = art.dataset.flipped === 'true';
+      if (!cerrando && e.detail !== 0 && movido) return;      // el guard solo bloquea la apertura
+      girar(art, !cerrando);
     });
     tira.addEventListener('keydown', function(e){
       if (e.key !== 'Escape') return;
