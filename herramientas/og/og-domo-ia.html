@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <title>Open Graph — domo IA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..800&family=IBM+Plex+Mono:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --crema: #F6F3EC;
+      --azul-noche: #1B2340;
+      --ambar: #D98E3A;
+      --muted: #A7B0CC;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 1200px;
+      height: 630px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--azul-noche);
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      color: var(--crema);
+      background:
+        radial-gradient(circle at 50% 48%, #26335c 0%, #202a4d 36%, var(--azul-noche) 76%);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    main {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 126px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin-bottom: 27px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 84px;
+      font-weight: 800;
+      font-variation-settings: "wdth" 118;
+      letter-spacing: -0.025em;
+      line-height: 1;
+    }
+
+    h1 .ia { color: var(--ambar); }
+
+    .tagline {
+      margin: 25px 0 0;
+      color: var(--muted);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      font-variation-settings: "wdth" 112;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+    }
+
+    .dominio {
+      margin: 46px 0 0;
+      color: var(--ambar);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="../../favicon.svg" alt="">
+    <h1>DOMO <span class="ia">IA</span></h1>
+    <p class="tagline">Trabajadores digitales para tu negocio</p>
+    <p class="dominio">domo-ia.com</p>
+  </main>
+</body>
+</html>
