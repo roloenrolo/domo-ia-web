@@ -140,7 +140,7 @@
   .agente[data-flipped="true"] .dorso{visibility:visible;transition:border-color .18s ease}
   .agente[data-flipped="true"] .frente{visibility:hidden;transition:border-color .18s ease,visibility 0s linear .25s}
   .frente img{border-radius:calc(var(--radius-card) - 1px) calc(var(--radius-card) - 1px) 0 0}
-  .frente .info{user-select:none}
+  .frente .info{user-select:none;display:flex;flex-direction:column;flex:1}
   .agente:hover .cara{border-color:var(--brand)}
   .dorso ul{list-style:none;margin:10px 0 0;padding:0}
   .dorso li{position:relative;padding-left:14px;font-size:13px;color:var(--muted);
@@ -161,7 +161,7 @@
   .flip-btn:hover{background:var(--brand);border-color:var(--brand);color:#fff}
   .flip-btn svg{width:15px;height:15px;flex:none}
   .flip-btn::after{content:"";position:absolute;inset:0}
-  .frente .flip-btn{margin:auto 18px 18px}
+  .frente .flip-btn{margin:auto 0 0}
   .dorso .flip-btn{margin-top:auto}
 
   /* — sin JS: caras apiladas y legibles, nada se pierde — */
@@ -303,7 +303,7 @@
     </nav>
     <a class="aviso-ley" href="/privacidad/">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-      <span class="ley-larga">Trabajando en la </span>Ley 21.719
+      Nos preparamos para la Ley 21.719
     </a>
     <a id="headerCta" class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
@@ -533,7 +533,7 @@
 
 <section id="nosotros">
   <div class="wrap reveal">
-    <div class="shead"><span class="num">05</span><h2 class="display">Quiénes estamos detrás</h2></div>
+    <div class="shead"><span class="num">05</span><h2 class="display">Conócenos</h2></div>
     <p class="sub">No somos una agencia con un equipo que nunca vas a conocer. Somos dos, y los dos trabajamos en esto.</p>
     <details class="nosotros">
       <summary>Ver quiénes somos</summary>
