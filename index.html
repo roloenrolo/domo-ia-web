@@ -271,6 +271,45 @@
     footer{padding-bottom:120px}
   }
 
+  /* ===== Elena · guía del domo (ficha del carrusel pendiente de retrato) ===== */
+  .elena-widget{position:fixed;right:24px;bottom:24px;z-index:1000;display:flex;flex-direction:column;align-items:flex-end;gap:12px;pointer-events:none}
+  .elena-widget[hidden]{display:none}
+  .elena-bubble,.elena-invite,.elena-panel{pointer-events:auto}
+  .elena-bubble{width:58px;height:58px;border:1px solid var(--deepBorder);border-radius:var(--radius-pill);background:var(--deep);color:var(--deepText);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+  .elena-bubble svg{width:27px;height:27px;display:block;fill:none;stroke:currentColor;stroke-width:1.8}
+  .elena-invite{position:absolute;right:70px;bottom:8px;margin:0;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);color:var(--text);box-shadow:var(--shadow);font-size:14px;line-height:1.35;white-space:nowrap}
+  .elena-panel{width:min(390px,calc(100vw - 32px));height:min(600px,calc(100vh - 48px));height:min(600px,calc(100dvh - 48px));display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow);overflow:hidden}
+  .elena-panel[hidden]{display:none}
+  .elena-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;background:var(--deep);color:var(--deepText)}
+  .elena-title{margin:0;font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 112;font-size:17px;font-weight:700}
+  .elena-close{width:38px;height:38px;display:flex;align-items:center;justify-content:center;border:1px solid var(--deepBorder);border-radius:var(--radius-pill);background:var(--deepSurface);color:var(--deepText);font:inherit;font-size:22px;line-height:1;cursor:pointer}
+  .elena-messages{overflow-y:auto;overscroll-behavior:contain;padding:18px;display:flex;flex-direction:column;gap:12px;background:var(--bg)}
+  .elena-message{max-width:86%;margin:0;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius-md);background:var(--surface);font-size:14px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
+  .elena-message[data-role="user"]{align-self:flex-end;background:var(--chip);color:var(--text);border-color:var(--border)}
+  .elena-message[data-state="error"]{align-self:stretch;max-width:none;background:var(--surface2);color:var(--text)}
+  .elena-message a{color:var(--brand);font-weight:600}
+  .elena-status{min-height:24px;margin:0;padding:4px 18px 0;background:var(--surface);color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:11px}
+  .elena-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:10px 12px 12px;background:var(--surface);border-top:1px solid var(--border)}
+  .elena-input{min-width:0;min-height:46px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);color:var(--text);padding:10px 12px;font:inherit;font-size:14px}
+  .elena-send{min-width:46px;min-height:46px;border:1px solid var(--brand);border-radius:var(--radius-sm);background:var(--brand);color:var(--surface);font:inherit;font-weight:700;cursor:pointer;padding:0 14px}
+  .elena-send:disabled,.elena-input:disabled{opacity:.55;cursor:not-allowed}
+  .elena-legal{grid-column:1/-1;margin:2px 0 0;color:var(--muted);font-size:10.5px;line-height:1.35}
+  .elena-legal a{color:var(--brand)}
+  @media(max-width:820px){
+    .elena-widget{right:16px;bottom:calc(84px + env(safe-area-inset-bottom))}
+    .elena-panel{height:min(560px,calc(100dvh - 116px));max-height:calc(100dvh - 116px)}
+    .elena-invite{right:68px;max-width:calc(100vw - 112px);white-space:normal}
+  }
+  @media(prefers-color-scheme:dark){
+    .elena-panel,.elena-form,.elena-status,.elena-message{background:var(--deepSurface);color:var(--deepText);border-color:var(--deepBorder)}
+    .elena-messages{background:var(--deep)}
+    .elena-message[data-role="user"]{background:var(--deepBorder);color:var(--deepText);border-color:var(--deepBorder)}
+    .elena-message[data-state="error"]{background:var(--deepSurface);color:var(--deepText)}
+    .elena-input{background:var(--deep);color:var(--deepText);border-color:var(--deepBorder)}
+    .elena-invite{background:var(--deepSurface);color:var(--deepText);border-color:var(--deepBorder)}
+    .elena-legal,.elena-status{color:var(--deepMuted)}
+  }
+
   /* ===== Entradas (manual §07: un momento por pantalla, 350ms, fade + 12px) ===== */
   .reveal{opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease}
   .reveal.in{opacity:1;transform:none}
@@ -611,11 +650,6 @@
 <section id="testimonio"> ... </section>
 ===== -->
 
-<!-- ===== PLANES: pendiente definición de precio (~24-jul). Estructura sugerida: 1 card por capa,
-precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
-<section id="planes"> ... </section>
-===== -->
-
 <!-- ===== CTA FINAL ===== -->
 <section class="final">
   <div class="wrap reveal">
@@ -647,6 +681,29 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
   </div>
 </footer>
 
+<aside class="elena-widget" id="elenaWidget" data-state="closed" aria-label="Chat con Elena">
+  <p class="elena-invite" id="elenaInvite">¿Te muestro quién hace qué?</p>
+  <section class="elena-panel" id="elenaPanel" aria-labelledby="elenaTitle" hidden>
+    <header class="elena-head">
+      <h2 class="elena-title" id="elenaTitle">Elena · Guía del domo</h2>
+      <button class="elena-close" id="elenaClose" type="button" aria-label="Cerrar chat">×</button>
+    </header>
+    <div class="elena-messages" id="elenaMessages" aria-live="polite" aria-relevant="additions text">
+      <p class="elena-message" data-role="assistant">Hola, soy Elena. Conozco el domo por dentro. ¿Qué te gustaría resolver?</p>
+    </div>
+    <p class="elena-status" id="elenaStatus" role="status"></p>
+    <form class="elena-form" id="elenaForm">
+      <label class="vh" for="elenaInput">Escribe tu mensaje</label>
+      <input class="elena-input" id="elenaInput" name="message" maxlength="1500" autocomplete="off" placeholder="Pregúntale a Elena…" required>
+      <button class="elena-send" id="elenaSend" type="submit" aria-label="Enviar mensaje">Enviar</button>
+      <p class="elena-legal">Conversación con un asistente de IA. Las respuestas son referenciales y no constituyen una oferta comercial. <a href="/privacidad/">Política de privacidad</a></p>
+    </form>
+  </section>
+  <button class="elena-bubble" id="elenaBubble" type="button" aria-expanded="false" aria-controls="elenaPanel" aria-label="Abrir chat con Elena">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18.5 3.5 21v-5A8 8 0 1 1 7 19.3Z"/><path d="M8 10h8M8 14h5"/></svg>
+  </button>
+</aside>
+
 <div class="sticky-cta" id="stickyCta">
   <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
   <a class="whatsapp-float" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20m%C3%A1s%20sobre%20los%20trabajadores%20digitales." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
@@ -655,6 +712,8 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
 </div>
 
 <script>
+  var ELENA_WORKER_URL = ''; // Se completa tras `wrangler deploy`.
+
   // Video del hero: solo desktop y solo si el usuario no pidió menos movimiento.
   // Si el navegador bloquea el autoplay, NO se esconde: reintenta al cargar y al primer gesto del usuario.
   (function(){
@@ -764,6 +823,168 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
     tira.addEventListener('scroll', estado, {passive:true});
     window.addEventListener('resize', estado, {passive:true});
     estado();
+  })();
+
+  (function(){
+    var widget = document.getElementById('elenaWidget');
+    var panel = document.getElementById('elenaPanel');
+    var bubble = document.getElementById('elenaBubble');
+    var close = document.getElementById('elenaClose');
+    var invite = document.getElementById('elenaInvite');
+    var form = document.getElementById('elenaForm');
+    var input = document.getElementById('elenaInput');
+    var send = document.getElementById('elenaSend');
+    var messages = document.getElementById('elenaMessages');
+    var status = document.getElementById('elenaStatus');
+    var history = [];
+    var busy = false;
+
+    if (!widget || !panel || !bubble || !form) return;
+
+    function rememberInvite(){
+      try { sessionStorage.setItem('elena-invite-seen', '1'); } catch (e) {}
+    }
+    function hideInvite(){
+      if (!invite) return;
+      invite.hidden = true;
+      rememberInvite();
+    }
+    try {
+      if (sessionStorage.getItem('elena-invite-seen') === '1') invite.hidden = true;
+      else window.setTimeout(hideInvite, 8000);
+    } catch (e) { window.setTimeout(hideInvite, 8000); }
+
+    function setOpen(open){
+      panel.hidden = !open;
+      bubble.hidden = open;
+      bubble.setAttribute('aria-expanded', String(open));
+      widget.dataset.state = open ? 'open' : 'closed';
+      hideInvite();
+      if (open) window.setTimeout(function(){ input.focus(); }, 0);
+      else bubble.focus();
+    }
+    function setBusy(next){
+      busy = next;
+      input.disabled = next;
+      send.disabled = next;
+      status.textContent = next ? 'Elena está escribiendo…' : '';
+      if (next) widget.dataset.state = 'writing';
+    }
+    function addMessage(role, text, state){
+      var p = document.createElement('p');
+      p.className = 'elena-message';
+      p.dataset.role = role;
+      if (state) p.dataset.state = state;
+      p.textContent = text;
+      messages.appendChild(p);
+      messages.scrollTop = messages.scrollHeight;
+      return p;
+    }
+    function addFallback(text){
+      var p = addMessage('assistant', text + ' ' , 'error');
+      var link = document.createElement('a');
+      link.href = 'https://wa.me/56936956065?text=' + encodeURIComponent('Vengo del chat de la web');
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'Hablar por WhatsApp';
+      p.appendChild(link);
+    }
+    function disableWidget(){
+      widget.dataset.state = 'disabled';
+      widget.hidden = true;
+      var sticky = document.getElementById('stickyCta');
+      if (sticky) sticky.classList.add('on');
+    }
+    function readSse(response, target){
+      if (!response.body || !response.body.getReader) return response.text().then(function(text){ target.textContent = text; return text; });
+      var reader = response.body.getReader();
+      var decoder = new TextDecoder();
+      var pending = '';
+      var answer = '';
+      function consume(block){
+        block.split('\n').forEach(function(line){
+          if (line.indexOf('data:') !== 0) return;
+          var raw = line.slice(5).trim();
+          if (!raw || raw === '[DONE]') return;
+          try {
+            var event = JSON.parse(raw);
+            var text = event.delta && event.delta.text ? event.delta.text : '';
+            if (text) { answer += text; target.textContent = answer; messages.scrollTop = messages.scrollHeight; }
+          } catch (e) {}
+        });
+      }
+      function pump(){
+        return reader.read().then(function(result){
+          pending += decoder.decode(result.value || new Uint8Array(), {stream:!result.done});
+          var parts = pending.split(/\r?\n\r?\n/);
+          pending = parts.pop();
+          parts.forEach(consume);
+          if (!result.done) return pump();
+          if (pending) consume(pending);
+          return answer;
+        });
+      }
+      return pump();
+    }
+
+    bubble.addEventListener('click', function(){ setOpen(true); });
+    close.addEventListener('click', function(){ setOpen(false); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !panel.hidden) setOpen(false); });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var text = input.value.trim();
+      if (!text || busy) return;
+      addMessage('user', text);
+      history.push({role:'user', content:text});
+      input.value = '';
+      setBusy(true);
+      var finalState = 'open';
+
+      if (!ELENA_WORKER_URL) {
+        addFallback('El chat todavía no está conectado.');
+        widget.dataset.state = 'network-error';
+        setBusy(false);
+        return;
+      }
+
+      fetch(ELENA_WORKER_URL.replace(/\/$/, '') + '/chat', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({messages:history})
+      }).then(function(response){
+        if (response.status === 429) throw {rateLimited:true};
+        var type = response.headers.get('content-type') || '';
+        if (type.indexOf('application/json') !== -1) {
+          return response.json().then(function(data){
+            if (data && data.disabled === true) { disableWidget(); return null; }
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            return data && data.message ? String(data.message) : '';
+          });
+        }
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        var target = addMessage('assistant', '');
+        return readSse(response, target).then(function(answer){
+          if (!answer) { target.remove(); throw new Error('Empty stream'); }
+          history.push({role:'assistant', content:answer});
+          return null;
+        });
+      }).then(function(answer){
+        if (answer) { addMessage('assistant', answer); history.push({role:'assistant', content:answer}); }
+      }).catch(function(error){
+        if (error && error.rateLimited) {
+          finalState = 'rate-limited';
+          addFallback('Llegaron muchos mensajes seguidos. Espera un minuto o');
+        } else {
+          finalState = 'network-error';
+          addFallback('No pude conectarme ahora.');
+        }
+      }).finally(function(){
+        if (!widget.hidden) {
+          setBusy(false);
+          widget.dataset.state = finalState;
+        }
+      });
+    });
   })();
 </script>
 </body>
