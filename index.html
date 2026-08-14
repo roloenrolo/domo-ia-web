@@ -195,7 +195,7 @@
 
   /* ===== Packs ===== */
   .packs{display:grid;grid-template-columns:1fr;gap:16px;align-items:stretch}
-  @media(min-width:960px){.packs{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:960px){.packs{grid-template-columns:repeat(2,1fr)}}
   .pack{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:22px;box-shadow:var(--shadow)}
   .pack h3{margin:0 0 8px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px;line-height:1.2}
   .pack .promesa{margin:0 0 14px;font-size:15px;font-weight:600;color:var(--text)}
@@ -412,6 +412,24 @@
           <div class="cara dorso" id="det-laura"><span class="cargo">Laura · qué hace</span><ul><li>Junta los patrones de todas las reuniones evaluadas y saca lo que sí cierra en tu rubro.</li><li>Entrena a tus vendedores con ejemplos de tu propia operación, no con teoría.</li><li>Arma la guía de conversación que tu equipo puede usar mañana.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Laura</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
         </article>
       </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-diego.jpg" alt="Diego, ingeniero de automatizaciones" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Ingeniero de automatizaciones</span><h3>Diego</h3><p>Construye la automatización que conecta tus herramientas y hace el trabajo repetitivo que hoy alguien hace a mano.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-diego"><span class="flip-txt">Ver detalle<span class="vh"> de Diego</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-diego"><span class="cargo">Diego · qué hace</span><ul><li>Toma tu pedido en palabras simples y lo convierte en un flujo que funciona.</li><li>Conecta las herramientas que ya usas: WhatsApp, planillas, correo, tu CRM.</li><li>Cada pedido parte de un criterio claro: qué debe pasar y cómo se sabe que funcionó.</li><li>Entrega la automatización probada, nunca a medio terminar.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Diego</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="assets/web/retrato-sebastian.jpg" alt="Sebastián, control de calidad" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Control de calidad</span><h3>Sebastián</h3><p>Prueba cada automatización antes de que llegue a ti. Si no cumple lo que se pidió, la devuelve.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sebastian"><span class="flip-txt">Ver detalle<span class="vh"> de Sebastián</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-sebastian"><span class="cargo">Sebastián · qué hace</span><ul><li>Revisa cada entrega de Diego con criterio propio: no da nada por bueno.</li><li>Ejecuta pruebas reales con datos de ejemplo antes de aprobar.</li><li>Rechaza lo que no cumple lo acordado, aunque a primera vista parezca que funciona.</li><li>Nada se entrega sin su visto bueno.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Sebastián</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
     </ul>
     <div class="tira-progreso" aria-hidden="true"><span></span></div>
   </div>
@@ -422,8 +440,8 @@
   <span id="capas" aria-hidden="true"></span>
   <div class="wrap reveal">
     <div class="shead"><span class="num">02</span>
-      <h2 class="display">Contrata un equipo, o los dos juntos</h2></div>
-    <p class="sub">Cada equipo resuelve una parte distinta del negocio. Casi todos parten por el Equipo comercial —es donde hoy se va la plata— y suman coaching cuando ya tienen reuniones que evaluar.</p>
+      <h2 class="display">Contrata un equipo, o los tres juntos</h2></div>
+    <p class="sub">Cada equipo resuelve una parte distinta del negocio. Casi todos parten por el equipo comercial —es donde hoy se va la plata— y suman los otros a medida que crecen.</p>
     <div class="packs">
       <article class="pack">
         <p class="eyebrow">EQUIPO 01 · DEL AVISO A LA REUNIÓN</p>
@@ -446,7 +464,7 @@
         <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20cotizar%20el%20Equipo%20comercial." target="_blank" rel="noopener">Cotizar este equipo</a>
       </article>
       <article class="pack">
-        <p class="eyebrow">EQUIPO 02 · coaching</p>
+        <p class="eyebrow">EQUIPO 02 · COACHING</p>
         <h3>Equipo de coaching comercial</h3>
         <p class="promesa">Que cada reunión deje aprendizaje, no solo un correo.</p>
         <div class="avatars" aria-hidden="true">
@@ -465,9 +483,26 @@
         <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20cotizar%20el%20Equipo%20de%20coaching%20comercial." target="_blank" rel="noopener">Cotizar este equipo</a>
       </article>
       <article class="pack">
-        <p class="eyebrow">EQUIPO 03 · TODO EL PLANTEL</p>
+        <p class="eyebrow">EQUIPO 03 · AUTOMATIZACIONES</p>
+        <h3>Equipo de automatizaciones</h3>
+        <p class="promesa">El trabajo repetitivo que hoy hace una persona, hecho por un flujo.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="assets/web/retrato-diego.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-sebastian.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">Diego + Sebastián</p>
+        <ul>
+          <li>Automatizaciones a medida, pedidas en palabras simples.</li>
+          <li>Conectan las herramientas que ya usas, sin cambiar tu forma de trabajar.</li>
+          <li>Cada entrega se prueba de forma independiente antes de llegar a ti.</li>
+          <li>Si no cumple lo pedido, se devuelve y se rehace.</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20cotizar%20el%20Equipo%20de%20automatizaciones." target="_blank" rel="noopener">Cotizar este equipo</a>
+      </article>
+      <article class="pack">
+        <p class="eyebrow">EQUIPO 04 · TODO EL PLANTEL</p>
         <h3>Domo completo</h3>
-        <p class="promesa">Los dos equipos trabajando juntos: del aviso a la reunión, y de la reunión al vendedor que mejora.</p>
+        <p class="promesa">Los tres equipos trabajando juntos: del aviso a la reunión, de la reunión al vendedor que mejora, y lo repetitivo hecho por un flujo.</p>
         <div class="avatars" aria-hidden="true">
           <img src="assets/web/retrato-antonia.jpg" alt="" loading="lazy" width="640" height="857">
           <img src="assets/web/retrato-matias.jpg" alt="" loading="lazy" width="640" height="857">
@@ -476,13 +511,15 @@
           <img src="assets/web/retrato-amanda.jpg" alt="" loading="lazy" width="640" height="857">
           <img src="assets/web/retrato-lucas.jpg" alt="" loading="lazy" width="640" height="857">
           <img src="assets/web/retrato-laura.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-diego.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="assets/web/retrato-sebastian.jpg" alt="" loading="lazy" width="640" height="857">
         </div>
-        <p class="quien">Los 7 trabajadores</p>
+        <p class="quien">Los 9 trabajadores</p>
         <ul>
-          <li>Los 7 trabajadores instalados y configurados para tu negocio.</li>
+          <li>Los 9 trabajadores instalados y configurados para tu negocio.</li>
           <li>El circuito completo: desde el aviso que pagas hasta la reunión evaluada.</li>
           <li>Un solo informe semanal con las dos puntas: lo que costó traer el lead y qué pasó en la reunión.</li>
-          <li>Se instala por partes igual: parte por el Equipo comercial y suma coaching cuando tengas reuniones que evaluar.</li>
+          <li>Se instala por partes igual: parte por el equipo comercial y suma los otros cuando los necesites.</li>
         </ul>
         <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20cotizar%20el%20Domo%20completo." target="_blank" rel="noopener">Cotizar este equipo</a>
       </article>
