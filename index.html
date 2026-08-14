@@ -149,12 +149,14 @@
 
   /* — el botón, estirado sobre toda la cara — */
   .flip-btn{margin-top:auto;align-self:flex-start;
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
     background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-pill);
-    padding:9px 14px;font:inherit;
+    padding:9px 15px;font:inherit;
     font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
     text-transform:uppercase;color:var(--brand);text-align:left;cursor:pointer;
-    display:inline-flex;align-items:center;gap:7px;
     transition:background .18s ease,color .18s ease,border-color .18s ease}
+  .flip-txt{white-space:nowrap}
+  .flip-btn svg{width:14px;height:14px;flex:none}
   .flip-btn:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
   .flip-btn::after{content:"";position:absolute;inset:0}
   .frente .flip-btn{margin:auto 18px 18px}
@@ -344,13 +346,13 @@
               <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Recepcionista · SDR</span>
               <h3>Antonia</h3>
               <p>Contesta tu WhatsApp en segundos, califica al lead con criterio y agenda la reunión directo en tu calendario.</p>
-              <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-antonia">Ver qué hace <span class="vh">Antonia</span> en detalle <span aria-hidden="true">↻</span></button>
+              <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-antonia"><span class="flip-txt">Ver qué hace<span class="vh"> Antonia</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
             </div>
           </div>
           <div class="cara dorso" id="det-antonia">
             <span class="cargo">Antonia · qué hace</span>
             <ul><li>Contesta los WhatsApp nuevos en menos de un minuto, a cualquier hora y cualquier día.</li><li>Hace las preguntas de calificación que tú definas —presupuesto, renta, plazo, comuna— sin sonar a formulario.</li><li>Agenda la reunión directo en el calendario de quien corresponda, con el detalle del lead.</li><li>Retoma al lead que quedó tibio en vez de dejar la conversación morir.</li><li>Deriva a un humano los casos que tú marcaste como "estos no los toca sola".</li></ul>
-            <button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Antonia</span> <span aria-hidden="true">↺</span></button>
+            <button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Antonia</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button>
           </div>
         </article>
       </li>
@@ -358,54 +360,54 @@
         <article class="agente" data-flipped="false">
           <div class="cara frente"><img src="assets/web/retrato-matias.jpg" alt="Matías, media buyer digital" loading="lazy" width="640" height="857"><div class="info">
             <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Media buyer</span><h3>Matías</h3><p>Vigila tus campañas todos los días y mueve el presupuesto hacia los avisos que sí traen leads que contestan.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-matias">Ver qué hace <span class="vh">Matías</span> en detalle <span aria-hidden="true">↻</span></button>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-matias"><span class="flip-txt">Ver qué hace<span class="vh"> Matías</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
           </div></div>
-          <div class="cara dorso" id="det-matias"><span class="cargo">Matías · qué hace</span><ul><li>Revisa todas las mañanas cómo rindió cada anuncio: gasto, leads, conversaciones y reuniones.</li><li>Mueve el presupuesto hacia los avisos que traen leads que contestan, no los que traen clics baratos.</li><li>Te avisa qué está quemando plata, con el número a la vista, y lo pausa apenas lo apruebas.</li><li>Define qué probar la semana siguiente y le encarga las piezas a Sofía.</li><li>Trabaja con Clara: ella le avisa qué anuncio trae mensajes pero no reuniones, y él corrige la pauta con eso.</li><li>Te deja un informe semanal en lenguaje humano: qué entró, qué costó y qué sigue.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Matías</span> <span aria-hidden="true">↺</span></button></div>
+          <div class="cara dorso" id="det-matias"><span class="cargo">Matías · qué hace</span><ul><li>Revisa todas las mañanas cómo rindió cada anuncio: gasto, leads, conversaciones y reuniones.</li><li>Mueve el presupuesto hacia los avisos que traen leads que contestan, no los que traen clics baratos.</li><li>Te avisa qué está quemando plata, con el número a la vista, y lo pausa apenas lo apruebas.</li><li>Define qué probar la semana siguiente y le encarga las piezas a Sofía.</li><li>Trabaja con Clara: ella le avisa qué anuncio trae mensajes pero no reuniones, y él corrige la pauta con eso.</li><li>Te deja un informe semanal en lenguaje humano: qué entró, qué costó y qué sigue.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Matías</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
         </article>
       </li>
       <li class="agente-slot">
         <article class="agente" data-flipped="false">
           <div class="cara frente"><img src="assets/web/retrato-clara.jpg" alt="Clara, encargada de mejora continua" loading="lazy" width="640" height="857"><div class="info">
             <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Mejora continua</span><h3>Clara</h3><p>Cada semana revisa qué está cambiando en las conversaciones y te deja mejoras concretas para cerrar más.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-clara">Ver qué hace <span class="vh">Clara</span> en detalle <span aria-hidden="true">↻</span></button>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-clara"><span class="flip-txt">Ver qué hace<span class="vh"> Clara</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
           </div></div>
-          <div class="cara dorso" id="det-clara"><span class="cargo">Clara · qué hace</span><ul><li>Detecta las tendencias de la semana: qué preguntas nuevas están llegando y qué respuestas están funcionando.</li><li>Encuentra las conversaciones donde se estaba por agendar y no se agendó.</li><li>Las convierte en mejoras concretas: qué frase cambiar, qué pregunta agregar, qué caso derivar antes.</li><li>Trabaja con Matías: le avisa qué anuncio trae muchos mensajes pero casi ninguna reunión, para que deje de gastar ahí.</li><li>Te deja las mejoras listas para aprobar y a la semana siguiente mide si trajeron más reuniones.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Clara</span> <span aria-hidden="true">↺</span></button></div>
+          <div class="cara dorso" id="det-clara"><span class="cargo">Clara · qué hace</span><ul><li>Detecta las tendencias de la semana: qué preguntas nuevas están llegando y qué respuestas están funcionando.</li><li>Encuentra las conversaciones donde se estaba por agendar y no se agendó.</li><li>Las convierte en mejoras concretas: qué frase cambiar, qué pregunta agregar, qué caso derivar antes.</li><li>Trabaja con Matías: le avisa qué anuncio trae muchos mensajes pero casi ninguna reunión, para que deje de gastar ahí.</li><li>Te deja las mejoras listas para aprobar y a la semana siguiente mide si trajeron más reuniones.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Clara</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
         </article>
       </li>
       <li class="agente-slot">
         <article class="agente" data-flipped="false">
           <div class="cara frente"><img src="assets/web/retrato-sofia.jpg" alt="Sofía, diseñadora" loading="lazy" width="640" height="857"><div class="info">
             <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L15 12l-4 1 1-4Z"/><path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/></svg>Diseñadora</span><h3>Sofía</h3><p>Diseña las piezas y variantes de tus avisos, alineadas a tu marca, para que Matías siempre tenga algo nuevo que probar.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sofia">Ver qué hace <span class="vh">Sofía</span> en detalle <span aria-hidden="true">↻</span></button>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sofia"><span class="flip-txt">Ver qué hace<span class="vh"> Sofía</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
           </div></div>
-          <div class="cara dorso" id="det-sofia"><span class="cargo">Sofía · qué hace</span><ul><li>Produce las piezas de tus avisos —imagen, video corto y texto— con tu marca.</li><li>Arma variantes del mismo mensaje para poder probar ángulo, gancho y llamada a la acción.</li><li>Mantiene el banco de creatividades vivo para que Matías siempre tenga algo nuevo que probar.</li><li>Reutiliza lo que ya funcionó en vez de partir de cero todos los meses.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Sofía</span> <span aria-hidden="true">↺</span></button></div>
+          <div class="cara dorso" id="det-sofia"><span class="cargo">Sofía · qué hace</span><ul><li>Produce las piezas de tus avisos —imagen, video corto y texto— con tu marca.</li><li>Arma variantes del mismo mensaje para poder probar ángulo, gancho y llamada a la acción.</li><li>Mantiene el banco de creatividades vivo para que Matías siempre tenga algo nuevo que probar.</li><li>Reutiliza lo que ya funcionó en vez de partir de cero todos los meses.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Sofía</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
         </article>
       </li>
       <li class="agente-slot">
         <article class="agente" data-flipped="false">
           <div class="cara frente"><img src="assets/web/retrato-amanda.jpg" alt="Amanda, notas de reuniones" loading="lazy" width="640" height="857"><div class="info">
             <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Notas de reunión</span><h3>Amanda</h3><p>Toma nota de cada reunión comercial y deja el registro ordenado: nada de lo que se conversó se pierde.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-amanda">Ver qué hace <span class="vh">Amanda</span> en detalle <span aria-hidden="true">↻</span></button>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-amanda"><span class="flip-txt">Ver qué hace<span class="vh"> Amanda</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
           </div></div>
-          <div class="cara dorso" id="det-amanda"><span class="cargo">Amanda · qué hace</span><ul><li>Toma nota de cada reunión comercial y deja el resumen ordenado el mismo día.</li><li>Registra lo acordado, las objeciones que aparecieron y el próximo paso comprometido.</li><li>Deja el registro donde tu equipo lo encuentra, sin depender de la memoria del vendedor.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Amanda</span> <span aria-hidden="true">↺</span></button></div>
+          <div class="cara dorso" id="det-amanda"><span class="cargo">Amanda · qué hace</span><ul><li>Toma nota de cada reunión comercial y deja el resumen ordenado el mismo día.</li><li>Registra lo acordado, las objeciones que aparecieron y el próximo paso comprometido.</li><li>Deja el registro donde tu equipo lo encuentra, sin depender de la memoria del vendedor.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Amanda</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
         </article>
       </li>
       <li class="agente-slot">
         <article class="agente" data-flipped="false">
           <div class="cara frente"><img src="assets/web/retrato-lucas.jpg" alt="Lucas, evaluador de ventas" loading="lazy" width="640" height="857"><div class="info">
             <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Evaluador de ventas</span><h3>Lucas</h3><p>Evalúa cada reunión con una rúbrica de venta profesional y te dice, con nota, qué se hizo bien y qué faltó.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-lucas">Ver qué hace <span class="vh">Lucas</span> en detalle <span aria-hidden="true">↻</span></button>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-lucas"><span class="flip-txt">Ver qué hace<span class="vh"> Lucas</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
           </div></div>
-          <div class="cara dorso" id="det-lucas"><span class="cargo">Lucas · qué hace</span><ul><li>Evalúa cada reunión con una rúbrica de venta profesional y le pone nota.</li><li>Muestra qué se hizo bien y qué faltó: descubrimiento, manejo de objeciones, cierre.</li><li>Compara reuniones entre sí para que veas quién necesita apoyo y en qué.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Lucas</span> <span aria-hidden="true">↺</span></button></div>
+          <div class="cara dorso" id="det-lucas"><span class="cargo">Lucas · qué hace</span><ul><li>Evalúa cada reunión con una rúbrica de venta profesional y le pone nota.</li><li>Muestra qué se hizo bien y qué faltó: descubrimiento, manejo de objeciones, cierre.</li><li>Compara reuniones entre sí para que veas quién necesita apoyo y en qué.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Lucas</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
         </article>
       </li>
       <li class="agente-slot">
         <article class="agente" data-flipped="false">
           <div class="cara frente"><img src="assets/web/retrato-laura.jpg" alt="Laura, coach de vendedores" loading="lazy" width="640" height="857"><div class="info">
             <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Coach comercial</span><h3>Laura</h3><p>Junta los patrones de todas tus reuniones y entrena a tu equipo humano con lo que funciona en tu rubro.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-laura">Ver qué hace <span class="vh">Laura</span> en detalle <span aria-hidden="true">↻</span></button>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-laura"><span class="flip-txt">Ver qué hace<span class="vh"> Laura</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg></button>
           </div></div>
-          <div class="cara dorso" id="det-laura"><span class="cargo">Laura · qué hace</span><ul><li>Junta los patrones de todas las reuniones evaluadas y saca lo que sí cierra en tu rubro.</li><li>Entrena a tus vendedores con ejemplos de tu propia operación, no con teoría.</li><li>Arma la guía de conversación que tu equipo puede usar mañana.</li></ul><button type="button" class="flip-btn">Volver <span class="vh">a la ficha de Laura</span> <span aria-hidden="true">↺</span></button></div>
+          <div class="cara dorso" id="det-laura"><span class="cargo">Laura · qué hace</span><ul><li>Junta los patrones de todas las reuniones evaluadas y saca lo que sí cierra en tu rubro.</li><li>Entrena a tus vendedores con ejemplos de tu propia operación, no con teoría.</li><li>Arma la guía de conversación que tu equipo puede usar mañana.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Laura</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
         </article>
       </li>
     </ul>
