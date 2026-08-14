@@ -121,9 +121,9 @@
   /* — la tira — */
   .equipo-tira{list-style:none;margin:0;padding:6px 0 12px;display:grid;grid-auto-flow:column;
     grid-auto-columns:78vw;gap:16px;overflow-x:auto;
-    scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
-  .equipo-tira::-webkit-scrollbar{height:6px}
-  .equipo-tira::-webkit-scrollbar-thumb{background:var(--border);border-radius:99px}
+    scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none}
+  .equipo-tira::-webkit-scrollbar{display:none}
   .agente-slot{display:grid;scroll-snap-align:start}
   @media(min-width:821px){.equipo-tira{grid-auto-columns:calc((100% - 48px)/4)}}
 
@@ -148,19 +148,29 @@
   .dorso li::before{content:"·";position:absolute;left:2px;color:var(--brand2);font-weight:700}
 
   /* — el botón, estirado sobre toda la cara — */
-  .flip-btn{background:none;border:0;margin-top:auto;padding:12px 0 0;font:inherit;
+  .flip-btn{margin-top:auto;align-self:flex-start;
+    background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-pill);
+    padding:9px 14px;font:inherit;
     font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
-    text-transform:uppercase;color:var(--brand);text-align:left;cursor:pointer}
+    text-transform:uppercase;color:var(--brand);text-align:left;cursor:pointer;
+    display:inline-flex;align-items:center;gap:7px;
+    transition:background .18s ease,color .18s ease,border-color .18s ease}
+  .flip-btn:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
   .flip-btn::after{content:"";position:absolute;inset:0}
-  .frente .flip-btn{padding-left:18px;padding-right:18px;padding-bottom:18px}
+  .frente .flip-btn{margin:auto 18px 18px}
+  .dorso .flip-btn{margin-top:auto}
 
   /* — sin JS: caras apiladas y legibles, nada se pierde — */
   .equipo-tira:not(.js) .cara{grid-area:auto;visibility:visible;transform:none}
   .equipo-tira:not(.js) .flip-btn{display:none}
   .equipo-tira:not(.js) .agente{transform:none}
 
-  .tira-nav{display:none}
-  @media(min-width:821px){.tira-nav{display:flex;gap:10px;justify-content:flex-end;margin:0 0 16px}}
+  .tira-pista{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;
+    color:var(--muted);margin:-24px 0 20px}
+  .tira-progreso{height:4px;background:var(--surface2);border-radius:99px;margin-top:16px;overflow:hidden}
+  .tira-progreso span{display:block;height:100%;width:30%;background:var(--brand);border-radius:99px;
+    transform:translateX(0);will-change:transform}
+  .tira-nav{display:flex;gap:10px;justify-content:flex-end;margin:0 0 16px}
   .tira-btn{width:56px;height:56px;border-radius:99px;border:1.5px solid var(--brand);
     background:var(--surface);color:var(--brand);cursor:pointer;padding:0;
     display:inline-flex;align-items:center;justify-content:center;
@@ -169,6 +179,7 @@
   .tira-btn svg{width:24px;height:24px;display:block}
   .tira-btn:hover:not(:disabled){background:var(--brand);color:#fff;transform:translateY(-2px)}
   .tira-btn:disabled{opacity:.35;cursor:default;border-color:var(--border);color:var(--muted);box-shadow:none}
+  @media(max-width:820px){.tira-btn{width:48px;height:48px}}
 
   .agente img{aspect-ratio:3/4;object-fit:cover;background:#F1EDE3}
   .agente .info{padding:16px 18px 18px}
@@ -248,7 +259,7 @@
 </head>
 <body>
 
-<!-- CTA de calendario + 4 botones de cotización por WhatsApp -->
+<!-- CTA de contacto y cotización por WhatsApp -->
 
 <header>
   <div class="wrap bar">
@@ -268,7 +279,7 @@
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
       <span class="ley-larga">Trabajando en la </span>Ley 21.719
     </a>
-    <a id="headerCta" class="btn ghost" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar diagnóstico</a>
+    <a id="headerCta" class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
 </header>
 
@@ -295,6 +306,7 @@
   <div class="wrap reveal">
     <div class="shead"><span class="num">01</span><h1 class="display">No vendemos un software. Instalamos un equipo.</h1></div>
     <p class="sub">Cada trabajador digital tiene nombre, cargo y una sola pega que hace bien. Más abajo los ves agrupados en los equipos que puedes contratar.</p>
+    <p class="tira-pista">Desliza para ver a los siete · toca una ficha para saber qué hace</p>
     <div class="tira-nav" aria-hidden="true">
       <button type="button" class="tira-btn" data-dir="-1" tabindex="-1" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
       <button type="button" class="tira-btn" data-dir="1" tabindex="-1" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
@@ -373,6 +385,7 @@
         </article>
       </li>
     </ul>
+    <div class="tira-progreso" aria-hidden="true"><span></span></div>
   </div>
 </section>
 
@@ -447,7 +460,7 @@
       </article>
     </div>
     <p class="sub" style="margin:32px 0 16px">¿No sabes por cuál partir? El diagnóstico te lo dice con tus números.</p>
-    <a class="btn ghost" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar diagnóstico</a>
+    <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20no%20s%C3%A9%20por%20cu%C3%A1l%20equipo%20partir." target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
 </section>
 
@@ -505,7 +518,7 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
     <p class="eyebrow">Diagnóstico inicial · una reunión · con tus números</p>
     <h2 class="display">Parte por saber cuántos leads estás perdiendo hoy</h2>
     <p class="sub">Agenda el diagnóstico: medimos tu embudo y te mostramos, con cifras tuyas, qué haría un equipo digital en tu corredora. Si los números no dan, también te lo decimos.</p>
-    <a class="btn" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar diagnóstico</a>
+    <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20cu%C3%A1ntos%20leads%20estoy%20perdiendo." target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
 </section>
 
@@ -531,7 +544,7 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
 </footer>
 
 <div class="sticky-cta" id="stickyCta">
-  <a class="btn" href="https://calendar.app.google/ZrWkQ3EYryRowUub6" target="_blank" rel="noopener">Agendar diagnóstico</a>
+  <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
   <a class="whatsapp-float" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20m%C3%A1s%20sobre%20los%20trabajadores%20digitales." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
   </a>
@@ -624,6 +637,14 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
         var dir = Number(b.getAttribute('data-dir'));
         b.disabled = dir < 0 ? tira.scrollLeft <= 0 : tira.scrollLeft >= max;
       });
+      var barra = document.querySelector('.tira-progreso span');
+      if (barra) {
+        var visible = tira.clientWidth / tira.scrollWidth;
+        var maxScroll = tira.scrollWidth - tira.clientWidth;
+        var avance = maxScroll > 0 ? tira.scrollLeft / maxScroll : 0;
+        barra.style.width = (visible * 100) + '%';
+        barra.style.transform = 'translateX(' + (avance * (1 - visible) / visible * 100) + '%)';
+      }
     }
     btns.forEach(function(b){
       b.addEventListener('click', function(){
