@@ -12,11 +12,21 @@
   "rodolfo": {
     "nombre": "Rodolfo Alfaro",
     "cargo": "Gerente Comercial",
-    "linea": "Acompaño a las corredoras que trabajan con la flota.",
+    "linea": "Acompaño a las empresas que trabajan con la flota.",
     "email": "rodolfo@domo-ia.com",
     "tel": "+56995475269",
     "agenda": "https://calendar.app.google/ZrWkQ3EYryRowUub6",
     "foto": "retrato-rodolfo.jpg",
     "en_hoja": true
+  },
+  "damian": {
+    "nombre": "Damián Roba",
+    "cargo": "Director de cuentas clave",
+    "linea": "Acompaño a cada empresa desde la instalación hasta los resultados.",
+    "email": "damian@domo-ia.com",
+    "tel": "+56984408523",
+    "agenda": "",
+    "foto": "retrato-damian.jpg",
+    "en_hoja": false
   }
 }
