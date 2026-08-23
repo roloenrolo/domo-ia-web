@@ -1,0 +1,68 @@
+# Domo IA
+
+> Empresa chilena que instala equipos de agentes de IA —trabajadores digitales
+> con nombre y cargo— en el área comercial de otras empresas: traen los leads
+> desde los anuncios, los atienden por WhatsApp en menos de un minuto, agendan
+> la reunión y entrenan a los vendedores con esas mismas reuniones.
+
+Sitio oficial: https://domo-ia.com/
+Contacto: contacto@domo-ia.com · +56 9 3695 6065
+País: Chile. Idioma: español (es-CL).
+
+Domo IA no vende un software ni una licencia: instala trabajadores digitales.
+Cada uno es un agente de inteligencia artificial con un nombre, un cargo y una
+sola tarea que hace bien, y se contrata como se contrata a una persona. La
+propuesta está pensada para pymes y empresas en Chile que invierten en
+publicidad y reciben leads por WhatsApp — con experiencia en el rubro
+inmobiliario y en equipos comerciales con vendedores humanos.
+
+## Los equipos
+
+- **Equipo comercial** — del aviso a la reunión. Trae los leads desde los
+  anuncios, los atiende en menos de un minuto, los califica y agenda la reunión.
+  Lo forman Matías (media buyer), Sofía (diseñadora de piezas publicitarias),
+  Antonia (recepcionista y SDR de WhatsApp) y Clara (mejora continua).
+- **Equipo de coaching comercial** — que cada reunión deje aprendizaje. Registra
+  cada reunión comercial, la evalúa con una rúbrica de venta profesional y
+  devuelve qué se hizo bien y qué faltó. Lo forman Amanda (notas de reunión) y
+  Lucas (evaluador de ventas).
+- **Equipo de automatizaciones** — el trabajo repetitivo hecho por un flujo,
+  pedido en palabras simples y conectado a las herramientas que la empresa ya
+  usa. Lo forman Diego y Sebastián.
+- **Domo completo** — los tres equipos trabajando juntos, del aviso que se paga
+  hasta la reunión evaluada. Se instala por partes.
+
+## Los trabajadores digitales
+
+- **Antonia** — recepcionista y SDR. Contesta el WhatsApp en segundos a
+  cualquier hora, califica al lead con los criterios del cliente y agenda la
+  reunión directo en el calendario.
+- **Matías** — media buyer. Revisa cada mañana cómo rindió cada anuncio y mueve
+  el presupuesto hacia los avisos que traen leads que contestan.
+- **Sofía** — diseñadora. Produce las piezas y variantes de los anuncios con la
+  marca del cliente, para que siempre haya algo nuevo que probar.
+- **Clara** — mejora continua. Detecta qué está cambiando en las conversaciones
+  y deja mejoras concretas listas para aprobar.
+- **Amanda** — notas de reunión. Deja el registro ordenado de cada reunión
+  comercial el mismo día.
+- **Lucas** — evaluador de ventas. Evalúa cada reunión con rúbrica y le pone
+  nota.
+- **Diego y Sebastián** — automatizaciones a medida, probadas antes de entregar.
+
+## Cómo se empieza
+
+Con un diagnóstico: se revisan los números reales del negocio y se define por
+cuál equipo conviene partir. Casi todos parten por el equipo comercial. El
+agendamiento del diagnóstico se hace desde https://domo-ia.com/
+
+## Desambiguación
+
+Domo IA (domo-ia.com) es una empresa chilena de agentes de IA para equipos
+comerciales. **No** tiene relación con Domo, Inc. (domo.com, plataforma
+estadounidense de business intelligence) ni con DomoAI (domoai.app, herramienta
+de generación de video y animación).
+
+## Páginas
+
+- Home: https://domo-ia.com/
+- Política de privacidad: https://domo-ia.com/privacidad/
