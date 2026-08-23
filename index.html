@@ -245,6 +245,17 @@
   .persona-link:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
   @media(max-width:820px){.personas{grid-template-columns:1fr;gap:24px;padding:4px 18px 20px}.nosotros summary{padding:16px 18px}}
 
+  /* ===== Preguntas frecuentes ===== */
+  .faqs{display:grid;gap:10px;margin-top:8px}
+  .faq{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow)}
+  .faq summary{cursor:pointer;list-style:none;padding:18px 22px;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:18px;flex:none}
+  .faq[open] summary::after{content:"\2212"}
+  .faq p{margin:0;padding:0 22px 20px;font-size:15px;color:var(--muted);line-height:1.65;max-width:72ch}
+  .faq p a{color:var(--brand2)}
+  @media(max-width:820px){.faq summary{padding:16px 18px}.faq p{padding:0 18px 18px;font-size:14px}}
+
   /* ===== CTA final ===== */
   .final{background:var(--deep);color:var(--deepText);border-bottom:none}
   .final h2{color:var(--deepText);max-width:20ch}
@@ -297,7 +308,10 @@
       "@type": "Organization",
       "@id": "https://domo-ia.com/#organization",
       "name": "Domo IA",
-      "alternateName": ["domo IA", "domo-ia"],
+      "alternateName": [
+        "domo IA",
+        "domo-ia"
+      ],
       "url": "https://domo-ia.com/",
       "logo": {
         "@type": "ImageObject",
@@ -309,8 +323,13 @@
       "description": "Equipos de trabajadores digitales con nombre y cargo: traen los leads desde los anuncios, los atienden en menos de 1 minuto, agendan la reunión y entrenan a los vendedores.",
       "email": "contacto@domo-ia.com",
       "telephone": "+56936956065",
-      "areaServed": { "@type": "Country", "name": "Chile" },
-      "knowsLanguage": ["es-CL"],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "knowsLanguage": [
+        "es-CL"
+      ],
       "sameAs": [
         "https://www.linkedin.com/company/domoia/",
         "https://www.instagram.com/domoia.cl/"
@@ -322,7 +341,9 @@
       "url": "https://domo-ia.com/",
       "name": "Domo IA",
       "inLanguage": "es-CL",
-      "publisher": { "@id": "https://domo-ia.com/#organization" }
+      "publisher": {
+        "@id": "https://domo-ia.com/#organization"
+      }
     },
     {
       "@type": "Service",
@@ -330,8 +351,13 @@
       "name": "Equipo comercial",
       "serviceType": "Captación, atención y agendamiento de leads",
       "description": "Equipo digital para traer leads desde anuncios, atenderlos en menos de 1 minuto, calificarlos y agendar reuniones comerciales.",
-      "provider": { "@id": "https://domo-ia.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "Chile" },
+      "provider": {
+        "@id": "https://domo-ia.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
       "url": "https://domo-ia.com/#packs"
     },
     {
@@ -340,8 +366,13 @@
       "name": "Equipo de coaching comercial",
       "serviceType": "Registro, evaluación y entrenamiento comercial",
       "description": "Equipo digital para registrar reuniones comerciales, evaluarlas con rúbrica y convertir patrones reales en entrenamiento para vendedores.",
-      "provider": { "@id": "https://domo-ia.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "Chile" },
+      "provider": {
+        "@id": "https://domo-ia.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
       "url": "https://domo-ia.com/#packs"
     },
     {
@@ -350,9 +381,85 @@
       "name": "Equipo de automatizaciones",
       "serviceType": "Automatización de procesos operativos",
       "description": "Equipo digital para construir y probar flujos que conectan herramientas existentes y ejecutan trabajo repetitivo.",
-      "provider": { "@id": "https://domo-ia.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "Chile" },
+      "provider": {
+        "@id": "https://domo-ia.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
       "url": "https://domo-ia.com/#packs"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://domo-ia.com/#faq",
+      "inLanguage": "es-CL",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es exactamente un trabajador digital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un agente de inteligencia artificial con un nombre, un cargo y una sola tarea que hace bien. No es un software que tengas que aprender a usar: se contrata como se contrata a una persona, entra a trabajar a tu operación y rinde cuentas de lo que hizo. Antonia contesta el WhatsApp, Matías mueve el presupuesto de los anuncios, Lucas evalúa las reuniones de venta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia de un chatbot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un chatbot sigue un árbol de respuestas: si el cliente se sale del guion, se cae. Un agente de IA entiende lo que le escriben, califica al lead con tus criterios, consulta tu calendario y agenda. La diferencia práctica es simple: el chatbot deriva a un humano, el agente cierra la reunión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve para una pyme o solo para empresas grandes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Está pensado justamente para pymes chilenas que invierten en publicidad y reciben leads por WhatsApp. La regla no es el tamaño: es si estás pagando por leads que después nadie contesta a tiempo. Si ese número resulta ser cero, te lo decimos en el diagnóstico y no te vendemos nada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Para qué industrias funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para cualquier negocio que pague por leads y los atienda por WhatsApp. El patrón se repite igual en inmobiliarias y corredoras de propiedades, seguros, clínicas y centros dentales, educación y capacitación, automotriz, construcción y servicios profesionales: mucho lead que llega por anuncio o portal, todos preguntando lo mismo, y una demora de respuesta que decide si el interesado sigue contigo o se va al de al lado. Partimos en inmobiliario porque ahí el problema se ve más nítido, pero el equipo no es de un rubro: lo que cambia entre una industria y otra no son los trabajadores digitales, sino las reglas de calificación y la forma de hablar, y eso se configura en el diagnóstico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto se demora en contestar un lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Menos de un minuto, de día, de noche, fin de semana y feriado. No es una promesa de marketing: es lo que se mide cada semana en el reporte de embudo que recibes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con los datos de mis clientes y la Ley 21.719?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los datos de quienes le escriben a tu agente son tuyos, no nuestros: los tratamos por encargo, bajo contrato y solo con tus instrucciones. La Ley 21.719 entra en vigencia el 1 de diciembre de 2026 y estamos adecuando a ella nuestros registros de tratamiento, contratos y plazos de conservación antes de esa fecha. Está todo escrito en la política de privacidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito tener para partir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un WhatsApp donde lleguen los leads y disposición a mostrar tus números reales. El diagnóstico mide cuántos leads entran, cuántos contestas y cuántos terminan en reunión. Sin ese número no hay promesa que valga."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Domo IA tiene relación con Domo, Inc. o con DomoAI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Domo IA es una empresa chilena —DOMO IA SpA, Santiago— que instala agentes de IA en equipos comerciales. Domo, Inc. (domo.com) es una plataforma estadounidense de business intelligence, y DomoAI (domoai.app) es una herramienta de generación de video. Nombres parecidos, negocios distintos."
+          }
+        }
+      ]
     }
   ]
 }
@@ -703,6 +810,48 @@
 precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
 <section id="planes"> ... </section>
 ===== -->
+
+<!-- ===== PREGUNTAS FRECUENTES ===== -->
+<section id="preguntas">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">06</span><h2 class="display">Preguntas frecuentes</h2></div>
+    <p class="sub">Lo que nos preguntan antes de agendar el diagnóstico.</p>
+    <div class="faqs">
+      <details class="faq">
+        <summary>¿Qué es exactamente un trabajador digital?</summary>
+        <p>Es un agente de inteligencia artificial con un nombre, un cargo y una sola tarea que hace bien. No es un software que tengas que aprender a usar: se contrata como se contrata a una persona, entra a trabajar a tu operación y rinde cuentas de lo que hizo. Antonia contesta el WhatsApp, Matías mueve el presupuesto de los anuncios, Lucas evalúa las reuniones de venta.</p>
+      </details>
+      <details class="faq">
+        <summary>¿En qué se diferencia de un chatbot?</summary>
+        <p>Un chatbot sigue un árbol de respuestas: si el cliente se sale del guion, se cae. Un agente de IA entiende lo que le escriben, califica al lead con tus criterios, consulta tu calendario y agenda. La diferencia práctica es simple: el chatbot deriva a un humano, el agente cierra la reunión.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Sirve para una pyme o solo para empresas grandes?</summary>
+        <p>Está pensado justamente para pymes chilenas que invierten en publicidad y reciben leads por WhatsApp. La regla no es el tamaño: es si estás pagando por leads que después nadie contesta a tiempo. Si ese número resulta ser cero, te lo decimos en el diagnóstico y no te vendemos nada.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Para qué industrias funciona?</summary>
+        <p>Para cualquier negocio que pague por leads y los atienda por WhatsApp. El patrón se repite igual en inmobiliarias y corredoras de propiedades, seguros, clínicas y centros dentales, educación y capacitación, automotriz, construcción y servicios profesionales: mucho lead que llega por anuncio o portal, todos preguntando lo mismo, y una demora de respuesta que decide si el interesado sigue contigo o se va al de al lado. Partimos en inmobiliario porque ahí el problema se ve más nítido, pero el equipo no es de un rubro: lo que cambia entre una industria y otra no son los trabajadores digitales, sino las reglas de calificación y la forma de hablar, y eso se configura en el diagnóstico.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Cuánto se demora en contestar un lead?</summary>
+        <p>Menos de un minuto, de día, de noche, fin de semana y feriado. No es una promesa de marketing: es lo que se mide cada semana en el reporte de embudo que recibes.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Qué pasa con los datos de mis clientes y la Ley 21.719?</summary>
+        <p>Los datos de quienes le escriben a tu agente son tuyos, no nuestros: los tratamos por encargo, bajo contrato y solo con tus instrucciones. La Ley 21.719 entra en vigencia el 1 de diciembre de 2026 y estamos adecuando a ella nuestros registros de tratamiento, contratos y plazos de conservación antes de esa fecha. Está todo escrito en la <a href="/privacidad/">política de privacidad</a>.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Qué necesito tener para partir?</summary>
+        <p>Un WhatsApp donde lleguen los leads y disposición a mostrar tus números reales. El diagnóstico mide cuántos leads entran, cuántos contestas y cuántos terminan en reunión. Sin ese número no hay promesa que valga.</p>
+      </details>
+      <details class="faq">
+        <summary>¿Domo IA tiene relación con Domo, Inc. o con DomoAI?</summary>
+        <p>No. Domo IA es una empresa chilena —DOMO IA SpA, Santiago— que instala agentes de IA en equipos comerciales. Domo, Inc. (domo.com) es una plataforma estadounidense de business intelligence, y DomoAI (domoai.app) es una herramienta de generación de video. Nombres parecidos, negocios distintos.</p>
+      </details>
+    </div>
+  </div>
+</section>
 
 <!-- ===== CTA FINAL ===== -->
 <section class="final">
