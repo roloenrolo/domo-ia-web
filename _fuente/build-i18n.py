@@ -545,9 +545,7 @@ def annotate_locale_alternates(tokens: list[dict]) -> None:
 
 def lang_switch_html(active: str) -> str:
     parts = []
-    for idx, code in enumerate(("ES", "EN", "IT")):
-        if idx:
-            parts.append('<span aria-hidden="true">·</span>')
+    for code in ("ES", "EN", "IT"):
         lang = code.lower()
         if lang == active:
             parts.append(f'<span aria-current="true">{code}</span>')

@@ -64,14 +64,20 @@
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--border);
   }
-  .bar{display:flex;align-items:center;gap:16px;padding:14px 24px}
+  .bar{display:flex;align-items:center;gap:10px;padding:14px 24px}
   .mark{display:flex;align-items:center;gap:9px;font-family:"Archivo";font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--text);text-decoration:none}
   .mark .ia{color:var(--brand2)}
   .mark svg{flex:none}
   .bar nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
   .bar nav a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:var(--radius-pill)}
   .bar nav a:hover{color:var(--text);background:var(--surface2)}
-  @media(max-width:820px){.bar{flex-wrap:wrap;row-gap:8px}.bar nav{display:none}.bar #headerCta{margin-left:auto}.aviso-ley{order:3;flex-basis:100%;justify-content:center}}
+  @media(max-width:820px){.bar{flex-wrap:wrap;row-gap:8px}.bar nav{display:none}.bar .mark{order:0}#headerCta{order:1;margin-left:auto}.bar .aviso-ley{order:2;flex-basis:auto;font-size:10px;padding-left:9px;padding-right:9px}.bar .lang-switch{order:3;margin-left:auto}}
+  .lang-switch{display:inline-flex;align-items:center;gap:4px;flex:none;font-family:"IBM Plex Mono",monospace;font-size:10px;line-height:1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .lang-switch a,.lang-switch span{display:inline-flex;align-items:center;color:var(--muted);text-decoration:none;padding:17px 0;margin:-17px 0}
+  .lang-switch a:hover{color:var(--brand2)}
+  .lang-switch [aria-current="true"]{color:var(--text);font-weight:600}
+  footer .lang-switch a,footer .lang-switch span{color:var(--deepMuted)}
+  footer .lang-switch a:hover,footer .lang-switch [aria-current="true"]{color:var(--deepText)}
   .aviso-ley{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;
     font-size:11.5px;letter-spacing:.04em;text-decoration:none;color:var(--chipText);
     background:var(--chip);border-radius:var(--radius-pill);padding:7px 12px;white-space:nowrap;
@@ -280,10 +286,6 @@
   footer .f-social a{text-decoration:none;color:var(--deepMuted)}
   footer .f-social a:hover{color:var(--deepText)}
   footer .f-social svg{width:20px;height:20px;fill:currentColor;display:block}
-  footer .lang-switch{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;color:var(--deepMuted);white-space:nowrap}
-  footer .lang-switch a,footer .lang-switch span{color:var(--deepMuted);text-decoration:none}
-  footer .lang-switch a:hover,footer .lang-switch [aria-current="true"]{color:var(--deepText)}
-  footer .lang-switch [aria-current="true"]{font-weight:600}
 
   /* ===== CTA sticky mobile ===== */
   .sticky-cta{display:none}
@@ -495,8 +497,9 @@
     </nav>
     <a class="aviso-ley" href="/privacidad/">
       <svg width="13" height="13" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-      Ci prepariamo alla legge cilena 21.719
+      Ci prepariamo alla legge 21.719
     </a>
+    <div class="lang-switch" aria-label="Selettore della lingua"><a href="/" lang="es" hreflang="es">ES</a><a href="/en/" lang="en" hreflang="en">EN</a><span aria-current="true">IT</span></div>
     <a id="headerCta" class="btn ghost" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+fissare+una+diagnosi." target="_blank" rel="noopener">Fissa una diagnosi</a>
   </div>
 </header>
@@ -875,7 +878,7 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
 <footer>
   <div class="wrap">
     <span class="mono">DOMO IA · Chile</span>
-    <div class="lang-switch" aria-label="Selettore della lingua"><a href="/" lang="es" hreflang="es">ES</a><span aria-hidden="true">·</span><a href="/en/" lang="en" hreflang="en">EN</a><span aria-hidden="true">·</span><span aria-current="true">IT</span></div>
+    <div class="lang-switch" aria-label="Selettore della lingua"><a href="/" lang="es" hreflang="es">ES</a><a href="/en/" lang="en" hreflang="en">EN</a><span aria-current="true">IT</span></div>
     <span>Lavoratori digitali che si misurano da soli.</span>
   </div>
   <div class="wrap">
