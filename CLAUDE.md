@@ -25,13 +25,34 @@ el privado en esta dirección o se retira de circulación.
 El sistema de marca vive en el repo privado (`marca/DESIGN.md`): paleta, tipografía y tokens.
 No improvisar colores. La paleta oficial es la editorial cálida; el morado está prohibido.
 
+## El sitio está en tres idiomas: si tocas el copy, regenera
+`index.html` (español) es el ÚNICO archivo de copy editable. `en/index.html` e
+`it/index.html` se GENERAN — editarlos a mano se pierde en la próxima corrida.
+
+Después de cambiar cualquier texto visible del home:
+
+    python3 _fuente/build-i18n.py
+
+El build **aborta** si una cadena no está en `_fuente/i18n/traducciones.json`, y
+también si aparece texto nuevo que el censo no conoce. Eso es a propósito: es lo
+único que impide que el inglés y el italiano queden diciendo cosas que el español
+ya no dice. Si aborta, agrega la traducción al censo y vuelve a correrlo — nunca
+lo saltes ni pushees sin haberlo corrido.
+
+En el censo: `null` = pendiente (aborta), `"="` = se deja igual a propósito.
+
+`_fuente/` se sirve públicamente (son los textos del propio sitio, no hay nada
+sensible) y está en `Disallow` del robots.txt.
+
 ## Verificación antes de pushear
-    python3 -m http.server     # abrir index.html y revisar en el navegador
+    python3 _fuente/build-i18n.py   # regenera /en/ y /it/; aborta si falta traducción
+    python3 -m http.server     # abrir index.html, /en/ y /it/ y revisar en el navegador
     grep -rn "XXXXXXX\|TODO\|placeholder" .   # cero placeholders sin resolver
 Revisar a mano: que los CTA apunten al calendario correcto y que no queden
 referencias a dominios viejos.
 
 ## Qué NO hacer
 - No copiar archivos desde el repo privado como si fueran la fuente.
+- No editar `en/index.html` ni `it/index.html` a mano: son salida del generador.
 - No pushear sin haber abierto la página localmente.
 - No commitear media pesada sin confirmar (el repo sirve el sitio en vivo).
