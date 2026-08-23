@@ -14,5 +14,6 @@
 
 User-agent: *
 Allow: /
+Disallow: /_fuente/
 
 Sitemap: https://domo-ia.com/sitemap.xml

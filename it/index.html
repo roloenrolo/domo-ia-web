@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domo IA — Dall'annuncio sui social all'incontro</title>
+<meta name="description" content="Un team di lavoratori digitali con nome e ruolo: portano i lead dai tuoi annunci, rispondono in meno di un minuto, ti fissano l&#x27;incontro e formano i tuoi venditori.">
+<link rel="canonical" href="https://domo-ia.com/it/">
+<link rel="alternate" hreflang="es" href="https://domo-ia.com/">
+<link rel="alternate" hreflang="en" href="https://domo-ia.com/en/">
+<link rel="alternate" hreflang="it" href="https://domo-ia.com/it/">
+<link rel="alternate" hreflang="x-default" href="https://domo-ia.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Domo IA">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="es_CL">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://domo-ia.com/it/">
+<meta property="og:title" content="Domo IA — Dall&#x27;annuncio sui social all&#x27;incontro">
+<meta property="og:description" content="Un team di lavoratori digitali con nome e ruolo: portano i lead dai tuoi annunci, rispondono in meno di un minuto, ti fissano l&#x27;incontro e formano i tuoi venditori.">
+<meta property="og:image" content="https://domo-ia.com/assets/web/og-domo-ia-v2.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Domo IA — Del anuncio en redes sociales a la reunión">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Domo IA — Dall&#x27;annuncio sui social all&#x27;incontro">
+<meta name="twitter:description" content="Un team di lavoratori digitali con nome e ruolo: portano i lead dai tuoi annunci, rispondono in meno di un minuto, ti fissano l&#x27;incontro e formano i tuoi venditori.">
+<meta name="twitter:image" content="https://domo-ia.com/assets/web/og-domo-ia-v2.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  /* ===== Tokens — manual de marca Domo IA v1 ===== */
+  :root{
+    --bg:#F6F3EC; --surface:#FFFFFF; --surface2:#F0EBE0;
+    --text:#1C2340; --muted:#5D6478; --border:#E2DCCC;
+    --brand:#33508F; --brand2:#D98E3A; --accent:#0E9F6E; --warn:#D97706;
+    --chip:#F3E8D2; --chipText:#A06A1F;
+    --deep:#1B2340; --deepSurface:#252F55; --deepText:#F2EDE4; --deepMuted:#A7B0CC; --deepBorder:#3D4A7A; --deepBrand:#7E9BDE; --deepAmber:#E8A951;
+    --shadow:0 2px 10px rgba(40,40,80,.08);
+    --radius-pill:99px; --radius-card:14px; --radius-md:12px; --radius-sm:10px; --radius-xs:8px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.6;
+  }
+  .display{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 118;letter-spacing:-.02em;line-height:1.08;margin:0}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  img{max-width:100%;height:auto;display:block}
+  :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand2);margin:0 0 16px}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .bar{display:flex;align-items:center;gap:16px;padding:14px 24px}
+  .mark{display:flex;align-items:center;gap:9px;font-family:"Archivo";font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--text);text-decoration:none}
+  .mark .ia{color:var(--brand2)}
+  .mark svg{flex:none}
+  .bar nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+  .bar nav a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:var(--radius-pill)}
+  .bar nav a:hover{color:var(--text);background:var(--surface2)}
+  @media(max-width:820px){.bar{flex-wrap:wrap;row-gap:8px}.bar nav{display:none}.bar #headerCta{margin-left:auto}.aviso-ley{order:3;flex-basis:100%;justify-content:center}}
+  .aviso-ley{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;letter-spacing:.04em;text-decoration:none;color:var(--chipText);
+    background:var(--chip);border-radius:var(--radius-pill);padding:7px 12px;white-space:nowrap;
+    transition:filter .18s ease}
+  .aviso-ley:hover{filter:brightness(.95)}
+
+  /* ===== Botones (manual: azul=avanzar, un primario por pantalla) ===== */
+  .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:var(--radius-sm);padding:13px 22px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;text-align:center;min-height:48px;transition:transform .18s ease}
+  .btn:hover{transform:translateY(-3px)}
+  .btn.ghost{background:transparent;color:var(--brand)}
+  .btn.ghost.on-dark{color:var(--deepText);border-color:var(--deepBorder)}
+  /* CTA del header: fantasma mientras el hero está en pantalla; primario después (JS) */
+  #headerCta{padding:9px 16px;min-height:auto;font-size:13px}
+  #headerCta.ghost{background:transparent;color:var(--brand)}
+
+  /* ===== Hero (azul noche, manual §08) ===== */
+  .hero{position:relative;background:var(--deep);color:var(--deepText);overflow:hidden;border-bottom:1px solid var(--border);min-height:100vh;min-height:100svh;display:flex;align-items:center}
+  .hero-media{position:absolute;inset:0;z-index:0;transform-origin:62% 42%;animation:heroDrift 22s ease-in-out infinite alternate}
+  .hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
+  .hero-media video{display:none}
+  /* Deriva lenta tipo Ken Burns sobre todo el fondo del hero (imagen o video):
+     se mueve siempre, aunque el navegador bloquee el autoplay del video */
+  @keyframes heroDrift{
+    from{transform:scale(1.02) translateX(0)}
+    to{transform:scale(1.10) translateX(-1.8%)}
+  }
+  .hero-scrim{position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(180deg, rgba(27,35,64,.45) 0%, rgba(27,35,64,.06) 22%, rgba(27,35,64,0) 55%, rgba(27,35,64,.35) 100%)}
+  .hero-scroll{position:absolute;z-index:3;bottom:28px;left:50%;transform:translateX(-50%);
+    color:var(--deepText);opacity:.85;display:flex;align-items:center;justify-content:center;
+    width:48px;height:48px;border-radius:var(--radius-pill);
+    background:rgba(27,35,64,.35);backdrop-filter:blur(4px);
+    animation:heroBob 2.4s ease-in-out infinite}
+  @keyframes heroBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+  @media(max-width:820px){
+    .hero-media{animation:none;transform:none}
+    .hero-media img,.hero-media video{object-position:center center}
+  }
+
+  /* ===== Secciones ===== */
+  section{padding:72px 0;border-bottom:1px solid var(--border)}
+  .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .num{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--brand2);letter-spacing:.1em}
+  h1,h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin:0}
+  .sub{color:var(--muted);max-width:66ch;margin:8px 0 40px}
+
+  /* ===== Equipo ===== */
+  /* — utilidad que el archivo no tiene — */
+  .vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+    clip-path:inset(50%);white-space:nowrap;border:0}
+
+  /* — la tira — */
+  .equipo-tira{list-style:none;margin:0;padding:6px 0 12px;display:grid;grid-auto-flow:column;
+    grid-auto-columns:78vw;gap:16px;overflow-x:auto;
+    scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none}
+  .equipo-tira::-webkit-scrollbar{display:none}
+  .agente-slot{display:grid;scroll-snap-align:start}
+  @media(min-width:821px){.equipo-tira{grid-auto-columns:calc((100% - 48px)/4)}}
+
+  /* — la tarjeta que gira — */
+  .agente{display:grid;height:100%;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;
+    transition:transform .5s ease}
+  .agente[data-flipped="true"]{transform:rotateY(180deg)}
+  .cara{grid-area:1/1;position:relative;display:flex;flex-direction:column;
+    backface-visibility:hidden;-webkit-backface-visibility:hidden;
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);
+    box-shadow:var(--shadow);transition:border-color .18s ease}
+  .dorso{transform:rotateY(180deg);visibility:hidden;transition:border-color .18s ease,visibility 0s linear .25s;padding:20px 18px;overflow-y:auto;
+    overscroll-behavior:contain}
+  .agente[data-flipped="true"] .dorso{visibility:visible;transition:border-color .18s ease}
+  .agente[data-flipped="true"] .frente{visibility:hidden;transition:border-color .18s ease,visibility 0s linear .25s}
+  .frente img{border-radius:calc(var(--radius-card) - 1px) calc(var(--radius-card) - 1px) 0 0}
+  .frente .info{user-select:none;display:flex;flex-direction:column;flex:1}
+  .agente:hover .cara{border-color:var(--brand)}
+  .dorso ul{list-style:none;margin:10px 0 0;padding:0}
+  .dorso li{position:relative;padding-left:14px;font-size:13px;color:var(--muted);
+    margin-bottom:8px;line-height:1.5}
+  .dorso li::before{content:"·";position:absolute;left:2px;color:var(--brand2);font-weight:700}
+
+  /* — el botón, estirado sobre toda la cara — */
+  .flip-btn{margin-top:auto;align-self:center;
+    display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
+    background:transparent;
+    border:1px solid color-mix(in srgb, var(--brand) 35%, transparent);
+    border-radius:var(--radius-pill);padding:7px 15px;
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:12px;font-weight:600;
+    letter-spacing:0;text-transform:none;color:var(--brand);
+    text-align:left;cursor:pointer;
+    transition:background .18s ease,color .18s ease,border-color .18s ease}
+  .flip-txt{white-space:nowrap}
+  .flip-btn:hover{background:var(--brand);border-color:var(--brand);color:#fff}
+  .flip-btn svg{width:15px;height:15px;flex:none}
+  .flip-btn::after{content:"";position:absolute;inset:0}
+  .frente .flip-btn{margin:auto 0 -8px}
+  .dorso .flip-btn{margin-top:auto}
+
+  /* — sin JS: caras apiladas y legibles, nada se pierde — */
+  .equipo-tira:not(.js) .cara{grid-area:auto;visibility:visible;transform:none}
+  .equipo-tira:not(.js) .flip-btn{display:none}
+  .equipo-tira:not(.js) .agente{transform:none}
+
+  .tira-cabecera{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:-24px 0 16px}
+  .tira-pista{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--muted);margin:0}
+  .tira-progreso{height:4px;background:var(--surface2);border-radius:99px;margin-top:16px;overflow:hidden}
+  .tira-progreso span{display:block;height:100%;width:30%;background:var(--brand);border-radius:99px;
+    transform:translateX(0);will-change:transform}
+  .tira-nav{display:flex;gap:10px;margin:0}
+  .tira-btn{width:56px;height:56px;border-radius:99px;border:1.5px solid var(--brand);
+    background:var(--surface);color:var(--brand);cursor:pointer;padding:0;
+    display:inline-flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow);
+    transition:background .18s ease,color .18s ease,transform .18s ease}
+  .tira-btn svg{width:24px;height:24px;display:block}
+  .tira-btn:hover:not(:disabled){background:var(--brand);color:#fff;transform:translateY(-2px)}
+  .tira-btn:disabled{opacity:.35;cursor:default;border-color:var(--border);color:var(--muted);box-shadow:none}
+  @media(max-width:820px){.tira-btn{width:48px;height:48px}}
+  @media(max-width:520px){.tira-cabecera{flex-direction:column;align-items:flex-start;gap:10px}.tira-nav{align-self:flex-end}}
+
+  .agente img{aspect-ratio:3/4;object-fit:cover;background:#F1EDE3}
+  .agente .info{padding:16px 18px 18px}
+  .agente .cargo{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand2);display:flex;align-items:center;gap:7px}
+  .agente .cargo svg{flex:none}
+  .agente h3{margin:6px 0 6px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px}
+  .agente p{margin:0;font-size:13.5px;color:var(--muted)}
+
+  /* ===== Packs ===== */
+  .packs{display:grid;grid-template-columns:1fr;gap:16px;align-items:stretch}
+  @media(min-width:960px){.packs{grid-template-columns:repeat(2,1fr)}}
+  .pack{min-width:0;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:22px;box-shadow:var(--shadow)}
+  .pack h3{margin:0 0 8px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px;line-height:1.2}
+  .pack .promesa{margin:0 0 14px;font-size:15px;font-weight:600;color:var(--text)}
+  .pack .quien{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin:8px 0 12px}
+  .pack ul{list-style:none;margin:0;padding:0}
+  .pack li{position:relative;padding-left:16px;font-size:14px;color:var(--muted);margin-bottom:8px}
+  .pack li::before{content:"·";position:absolute;left:4px;color:var(--brand2);font-weight:700}
+  .pack .nota{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--border);padding-top:10px;margin:12px 0 0}
+  .pack .btn{margin-top:auto;align-self:flex-start}
+  .avatars{display:flex;flex-wrap:wrap;margin:0 0 4px}
+  .avatars img{width:48px;height:48px;flex:none;border-radius:99px;object-fit:cover;object-position:50% 18%;border:2px solid var(--surface);background:#F1EDE3}
+  .avatars img+img{margin-left:-10px}
+  @media(max-width:520px){
+    .avatars img{width:36px;height:36px}
+    .avatars img+img{margin-left:-12px}
+  }
+
+  /* ===== Cómo funciona ===== */
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .paso{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:22px;box-shadow:var(--shadow)}
+  .paso .n{font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:13px;letter-spacing:.1em}
+  .paso h3{margin:10px 0 8px;font-size:18px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700}
+  .paso p{margin:0;font-size:14px;color:var(--muted)}
+
+  /* ===== Video ===== */
+  .video-frame{border-radius:var(--radius-card);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#000}
+  .video-frame video{width:100%;display:block}
+
+  /* ===== Quiénes somos ===== */
+  .nosotros{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow);margin-top:8px}
+  .nosotros summary{cursor:pointer;list-style:none;padding:18px 22px;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
+  .nosotros summary::-webkit-details-marker{display:none}
+  .nosotros summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:18px;flex:none}
+  .nosotros[open] summary::after{content:"−"}
+  .personas{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:4px 22px 24px;align-items:stretch}
+  .persona{display:flex;flex-direction:column;align-items:center;text-align:center;height:100%}
+  .persona img{width:110px;height:110px;flex:none;border-radius:99px;object-fit:cover;border:3px solid var(--surface2);margin-bottom:14px;filter:grayscale(1)}
+  .persona-cargo{margin:0 0 4px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand2)}
+  .persona h3{margin:0 0 12px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:19px}
+  .persona-datos{list-style:none;margin:0 0 14px;padding:0;max-width:34ch}
+  .persona-datos li{font-size:14px;color:var(--muted);line-height:1.55;margin-bottom:6px}
+  .persona-link{display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:99px;border:1px solid var(--border);
+    color:var(--brand);background:var(--surface);margin-top:auto;
+    transition:background .18s ease,color .18s ease,border-color .18s ease}
+  .persona-link svg{width:18px;height:18px;fill:currentColor;display:block}
+  .persona-link:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+  @media(max-width:820px){.personas{grid-template-columns:1fr;gap:24px;padding:4px 18px 20px}.nosotros summary{padding:16px 18px}}
+
+  /* ===== Preguntas frecuentes ===== */
+  .faqs{display:grid;gap:10px;margin-top:8px}
+  .faq{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow)}
+  .faq summary{cursor:pointer;list-style:none;padding:18px 22px;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:18px;flex:none}
+  .faq[open] summary::after{content:"\2212"}
+  .faq p{margin:0;padding:0 22px 20px;font-size:15px;color:var(--muted);line-height:1.65;max-width:72ch}
+  .faq p a{color:var(--brand2)}
+  @media(max-width:820px){.faq summary{padding:16px 18px}.faq p{padding:0 18px 18px;font-size:14px}}
+
+  /* ===== CTA final ===== */
+  .final{background:var(--deep);color:var(--deepText);border-bottom:none}
+  .final h2{color:var(--deepText);max-width:20ch}
+  .final .sub{color:var(--deepMuted)}
+  .final .eyebrow{color:var(--deepAmber)}
+
+  footer{padding:40px 0 96px;color:var(--muted);font-size:13px;background:var(--deep)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer .wrap+.wrap{margin-top:16px;align-items:center}
+  footer span{color:var(--deepMuted)}
+  footer a{color:var(--deepMuted);text-decoration:underline;text-underline-offset:3px}
+  footer a:hover{color:var(--deepText)}
+  footer .f-contact{display:flex;flex-direction:column;gap:4px}
+  footer .f-lbl{color:var(--deepText);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:11px}
+  footer .f-social{display:flex;gap:16px;align-items:center}
+  footer .f-social a{text-decoration:none;color:var(--deepMuted)}
+  footer .f-social a:hover{color:var(--deepText)}
+  footer .f-social svg{width:20px;height:20px;fill:currentColor;display:block}
+  footer .lang-switch{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.08em;color:var(--deepMuted);white-space:nowrap}
+  footer .lang-switch a,footer .lang-switch span{color:var(--deepMuted);text-decoration:none}
+  footer .lang-switch a:hover,footer .lang-switch [aria-current="true"]{color:var(--deepText)}
+  footer .lang-switch [aria-current="true"]{font-weight:600}
+
+  /* ===== CTA sticky mobile ===== */
+  .sticky-cta{display:none}
+  @media(max-width:820px){
+    .sticky-cta{display:flex;align-items:center;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-top:1px solid var(--border);transform:translateY(110%);transition:transform .3s ease}
+    .sticky-cta.on{transform:translateY(0)}
+    .sticky-cta .btn{flex:1 1 auto;width:auto;min-width:0;white-space:nowrap}
+    .whatsapp-float{flex:0 0 48px;width:48px;height:48px;border-radius:var(--radius-pill);display:inline-flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);text-decoration:none}
+    .whatsapp-float svg{width:22px;height:22px;fill:var(--accent);display:block}
+    footer{padding-bottom:120px}
+  }
+
+  /* ===== Entradas (manual §07: un momento por pantalla, 350ms, fade + 12px) ===== */
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    .agente[data-flipped="true"]{transform:none}
+    .dorso{transform:none}
+    html{scroll-behavior:auto}
+    *{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+
+<!-- Datos estructurados: le dicen a Google que "Domo IA" es una entidad propia
+     (distinta de Domo Inc.). No se ve en pantalla; lo lee el buscador. -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domo-ia.com/it/#organization",
+      "name": "Domo IA",
+      "alternateName": [
+        "domo IA",
+        "domo-ia"
+      ],
+      "url": "https://domo-ia.com/it/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://domo-ia.com/assets/web/og-domo-ia-v2.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "image": "https://domo-ia.com/assets/web/og-domo-ia-v2.jpg",
+      "description": "Equipos de trabajadores digitales con nombre y cargo: traen los leads desde los anuncios, los atienden en menos de 1 minuto, agendan la reunión y entrenan a los vendedores.",
+      "email": "contacto@domo-ia.com",
+      "telephone": "+56936956065",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "knowsLanguage": [
+        "es-CL",
+        "en",
+        "it"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/domoia/",
+        "https://www.instagram.com/domoia.cl/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domo-ia.com/it/#website",
+      "url": "https://domo-ia.com/it/",
+      "name": "Domo IA",
+      "inLanguage": "it",
+      "publisher": {
+        "@id": "https://domo-ia.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://domo-ia.com/it/#service-equipo-comercial",
+      "name": "Team commerciale",
+      "serviceType": "Captación, atención y agendamiento de leads",
+      "description": "Un team digitale che porta i lead dagli annunci, risponde in meno di un minuto, li qualifica e fissa gli incontri commerciali.",
+      "provider": {
+        "@id": "https://domo-ia.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "url": "https://domo-ia.com/it/#packs"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://domo-ia.com/it/#service-coaching-comercial",
+      "name": "Team di coaching commerciale",
+      "serviceType": "Registro, evaluación y entrenamiento comercial",
+      "description": "Un team digitale che registra gli incontri commerciali, li valuta con una griglia e trasforma schemi reali in formazione per i venditori.",
+      "provider": {
+        "@id": "https://domo-ia.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "url": "https://domo-ia.com/it/#packs"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://domo-ia.com/it/#service-automatizaciones",
+      "name": "Team di automazioni",
+      "serviceType": "Automatización de procesos operativos",
+      "description": "Un team digitale che costruisce e testa flussi che collegano gli strumenti esistenti ed eseguono lavoro ripetitivo.",
+      "provider": {
+        "@id": "https://domo-ia.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "url": "https://domo-ia.com/it/#packs"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://domo-ia.com/it/#faq",
+      "inLanguage": "it",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Che cos'è esattamente un lavoratore digitale?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "È un agente di intelligenza artificiale con un nome, un ruolo e un solo compito che svolge bene. Non è un software che devi imparare a usare: si assume come si assume una persona, entra a lavorare nella tua operatività e rende conto di ciò che ha fatto. Antonia risponde su WhatsApp, Matías sposta il budget degli annunci, Lucas valuta gli incontri di vendita."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In cosa si differenzia da un chatbot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un chatbot segue un albero di risposte: se il cliente esce dal copione, si blocca. Un agente di IA capisce quello che gli scrivono, qualifica il lead secondo i tuoi criteri, consulta il tuo calendario e fissa l'appuntamento. La differenza pratica è semplice: il chatbot passa la palla a una persona, l'agente chiude l'incontro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Va bene per una PMI o solo per le grandi aziende?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "È pensato proprio per le piccole e medie imprese che investono in pubblicità e ricevono lead su WhatsApp. La regola non è la dimensione: è se stai pagando per lead a cui poi nessuno risponde in tempo. Se quel numero risulta essere zero, te lo diciamo nella diagnosi e non ti vendiamo nulla."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Per quali settori funziona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per qualsiasi attività che paghi per i lead e li gestisca su WhatsApp. Lo schema si ripete uguale nelle agenzie immobiliari, nelle assicurazioni, nelle cliniche e negli studi dentistici, nella formazione, nell'automotive, nell'edilizia e nei servizi professionali: molti lead che arrivano da annunci o portali, tutti che chiedono la stessa cosa, e un ritardo nella risposta che decide se l'interessato resta con te o passa a quello accanto. Siamo partiti dall'immobiliare perché lì il problema si vede più nitido, ma il team non appartiene a un settore: quello che cambia da un'industria all'altra non sono i lavoratori digitali, bensì le regole di qualificazione e il modo di parlare, e questo si configura nella diagnosi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo impiega a rispondere a un lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Meno di un minuto, di giorno, di notte, nel fine settimana e nei giorni festivi. Non è una promessa di marketing: è ciò che viene misurato ogni settimana nel report del funnel che ricevi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Che ne è dei dati dei miei clienti e della legge cilena 21.719?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I dati di chi scrive al tuo agente sono tuoi, non nostri: li trattiamo per tuo conto, sotto contratto e solo secondo le tue istruzioni. La legge cilena 21.719 entra in vigore il 1º dicembre 2026 e stiamo adeguando ad essa i nostri registri di trattamento, i contratti e i tempi di conservazione prima di quella data. È tutto scritto nell’informativa sulla privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Che cosa mi serve per iniziare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un WhatsApp dove arrivano i lead e la disponibilità a mostrare i tuoi numeri reali. La diagnosi misura quanti lead entrano, a quanti rispondi e quanti si trasformano in un incontro. Senza quel numero non c'è promessa che valga."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Domo IA ha rapporti con Domo, Inc. o con DomoAI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Domo IA è un'azienda cilena —DOMO IA SpA, Santiago— che installa agenti di IA nei team commerciali. Domo, Inc. (domo.com) è una piattaforma statunitense di business intelligence e DomoAI (domoai.app) è uno strumento di generazione video. Nomi simili, attività diverse."
+          }
+        }
+      ]
+    }
+  ]
+}</script>
+</head>
+<body>
+
+<!-- CTA de contacto y cotización por WhatsApp -->
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top" aria-label="Domo IA — home">
+      <svg width="26" height="26" viewbox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--text)" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="50" cy="74" r="13" fill="var(--brand2)"/>
+      </svg>
+      <span>DOMO<span class="ia">&nbsp;IA</span></span></a>
+    <nav aria-label="Sezioni">
+      <a href="#packs">Team</a>
+      <a href="#equipo">La squadra</a>
+      <a href="#como">Come funziona</a>
+      <a href="#video">Video</a>
+    </nav>
+    <a class="aviso-ley" href="/privacidad/">
+      <svg width="13" height="13" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+      Ci prepariamo alla legge cilena 21.719
+    </a>
+    <a id="headerCta" class="btn ghost" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+fissare+una+diagnosi." target="_blank" rel="noopener">Fissa una diagnosi</a>
+  </div>
+</header>
+
+  <!-- ===== HERO ===== -->
+<div class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <picture>
+      <source media="(max-width:820px)" srcset="/assets/web/hero-oficina-vertical-v2.jpg">
+      <img src="/assets/web/hero-oficina-1920.jpg" srcset="/assets/web/hero-oficina-900.jpg 900w, /assets/web/hero-oficina-1920.jpg 1920w" sizes="100vw" alt="" fetchpriority="high">
+    </picture>
+    <video id="heroVideo" autoplay muted loop playsinline preload="auto"></video>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <a class="hero-scroll" href="#packs" aria-label="Vedi i team">
+    <svg width="26" height="26" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ===== PACKS ===== -->
+<section id="packs">
+  <span id="capas" aria-hidden="true"></span>
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">01</span>
+      <h1 class="display">Assumi un team, o tutti e tre insieme</h1></div>
+    <p class="sub">Ogni team risolve una parte diversa dell'attività. Quasi tutti iniziano dal team commerciale —è lì che oggi se ne vanno i soldi— e aggiungono gli altri man mano che crescono.</p>
+    <div class="packs">
+      <article class="pack">
+        <p class="eyebrow">TEAM 01 · DALL'ANNUNCIO ALL'INCONTRO</p>
+        <h3>Team commerciale</h3>
+        <p class="promesa">Porta i lead, risponde in meno di un minuto e ogni settimana si corregge per chiudere di più.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="/assets/web/retrato-matias.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-sofia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-antonia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-clara.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">Matías + Sofía + Antonia + Clara</p>
+        <ul>
+          <li>Matías controlla le campagne ogni giorno e sposta il budget sugli annunci che portano conversazioni.</li>
+          <li>Sofía rinnova i creativi ogni settimana per testare nuovi angoli, con il tuo marchio.</li>
+          <li>Antonia risponde a ogni WhatsApp in meno di un minuto, qualifica e fissa l'appuntamento in calendario.</li>
+          <li>Clara collega i due estremi: avvisa Matías su quale annuncio porta molti messaggi ma quasi nessun incontro.</li>
+          <li>Ogni settimana ricevi che cosa è entrato, quanto è costato e che cosa è stato corretto.</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+un+preventivo+per+il+Team+commerciale." target="_blank" rel="noopener">Richiedi un preventivo</a>
+      </article>
+      <article class="pack">
+        <p class="eyebrow">TEAM 02 · COACHING</p>
+        <h3>Team di coaching commerciale</h3>
+        <p class="promesa">Perché ogni incontro lasci un apprendimento, non solo un'email.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="/assets/web/retrato-amanda.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-lucas.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-laura.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">Amanda + Lucas + Laura</p>
+        <ul>
+          <li>Appunti e registro ordinato di ogni incontro commerciale.</li>
+          <li>Valutazione con griglia professionale e voto per ogni incontro.</li>
+          <li>La guida alla conversazione con ciò che davvero chiude nel tuo settore.</li>
+          <li>Formazione per i tuoi venditori con i tuoi stessi incontri, non con la teoria.</li>
+        </ul>
+        <p class="nota">Rende davvero a partire da circa 15 incontri valutati.</p>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+un+preventivo+per+il+Team+di+coaching+commerciale." target="_blank" rel="noopener">Richiedi un preventivo</a>
+      </article>
+      <article class="pack">
+        <p class="eyebrow">TEAM 03 · AUTOMAZIONI</p>
+        <h3>Team di automazioni</h3>
+        <p class="promesa">Il lavoro ripetitivo che oggi fa una persona, svolto da un flusso.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="/assets/web/retrato-diego.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-sebastian.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">Diego + Sebastián</p>
+        <ul>
+          <li>Automazioni su misura, richieste con parole semplici.</li>
+          <li>Collegano gli strumenti che già usi, senza cambiare il tuo modo di lavorare.</li>
+          <li>Ogni consegna viene testata in modo indipendente prima di arrivare a te.</li>
+          <li>Se non soddisfa la richiesta, torna indietro e viene rifatta.</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+un+preventivo+per+il+Team+di+automazioni." target="_blank" rel="noopener">Richiedi un preventivo</a>
+      </article>
+      <article class="pack">
+        <p class="eyebrow">TEAM 04 · TUTTA LA SQUADRA</p>
+        <h3>Domo completo</h3>
+        <p class="promesa">I tre team che lavorano insieme: dall'annuncio all'incontro, dall'incontro al venditore che migliora, e il lavoro ripetitivo svolto da un flusso.</p>
+        <div class="avatars" aria-hidden="true">
+          <img src="/assets/web/retrato-antonia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-matias.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-sofia.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-clara.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-amanda.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-lucas.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-laura.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-diego.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/retrato-sebastian.jpg" alt="" loading="lazy" width="640" height="857">
+        </div>
+        <p class="quien">I 9 lavoratori</p>
+        <ul>
+          <li>I 9 lavoratori installati e configurati per la tua attività.</li>
+          <li>Il circuito completo: dall'annuncio che paghi fino all'incontro valutato.</li>
+          <li>Un unico report settimanale con i due estremi: quanto è costato portare il lead e che cosa è successo nell'incontro.</li>
+          <li>Si installa comunque per parti: inizia dal team commerciale e aggiungi gli altri quando ti servono.</li>
+        </ul>
+        <a class="btn ghost" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+un+preventivo+per+il+Domo+completo." target="_blank" rel="noopener">Richiedi un preventivo</a>
+      </article>
+    </div>
+    <p class="sub" style="margin:32px 0 16px">Non sai da quale iniziare? La diagnosi te lo dice con i tuoi numeri.</p>
+    <a class="btn ghost" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+non+so+da+quale+team+iniziare." target="_blank" rel="noopener">Fissa una diagnosi</a>
+  </div>
+</section>
+
+<!-- ===== EQUIPO ===== -->
+<section id="equipo">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">02</span><h2 class="display">Non vendiamo un software. Installiamo un team.</h2></div>
+    <p class="sub">Ogni lavoratore digitale ha un nome, un ruolo e un solo compito che svolge bene. Ogni team si costruisce con questi lavoratori digitali.</p>
+    <div class="tira-cabecera">
+      <p class="tira-pista">Scorri per conoscere tutto il team</p>
+      <div class="tira-nav" aria-hidden="true">
+        <button type="button" class="tira-btn" data-dir="-1" tabindex="-1" aria-label="Precedente"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button type="button" class="tira-btn" data-dir="1" tabindex="-1" aria-label="Successivo"><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+      </div>
+    </div>
+    <ul class="equipo-tira">
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente">
+            <img src="/assets/web/retrato-antonia.jpg" alt="Antonia, receptionist digitale" loading="lazy" width="640" height="857">
+            <div class="info">
+              <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Receptionist · SDR</span>
+              <h3>Antonia</h3>
+              <p>Risponde al tuo WhatsApp in pochi secondi, qualifica il lead con criterio e fissa l'incontro direttamente nel tuo calendario.</p>
+              <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-antonia"><span class="flip-txt">Vedi dettagli<span class="vh"> di Antonia</span></span></button>
+            </div>
+          </div>
+          <div class="cara dorso" id="det-antonia">
+            <span class="cargo">Che cosa fa Antonia</span>
+            <ul><li>Risponde ai nuovi messaggi WhatsApp in meno di un minuto, a qualsiasi ora e in qualsiasi giorno.</li><li>Pone le domande di qualificazione che definisci tu —budget, reddito, tempistiche, zona— senza sembrare un modulo.</li><li>Fissa l'incontro direttamente nel calendario della persona giusta, con i dettagli del lead.</li><li>Riprende il lead che si è raffreddato invece di lasciar morire la conversazione.</li><li>Passa a una persona i casi che hai indicato come da non gestire da sola.</li></ul>
+            <button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Antonia</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button>
+          </div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-matias.jpg" alt="Matías, media buyer digitale" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Media buyer</span><h3>Matías</h3><p>Controlla le tue campagne ogni giorno e sposta il budget verso gli annunci che portano davvero lead che rispondono.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-matias"><span class="flip-txt">Vedi dettagli<span class="vh"> di Matías</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-matias"><span class="cargo">Che cosa fa Matías</span><ul><li>Ogni mattina verifica come ha reso ciascun annuncio: spesa, lead, conversazioni e incontri.</li><li>Sposta il budget verso gli annunci che portano lead che rispondono, non quelli che portano clic a basso costo.</li><li>Ti segnala che cosa sta bruciando soldi, con il numero in chiaro, e lo mette in pausa appena approvi.</li><li>Definisce che cosa testare la settimana successiva e commissiona i creativi a Sofía.</li><li>Lavora con Clara: lei segnala quale annuncio porta messaggi ma non incontri, e lui corregge la campagna di conseguenza.</li><li>Ti lascia un report settimanale in linguaggio umano: che cosa è entrato, quanto è costato e che cosa viene dopo.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Matías</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-clara.jpg" alt="Clara, responsabile del miglioramento continuo" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Miglioramento continuo</span><h3>Clara</h3><p>Ogni settimana esamina che cosa sta cambiando nelle conversazioni e ti lascia miglioramenti concreti per chiudere di più.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-clara"><span class="flip-txt">Vedi dettagli<span class="vh"> di Clara</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-clara"><span class="cargo">Che cosa fa Clara</span><ul><li>Rileva le tendenze della settimana: quali nuove domande arrivano e quali risposte funzionano.</li><li>Trova le conversazioni che stavano per concludersi con un appuntamento e non l'hanno fatto.</li><li>Le trasforma in miglioramenti concreti: quale frase cambiare, quale domanda aggiungere, quale caso inoltrare prima.</li><li>Lavora con Matías: gli segnala quale annuncio porta molti messaggi ma quasi nessun incontro, così smette di spendere lì.</li><li>Ti lascia i miglioramenti pronti da approvare e la settimana successiva misura se hanno portato più incontri.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Clara</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-sofia.jpg" alt="Sofía, designer" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L15 12l-4 1 1-4Z"/><path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/></svg>Designer</span><h3>Sofía</h3><p>Progetta i creativi e le loro varianti per i tuoi annunci, in linea con il tuo marchio, così Matías ha sempre qualcosa di nuovo da testare.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sofia"><span class="flip-txt">Vedi dettagli<span class="vh"> di Sofía</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-sofia"><span class="cargo">Che cosa fa Sofía</span><ul><li>Produce i creativi dei tuoi annunci —immagine, video breve e testo— con il tuo marchio.</li><li>Crea varianti dello stesso messaggio per poter testare angolo, gancio e call to action.</li><li>Mantiene vivo l'archivio dei creativi così Matías ha sempre qualcosa di nuovo da testare.</li><li>Riutilizza ciò che ha già funzionato invece di ripartire da zero ogni mese.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Sofía</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-amanda.jpg" alt="Amanda, note delle riunioni" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Note delle riunioni</span><h3>Amanda</h3><p>Prende nota di ogni incontro commerciale e lascia un registro ordinato: nulla di ciò che è stato detto va perso.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-amanda"><span class="flip-txt">Vedi dettagli<span class="vh"> di Amanda</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-amanda"><span class="cargo">Che cosa fa Amanda</span><ul><li>Prende nota di ogni incontro commerciale e lascia il riassunto ordinato lo stesso giorno.</li><li>Registra ciò che è stato concordato, le obiezioni emerse e il prossimo passo concordato.</li><li>Lascia il registro dove il tuo team lo trova, senza dipendere dalla memoria del venditore.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Amanda</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-lucas.jpg" alt="Lucas, valutatore di vendite" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Valutatore di vendite</span><h3>Lucas</h3><p>Valuta ogni incontro con una griglia di vendita professionale e ti dice, con un voto, che cosa è stato fatto bene e che cosa è mancato.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-lucas"><span class="flip-txt">Vedi dettagli<span class="vh"> di Lucas</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-lucas"><span class="cargo">Che cosa fa Lucas</span><ul><li>Valuta ogni incontro con una griglia di vendita professionale e gli assegna un voto.</li><li>Mostra che cosa è stato fatto bene e che cosa è mancato: scoperta, gestione delle obiezioni, chiusura.</li><li>Confronta gli incontri tra loro così vedi chi ha bisogno di supporto e su che cosa.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Lucas</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-laura.jpg" alt="Laura, coach dei venditori" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Coach commerciale</span><h3>Laura</h3><p>Raccoglie gli schemi ricorrenti di tutti i tuoi incontri e forma il tuo team umano con ciò che funziona nel tuo settore.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-laura"><span class="flip-txt">Vedi dettagli<span class="vh"> di Laura</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-laura"><span class="cargo">Che cosa fa Laura</span><ul><li>Raccoglie gli schemi di tutti gli incontri valutati ed estrae ciò che davvero chiude nel tuo settore.</li><li>Forma i tuoi venditori con esempi presi dalla tua stessa operatività, non con la teoria.</li><li>Costruisce la guida alla conversazione che il tuo team può usare domani.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Laura</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-diego.jpg" alt="Diego, ingegnere delle automazioni" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Ingegnere delle automazioni</span><h3>Diego</h3><p>Costruisce l'automazione che collega i tuoi strumenti e svolge il lavoro ripetitivo che oggi qualcuno fa a mano.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-diego"><span class="flip-txt">Vedi dettagli<span class="vh"> di Diego</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-diego"><span class="cargo">Che cosa fa Diego</span><ul><li>Prende la tua richiesta in parole semplici e la trasforma in un flusso che funziona.</li><li>Collega gli strumenti che già usi: WhatsApp, fogli di calcolo, email, il tuo CRM.</li><li>Ogni richiesta parte da un criterio chiaro: che cosa deve succedere e come si capisce che ha funzionato.</li><li>Consegna l'automazione testata, mai a metà.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Diego</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+      <li class="agente-slot">
+        <article class="agente" data-flipped="false">
+          <div class="cara frente"><img src="/assets/web/retrato-sebastian.jpg" alt="Sebastián, controllo qualità" loading="lazy" width="640" height="857"><div class="info">
+            <span class="cargo"><svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Controllo qualità</span><h3>Sebastián</h3><p>Testa ogni automazione prima che arrivi a te. Se non fa ciò che è stato richiesto, la rimanda indietro.</p>
+            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sebastian"><span class="flip-txt">Vedi dettagli<span class="vh"> di Sebastián</span></span></button>
+          </div></div>
+          <div class="cara dorso" id="det-sebastian"><span class="cargo">Che cosa fa Sebastián</span><ul><li>Esamina ogni consegna di Diego con criterio proprio: non dà nulla per scontato.</li><li>Esegue test reali con dati di esempio prima di approvare.</li><li>Rifiuta ciò che non rispetta quanto concordato, anche se a prima vista sembra funzionare.</li><li>Nulla viene consegnato senza la sua approvazione.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Torna<span class="vh"> alla scheda di Sebastián</span></span><svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
+        </article>
+      </li>
+    </ul>
+    <div class="tira-progreso" aria-hidden="true"><span></span></div>
+  </div>
+</section>
+
+<!-- ===== CÓMO FUNCIONA ===== -->
+<section id="como">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">03</span><h2 class="display">Come si installa</h2></div>
+    <p class="sub">Il motore è lo stesso; ciò che cambia è la configurazione per la tua attività.</p>
+    <div class="pasos">
+      <div class="paso">
+        <span class="n">PASSO 1</span>
+        <h3>Diagnosi</h3>
+        <p>Misuriamo il tuo funnel reale: quanti lead arrivano, a quanti rispondi e quanti si trasformano in un incontro. Senza quel numero, non c'è promessa.</p>
+      </div>
+      <div class="paso">
+        <span class="n">PASSO 2</span>
+        <h3>Installazione</h3>
+        <p>Antonia entra nel tuo WhatsApp con il tuo modo di parlare e le tue regole di qualificazione. Sei tu ad approvare come risponde prima che gestisca da sola.</p>
+      </div>
+      <div class="paso">
+        <span class="n">PASSO 3</span>
+        <h3>Misurazione settimanale</h3>
+        <p>Ogni settimana ricevi il funnel misurato: che cosa è entrato, che cosa è stato fissato e che cosa migliorare. Ciò che non si misura non si fattura e non si promette.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO ===== -->
+<section id="video">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">04</span><h2 class="display">Il metodo, in 2 minuti</h2></div>
+    <p class="sub">Come funziona il Metodo DOMO: diagnosticare, orchestrare, misurare e ottimizzare — spiegato in modo semplice. Il video è in spagnolo.</p>
+    <div class="video-frame">
+      <video controls preload="none" poster="/assets/web/poster-video-metodo.jpg" width="1280" height="720">
+        <source src="/media/video-metodo-domo.mp4" type="video/mp4">
+        Il tuo browser non può riprodurre questo video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">05</span><h2 class="display">Chi siamo</h2></div>
+    <p class="sub">Non siamo un'agenzia con un team che non conoscerai mai. Siamo in tre, e tutti e tre lavoriamo a questo.</p>
+    <details class="nosotros">
+      <summary>Scopri chi siamo</summary>
+      <div class="personas">
+
+        <article class="persona">
+          <img src="/assets/web/retrato-rodrigo.jpg" alt="Rodrigo González Villalobos" loading="lazy" width="640" height="640">
+          <p class="persona-cargo">Fondatore</p>
+          <h3>Rodrigo González Villalobos</h3>
+          <ul class="persona-datos">
+            <li>Ingegneria gestionale, Universidad Central de Chile.</li>
+            <li>MBA, Universitat Politècnica de Catalunya.</li>
+          </ul>
+          <a class="persona-link" href="https://www.linkedin.com/in/rodrigo-gonzalez-villalobos/" target="_blank" rel="noopener" aria-label="Rodrigo González Villalobos su LinkedIn">
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </article>
+
+        <article class="persona">
+          <img src="/assets/web/retrato-rodolfo.jpg" alt="Rodolfo Alfaro" loading="lazy" width="640" height="640">
+          <p class="persona-cargo">Direttore commerciale</p>
+          <h3>Rodolfo Alfaro</h3>
+          <ul class="persona-datos">
+            <li>Economia aziendale, Universidad de Valparaíso.</li>
+            <li>Diploma post-laurea in Finanza aziendale, Universidad de Chile.</li>
+          </ul>
+          <a class="persona-link" href="https://www.linkedin.com/in/rodolfoalfaro/" target="_blank" rel="noopener" aria-label="Rodolfo Alfaro su LinkedIn">
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </article>
+
+        <article class="persona">
+          <img src="/assets/web/retrato-damian.jpg" alt="Damián Roba Jesset" loading="lazy" width="640" height="640">
+          <p class="persona-cargo">Direttore key account</p>
+          <h3>Damián Roba Jesset</h3>
+          <ul class="persona-datos">
+            <li>Gestione dell'ecoturismo, Duoc UC.</li>
+            <li>Francofono; si è formato all'Université Toulouse – Jean Jaurès.</li>
+          </ul>
+          <a class="persona-link" href="https://www.linkedin.com/in/damian-roba-jesset-7a5907145/" target="_blank" rel="noopener" aria-label="Damián Roba Jesset su LinkedIn">
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIO: pendiente cita real autorizada del piloto. NO publicar sin aprobación.
+<section id="testimonio"> ... </section>
+===== -->
+
+<!-- ===== PLANES: pendiente definición de precio (~24-jul). Estructura sugerida: 1 card por capa,
+precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
+<section id="planes"> ... </section>
+===== -->
+
+<!-- ===== PREGUNTAS FRECUENTES ===== -->
+<section id="preguntas">
+  <div class="wrap reveal">
+    <div class="shead"><span class="num">06</span><h2 class="display">Domande frequenti</h2></div>
+    <p class="sub">Quello che ci chiedono prima di fissare la diagnosi.</p>
+    <div class="faqs">
+      <details class="faq">
+        <summary>Che cos'è esattamente un lavoratore digitale?</summary>
+        <p>È un agente di intelligenza artificiale con un nome, un ruolo e un solo compito che svolge bene. Non è un software che devi imparare a usare: si assume come si assume una persona, entra a lavorare nella tua operatività e rende conto di ciò che ha fatto. Antonia risponde su WhatsApp, Matías sposta il budget degli annunci, Lucas valuta gli incontri di vendita.</p>
+      </details>
+      <details class="faq">
+        <summary>In cosa si differenzia da un chatbot?</summary>
+        <p>Un chatbot segue un albero di risposte: se il cliente esce dal copione, si blocca. Un agente di IA capisce quello che gli scrivono, qualifica il lead secondo i tuoi criteri, consulta il tuo calendario e fissa l'appuntamento. La differenza pratica è semplice: il chatbot passa la palla a una persona, l'agente chiude l'incontro.</p>
+      </details>
+      <details class="faq">
+        <summary>Va bene per una PMI o solo per le grandi aziende?</summary>
+        <p>È pensato proprio per le piccole e medie imprese che investono in pubblicità e ricevono lead su WhatsApp. La regola non è la dimensione: è se stai pagando per lead a cui poi nessuno risponde in tempo. Se quel numero risulta essere zero, te lo diciamo nella diagnosi e non ti vendiamo nulla.</p>
+      </details>
+      <details class="faq">
+        <summary>Per quali settori funziona?</summary>
+        <p>Per qualsiasi attività che paghi per i lead e li gestisca su WhatsApp. Lo schema si ripete uguale nelle agenzie immobiliari, nelle assicurazioni, nelle cliniche e negli studi dentistici, nella formazione, nell'automotive, nell'edilizia e nei servizi professionali: molti lead che arrivano da annunci o portali, tutti che chiedono la stessa cosa, e un ritardo nella risposta che decide se l'interessato resta con te o passa a quello accanto. Siamo partiti dall'immobiliare perché lì il problema si vede più nitido, ma il team non appartiene a un settore: quello che cambia da un'industria all'altra non sono i lavoratori digitali, bensì le regole di qualificazione e il modo di parlare, e questo si configura nella diagnosi.</p>
+      </details>
+      <details class="faq">
+        <summary>Quanto tempo impiega a rispondere a un lead?</summary>
+        <p>Meno di un minuto, di giorno, di notte, nel fine settimana e nei giorni festivi. Non è una promessa di marketing: è ciò che viene misurato ogni settimana nel report del funnel che ricevi.</p>
+      </details>
+      <details class="faq">
+        <summary>Che ne è dei dati dei miei clienti e della legge cilena 21.719?</summary>
+        <p>I dati di chi scrive al tuo agente sono tuoi, non nostri: li trattiamo per tuo conto, sotto contratto e solo secondo le tue istruzioni. La legge cilena 21.719 entra in vigore il 1º dicembre 2026 e stiamo adeguando ad essa i nostri registri di trattamento, i contratti e i tempi di conservazione prima di quella data. È tutto scritto nell'<a href="/privacidad/">informativa sulla privacy</a>.</p>
+      </details>
+      <details class="faq">
+        <summary>Che cosa mi serve per iniziare?</summary>
+        <p>Un WhatsApp dove arrivano i lead e la disponibilità a mostrare i tuoi numeri reali. La diagnosi misura quanti lead entrano, a quanti rispondi e quanti si trasformano in un incontro. Senza quel numero non c'è promessa che valga.</p>
+      </details>
+      <details class="faq">
+        <summary>Domo IA ha rapporti con Domo, Inc. o con DomoAI?</summary>
+        <p>No. Domo IA è un'azienda cilena —DOMO IA SpA, Santiago— che installa agenti di IA nei team commerciali. Domo, Inc. (domo.com) è una piattaforma statunitense di business intelligence e DomoAI (domoai.app) è uno strumento di generazione video. Nomi simili, attività diverse.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="final">
+  <div class="wrap reveal">
+    <p class="eyebrow">Diagnosi iniziale · un incontro · con i tuoi numeri</p>
+    <h2 class="display">Inizia scoprendo quanti lead stai perdendo oggi</h2>
+    <p class="sub">Fissa la diagnosi: misuriamo il tuo funnel e ti mostriamo, con i tuoi numeri, che cosa farebbe un team digitale nella tua attività. Se i conti non tornano, te lo diciamo lo stesso.</p>
+    <a class="btn" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+voglio+sapere+quanti+lead+sto+perdendo." target="_blank" rel="noopener">Fissa una diagnosi</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">DOMO IA · Chile</span>
+    <div class="lang-switch" aria-label="Selettore della lingua"><a href="/" lang="es" hreflang="es">ES</a><span aria-hidden="true">·</span><a href="/en/" lang="en" hreflang="en">EN</a><span aria-hidden="true">·</span><span aria-current="true">IT</span></div>
+    <span>Lavoratori digitali che si misurano da soli.</span>
+  </div>
+  <div class="wrap">
+    <div class="f-contact">
+      <span class="f-lbl">Contatti</span>
+      <span><a href="mailto:rodrigo@domo-ia.com">rodrigo@domo-ia.com</a> · <a href="mailto:rodolfo@domo-ia.com">rodolfo@domo-ia.com</a> · <a href="mailto:damian@domo-ia.com">damian@domo-ia.com</a> · <a href="https://wa.me/56936956065" target="_blank" rel="noopener">+56 9 3695 6065</a> · <a href="/privacidad/">Informativa sulla privacy (in spagnolo)</a></span>
+    </div>
+    <div class="f-social">
+      <a href="https://www.linkedin.com/company/domoia/" target="_blank" rel="noopener" aria-label="domo IA su LinkedIn">
+        <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/domoia.cl/" target="_blank" rel="noopener" aria-label="domo IA su Instagram">
+        <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06zm0 5.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.757 6.162 6.162 6.162 3.405 0 6.162-2.757 6.162-6.162 0-3.402-2.757-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.645-1.44-1.44 0-.794.646-1.439 1.44-1.439.793 0 1.44.645 1.44 1.439z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+fissare+una+diagnosi." target="_blank" rel="noopener">Fissa una diagnosi</a>
+  <a class="whatsapp-float" href="https://wa.me/56936956065?text=Ciao%2C+arrivo+da+domo-ia.com+e+vorrei+saperne+di+pi%C3%B9+sui+lavoratori+digitali." target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
+    <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+  </a>
+</div>
+
+<script>
+  // Video del hero: solo desktop y solo si el usuario no pidió menos movimiento.
+  // Si el navegador bloquea el autoplay, NO se esconde: reintenta al cargar y al primer gesto del usuario.
+  (function(){
+    var mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var v = document.getElementById('heroVideo');
+    if (!v || mqMotion.matches) return;
+    var esMovil = window.matchMedia('(max-width:820px)').matches;
+    v.poster = esMovil ? '/assets/web/hero-oficina-vertical-v2.jpg' : '/assets/web/hero-oficina-1920.jpg';
+    v.src    = esMovil ? '/assets/web/video-hero-vertical-v2.mp4'  : '/assets/web/video-hero-oficina.mp4';
+    v.style.display = 'block';
+    function intentar(){ if (v.paused) v.play().catch(function(){}); }
+    v.addEventListener('canplay', intentar);
+    ['pointerdown','touchstart','scroll','keydown'].forEach(function(ev){
+      window.addEventListener(ev, intentar, {once:true, passive:true});
+    });
+    v.load();
+    intentar();
+  })();
+
+  // Header CTA: fantasma sobre el hero, primario después. Sticky CTA mobile igual.
+  (function(){
+    var hero = document.getElementById('top');
+    var headerCta = document.getElementById('headerCta');
+    var sticky = document.getElementById('stickyCta');
+    if (!('IntersectionObserver' in window)) { headerCta.classList.remove('ghost'); return; }
+    new IntersectionObserver(function(entries){
+      var visible = entries[0].isIntersecting;
+      headerCta.classList.toggle('ghost', visible);
+      if (sticky) sticky.classList.toggle('on', !visible);
+    }, {threshold: 0.15}).observe(hero);
+  })();
+
+  // Entrada por sección: fade + 12px, una sola vez (manual §07)
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  })();
+
+  (function(){
+    var tira = document.querySelector('.equipo-tira');
+    if (!tira) return;
+    tira.classList.add('js');
+
+    function girar(art, abrir){
+      document.querySelectorAll('.agente[data-flipped="true"]').forEach(function(o){
+        if (o !== art) o.dataset.flipped = 'false';
+      });
+      art.dataset.flipped = abrir ? 'true' : 'false';
+      art.querySelector('.frente .flip-btn').setAttribute('aria-expanded', String(abrir));
+      art.querySelector(abrir ? '.dorso .flip-btn' : '.frente .flip-btn').focus({preventScroll:true});
+    }
+
+    var abajo = false, movido = false, sx = 0, sy = 0;
+    tira.addEventListener('pointerdown', function(e){ abajo = true; movido = false; sx = e.clientX; sy = e.clientY; }, {passive:true});
+    tira.addEventListener('pointermove', function(e){
+      if (!abajo) return;                                    // ignorar el simple hover
+      if (Math.hypot(e.clientX - sx, e.clientY - sy) > 14) movido = true;
+    }, {passive:true});
+    tira.addEventListener('pointerup', function(){ abajo = false; }, {passive:true});
+    tira.addEventListener('pointercancel', function(){ abajo = false; movido = true; }, {passive:true});
+    tira.addEventListener('click', function(e){
+      var btn = e.target.closest('.flip-btn'); if (!btn) return;
+      var art = btn.closest('.agente');
+      var cerrando = art.dataset.flipped === 'true';
+      if (!cerrando && e.detail !== 0 && movido) return;      // el guard solo bloquea la apertura
+      girar(art, !cerrando);
+    });
+    tira.addEventListener('keydown', function(e){
+      if (e.key !== 'Escape') return;
+      var art = e.target.closest('.agente[data-flipped="true"]'); if (!art) return;
+      girar(art, false);
+    });
+
+    var nav  = document.querySelector('.tira-nav');
+    var btns = nav ? Array.prototype.slice.call(nav.querySelectorAll('.tira-btn')) : [];
+
+    function paso(){
+      var slot = tira.querySelector('.agente-slot');
+      return slot ? slot.getBoundingClientRect().width + 16 : 266;
+    }
+    function estado(){
+      var max = tira.scrollWidth - tira.clientWidth - 1;
+      btns.forEach(function(b){
+        var dir = Number(b.getAttribute('data-dir'));
+        b.disabled = dir < 0 ? tira.scrollLeft <= 0 : tira.scrollLeft >= max;
+      });
+      var barra = document.querySelector('.tira-progreso span');
+      if (barra) {
+        var visible = tira.clientWidth / tira.scrollWidth;
+        var maxScroll = tira.scrollWidth - tira.clientWidth;
+        var avance = maxScroll > 0 ? tira.scrollLeft / maxScroll : 0;
+        barra.style.width = (visible * 100) + '%';
+        barra.style.transform = 'translateX(' + (avance * (1 - visible) / visible * 100) + '%)';
+      }
+    }
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        var suave = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+        tira.scrollBy({left: Number(b.getAttribute('data-dir')) * paso(), behavior: suave});
+      });
+    });
+    tira.addEventListener('scroll', estado, {passive:true});
+    window.addEventListener('resize', estado, {passive:true});
+    estado();
+  })();
+</script>
+</body>
+</html>

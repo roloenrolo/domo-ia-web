@@ -24,8 +24,8 @@ inmobiliario y en equipos comerciales con vendedores humanos.
   Antonia (recepcionista y SDR de WhatsApp) y Clara (mejora continua).
 - **Equipo de coaching comercial** — que cada reunión deje aprendizaje. Registra
   cada reunión comercial, la evalúa con una rúbrica de venta profesional y
-  devuelve qué se hizo bien y qué faltó. Lo forman Amanda (notas de reunión) y
-  Lucas (evaluador de ventas).
+  devuelve qué se hizo bien y qué faltó. Lo forman Amanda (notas de reunión),
+  Lucas (evaluador de ventas) y Laura (coach comercial).
 - **Equipo de automatizaciones** — el trabajo repetitivo hecho por un flujo,
   pedido en palabras simples y conectado a las herramientas que la empresa ya
   usa. Lo forman Diego y Sebastián.
@@ -47,6 +47,8 @@ inmobiliario y en equipos comerciales con vendedores humanos.
   comercial el mismo día.
 - **Lucas** — evaluador de ventas. Evalúa cada reunión con rúbrica y le pone
   nota.
+- **Laura** — coach comercial. Junta los patrones de las reuniones evaluadas y
+  entrena al equipo humano con lo que sí cierra en el rubro del cliente.
 - **Diego y Sebastián** — automatizaciones a medida, probadas antes de entregar.
 
 ## Cómo se empieza
@@ -64,5 +66,7 @@ de generación de video y animación).
 
 ## Páginas
 
-- Home: https://domo-ia.com/
+- Home (español): https://domo-ia.com/
+- Home (inglés): https://domo-ia.com/en/
+- Home (italiano): https://domo-ia.com/it/
 - Política de privacidad: https://domo-ia.com/privacidad/
