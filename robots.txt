@@ -4,13 +4,17 @@
 # importa para aparecer en Google.
 #
 # OJO: Cloudflare ANTEPONE automaticamente su propio bloque a este archivo
-# (la politica "Content Signals" que bloquea GPTBot, ClaudeBot, CCBot,
-# Google-Extended, meta-externalagent, etc.). Esos crawlers son de
-# ENTRENAMIENTO / asistentes de IA, no buscadores: bloquearlos NO afecta el
-# posicionamiento en Google, pero SI impide que domo IA sea citada cuando
-# alguien le pregunta a ChatGPT o Claude por proveedores.
-# Para cambiar eso hay que apagar la opcion en el panel de Cloudflare,
-# no en este archivo.
+# (la politica "Content Signals"). Ese bloque cubre solo la familia de
+# ENTRENAMIENTO: GPTBot, ClaudeBot, Google-Extended, CCBot, Bytespider,
+# Amazonbot, meta-externalagent y Applebot-Extended.
+#
+# Los crawlers que salen a buscar EN VIVO para responderle a un usuario
+# (Claude-SearchBot, Claude-User, ChatGPT-User, OAI-SearchBot, PerplexityBot)
+# NO estan bloqueados: entran por el "User-agent: *  Allow: /" de arriba.
+# Verificado el 25-ago-2026 en el panel de Cloudflare con trafico real.
+# Es decir: el sitio SI puede ser citado por ChatGPT y Claude, y llms.txt
+# les llega. Para cambiar la parte de entrenamiento hay que tocar el panel
+# de Cloudflare, no este archivo.
 
 User-agent: *
 Allow: /
