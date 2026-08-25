@@ -1,23 +1,73 @@
 # robots.txt de domo-ia.com
 #
-# Buscadores (Googlebot, Bingbot) tienen acceso completo: eso es lo que
-# importa para aparecer en Google.
+# Este archivo lo controlamos nosotros. Hasta el 25-ago-2026 Cloudflare
+# ANTEPONIA su propio bloque gestionado ("Managed robots.txt"), que era todo o
+# nada: para dejar entrar a Google-Extended habia que apagarlo entero. Se apago
+# y las declaraciones se replicaron aca, identicas salvo por esa.
 #
-# OJO: Cloudflare ANTEPONE automaticamente su propio bloque a este archivo
-# (la politica "Content Signals"). Ese bloque cubre solo la familia de
-# ENTRENAMIENTO: GPTBot, ClaudeBot, Google-Extended, CCBot, Bytespider,
-# Amazonbot, meta-externalagent y Applebot-Extended.
+# Si alguien vuelve a encender "Managed robots.txt" en el panel de Cloudflare
+# (AI Crawl Control -> Signals), su bloque se antepone otra vez y Google-Extended
+# vuelve a quedar bloqueado. Ese es el unico lugar donde se revierte.
 #
-# Los crawlers que salen a buscar EN VIVO para responderle a un usuario
-# (Claude-SearchBot, Claude-User, ChatGPT-User, OAI-SearchBot, PerplexityBot)
-# NO estan bloqueados: entran por el "User-agent: *  Allow: /" de arriba.
-# Verificado el 25-ago-2026 en el panel de Cloudflare con trafico real.
-# Es decir: el sitio SI puede ser citado por ChatGPT y Claude, y llms.txt
-# les llega. Para cambiar la parte de entrenamiento hay que tocar el panel
-# de Cloudflare, no este archivo.
+# OJO: el bloqueo DURO de crawlers no vive aca, vive en el panel
+# (AI Crawl Control -> Security), con un interruptor por bot. Este archivo solo
+# declara la intencion; el panel es el que efectivamente corta la conexion.
+
+# ---------------------------------------------------------------------------
+# Senales de contenido (Content Signals, contentsignals.org)
+#
+#   search   = indexar y devolver enlaces con extractos cortos. No incluye
+#              resumenes generados por IA.
+#   ai-input = usar el contenido como entrada de un modelo en tiempo real
+#              (RAG, grounding, respuestas de busqueda generativa).
+#   ai-train = entrenar o afinar modelos.
+#
+# Nuestra postura: buscadores si, entrenamiento no.
+#
+# CUALQUIER RESTRICCION EXPRESADA POR CONTENT SIGNALS ES UNA RESERVA EXPRESA DE
+# DERECHOS BAJO EL ARTICULO 4 DE LA DIRECTIVA (UE) 2019/790 SOBRE DERECHOS DE
+# AUTOR EN EL MERCADO UNICO DIGITAL.
+# ---------------------------------------------------------------------------
 
 User-agent: *
+Content-Signal: search=yes,ai-train=no,use=reference
 Allow: /
 Disallow: /_fuente/
+
+# ---------------------------------------------------------------------------
+# Crawlers de ENTRENAMIENTO y raspado masivo: no.
+#
+# Google-Extended NO esta en esta lista a proposito (decision del 25-ago-2026):
+# gobierna las respuestas de la app Gemini y el grounding de Vertex AI. No
+# controla los resumenes de IA de Google Search, que usan el indice normal.
+#
+# Tampoco estan los que salen a buscar EN VIVO para responderle a un usuario
+# —Claude-SearchBot, ChatGPT-User, OAI-SearchBot, PerplexityBot—: esos si nos
+# interesan, son los que pueden citar a domo IA.
+# ---------------------------------------------------------------------------
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CloudflareBrowserRenderingCrawler
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
 
 Sitemap: https://domo-ia.com/sitemap.xml
