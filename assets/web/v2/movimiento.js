@@ -40,6 +40,14 @@
     }));
   });
   const ribbon = document.querySelector('.marquee-track');
+  // La frase se repite hasta cubrir la ventana: funciona igual en es, en e it.
+  const base = ribbon.firstElementChild;
+  const frase = base.textContent.trim();
+  let veces = 1;
+  while (base.getBoundingClientRect().width < innerWidth * 1.15 && veces < 40) {
+    veces += 1;
+    base.textContent = Array(veces).fill(frase).join('  ·  ');
+  }
   const copy = document.createElement('p');
   copy.className = 'mono marquee-copy';
   copy.setAttribute('aria-hidden', 'true');
