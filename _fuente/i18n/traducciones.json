@@ -1354,5 +1354,53 @@
  "1,5% agenda": {
   "en": "1.5% booked",
   "it": "1,5% fissate"
+ },
+ "Cómo se conecta": {
+  "en": "How it connects",
+  "it": "Come si collega"
+ },
+ "Del aviso a la reunión, y de la reunión al vendedor que mejora.": {
+  "en": "From the ad to the meeting, and from the meeting to a better salesperson.",
+  "it": "Dall’annuncio alla riunione, e dalla riunione al venditore che migliora."
+ },
+ "Atraer tráfico": {
+  "en": "Attract traffic",
+  "it": "Attrarre traffico"
+ },
+ "Recibir y conectar": {
+  "en": "Receive and connect",
+  "it": "Ricevere e connettere"
+ },
+ "Medir": {
+  "en": "Measure",
+  "it": "Misurare"
+ },
+ "Mejora continua de ventas": {
+  "en": "Continuous sales improvement",
+  "it": "Miglioramento continuo delle vendite"
+ },
+ "Automatizar lo repetitivo": {
+  "en": "Automate the repetitive",
+  "it": "Automatizzare il ripetitivo"
+ },
+ "Piezas nuevas cada semana y el presupuesto puesto donde hay conversaciones.": {
+  "en": "New creatives every week and the budget placed where the conversations are.",
+  "it": "Nuove creatività ogni settimana e il budget dove ci sono conversazioni."
+ },
+ "Contesta en menos de un minuto, califica con tus reglas y agenda.": {
+  "en": "Replies in under a minute, qualifies with your rules and books.",
+  "it": "Risponde in meno di un minuto, qualifica con le tue regole e fissa."
+ },
+ "Revisa todas las conversaciones y avisa qué se atascó y dónde.": {
+  "en": "Reviews every conversation and flags what stalled and where.",
+  "it": "Rivede tutte le conversazioni e segnala cosa si è bloccato e dove."
+ },
+ "Registra cada reunión, la evalúa con rúbrica y entrena con las tuyas.": {
+  "en": "Records every meeting, scores it with a rubric and trains with your own.",
+  "it": "Registra ogni riunione, la valuta con una rubrica e allena con le tue."
+ },
+ "El trabajo que hoy hace una persona a mano, hecho por un flujo probado.": {
+  "en": "The work a person does by hand today, done by a tested flow.",
+  "it": "Il lavoro che oggi fa una persona a mano, svolto da un flusso testato."
  }
 }
