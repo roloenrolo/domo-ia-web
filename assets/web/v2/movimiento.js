@@ -14,7 +14,7 @@
       return;
     }
     video.autoplay = true;
-    video.src = mobile.matches ? '/assets/web/video-hero-vertical-v2.mp4' : '/assets/web/video-hero-oficina.mp4';
+    video.src = mobile.matches ? '/assets/web/v2/hero-vertical.mp4' : '/assets/web/v2/hero-oficina.mp4';
     video.load();
     video.play().catch(() => {});
   }
@@ -27,7 +27,7 @@
   new IntersectionObserver(([e]) => root.classList.toggle('cta-on', !e.isIntersecting)).observe(document.querySelector('.hero'));
   if (reduce.matches) return;
   root.classList.add('motion');
-  reduce.addEventListener('change', () => location.reload());
+  reduce.addEventListener('change', () => { root.classList.toggle('motion', !reduce.matches); heroVideo(); });
   document.querySelectorAll('[data-words]').forEach(el => {
     const words = el.textContent.split(/(\s+)/);
     el.replaceChildren(...words.map((word, i) => {
