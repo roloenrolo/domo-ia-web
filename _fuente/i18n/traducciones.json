@@ -1250,5 +1250,109 @@
  "Diagnóstico gratis de 45 minutos": {
   "en": "Free 45-minute diagnostic",
   "it": "Diagnosi gratuita di 45 minuti"
+ },
+ "4.960": {
+  "en": "=",
+  "it": "="
+ },
+ "15": {
+  "en": "=",
+  "it": "="
+ },
+ "15×": {
+  "en": "=",
+  "it": "="
+ },
+ "V": {
+  "en": "=",
+  "it": "="
+ },
+ "E": {
+  "en": "=",
+  "it": "="
+ },
+ "N": {
+  "en": "=",
+  "it": "="
+ },
+ "D": {
+  "en": "=",
+  "it": "="
+ },
+ "Cada mañana, solo": {
+  "en": "Every morning, on its own",
+  "it": "Ogni mattina, da solo"
+ },
+ "Qué cambió": {
+  "en": "What changed",
+  "it": "Cosa è cambiato"
+ },
+ "Lo que lleva medido": {
+  "en": "Measured so far",
+  "it": "Misurato finora"
+ },
+ "Pieza en video": {
+  "en": "Video creative",
+  "it": "Creatività video"
+ },
+ "Pieza de imagen": {
+  "en": "Image creative",
+  "it": "Creatività immagine"
+ },
+ "Misma cuenta, mismo mes, mismo presupuesto diario": {
+  "en": "Same account, same month, same daily budget",
+  "it": "Stesso account, stesso mese, stesso budget giornaliero"
+ },
+ "El motor del buscador corriendo": {
+  "en": "The property search engine running",
+  "it": "Il motore di ricerca in funzione"
+ },
+ "El gatillador, en la primera pregunta abierta.": {
+  "en": "The trigger, in the first open question.",
+  "it": "L’innesco, nella prima domanda aperta."
+ },
+ "El nudo real aparece a los 5 minutos y se explicita a los 11.": {
+  "en": "The real knot shows at minute 5 and is spelled out at minute 11.",
+  "it": "Il nodo vero emerge al minuto 5 e viene esplicitato all’11."
+ },
+ "La franqueza que mata la venta de hoy.": {
+  "en": "The candour that kills today’s sale.",
+  "it": "La franchezza che uccide la vendita di oggi."
+ },
+ "{0}Informe de reunión · Lucas{1}": {
+  "en": "{0}Meeting report · Lucas{1}",
+  "it": "{0}Report della riunione · Lucas{1}"
+ },
+ "más reuniones agendadas por conversación. Matías movió el presupuesto a la pieza que agenda.": {
+  "en": "more meetings booked per conversation. Matías moved the budget to the creative that books.",
+  "it": "più riunioni fissate per conversazione. Matías ha spostato il budget sulla creatività che fissa."
+ },
+ "reuniones evaluadas con la misma rúbrica de cinco pasos, una por una.": {
+  "en": "meetings assessed with the same five-step rubric, one by one.",
+  "it": "riunioni valutate con la stessa rubrica in cinque passi, una per una."
+ },
+ "avisos leídos en 27 comunas antes de las 06:16, para dejar el buscador al día.": {
+  "en": "listings read across 27 districts before 06:16, to keep the search engine current.",
+  "it": "annunci letti in 27 comuni prima delle 06:16, per tenere aggiornato il motore."
+ },
+ "La pieza que funciona deja una reunión cada US$4,86; la otra, cada US$167,88. Cuenta de una corredora de propiedades en Santiago, al 6 de septiembre de 2026. El agendamiento se mide en el CRM a 30 días y la inversión en Meta a 28: las ventanas no están alineadas.": {
+  "en": "The creative that works books a meeting for every US$4.86; the other, for every US$167.88. Account of a real-estate brokerage in Santiago, as of 6 September 2026. Bookings are measured in the CRM over 30 days and spend in Meta over 28: the windows are not aligned.",
+  "it": "La creatività che funziona porta una riunione ogni 4,86 US$; l’altra, ogni 167,88 US$. Account di un’agenzia immobiliare a Santiago, al 6 settembre 2026. Le riunioni si misurano nel CRM su 30 giorni e la spesa su Meta su 28: le finestre non sono allineate."
+ },
+ "Formato real del informe que deja Lucas después de cada reunión, con los datos del cliente ocultos. La rúbrica V-E-N-D-E revisa vincular, explorar, narrar, destrabar y expandir.": {
+  "en": "The real format of the report Lucas leaves after each meeting, with the client’s details hidden. The V-E-N-D-E rubric checks connect, explore, narrate, unblock and expand.",
+  "it": "Il formato reale del report che Lucas lascia dopo ogni riunione, con i dati del cliente nascosti. La rubrica V-E-N-D-E verifica collegare, esplorare, narrare, sbloccare ed espandere."
+ },
+ "Corrida real del 6 de septiembre de 2026: 276 proyectos recuperados del CRM con un navegador automatizado, 4.960 avisos de arriendo leídos y 78 medianas calculadas. Nadie interviene.": {
+  "en": "Real run of 6 September 2026: 276 projects pulled from the CRM with an automated browser, 4,960 rental listings read and 78 medians computed. Nobody steps in.",
+  "it": "Esecuzione reale del 6 settembre 2026: 276 progetti estratti dal CRM con un browser automatizzato, 4.960 annunci di affitto letti e 78 mediane calcolate. Nessuno interviene."
+ },
+ "22,8% agenda": {
+  "en": "22.8% booked",
+  "it": "22,8% fissate"
+ },
+ "1,5% agenda": {
+  "en": "1.5% booked",
+  "it": "1,5% fissate"
  }
 }
