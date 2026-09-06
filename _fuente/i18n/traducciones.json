@@ -1158,5 +1158,81 @@
  "Ver el método completo, 2 min ↓": {
   "en": "Watch the full method, 2 min ↓",
   "it": "Guarda il metodo completo, 2 min ↓"
+ },
+ "Sí, son consultas de propiedades. Me escriben a cualquier hora y en la noche no alcanzo.": {
+  "en": "=",
+  "it": "="
+ },
+ "Entiendo, te llegan consultas fuera de horario y se te acumulan. Eso hace perder harto tiempo de respuesta y probablemente algunos clientes se van a otra corredora mientras contestas.": {
+  "en": "=",
+  "it": "="
+ },
+ "Para ver cómo se puede automatizar eso, te propongo agendar un diagnóstico con Rodrigo. Ahí revisan tu caso puntual.": {
+  "en": "=",
+  "it": "="
+ },
+ "¿Cuál es tu nombre y tu correo para agendarlo?": {
+  "en": "=",
+  "it": "="
+ },
+ "Somos tres vendedores y llegan como 40 mensajes al día. Lo que más me duele es que se enfrían.": {
+  "en": "=",
+  "it": "="
+ },
+ "Entiendo, con 40 mensajes diarios entre tres personas es difícil que alguien no se enfríe esperando respuesta.": {
+  "en": "=",
+  "it": "="
+ },
+ "Para revisar tu caso con Rodrigo, ¿me pasas tu nombre y correo así agendamos el diagnóstico?": {
+  "en": "=",
+  "it": "="
+ },
+ "Carla Pérez, carla@example.com": {
+  "en": "=",
+  "it": "="
+ },
+ "Gracias, Carla. Tengo estas horas disponibles para el diagnóstico con Rodrigo:": {
+  "en": "=",
+  "it": "="
+ },
+ "Lunes 7 a las 10:00 · Lunes 7 a las 11:00 · Lunes 7 a las 12:00": {
+  "en": "=",
+  "it": "="
+ },
+ "¿Cuál te acomoda?": {
+  "en": "=",
+  "it": "="
+ },
+ "El lunes 7 a las 10:00 me sirve.": {
+  "en": "=",
+  "it": "="
+ },
+ "Listo, Carla, quedaste agendada con Rodrigo el lunes 7 a las 10:00.": {
+  "en": "=",
+  "it": "="
+ },
+ "11:47": {
+  "en": "=",
+  "it": "="
+ },
+ "11:48": {
+  "en": "=",
+  "it": "="
+ },
+ "11:49": {
+  "en": "=",
+  "it": "="
+ },
+ "WhatsApp · en turno": {
+  "en": "=",
+  "it": "="
+ },
+ "Reunión agendada. Queda en el calendario del vendedor.": {
+  "en": "=",
+  "it": "="
+ },
+ "Conversación de prueba contra la Antonia de domo IA, 6 de septiembre de 2026. Respuestas textuales, sin editar. El lead es de prueba y las horas salen de un calendario real. Nunca publicamos conversaciones de clientes.": {
+  "en": "Test conversation with domo IA’s own Antonia, 6 September 2026. Replies are verbatim, unedited. The lead is a test lead and the times come from a real calendar. We never publish client conversations.",
+  "it": "Conversazione di prova con l’Antonia di domo IA, 6 settembre 2026. Risposte testuali, non modificate. Il lead è di prova e gli orari vengono da un calendario reale. Non pubblichiamo mai conversazioni dei clienti."
  }
 }
