@@ -1152,8 +1152,8 @@
   "it": "="
  },
  "Los cinco frentes se contratan en tres equipos, o todos juntos": {
-  "en": "The five fronts are hired as three teams, or all together",
-  "it": "I cinque fronti si assumono in tre squadre, o tutti insieme"
+  "en": "The five areas are hired as three teams, or all together",
+  "it": "I cinque ambiti si assumono in tre squadre, o tutti insieme"
  },
  "Ver el método completo, 2 min ↓": {
   "en": "Watch the full method, 2 min ↓",
@@ -1234,5 +1234,21 @@
  "Conversación de prueba contra la Antonia de domo IA, 6 de septiembre de 2026. Respuestas textuales, sin editar. El lead es de prueba y las horas salen de un calendario real. Nunca publicamos conversaciones de clientes.": {
   "en": "Test conversation with domo IA’s own Antonia, 6 September 2026. Replies are verbatim, unedited. The lead is a test lead and the times come from a real calendar. We never publish client conversations.",
   "it": "Conversazione di prova con l’Antonia di domo IA, 6 settembre 2026. Risposte testuali, non modificate. Il lead è di prova e gli orari vengono da un calendario reale. Non pubblichiamo mai conversazioni dei clienti."
+ },
+ "Cubre los frentes 01, 02 y 03": {
+  "en": "Covers areas 01, 02 and 03",
+  "it": "Copre gli ambiti 01, 02 e 03"
+ },
+ "Cubre el frente 04": {
+  "en": "Covers area 04",
+  "it": "Copre l’ambito 04"
+ },
+ "Cubre el frente 05": {
+  "en": "Covers area 05",
+  "it": "Copre l’ambito 05"
+ },
+ "Cubre los cinco frentes": {
+  "en": "Covers all five areas",
+  "it": "Copre tutti e cinque gli ambiti"
  }
 }
