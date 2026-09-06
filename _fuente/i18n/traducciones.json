@@ -1407,10 +1407,6 @@
   "en": "wrote in",
   "it": "hanno scritto"
  },
- "declararon presupuesto": {
-  "en": "stated a budget",
-  "it": "hanno indicato un budget"
- },
  "agendaron": {
   "en": "booked a meeting",
   "it": "hanno fissato"
@@ -1427,32 +1423,36 @@
   "en": "conversations end in a meeting. Clara reviews where the rest drop off and flags when one ad concentrates the stalled ones.",
   "it": "conversazioni finiscono in riunione. Clara controlla dove cade il resto e segnala quando un singolo annuncio concentra quelle bloccate."
  },
- "369": {
+ "141": {
   "en": "=",
   "it": "="
  },
- "221": {
+ "70": {
   "en": "=",
   "it": "="
  },
- "105": {
+ "29": {
   "en": "=",
   "it": "="
  },
- "52": {
+ "28": {
   "en": "=",
   "it": "="
  },
- "eligieron horario": {
-  "en": "picked a time slot",
-  "it": "hanno scelto un orario"
+ "dejaron sus datos": {
+  "en": "left their details",
+  "it": "hanno lasciato i dati"
  },
- "14 de 100": {
-  "en": "14 in 100",
-  "it": "14 su 100"
+ "pidieron horarios": {
+  "en": "asked for time slots",
+  "it": "hanno chiesto gli orari"
  },
- "Últimos 30 días de una corredora de propiedades en Santiago. Cada tramo se mide en el CRM del cliente.": {
-  "en": "Last 30 days of a real-estate brokerage in Santiago. Each step is measured in the client’s CRM.",
-  "it": "Ultimi 30 giorni di un’agenzia immobiliare a Santiago. Ogni passaggio è misurato nel CRM del cliente."
+ "20 de 100": {
+  "en": "20 in 100",
+  "it": "20 su 100"
+ },
+ "Últimas dos semanas de una corredora de propiedades en Santiago, contadas sobre el registro de la propia Antonia. Dos de esas reuniones se cancelaron después.": {
+  "en": "Last two weeks of a real-estate brokerage in Santiago, counted from Antonia’s own log. Two of those meetings were cancelled afterwards.",
+  "it": "Ultime due settimane di un’agenzia immobiliare a Santiago, contate sul registro di Antonia stessa. Due di quelle riunioni sono state poi annullate."
  }
 }
