@@ -2,6 +2,7 @@
 <html lang="es-CL">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Domo IA — Del anuncio en redes sociales a la reunión</title>
 <meta name="description" content="Un equipo de trabajadores digitales con nombre y cargo: traen los leads desde tus anuncios, los atienden en menos de 1 minuto, te agendan la reunión y entrenan a tus vendedores.">
@@ -28,290 +29,80 @@
 <meta name="twitter:image" content="https://domo-ia.com/assets/web/og-domo-ia-v2.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#F6F3EC">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  /* ===== Tokens — manual de marca Domo IA v1 ===== */
-  :root{
-    --bg:#F6F3EC; --surface:#FFFFFF; --surface2:#F0EBE0;
-    --text:#1C2340; --muted:#5D6478; --border:#E2DCCC;
-    --brand:#33508F; --brand2:#D98E3A; --accent:#0E9F6E; --warn:#D97706;
-    --chip:#F3E8D2; --chipText:#A06A1F;
-    --deep:#1B2340; --deepSurface:#252F55; --deepText:#F2EDE4; --deepMuted:#A7B0CC; --deepBorder:#3D4A7A; --deepBrand:#7E9BDE; --deepAmber:#E8A951;
-    --shadow:0 2px 10px rgba(40,40,80,.08);
-    --radius-pill:99px; --radius-card:14px; --radius-md:12px; --radius-sm:10px; --radius-xs:8px;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0; background:var(--bg); color:var(--text);
-    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
-    font-size:16px; line-height:1.6;
-  }
-  .display{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 118;letter-spacing:-.02em;line-height:1.08;margin:0}
-  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-  img{max-width:100%;height:auto;display:block}
-  :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
-  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--brand2);margin:0 0 16px}
+:root{--bg:#FFFFFF;--fg:#0A0A0A;--muted:#6B6B6B;--accent:#1F3BFF;--paper:#F5F5F5;--gutter:48px;--rise:60px}
+*{box-sizing:border-box;border-radius:0}html{scroll-padding-top:88px}body{margin:0;padding-top:72px;background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.5}img,video{display:block;max-width:100%}img{object-fit:contain}a{color:inherit;text-underline-offset:5px}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}p{margin:0}h1,h2,h3,.display,.mark{font-family:"Archivo","Arial Black",system-ui,sans-serif;font-variation-settings:"wdth" 125;font-weight:900;letter-spacing:-.03em;line-height:.95;margin:0}h2{font-size:clamp(48px,5.3vw,80px)}h3{font-size:40px}h1,h2,h3{overflow-wrap:anywhere;hyphens:manual}.mono,.eyebrow,.num,.btn,.text-link,nav,.lang-switch,.video-label,.video-caption,.worker-role,.badge,.n,.quien,.nota,.persona-cargo,.f-lbl,.aviso-ley,.method-play{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;font-variant-numeric:tabular-nums}.mono,.eyebrow{font-size:12px}.eyebrow{color:var(--muted)}.num{font-size:13px;color:var(--accent);font-weight:600}.wrap{padding-left:var(--gutter);padding-right:var(--gutter);max-width:1680px;margin-inline:auto}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:var(--bg);padding:18px 26px;text-decoration:none;font-size:12px;font-weight:600;line-height:1.4;border:1px solid var(--accent);text-align:center}.btn.ghost{background:transparent;color:var(--accent)}.text-link{font-size:12px;line-height:1.5}.actions,.section-close{display:flex;align-items:center;gap:28px}.section-close{padding-top:36px}.section,main>section:not(.hero){padding-block:64px;border-top:1px solid var(--fg)}.shead{display:flex;gap:24px;align-items:baseline;border-bottom:3px solid var(--fg);padding-bottom:28px;margin-bottom:24px}.shead h2{max-width:1120px}.sub{max-width:800px;margin-bottom:36px;font-size:18px}.bar{height:72px;display:flex;align-items:center;gap:24px;padding-block:20px}header{position:fixed;inset:0 0 auto;height:72px;background:var(--bg);border-bottom:1px solid var(--fg);z-index:30}.mark{display:flex;align-items:center;gap:10px;font-size:20px;white-space:nowrap;text-decoration:none;letter-spacing:0;flex:none}.mark svg{flex:none}nav{display:flex;align-items:center;gap:22px;margin-left:auto;white-space:nowrap;font-size:11px}nav a{text-decoration:none}.lang-switch{display:flex;gap:12px;align-items:center;white-space:nowrap;font-size:11px}.lang-switch a{text-decoration:none;color:var(--muted)}.lang-switch [aria-current]{color:var(--accent)}.bar .btn{padding:12px 16px;font-size:11px;white-space:nowrap;flex:none}
+.hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:1fr auto;min-height:588px;padding-block:30px;position:relative;column-gap:0}.hero::after{content:"";position:absolute;inset:0 auto 0 50%;border-left:1px solid var(--fg)}.hero-title,.hero-copy{grid-column:1 / 7;padding-right:40px}.hero-title{align-self:end}.hero-title .eyebrow{margin-bottom:26px}.hero h1{font-size:72px}.hero-copy{padding-top:26px;align-self:start}.hero-copy>p{font-size:18px;line-height:1.45;max-width:46ch}.hero-copy .actions{margin-top:26px;gap:24px;flex-wrap:wrap}.hero-media{grid-column:7 / 13;grid-row:1 / 3;align-self:center;padding-left:40px}.hero-frame{position:relative;border:1px solid var(--fg);background:var(--fg);aspect-ratio:16/9;overflow:hidden}.hero-frame video{width:100%;height:100%;object-fit:cover}.video-label{position:absolute;inset:auto 16px 14px;max-width:max-content;background:var(--fg);color:var(--paper);font-size:10px;padding:6px 10px;line-height:1.5}.video-caption{display:block;margin-top:12px;font-size:10px;color:var(--muted);line-height:1.7}.marquee{overflow:hidden;border-top:1px solid var(--fg);border-bottom:1px solid var(--fg);padding-block:9px}.marquee-track{display:flex;width:max-content;gap:48px}.marquee p{white-space:nowrap;font-size:10px;flex:none}.marquee-copy::before{content:attr(data-text)}.roster-strip{display:flex;height:232px;border-bottom:1px solid var(--fg);overflow-x:auto;overflow-y:hidden}.count-block{flex:0 0 220px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--fg);padding-right:24px;gap:12px}.count-block .display{font-size:64px}.count-block p{font-size:11px;max-width:180px;color:var(--muted)}.roster{flex:1;min-width:0;display:flex;align-items:flex-end;justify-content:space-between;padding-left:32px;gap:8px}.roster-person{display:flex;flex-direction:column;align-items:center;min-width:0}.roster img{height:156px;width:auto;max-width:none}.roster-person>span{font-size:10px;display:block;border-top:1px solid var(--fg);width:100%;text-align:center;padding:8px 0 14px}.front-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}.front-intro h2{font-size:clamp(50px,5vw,72px);border-bottom:3px solid var(--fg);padding-block:20px 28px;margin-bottom:24px}.front-intro>p:not(.eyebrow){font-size:17px}.front-counter{display:none;font-family:"Archivo","Arial Black",sans-serif;font-weight:900;font-variation-settings:"wdth" 125;letter-spacing:-.03em;line-height:1;color:var(--accent);font-size:240px;margin-top:20px}.front-counter::before{content:attr(data-number)}.front-row{min-height:520px;padding-block:36px;border-bottom:1px solid var(--fg);display:flex;flex-direction:column;gap:24px}.front-row:first-child{padding-top:0}.front-row h3{font-size:40px;max-width:620px}.front-row p{max-width:58ch}.responsibles{display:flex;gap:24px;align-items:flex-end;justify-content:flex-end;margin-top:auto;padding-top:12px}.responsibles>div{min-width:0;display:flex;flex-direction:column;align-items:center}.responsibles img{height:180px;width:auto}.responsibles span{font-size:10px;border-top:1px solid var(--fg);padding-top:8px;width:100%;text-align:center}
+.team{position:relative}.team .shead{display:block}.team .eyebrow{margin-bottom:18px}.team-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--fg);border-left:1px solid var(--fg)}.worker{border-right:1px solid var(--fg);border-bottom:1px solid var(--fg);padding:24px 24px 0;display:flex;flex-direction:column;min-width:0;background:var(--bg)}.worker-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.worker h3{font-size:34px}.badge{font-size:10px;line-height:1.4;white-space:nowrap;background:var(--accent);color:var(--bg);padding:6px 10px}.worker-role{color:var(--muted);font-size:10.5px;margin-top:10px;min-height:32px}.worker-summary{font-size:15px;margin-block:12px}.worker ul{font-size:14px;padding-left:18px;margin:0 0 20px;line-height:1.5}.worker li+li{margin-top:8px}.worker-portrait{margin-top:auto;align-self:flex-end}.worker-portrait img{height:200px;width:auto}.team-progress{height:3px;background:var(--accent);transform-origin:left;display:none}.team-end{display:block;width:max-content;max-width:100%;margin-top:22px}.team-contact{padding-bottom:64px}.packs{display:flex;flex-direction:column;gap:32px}.pack{position:relative;border:1px solid var(--fg);background:var(--bg);padding:36px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:32px;align-content:start}.pack>.eyebrow,.pack>h3,.pack>.promesa,.pack>.quien,.pack>.avatars{grid-column:1 / 7}.pack>h3{font-size:48px;margin-block:20px}.promesa{font-size:20px;line-height:1.4}.avatars{display:flex;align-items:end;flex-wrap:wrap;gap:12px;margin-top:24px}.avatars img{height:100px;width:auto;max-width:74px}.quien{font-size:11px;margin-block:16px;color:var(--muted)}.pack>ul{grid-column:7 / 13;grid-row:1 / 6;padding-left:20px;font-size:18px;margin:0}.pack li+li{margin-top:18px}.pack>.nota{grid-column:7 / 13;font-size:11px;margin-block:18px}.pack>.btn{grid-column:7 / 13;justify-self:start;margin-top:24px}.pasos,.personas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}.paso{padding:28px 32px 12px;position:relative}.paso:first-child{padding-left:0}.paso::before{content:"";position:absolute;inset:0 auto 0 0;border-left:1px solid var(--fg);transform-origin:top}.paso:first-child::before{display:none}.paso .n{color:var(--accent);font-size:12px}.paso h3{font-size:32px;margin:24px 0}.video-frame{position:relative;margin-top:36px;border:1px solid var(--fg);aspect-ratio:16/9;background:var(--fg)}.video-frame video{width:100%;height:100%;object-fit:contain}.method-play{display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--accent);color:var(--bg);border:0;padding:20px;font-size:11px;align-items:center;gap:12px}.method-play svg{width:24px;height:24px;fill:currentColor}.personas{margin-top:32px}.persona{padding:24px 32px;border-left:1px solid var(--fg);border-top:1px solid var(--fg)}.persona:first-child{padding-left:0;border-left:0}.persona>img{width:88px;height:88px;object-fit:cover;filter:grayscale(1);margin-bottom:24px}.persona-cargo{font-size:11px;color:var(--muted);margin-bottom:12px}.persona h3{font-size:30px;max-width:360px}.persona-link{display:inline-flex;margin-top:20px}.persona-link svg,.f-social svg{width:22px;height:22px;fill:currentColor}.formacion{margin-top:24px}.formacion summary{font-size:14px}.persona-datos{font-size:14px;padding-left:18px}.persona-datos li+li{margin-top:8px}.faq{border-top:1px solid var(--fg);padding-block:24px}.faq:last-child{border-bottom:1px solid var(--fg)}summary{cursor:pointer;list-style:none;font-size:20px;font-weight:600;padding-right:36px;position:relative}summary::-webkit-details-marker{display:none}summary::after{content:"+";position:absolute;right:4px;top:0;font-family:"IBM Plex Mono",monospace;color:var(--accent)}details[open]>summary::after{content:"−"}.answer p{padding-top:18px;max-width:1000px}.closing{position:relative}.final{position:relative;min-height:100svh;background:var(--bg);display:flex;align-items:center;text-align:center;border-top:1px solid var(--fg);padding-block:96px}.final .wrap{max-width:1200px}.final h2{font-size:clamp(48px,6vw,88px);margin-block:28px}.final .sub{margin-inline:auto;margin-bottom:32px}.final-num{position:absolute;top:40px;left:var(--gutter)}footer{position:relative;z-index:2;background:var(--fg);color:var(--paper);padding:64px 0 100px;min-height:420px}footer>.wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;margin-bottom:40px}footer .lang-switch a,footer .lang-switch [aria-current]{color:var(--paper)}footer .lang-switch [aria-current]{text-decoration:underline}.f-contact{display:flex;flex-direction:column;gap:16px;max-width:1060px}.f-lbl,.aviso-ley{font-size:11px}.f-social{display:flex;gap:24px}.sticky-cta{display:none}
+@media(min-width:1024px){html.motion .front-intro{position:sticky;top:104px}html.motion .front-counter{display:block}}
+@media(min-width:1024px) and (min-height:860px){.pack{min-height:650px}html.motion .pack{position:sticky;top:72px}html.motion .pack:nth-child(2){top:96px}html.motion .pack:nth-child(3){top:120px}html.motion .pack:nth-child(4){top:144px}}
+@media(min-width:1024px) and (min-height:820px){html.gallery #equipo{padding:0;height:calc(100svh + 9 * 340px - (100vw - 96px));border:0}html.gallery .team-stage{position:sticky;top:72px;height:calc(100svh - 72px);padding-top:24px;padding-bottom:16px;display:flex;flex-direction:column;background:var(--bg)}html.gallery .team .shead{padding-bottom:16px;margin-bottom:20px;flex:none}html.gallery .team h2{font-size:52px}html.gallery .team .eyebrow{margin-bottom:12px}html.gallery .team-progress{display:block;position:absolute;inset:0 48px auto}html.gallery .team-window{overflow:hidden;min-height:0;flex:1}html.gallery .team-track{display:flex;height:100%;width:max-content}html.gallery .worker{flex:0 0 680px;width:680px;display:grid;grid-template-columns:1fr 150px;grid-template-rows:auto auto auto 1fr;column-gap:20px;align-content:start}html.gallery .worker-head,html.gallery .worker-role,html.gallery .worker-summary{grid-column:1 / 3}html.gallery .worker ul{grid-column:1;grid-row:4;font-size:14px;line-height:1.45;margin-bottom:20px}html.gallery .worker-portrait{grid-column:2;grid-row:4;align-self:end;margin-top:0}html.gallery .worker-portrait img{height:200px;max-width:150px;object-position:bottom}html.gallery .team-end{flex:none;margin-top:14px}}
+@media(max-width:1240px){.bar{gap:16px}nav{gap:14px;font-size:10px}.bar .btn{font-size:10px;padding-inline:12px}.hero h1{font-size:60px}.roster{min-width:950px}.hero-copy .actions{gap:20px}.front-grid{gap:40px}}
+@media(max-width:1023px){:root{--gutter:20px;--rise:30px}body{padding-top:118px}html{scroll-padding-top:130px}.bar{gap:14px}.mark{font-size:17px}.mark svg{width:24px;height:24px}nav{display:flex;flex:0 0 100%;order:9;margin:10px 0 0;padding-top:10px;border-top:1px solid var(--fg);overflow-x:auto;gap:20px;font-size:11px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}header{height:auto}.bar{height:auto;flex-wrap:wrap;padding-block:12px}.bar .lang-switch{margin-left:auto;font-size:10px;gap:8px}.bar .btn{font-size:10px;max-width:125px;white-space:normal;padding:10px}.hero{display:flex;flex-direction:column;min-height:0;padding-block:30px;gap:24px}.hero::after{display:none}.hero-title,.hero-copy{padding:0}.hero-title{align-self:stretch;order:0}.hero-title .eyebrow{font-size:11px;margin-bottom:24px}.hero h1{font-size:clamp(46px,8vw,72px)}.hero-media{order:1;padding:0;align-self:stretch}.hero-copy{order:2}.hero-copy>p{max-width:none;font-size:16px}.hero-copy .actions{display:flex;align-items:stretch;flex-direction:column;gap:20px;margin-top:24px}.hero-copy .text-link{text-align:center}.hero-frame{aspect-ratio:9/12}.video-label{font-size:9px;inset:auto 10px 10px;padding:5px 8px}.video-caption{font-size:9px}.roster-strip{height:204px}.count-block{flex-basis:140px}.count-block .display{font-size:52px}.count-block p{font-size:9px}.roster{min-width:850px;padding-left:20px;gap:16px}.roster img{height:128px}.roster-person>span{font-size:9px}.front-grid{display:block}.front-intro h2{font-size:48px}.front-rows{margin-top:36px}.front-row{min-height:0;padding-block:28px;gap:18px}.front-row h3{font-size:34px}.responsibles{margin-top:0;gap:18px}.responsibles img{height:140px}.section,main>section:not(.hero){padding-block:48px}.section-close{align-items:stretch;flex-direction:column;gap:18px}.section-close p{font-size:11px}.shead{display:block}.shead .num{display:block;margin-bottom:18px}.shead h2{font-size:46px}.sub{font-size:16px}.team-window{overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}.team-track{display:flex;width:max-content}.worker{width:calc(100vw - 52px);max-width:520px;flex:none;scroll-snap-align:start;padding:24px 20px 0}.worker-portrait img{height:200px}.team .shead h2{font-size:46px}.worker ul{font-size:14px}.team-contact{padding-bottom:48px}.pack{display:flex;flex-direction:column;padding:28px 20px;min-height:0}.pack>h3{font-size:38px}.pack>ul{margin-top:24px;font-size:16px}.pack li+li{margin-top:12px}.promesa{font-size:18px}.avatars{gap:8px}.avatars img{height:78px;max-width:58px}.pack>.btn{align-self:stretch}.pack>.nota{font-size:10px}.pasos,.personas{grid-template-columns:1fr}.paso,.paso:first-child{padding:28px 0;border-bottom:1px solid var(--fg)}.paso::before{display:none}.paso h3{margin-block:18px;font-size:30px}.persona,.persona:first-child{border-left:0;padding:28px 0}.persona h3{font-size:30px}.personas{gap:24px}.faq{padding-block:22px}summary{font-size:18px}.final h2{font-size:48px}.final{padding-block:80px}.final .eyebrow{font-size:10px}footer>.wrap{flex-direction:column;gap:24px}.f-contact span{overflow-wrap:anywhere}.sticky-cta{position:fixed;inset:auto 12px 12px;z-index:20;align-items:center;gap:12px;pointer-events:none}.sticky-cta .btn{flex:1;padding:14px 12px}.whatsapp-float{display:flex;background:var(--accent);color:var(--bg);padding:12px}.whatsapp-float svg{width:28px;height:28px;fill:currentColor}html.cta-on .sticky-cta{display:flex;pointer-events:auto}.method-play{padding:14px;font-size:10px}}
+@media(max-width:560px){.bar .lang-switch{display:none}.bar .btn{max-width:none;white-space:nowrap}}@media(max-width:389px){.bar{gap:8px}.mark{font-size:15px;gap:6px}.bar .btn{font-size:9px;padding-inline:10px}.bar .lang-switch{gap:6px;font-size:9px}.hero h1{font-size:46px}}
+html.motion .final{position:sticky;top:0}
+/* MOVIMIENTO */
+@keyframes enter{from{transform:translateY(var(--rise));opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes word{from{transform:translateY(30px);clip-path:inset(100% 0 0)}to{transform:translateY(0);clip-path:inset(0)}}
+@keyframes media-in{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes method-in{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes photo-in{from{opacity:0}to{opacity:1}}
+@keyframes rule-in{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes lateral{from{transform:translateX(calc(-1 * var(--rise)));opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes marquee{to{transform:translateX(calc(-50% - 24px))}}
+@keyframes parallax{from{transform:translateY(12px)}to{transform:translateY(-12px)}}
+@keyframes number-wipe{from{clip-path:inset(100% 0 0)}to{clip-path:inset(0)}}
+@keyframes gallery-pan{to{transform:translateX(calc(-1 * var(--travel)))}}
+@keyframes progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes stack-back{to{transform:scale(.97);opacity:.88}}
+@keyframes pulse{0%,50%,100%{transform:translate(-50%,-50%) scale(1)}25%,75%{transform:translate(-50%,-50%) scale(1.08)}}
+@media(prefers-reduced-motion:no-preference){
+ header .bar{transition:padding 200ms}html.scrolled .bar{padding-block:14px}
+ html.js .hero-title>.eyebrow{animation:enter 450ms both}
+ html.js .hero h1{animation:word 700ms both}
+ html.js .hero-copy{animation:enter 650ms 200ms both}
+ html.js .hero-media{animation:media-in 700ms cubic-bezier(.2,.8,.2,1) both}
+ html.motion [data-words] .word{display:inline-block;animation:word 650ms cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i) * 60ms)}
+ html.motion .final [data-words]:not(.in) .word{animation-play-state:paused}
+ html.motion .final .btn{animation:enter 700ms 700ms both;animation-play-state:paused}
+ html.motion .final.in .btn{animation-play-state:running}
+ html.motion [data-enter].waiting{opacity:0}
+ html.motion [data-enter].in{animation:enter 650ms cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--i,0) * 70ms)}
+ html.motion .paso.in{animation-name:lateral;animation-delay:calc(var(--i,0) * 120ms)}
+ html.motion .paso.in::before{animation:rule-in 650ms both;animation-delay:calc(var(--i,0) * 120ms)}
+ html.motion .video-frame.in{animation-name:method-in}
+ html.motion .method-play{display:flex}
+ html.motion .video-frame.in .method-play{animation:pulse 600ms 2}
+ html.motion .video-frame.playing .method-play{display:none}
+ html.motion .persona img.in{animation-name:photo-in}
+ html.motion .persona h3.in{animation-name:word}
+ html.motion .faq.in{animation-delay:calc(var(--i,0) * 60ms)}
+ html.motion .marquee-track{animation:marquee 40s linear infinite}
+ html.motion .front-counter.wipe{animation:number-wipe 450ms both}
+ html.motion .answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows 350ms}
+ html.motion .answer>div{overflow:hidden}
+ html.motion details[open]>.answer{grid-template-rows:1fr}
+ @supports selector(details::details-content){html.motion .faq::details-content{display:block;transition:content-visibility 350ms allow-discrete}}
+ @starting-style{html.motion .faq[open]>.answer{grid-template-rows:0fr}}
+ @supports(animation-timeline:view()){
+  html.native-motion [data-enter].in{animation-timeline:view();animation-range:entry calc(var(--i,0) * 2%) entry calc(60% + var(--i,0) * 2%);animation-delay:0s}
+  html.native-motion [data-enter].settled{animation:none;opacity:1;transform:none;clip-path:none}
+  @media(min-width:1024px){html.motion .parallax{animation:parallax linear both;animation-timeline:view();will-change:transform}html.motion .roster-person:nth-child(even) .parallax{animation-direction:reverse}}
+  @media(min-width:1024px) and (min-height:860px){.packs{timeline-scope:--pack2,--pack3,--pack4}.pack:nth-child(2){view-timeline-name:--pack2}.pack:nth-child(3){view-timeline-name:--pack3}.pack:nth-child(4){view-timeline-name:--pack4}html.motion .pack:not(:last-child){animation:stack-back linear both;animation-range:entry 0% entry 100%}html.motion .pack:nth-child(1){animation-timeline:--pack2}html.motion .pack:nth-child(2){animation-timeline:--pack3}html.motion .pack:nth-child(3){animation-timeline:--pack4}}
+ }
+ @supports(animation-timeline:scroll(root block)){
+  html.native-gallery .team-track{animation:gallery-pan linear both;animation-timeline:scroll(root block);animation-range:var(--scroll-start) var(--scroll-end)}
+  html.native-gallery .team-progress{animation:progress linear both;animation-timeline:scroll(root block);animation-range:var(--scroll-start) var(--scroll-end)}
+ }
+ @media(hover:hover){.marquee-track:hover{animation-play-state:paused}.btn:hover{transform:translateY(-2px)}}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.marquee-track{width:auto}.marquee p{white-space:normal}.marquee-copy{display:none}.front-counter{display:none!important}}
 
-  /* ===== Header ===== */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:color-mix(in srgb, var(--bg) 90%, transparent);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--border);
-  }
-  .bar{display:flex;align-items:center;gap:10px;padding:14px 24px}
-  .mark{display:flex;align-items:center;gap:9px;font-family:"Archivo";font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--text);text-decoration:none}
-  .mark .ia{color:var(--brand2)}
-  .mark svg{flex:none}
-  .bar nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
-  .bar nav a{font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 10px;border-radius:var(--radius-pill)}
-  .bar nav a:hover{color:var(--text);background:var(--surface2)}
-  @media(max-width:820px){.bar{flex-wrap:wrap;row-gap:8px}.bar nav{display:none}.bar .mark{order:0}#headerCta{order:1;margin-left:auto}.bar .aviso-ley{order:2;flex-basis:auto;font-size:10px;padding-left:9px;padding-right:9px}.bar .lang-switch{order:3;margin-left:auto}}
-  .lang-switch{display:inline-flex;align-items:center;gap:4px;flex:none;font-family:"IBM Plex Mono",monospace;font-size:10px;line-height:1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-  .lang-switch a,.lang-switch span{display:inline-flex;align-items:center;color:var(--muted);text-decoration:none;padding:17px 0;margin:-17px 0}
-  .lang-switch a:hover{color:var(--brand2)}
-  .lang-switch [aria-current="true"]{color:var(--text);font-weight:600}
-  footer .lang-switch a,footer .lang-switch span{color:var(--deepMuted)}
-  footer .lang-switch a:hover,footer .lang-switch [aria-current="true"]{color:var(--deepText)}
-  .aviso-ley{display:inline-flex;align-items:center;gap:6px;font-family:"IBM Plex Mono",monospace;
-    font-size:11.5px;letter-spacing:.04em;text-decoration:none;color:var(--chipText);
-    background:var(--chip);border-radius:var(--radius-pill);padding:7px 12px;white-space:nowrap;
-    transition:filter .18s ease}
-  .aviso-ley:hover{filter:brightness(.95)}
-
-  /* ===== Botones (manual: azul=avanzar, un primario por pantalla) ===== */
-  .btn{display:inline-block;background:var(--brand);color:#fff;border:1px solid var(--brand);border-radius:var(--radius-sm);padding:13px 22px;font:inherit;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;text-align:center;min-height:48px;transition:transform .18s ease}
-  .btn:hover{transform:translateY(-3px)}
-  .btn.ghost{background:transparent;color:var(--brand)}
-  .btn.ghost.on-dark{color:var(--deepText);border-color:var(--deepBorder)}
-  /* CTA del header: fantasma mientras el hero está en pantalla; primario después (JS) */
-  #headerCta{padding:9px 16px;min-height:auto;font-size:13px}
-  #headerCta.ghost{background:transparent;color:var(--brand)}
-
-  /* ===== Hero (azul noche, manual §08) ===== */
-  .hero{position:relative;background:var(--deep);color:var(--deepText);overflow:hidden;border-bottom:1px solid var(--border);min-height:100vh;min-height:100svh;display:flex;align-items:center}
-  .hero-media{position:absolute;inset:0;z-index:0;transform-origin:62% 42%;animation:heroDrift 22s ease-in-out infinite alternate}
-  .hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center}
-  .hero-media video{display:none}
-  /* Deriva lenta tipo Ken Burns sobre todo el fondo del hero (imagen o video):
-     se mueve siempre, aunque el navegador bloquee el autoplay del video */
-  @keyframes heroDrift{
-    from{transform:scale(1.02) translateX(0)}
-    to{transform:scale(1.10) translateX(-1.8%)}
-  }
-  .hero-scrim{position:absolute;inset:0;z-index:1;
-    background:
-      linear-gradient(180deg, rgba(27,35,64,.45) 0%, rgba(27,35,64,.06) 22%, rgba(27,35,64,0) 55%, rgba(27,35,64,.35) 100%)}
-  .hero-scroll{position:absolute;z-index:3;bottom:28px;left:50%;transform:translateX(-50%);
-    color:var(--deepText);opacity:.85;display:flex;align-items:center;justify-content:center;
-    width:48px;height:48px;border-radius:var(--radius-pill);
-    background:rgba(27,35,64,.35);backdrop-filter:blur(4px);
-    animation:heroBob 2.4s ease-in-out infinite}
-  @keyframes heroBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
-  @media(max-width:820px){
-    .hero-media{animation:none;transform:none}
-    .hero-media img,.hero-media video{object-position:center center}
-  }
-
-  /* ===== Secciones ===== */
-  section{padding:72px 0;border-bottom:1px solid var(--border)}
-  .shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
-  .num{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--brand2);letter-spacing:.1em}
-  h1,h2{font-size:clamp(26px,3.4vw,38px);font-weight:700;margin:0}
-  .sub{color:var(--muted);max-width:66ch;margin:8px 0 40px}
-
-  /* ===== Equipo ===== */
-  /* — utilidad que el archivo no tiene — */
-  .vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
-    clip-path:inset(50%);white-space:nowrap;border:0}
-
-  /* — la tira — */
-  .equipo-tira{list-style:none;margin:0;padding:6px 0 12px;display:grid;grid-auto-flow:column;
-    grid-auto-columns:78vw;gap:16px;overflow-x:auto;
-    scroll-snap-type:x proximity;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;
-    scrollbar-width:none}
-  .equipo-tira::-webkit-scrollbar{display:none}
-  .agente-slot{display:grid;scroll-snap-align:start}
-  @media(min-width:821px){.equipo-tira{grid-auto-columns:calc((100% - 48px)/4)}}
-
-  /* — la tarjeta que gira — */
-  .agente{display:grid;height:100%;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;
-    transition:transform .5s ease}
-  .agente[data-flipped="true"]{transform:rotateY(180deg)}
-  .cara{grid-area:1/1;position:relative;display:flex;flex-direction:column;
-    backface-visibility:hidden;-webkit-backface-visibility:hidden;
-    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);
-    box-shadow:var(--shadow);transition:border-color .18s ease}
-  .dorso{transform:rotateY(180deg);visibility:hidden;transition:border-color .18s ease,visibility 0s linear .25s;padding:20px 18px;overflow-y:auto;
-    overscroll-behavior:contain}
-  .agente[data-flipped="true"] .dorso{visibility:visible;transition:border-color .18s ease}
-  .agente[data-flipped="true"] .frente{visibility:hidden;transition:border-color .18s ease,visibility 0s linear .25s}
-  .frente img{border-radius:calc(var(--radius-card) - 1px) calc(var(--radius-card) - 1px) 0 0}
-  .frente .info{user-select:none;display:flex;flex-direction:column;flex:1}
-  .agente:hover .cara{border-color:var(--brand)}
-  .dorso ul{list-style:none;margin:10px 0 0;padding:0}
-  .dorso li{position:relative;padding-left:14px;font-size:13px;color:var(--muted);
-    margin-bottom:8px;line-height:1.5}
-  .dorso li::before{content:"·";position:absolute;left:2px;color:var(--brand2);font-weight:700}
-
-  /* — el botón, estirado sobre toda la cara — */
-  .flip-btn{margin-top:auto;align-self:center;
-    display:inline-flex;align-items:center;gap:7px;white-space:nowrap;
-    background:transparent;
-    border:1px solid color-mix(in srgb, var(--brand) 35%, transparent);
-    border-radius:var(--radius-pill);padding:7px 15px;
-    font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:12px;font-weight:600;
-    letter-spacing:0;text-transform:none;color:var(--brand);
-    text-align:left;cursor:pointer;
-    transition:background .18s ease,color .18s ease,border-color .18s ease}
-  .flip-txt{white-space:nowrap}
-  .flip-btn:hover{background:var(--brand);border-color:var(--brand);color:#fff}
-  .flip-btn svg{width:15px;height:15px;flex:none}
-  .flip-btn::after{content:"";position:absolute;inset:0}
-  .frente .flip-btn{margin:auto 0 -8px}
-  .dorso .flip-btn{margin-top:auto}
-
-  /* — sin JS: caras apiladas y legibles, nada se pierde — */
-  .equipo-tira:not(.js) .cara{grid-area:auto;visibility:visible;transform:none}
-  .equipo-tira:not(.js) .flip-btn{display:none}
-  .equipo-tira:not(.js) .agente{transform:none}
-
-  .tira-cabecera{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:-24px 0 16px}
-  .tira-pista{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--muted);margin:0}
-  .tira-progreso{height:4px;background:var(--surface2);border-radius:99px;margin-top:16px;overflow:hidden}
-  .tira-progreso span{display:block;height:100%;width:30%;background:var(--brand);border-radius:99px;
-    transform:translateX(0);will-change:transform}
-  .tira-nav{display:flex;gap:10px;margin:0}
-  .tira-btn{width:56px;height:56px;border-radius:99px;border:1.5px solid var(--brand);
-    background:var(--surface);color:var(--brand);cursor:pointer;padding:0;
-    display:inline-flex;align-items:center;justify-content:center;
-    box-shadow:var(--shadow);
-    transition:background .18s ease,color .18s ease,transform .18s ease}
-  .tira-btn svg{width:24px;height:24px;display:block}
-  .tira-btn:hover:not(:disabled){background:var(--brand);color:#fff;transform:translateY(-2px)}
-  .tira-btn:disabled{opacity:.35;cursor:default;border-color:var(--border);color:var(--muted);box-shadow:none}
-  @media(max-width:820px){.tira-btn{width:48px;height:48px}}
-  @media(max-width:520px){.tira-cabecera{flex-direction:column;align-items:flex-start;gap:10px}.tira-nav{align-self:flex-end}}
-
-  .agente img{aspect-ratio:3/4;object-fit:cover;background:#F1EDE3}
-  .agente .info{padding:16px 18px 18px}
-  .agente .cargo{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand2);display:flex;align-items:center;gap:7px}
-  .agente .cargo svg{flex:none}
-  .agente h3{margin:6px 0 6px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px}
-  .agente p{margin:0;font-size:13.5px;color:var(--muted)}
-
-  /* ===== Packs ===== */
-  .packs{display:grid;grid-template-columns:1fr;gap:16px;align-items:stretch}
-  @media(min-width:960px){.packs{grid-template-columns:repeat(2,1fr)}}
-  .pack{min-width:0;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:22px;box-shadow:var(--shadow)}
-  .pack h3{margin:0 0 8px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:20px;line-height:1.2}
-  .pack .promesa{margin:0 0 14px;font-size:15px;font-weight:600;color:var(--text)}
-  .pack .quien{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);margin:8px 0 12px}
-  .pack ul{list-style:none;margin:0;padding:0}
-  .pack li{position:relative;padding-left:16px;font-size:14px;color:var(--muted);margin-bottom:8px}
-  .pack li::before{content:"·";position:absolute;left:4px;color:var(--brand2);font-weight:700}
-  .pack .nota{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--border);padding-top:10px;margin:12px 0 0}
-  .pack .btn{margin-top:auto;align-self:flex-start}
-  .avatars{display:flex;flex-wrap:wrap;margin:0 0 4px}
-  .avatars img{width:48px;height:48px;flex:none;border-radius:99px;object-fit:cover;object-position:50% 18%;border:2px solid var(--surface);background:#F1EDE3}
-  .avatars img+img{margin-left:-10px}
-  @media(max-width:520px){
-    .avatars img{width:36px;height:36px}
-    .avatars img+img{margin-left:-12px}
-  }
-
-  /* ===== Cómo funciona ===== */
-  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-  .paso{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);padding:22px;box-shadow:var(--shadow)}
-  .paso .n{font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:13px;letter-spacing:.1em}
-  .paso h3{margin:10px 0 8px;font-size:18px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700}
-  .paso p{margin:0;font-size:14px;color:var(--muted)}
-
-  /* ===== Video ===== */
-  .video-frame{border-radius:var(--radius-card);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);background:#000}
-  .video-frame video{width:100%;display:block}
-
-  /* ===== Quiénes somos ===== */
-  .nosotros{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow);margin-top:8px}
-  .nosotros summary{cursor:pointer;list-style:none;padding:18px 22px;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
-  .nosotros summary::-webkit-details-marker{display:none}
-  .nosotros summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:18px;flex:none}
-  .nosotros[open] summary::after{content:"−"}
-  .personas{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:4px 22px 24px;align-items:stretch}
-  .persona{display:flex;flex-direction:column;align-items:center;text-align:center;height:100%}
-  .persona img{width:110px;height:110px;flex:none;border-radius:99px;object-fit:cover;border:3px solid var(--surface2);margin-bottom:14px;filter:grayscale(1)}
-  .persona-cargo{margin:0 0 4px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand2)}
-  .persona h3{margin:0 0 12px;font-family:"Archivo";font-variation-settings:"wdth" 112;font-weight:700;font-size:19px}
-  .persona-datos{list-style:none;margin:0 0 14px;padding:0;max-width:34ch}
-  .persona-datos li{font-size:14px;color:var(--muted);line-height:1.55;margin-bottom:6px}
-  .persona-link{display:inline-flex;align-items:center;justify-content:center;
-    width:40px;height:40px;border-radius:99px;border:1px solid var(--border);
-    color:var(--brand);background:var(--surface);margin-top:auto;
-    transition:background .18s ease,color .18s ease,border-color .18s ease}
-  .persona-link svg{width:18px;height:18px;fill:currentColor;display:block}
-  .persona-link:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
-  @media(max-width:820px){.personas{grid-template-columns:1fr;gap:24px;padding:4px 18px 20px}.nosotros summary{padding:16px 18px}}
-
-  /* ===== Preguntas frecuentes ===== */
-  .faqs{display:grid;gap:10px;margin-top:8px}
-  .faq{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow)}
-  .faq summary{cursor:pointer;list-style:none;padding:18px 22px;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
-  .faq summary::-webkit-details-marker{display:none}
-  .faq summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--brand2);font-size:18px;flex:none}
-  .faq[open] summary::after{content:"\2212"}
-  .faq p{margin:0;padding:0 22px 20px;font-size:15px;color:var(--muted);line-height:1.65;max-width:72ch}
-  .faq p a{color:var(--brand2)}
-  @media(max-width:820px){.faq summary{padding:16px 18px}.faq p{padding:0 18px 18px;font-size:14px}}
-
-  /* ===== CTA final ===== */
-  .final{background:var(--deep);color:var(--deepText);border-bottom:none}
-  .final h2{color:var(--deepText);max-width:20ch}
-  .final .sub{color:var(--deepMuted)}
-  .final .eyebrow{color:var(--deepAmber)}
-
-  footer{padding:40px 0 96px;color:var(--muted);font-size:13px;background:var(--deep)}
-  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  footer .wrap+.wrap{margin-top:16px;align-items:center}
-  footer span{color:var(--deepMuted)}
-  footer a{color:var(--deepMuted);text-decoration:underline;text-underline-offset:3px}
-  footer a:hover{color:var(--deepText)}
-  footer .f-contact{display:flex;flex-direction:column;gap:4px}
-  footer .f-lbl{color:var(--deepText);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:11px}
-  footer .f-social{display:flex;gap:16px;align-items:center}
-  footer .f-social a{text-decoration:none;color:var(--deepMuted)}
-  footer .f-social a:hover{color:var(--deepText)}
-  footer .f-social svg{width:20px;height:20px;fill:currentColor;display:block}
-
-  /* ===== CTA sticky mobile ===== */
-  .sticky-cta{display:none}
-  @media(max-width:820px){
-    .sticky-cta{display:flex;align-items:center;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-top:1px solid var(--border);transform:translateY(110%);transition:transform .3s ease}
-    .sticky-cta.on{transform:translateY(0)}
-    .sticky-cta .btn{flex:1 1 auto;width:auto;min-width:0;white-space:nowrap}
-    .whatsapp-float{flex:0 0 48px;width:48px;height:48px;border-radius:var(--radius-pill);display:inline-flex;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);text-decoration:none}
-    .whatsapp-float svg{width:22px;height:22px;fill:var(--accent);display:block}
-    footer{padding-bottom:120px}
-  }
-
-  /* ===== Entradas (manual §07: un momento por pantalla, 350ms, fade + 12px) ===== */
-  .reveal{opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .35s ease}
-  .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){
-    .agente[data-flipped="true"]{transform:none}
-    .dorso{transform:none}
-    html{scroll-behavior:auto}
-    *{animation:none!important;transition:none!important}
-    .reveal{opacity:1;transform:none}
-  }
 </style>
-
-<!-- Datos estructurados: le dicen a Google que "Domo IA" es una entidad propia
-     (distinta de Domo Inc.). No se ve en pantalla; lo lee el buscador. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -476,58 +267,67 @@
   ]
 }
 </script>
+<script src="/assets/web/v2/movimiento.js" defer></script>
 </head>
 <body>
-
-<!-- CTA de contacto y cotización por WhatsApp -->
-
-<header>
-  <div class="wrap bar">
-    <a class="mark" href="#top" aria-label="Domo IA — inicio">
-      <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--text)" stroke-width="17" stroke-linecap="round" fill="none"/>
-        <circle cx="50" cy="74" r="13" fill="var(--brand2)"/>
-      </svg>
-      <span>DOMO<span class="ia">&nbsp;IA</span></span></a>
-    <nav aria-label="Secciones">
-      <a href="#packs">Equipos</a>
-      <a href="#equipo">Plantel</a>
-      <a href="#como">Cómo funciona</a>
-      <a href="#video">Video</a>
-    </nav>
-    <a class="aviso-ley" href="/privacidad/">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
-      Nos preparamos para la Ley 21.719
-    </a>
-    <div class="lang-switch" aria-label="Selector de idioma"><span aria-current="true">ES</span><a href="/en/" lang="en" hreflang="en">EN</a><a href="/it/" lang="it" hreflang="it">IT</a></div>
-    <a id="headerCta" class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
-  </div>
-</header>
-
-  <!-- ===== HERO ===== -->
-<div class="hero" id="top">
-  <div class="hero-media" aria-hidden="true">
-    <picture>
-      <source media="(max-width:820px)" srcset="/assets/web/hero-oficina-vertical-v2.jpg">
-      <img src="/assets/web/hero-oficina-1920.jpg" srcset="/assets/web/hero-oficina-900.jpg 900w, /assets/web/hero-oficina-1920.jpg 1920w" sizes="100vw" alt="" fetchpriority="high">
-    </picture>
-    <video id="heroVideo" autoplay muted loop playsinline preload="auto"></video>
-  </div>
-  <div class="hero-scrim" aria-hidden="true"></div>
-  <a class="hero-scroll" href="#packs" aria-label="Ver los equipos">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>
-    </svg>
-  </a>
-</div>
-
-<!-- ===== PACKS ===== -->
+<header><div class="wrap bar">
+<a class="mark" href="#top" aria-label="Domo IA — inicio"><svg width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--fg)" stroke-width="17" stroke-linecap="round"/><circle cx="50" cy="74" r="13" fill="var(--fg)"/></svg><span>DOMO IA</span></a>
+<nav aria-label="Secciones"><a href="#frentes">Qué hace</a><a href="#equipo">El equipo</a><a href="#packs">Contratar</a><a href="#como">Cómo funciona</a><a href="#preguntas">Preguntas</a></nav>
+<div class="lang-switch" aria-label="Selector de idioma"><span aria-current="true">ES</span><a href="/en/" lang="en" hreflang="en">EN</a><a href="/it/" lang="it" hreflang="it">IT</a></div><a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a></div></header>
+<main>
+<section class="hero wrap" id="top">
+<div class="hero-title"><p class="eyebrow">Trabajadores digitales · Santiago de Chile</p><h1 class="display" data-words>Un equipo digital que trabaja en tu empresa.</h1></div>
+<div class="hero-copy"><p>Nueve trabajadores digitales con nombre y cargo: crean y gestionan tus campañas comerciales, atienden a tus clientes 24/7, auditan tu proceso comercial, entrenan a tus vendedores y automatizan las tareas repetitivas.</p><div class="actions"><a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a><a class="text-link" href="#equipo">Conocer al equipo ↓</a></div></div>
+<div class="hero-media"><div class="hero-frame"><video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="/assets/web/hero-oficina-vertical-v2.jpg" width="1920" height="1080" aria-label="El equipo digital en la oficina"></video><p class="video-label">En bucle, sin sonido · el video del método, más abajo</p></div><a class="video-caption" href="#video">Arranca solo al cargar la página. Ver el método completo, 2 min ↓</a></div>
+</section>
+<div class="marquee"><div class="marquee-track"><p class="mono">Antonia — Recepcionista · 24/7 · Matías — Analista de pauta · 06:15 · Clara — Auditora de calidad · 08:30 · Sofía — Creativa de anuncios · semanal · Amanda — Notas de reunión · mismo día · Lucas — Evaluador · por reunión · Laura — Entrenadora · desde 15 reuniones · Diego — Ingeniero de automatizaciones · Sebastián — Control de calidad</p></div></div>
+<div class="roster-strip wrap"><div class="count-block"><span class="display" data-count="9">9</span><p class="mono">trabajadores digitales con nombre y cargo</p></div><div class="roster"><div class="roster-person" data-enter style="--i:0"><div class="parallax"><img src="/assets/web/v2/antonia-s.webp" width="357" height="480" alt="Antonia" loading="lazy"></div><span class="mono">Antonia</span></div>
+<div class="roster-person" data-enter style="--i:1"><div class="parallax"><img src="/assets/web/v2/matias-s.webp" width="352" height="480" alt="Matías" loading="lazy"></div><span class="mono">Matías</span></div>
+<div class="roster-person" data-enter style="--i:2"><div class="parallax"><img src="/assets/web/v2/clara-s.webp" width="384" height="480" alt="Clara" loading="lazy"></div><span class="mono">Clara</span></div>
+<div class="roster-person" data-enter style="--i:3"><div class="parallax"><img src="/assets/web/v2/sofia-s.webp" width="376" height="480" alt="Sofía" loading="lazy"></div><span class="mono">Sofía</span></div>
+<div class="roster-person" data-enter style="--i:4"><div class="parallax"><img src="/assets/web/v2/amanda-s.webp" width="362" height="480" alt="Amanda" loading="lazy"></div><span class="mono">Amanda</span></div>
+<div class="roster-person" data-enter style="--i:5"><div class="parallax"><img src="/assets/web/v2/lucas-s.webp" width="372" height="480" alt="Lucas" loading="lazy"></div><span class="mono">Lucas</span></div>
+<div class="roster-person" data-enter style="--i:6"><div class="parallax"><img src="/assets/web/v2/laura-s.webp" width="402" height="480" alt="Laura" loading="lazy"></div><span class="mono">Laura</span></div>
+<div class="roster-person" data-enter style="--i:7"><div class="parallax"><img src="/assets/web/v2/diego-s.webp" width="372" height="480" alt="Diego" loading="lazy"></div><span class="mono">Diego</span></div>
+<div class="roster-person" data-enter style="--i:8"><div class="parallax"><img src="/assets/web/v2/sebastian-s.webp" width="388" height="480" alt="Sebastián" loading="lazy"></div><span class="mono">Sebastián</span></div>
+</div></div>
+<section id="frentes" class="wrap section" data-activa="1"><div class="front-grid"><div class="front-intro"><p class="eyebrow">02 · Qué hace el equipo</p><h2 class="display">Cinco frentes. Un solo equipo.</h2><p>Un equipo que crea y gestiona tus campañas comerciales, atiende a tus clientes 24/7, audita tu proceso comercial, entrena a tus vendedores y mejora la productividad de tu empresa automatizando las tareas repetitivas.</p><div class="front-counter" aria-hidden="true" data-number="01"></div></div><div class="front-rows">
+<article class="front-row" data-front="1"><span class="num">01</span><h3 data-enter>Crea y gestiona tus campañas comerciales</h3><p data-enter>Piezas nuevas cada semana con tu marca, y el presupuesto puesto cada mañana en los avisos que traen conversaciones, no clics baratos.</p><div class="responsibles">
+<div data-enter style="--i:0"><img src="/assets/web/v2/matias-s.webp" width="352" height="480" alt="Matías" loading="lazy"><span class="mono">Matías</span></div>
+<div data-enter style="--i:1"><img src="/assets/web/v2/sofia-s.webp" width="376" height="480" alt="Sofía" loading="lazy"><span class="mono">Sofía</span></div>
+</div></article>
+<article class="front-row" data-front="2"><span class="num">02</span><h3 data-enter>Atiende a tus clientes 24/7</h3><p data-enter>Contesta el WhatsApp en menos de un minuto, de día, de noche y en feriados. Califica con tus reglas, agenda en el calendario del vendedor y retoma al lead que quedó tibio.</p><div class="responsibles">
+<div data-enter style="--i:0"><img src="/assets/web/v2/antonia-s.webp" width="357" height="480" alt="Antonia" loading="lazy"><span class="mono">Antonia</span></div>
+</div></article>
+<article class="front-row" data-front="3"><span class="num">03</span><h3 data-enter>Audita tus procesos comerciales</h3><p data-enter>Revisa todas las conversaciones cada mañana: qué lead se atascó, qué respuesta está funcionando y qué anuncio trae mensajes pero ninguna reunión.</p><div class="responsibles">
+<div data-enter style="--i:0"><img src="/assets/web/v2/clara-s.webp" width="384" height="480" alt="Clara" loading="lazy"><span class="mono">Clara</span></div>
+</div></article>
+<article class="front-row" data-front="4"><span class="num">04</span><h3 data-enter>Coaching para tus vendedores</h3><p data-enter>Registra cada reunión comercial, la evalúa con una rúbrica profesional y entrena a tu equipo con sus propias reuniones, no con teoría.</p><div class="responsibles">
+<div data-enter style="--i:0"><img src="/assets/web/v2/amanda-s.webp" width="362" height="480" alt="Amanda" loading="lazy"><span class="mono">Amanda</span></div>
+<div data-enter style="--i:1"><img src="/assets/web/v2/lucas-s.webp" width="372" height="480" alt="Lucas" loading="lazy"><span class="mono">Lucas</span></div>
+<div data-enter style="--i:2"><img src="/assets/web/v2/laura-s.webp" width="402" height="480" alt="Laura" loading="lazy"><span class="mono">Laura</span></div>
+</div></article>
+<article class="front-row" data-front="5"><span class="num">05</span><h3 data-enter>Automatiza las tareas repetitivas</h3><p data-enter>El trabajo repetitivo que hoy hace una persona, hecho por un flujo que conecta las herramientas que ya usas. Cada entrega se prueba antes de llegar a ti.</p><div class="responsibles">
+<div data-enter style="--i:0"><img src="/assets/web/v2/diego-s.webp" width="372" height="480" alt="Diego" loading="lazy"><span class="mono">Diego</span></div>
+<div data-enter style="--i:1"><img src="/assets/web/v2/sebastian-s.webp" width="388" height="480" alt="Sebastián" loading="lazy"><span class="mono">Sebastián</span></div>
+</div></article>
+</div></div><div class="section-close"><a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20m%C3%A1s%20sobre%20los%20cinco%20frentes%20del%20equipo" target="_blank" rel="noopener">Agendar diagnóstico</a><p class="mono">Los cinco frentes se contratan en tres equipos, o todos juntos</p></div></section>
+<section id="equipo" class="team section"><div class="team-stage wrap"><div class="team-progress" aria-hidden="true"></div><div class="shead"><p class="eyebrow">03 · El equipo</p><h2 class="display">Nueve. Con nombre, cargo y turno.</h2></div><div class="team-window"><div class="team-track">
+<article class="worker" id="det-antonia"><div class="worker-head"><h3>Antonia</h3><span class="badge">En turno</span></div><p class="worker-role mono">Recepcionista · 24/7</p><p class="worker-summary">Contesta tu WhatsApp en menos de un minuto, califica y agenda.</p><ul><li>Contesta los WhatsApp nuevos en menos de un minuto, a cualquier hora y cualquier día.</li><li>Hace las preguntas de calificación que tú definas —presupuesto, renta, plazo, comuna— sin sonar a formulario.</li><li>Agenda la reunión directo en el calendario de quien corresponda, con el detalle del lead.</li><li>Retoma al lead que quedó tibio en vez de dejar la conversación morir.</li><li>Deriva a un humano los casos que tú marcaste como "estos no los toca sola".</li></ul><div class="worker-portrait"><img src="/assets/web/v2/antonia-g.webp" width="775" height="1040" alt="Antonia" loading="lazy"></div></article>
+<article class="worker" id="det-matias"><div class="worker-head"><h3>Matías</h3></div><p class="worker-role mono">Analista de pauta · 06:15</p><p class="worker-summary">Mueve el presupuesto a los avisos que traen conversaciones.</p><ul><li>Revisa todas las mañanas cómo rindió cada anuncio: gasto, leads, conversaciones y reuniones.</li><li>Mueve el presupuesto hacia los avisos que traen leads que contestan, no los que traen clics baratos.</li><li>Te avisa qué está quemando plata, con el número a la vista, y lo pausa apenas lo apruebas.</li><li>Define qué probar la semana siguiente y le encarga las piezas a Sofía.</li><li>Trabaja con Clara: ella le avisa qué anuncio trae mensajes pero no reuniones, y él corrige la pauta con eso.</li><li>Te deja un informe semanal en lenguaje humano: qué entró, qué costó y qué sigue.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/matias-g.webp" width="763" height="1040" alt="Matías" loading="lazy"></div></article>
+<article class="worker" id="det-clara"><div class="worker-head"><h3>Clara</h3></div><p class="worker-role mono">Auditora de calidad · 08:30</p><p class="worker-summary">Revisa todas las conversaciones y avisa qué se atascó.</p><ul><li>Detecta las tendencias de la semana: qué preguntas nuevas están llegando y qué respuestas están funcionando.</li><li>Encuentra las conversaciones donde se estaba por agendar y no se agendó.</li><li>Las convierte en mejoras concretas: qué frase cambiar, qué pregunta agregar, qué caso derivar antes.</li><li>Trabaja con Matías: le avisa qué anuncio trae muchos mensajes pero casi ninguna reunión, para que deje de gastar ahí.</li><li>Te deja las mejoras listas para aprobar y a la semana siguiente mide si trajeron más reuniones.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/clara-g.webp" width="832" height="1040" alt="Clara" loading="lazy"></div></article>
+<article class="worker" id="det-sofia"><div class="worker-head"><h3>Sofía</h3></div><p class="worker-role mono">Creativa de anuncios · semanal</p><p class="worker-summary">Produce las piezas de tus avisos con tu marca.</p><ul><li>Produce las piezas de tus avisos —imagen, video corto y texto— con tu marca.</li><li>Arma variantes del mismo mensaje para poder probar ángulo, gancho y llamada a la acción.</li><li>Mantiene el banco de creatividades vivo para que Matías siempre tenga algo nuevo que probar.</li><li>Reutiliza lo que ya funcionó en vez de partir de cero todos los meses.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/sofia-g.webp" width="815" height="1040" alt="Sofía" loading="lazy"></div></article>
+<article class="worker" id="det-amanda"><div class="worker-head"><h3>Amanda</h3></div><p class="worker-role mono">Notas de reunión · mismo día</p><p class="worker-summary">Deja el registro ordenado de cada reunión comercial.</p><ul><li>Toma nota de cada reunión comercial y deja el resumen ordenado el mismo día.</li><li>Registra lo acordado, las objeciones que aparecieron y el próximo paso comprometido.</li><li>Deja el registro donde tu equipo lo encuentra, sin depender de la memoria del vendedor.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/amanda-g.webp" width="785" height="1040" alt="Amanda" loading="lazy"></div></article>
+<article class="worker" id="det-lucas"><div class="worker-head"><h3>Lucas</h3></div><p class="worker-role mono">Evaluador · por reunión</p><p class="worker-summary">Evalúa cada reunión con rúbrica y le pone nota.</p><ul><li>Evalúa cada reunión con una rúbrica de venta profesional y le pone nota.</li><li>Muestra qué se hizo bien y qué faltó: descubrimiento, manejo de objeciones, cierre.</li><li>Compara reuniones entre sí para que veas quién necesita apoyo y en qué.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/lucas-g.webp" width="807" height="1040" alt="Lucas" loading="lazy"></div></article>
+<article class="worker" id="det-laura"><div class="worker-head"><h3>Laura</h3></div><p class="worker-role mono">Entrenadora · desde 15 reuniones</p><p class="worker-summary">Entrena a tus vendedores con tus propias reuniones.</p><ul><li>Junta los patrones de todas las reuniones evaluadas y saca lo que sí cierra en tu rubro.</li><li>Entrena a tus vendedores con ejemplos de tu propia operación, no con teoría.</li><li>Arma la guía de conversación que tu equipo puede usar mañana.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/laura-g.webp" width="872" height="1040" alt="Laura" loading="lazy"></div></article>
+<article class="worker" id="det-diego"><div class="worker-head"><h3>Diego</h3></div><p class="worker-role mono">Ingeniero de automatizaciones</p><p class="worker-summary">Convierte un pedido en palabras simples en un flujo que funciona.</p><ul><li>Toma tu pedido en palabras simples y lo convierte en un flujo que funciona.</li><li>Conecta las herramientas que ya usas: WhatsApp, planillas, correo, tu CRM.</li><li>Cada pedido parte de un criterio claro: qué debe pasar y cómo se sabe que funcionó.</li><li>Entrega la automatización probada, nunca a medio terminar.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/diego-g.webp" width="806" height="1040" alt="Diego" loading="lazy"></div></article>
+<article class="worker" id="det-sebastian"><div class="worker-head"><h3>Sebastián</h3></div><p class="worker-role mono">Control de calidad</p><p class="worker-summary">Prueba cada automatización antes de que llegue a ti.</p><ul><li>Revisa cada entrega de Diego con criterio propio: no da nada por bueno.</li><li>Ejecuta pruebas reales con datos de ejemplo antes de aprobar.</li><li>Rechaza lo que no cumple lo acordado, aunque a primera vista parezca que funciona.</li><li>Nada se entrega sin su visto bueno.</li></ul><div class="worker-portrait"><img src="/assets/web/v2/sebastian-g.webp" width="842" height="1040" alt="Sebastián" loading="lazy"></div></article>
+</div></div><a class="team-end text-link" href="#packs">Ver los equipos</a></div></section><div class="team-contact wrap"><a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20conocer%20al%20equipo%20digital" target="_blank" rel="noopener">Agendar diagnóstico</a></div>
 <section id="packs">
   <span id="capas" aria-hidden="true"></span>
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">01</span>
-      <h1 class="display">Contrata un equipo, o los tres juntos</h1></div>
+  <div class="wrap">
+    <div class="shead"><span class="num">04</span>
+      <h2 class="display">Contrata un equipo, o los tres juntos</h2></div>
     <p class="sub">Cada equipo resuelve una parte distinta del negocio. Casi todos parten por el equipo comercial —es donde hoy se va la plata— y suman los otros a medida que crecen.</p>
     <div class="packs">
       <article class="pack">
@@ -535,10 +335,10 @@
         <h3>Equipo comercial</h3>
         <p class="promesa">Trae los leads, los atiende en menos de 1 minuto y cada semana se corrige para cerrar más.</p>
         <div class="avatars" aria-hidden="true">
-          <img src="/assets/web/retrato-matias.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-sofia.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-antonia.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-clara.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/v2/matias-s.webp" width="352" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/sofia-s.webp" width="376" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/antonia-s.webp" width="357" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/clara-s.webp" width="384" height="480" alt="" loading="lazy">
         </div>
         <p class="quien">Matías + Sofía + Antonia + Clara</p>
         <ul>
@@ -555,9 +355,9 @@
         <h3>Equipo de coaching comercial</h3>
         <p class="promesa">Que cada reunión deje aprendizaje, no solo un correo.</p>
         <div class="avatars" aria-hidden="true">
-          <img src="/assets/web/retrato-amanda.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-lucas.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-laura.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/v2/amanda-s.webp" width="362" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/lucas-s.webp" width="372" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/laura-s.webp" width="402" height="480" alt="" loading="lazy">
         </div>
         <p class="quien">Amanda + Lucas + Laura</p>
         <ul>
@@ -574,8 +374,8 @@
         <h3>Equipo de automatizaciones</h3>
         <p class="promesa">El trabajo repetitivo que hoy hace una persona, hecho por un flujo.</p>
         <div class="avatars" aria-hidden="true">
-          <img src="/assets/web/retrato-diego.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-sebastian.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/v2/diego-s.webp" width="372" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/sebastian-s.webp" width="388" height="480" alt="" loading="lazy">
         </div>
         <p class="quien">Diego + Sebastián</p>
         <ul>
@@ -591,15 +391,15 @@
         <h3>Domo completo</h3>
         <p class="promesa">Los tres equipos trabajando juntos: del aviso a la reunión, de la reunión al vendedor que mejora, y lo repetitivo hecho por un flujo.</p>
         <div class="avatars" aria-hidden="true">
-          <img src="/assets/web/retrato-antonia.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-matias.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-sofia.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-clara.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-amanda.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-lucas.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-laura.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-diego.jpg" alt="" loading="lazy" width="640" height="857">
-          <img src="/assets/web/retrato-sebastian.jpg" alt="" loading="lazy" width="640" height="857">
+          <img src="/assets/web/v2/antonia-s.webp" width="357" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/matias-s.webp" width="352" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/sofia-s.webp" width="376" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/clara-s.webp" width="384" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/amanda-s.webp" width="362" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/lucas-s.webp" width="372" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/laura-s.webp" width="402" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/diego-s.webp" width="372" height="480" alt="" loading="lazy">
+          <img src="/assets/web/v2/sebastian-s.webp" width="388" height="480" alt="" loading="lazy">
         </div>
         <p class="quien">Los 9 trabajadores</p>
         <ul>
@@ -615,132 +415,22 @@
     <a class="btn ghost" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20no%20s%C3%A9%20por%20cu%C3%A1l%20equipo%20partir." target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
 </section>
-
-<!-- ===== EQUIPO ===== -->
-<section id="equipo">
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">02</span><h2 class="display">No vendemos un software. Instalamos un equipo.</h2></div>
-    <p class="sub">Cada trabajador digital tiene nombre, cargo y una sola tarea que hace bien. Cada equipo se arma con estos trabajadores digitales.</p>
-    <div class="tira-cabecera">
-      <p class="tira-pista">Desliza para conocer al equipo completo</p>
-      <div class="tira-nav" aria-hidden="true">
-        <button type="button" class="tira-btn" data-dir="-1" tabindex="-1" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-        <button type="button" class="tira-btn" data-dir="1" tabindex="-1" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-      </div>
-    </div>
-    <ul class="equipo-tira">
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente">
-            <img src="/assets/web/retrato-antonia.jpg" alt="Antonia, recepcionista digital" loading="lazy" width="640" height="857">
-            <div class="info">
-              <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Recepcionista · SDR</span>
-              <h3>Antonia</h3>
-              <p>Contesta tu WhatsApp en segundos, califica al lead con criterio y agenda la reunión directo en tu calendario.</p>
-              <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-antonia"><span class="flip-txt">Ver detalle<span class="vh"> de Antonia</span></span></button>
-            </div>
-          </div>
-          <div class="cara dorso" id="det-antonia">
-            <span class="cargo">Antonia · qué hace</span>
-            <ul><li>Contesta los WhatsApp nuevos en menos de un minuto, a cualquier hora y cualquier día.</li><li>Hace las preguntas de calificación que tú definas —presupuesto, renta, plazo, comuna— sin sonar a formulario.</li><li>Agenda la reunión directo en el calendario de quien corresponda, con el detalle del lead.</li><li>Retoma al lead que quedó tibio en vez de dejar la conversación morir.</li><li>Deriva a un humano los casos que tú marcaste como "estos no los toca sola".</li></ul>
-            <button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Antonia</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button>
-          </div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-matias.jpg" alt="Matías, media buyer digital" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Media buyer</span><h3>Matías</h3><p>Vigila tus campañas todos los días y mueve el presupuesto hacia los avisos que sí traen leads que contestan.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-matias"><span class="flip-txt">Ver detalle<span class="vh"> de Matías</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-matias"><span class="cargo">Matías · qué hace</span><ul><li>Revisa todas las mañanas cómo rindió cada anuncio: gasto, leads, conversaciones y reuniones.</li><li>Mueve el presupuesto hacia los avisos que traen leads que contestan, no los que traen clics baratos.</li><li>Te avisa qué está quemando plata, con el número a la vista, y lo pausa apenas lo apruebas.</li><li>Define qué probar la semana siguiente y le encarga las piezas a Sofía.</li><li>Trabaja con Clara: ella le avisa qué anuncio trae mensajes pero no reuniones, y él corrige la pauta con eso.</li><li>Te deja un informe semanal en lenguaje humano: qué entró, qué costó y qué sigue.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Matías</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-clara.jpg" alt="Clara, encargada de mejora continua" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Mejora continua</span><h3>Clara</h3><p>Cada semana revisa qué está cambiando en las conversaciones y te deja mejoras concretas para cerrar más.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-clara"><span class="flip-txt">Ver detalle<span class="vh"> de Clara</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-clara"><span class="cargo">Clara · qué hace</span><ul><li>Detecta las tendencias de la semana: qué preguntas nuevas están llegando y qué respuestas están funcionando.</li><li>Encuentra las conversaciones donde se estaba por agendar y no se agendó.</li><li>Las convierte en mejoras concretas: qué frase cambiar, qué pregunta agregar, qué caso derivar antes.</li><li>Trabaja con Matías: le avisa qué anuncio trae muchos mensajes pero casi ninguna reunión, para que deje de gastar ahí.</li><li>Te deja las mejoras listas para aprobar y a la semana siguiente mide si trajeron más reuniones.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Clara</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-sofia.jpg" alt="Sofía, diseñadora" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L15 12l-4 1 1-4Z"/><path d="M11 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-5"/></svg>Diseñadora</span><h3>Sofía</h3><p>Diseña las piezas y variantes de tus avisos, alineadas a tu marca, para que Matías siempre tenga algo nuevo que probar.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sofia"><span class="flip-txt">Ver detalle<span class="vh"> de Sofía</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-sofia"><span class="cargo">Sofía · qué hace</span><ul><li>Produce las piezas de tus avisos —imagen, video corto y texto— con tu marca.</li><li>Arma variantes del mismo mensaje para poder probar ángulo, gancho y llamada a la acción.</li><li>Mantiene el banco de creatividades vivo para que Matías siempre tenga algo nuevo que probar.</li><li>Reutiliza lo que ya funcionó en vez de partir de cero todos los meses.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Sofía</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-amanda.jpg" alt="Amanda, notas de reuniones" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Notas de reunión</span><h3>Amanda</h3><p>Toma nota de cada reunión comercial y deja el registro ordenado: nada de lo que se conversó se pierde.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-amanda"><span class="flip-txt">Ver detalle<span class="vh"> de Amanda</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-amanda"><span class="cargo">Amanda · qué hace</span><ul><li>Toma nota de cada reunión comercial y deja el resumen ordenado el mismo día.</li><li>Registra lo acordado, las objeciones que aparecieron y el próximo paso comprometido.</li><li>Deja el registro donde tu equipo lo encuentra, sin depender de la memoria del vendedor.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Amanda</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-lucas.jpg" alt="Lucas, evaluador de ventas" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Evaluador de ventas</span><h3>Lucas</h3><p>Evalúa cada reunión con una rúbrica de venta profesional y te dice, con nota, qué se hizo bien y qué faltó.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-lucas"><span class="flip-txt">Ver detalle<span class="vh"> de Lucas</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-lucas"><span class="cargo">Lucas · qué hace</span><ul><li>Evalúa cada reunión con una rúbrica de venta profesional y le pone nota.</li><li>Muestra qué se hizo bien y qué faltó: descubrimiento, manejo de objeciones, cierre.</li><li>Compara reuniones entre sí para que veas quién necesita apoyo y en qué.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Lucas</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-laura.jpg" alt="Laura, coach de vendedores" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Coach comercial</span><h3>Laura</h3><p>Junta los patrones de todas tus reuniones y entrena a tu equipo humano con lo que funciona en tu rubro.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-laura"><span class="flip-txt">Ver detalle<span class="vh"> de Laura</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-laura"><span class="cargo">Laura · qué hace</span><ul><li>Junta los patrones de todas las reuniones evaluadas y saca lo que sí cierra en tu rubro.</li><li>Entrena a tus vendedores con ejemplos de tu propia operación, no con teoría.</li><li>Arma la guía de conversación que tu equipo puede usar mañana.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Laura</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-diego.jpg" alt="Diego, ingeniero de automatizaciones" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 18-5v12L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>Ingeniero de automatizaciones</span><h3>Diego</h3><p>Construye la automatización que conecta tus herramientas y hace el trabajo repetitivo que hoy alguien hace a mano.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-diego"><span class="flip-txt">Ver detalle<span class="vh"> de Diego</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-diego"><span class="cargo">Diego · qué hace</span><ul><li>Toma tu pedido en palabras simples y lo convierte en un flujo que funciona.</li><li>Conecta las herramientas que ya usas: WhatsApp, planillas, correo, tu CRM.</li><li>Cada pedido parte de un criterio claro: qué debe pasar y cómo se sabe que funcionó.</li><li>Entrega la automatización probada, nunca a medio terminar.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Diego</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-      <li class="agente-slot">
-        <article class="agente" data-flipped="false">
-          <div class="cara frente"><img src="/assets/web/retrato-sebastian.jpg" alt="Sebastián, control de calidad" loading="lazy" width="640" height="857"><div class="info">
-            <span class="cargo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D98E3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Control de calidad</span><h3>Sebastián</h3><p>Prueba cada automatización antes de que llegue a ti. Si no cumple lo que se pidió, la devuelve.</p>
-            <button type="button" class="flip-btn" aria-expanded="false" aria-controls="det-sebastian"><span class="flip-txt">Ver detalle<span class="vh"> de Sebastián</span></span></button>
-          </div></div>
-          <div class="cara dorso" id="det-sebastian"><span class="cargo">Sebastián · qué hace</span><ul><li>Revisa cada entrega de Diego con criterio propio: no da nada por bueno.</li><li>Ejecuta pruebas reales con datos de ejemplo antes de aprobar.</li><li>Rechaza lo que no cumple lo acordado, aunque a primera vista parezca que funciona.</li><li>Nada se entrega sin su visto bueno.</li></ul><button type="button" class="flip-btn"><span class="flip-txt">Volver<span class="vh"> a la ficha de Sebastián</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button></div>
-        </article>
-      </li>
-    </ul>
-    <div class="tira-progreso" aria-hidden="true"><span></span></div>
-  </div>
-</section>
-
-<!-- ===== CÓMO FUNCIONA ===== -->
 <section id="como">
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">03</span><h2 class="display">Cómo se instala</h2></div>
+  <div class="wrap">
+    <div class="shead"><span class="num">05</span><h2 class="display">Cómo se instala</h2></div>
     <p class="sub">El motor es el mismo; lo que cambia es la configuración para tu negocio.</p>
     <div class="pasos">
-      <div class="paso">
+      <div class="paso" data-enter style="--i:0">
         <span class="n">PASO 1</span>
         <h3>Diagnóstico</h3>
         <p>Medimos tu embudo real: cuántos leads llegan, cuántos contestas y cuántos terminan en reunión. Sin ese número, no hay promesa.</p>
       </div>
-      <div class="paso">
+      <div class="paso" data-enter style="--i:1">
         <span class="n">PASO 2</span>
         <h3>Instalación</h3>
         <p>Antonia entra a tu WhatsApp con tu forma de hablar y tus reglas de calificación. Tú apruebas cómo responde antes de que atienda sola.</p>
       </div>
-      <div class="paso">
+      <div class="paso" data-enter style="--i:2">
         <span class="n">PASO 3</span>
         <h3>Medición semanal</h3>
         <p>Cada semana recibes el embudo medido: qué entró, qué se agendó y qué mejorar. Lo que no se mide, no se cobra ni se promete.</p>
@@ -748,134 +438,109 @@
     </div>
   </div>
 </section>
-
-<!-- ===== VIDEO ===== -->
 <section id="video">
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">04</span><h2 class="display">El método, en 2 minutos</h2></div>
+  <div class="wrap">
+    <div class="shead"><span class="num">06</span><h2 class="display">El método, en 2 minutos</h2></div>
     <p class="sub">Así funciona el Método DOMO: diagnosticar, orquestar, medir y optimizar — contado simple.</p>
-    <div class="video-frame">
+    <div class="video-frame" data-enter>
       <video controls preload="none" poster="/assets/web/poster-video-metodo.jpg" width="1280" height="720">
         <source src="/media/video-metodo-domo.mp4" type="video/mp4">
-        Tu navegador no puede reproducir este video.
-      </video>
+        <span>Tu navegador no puede reproducir este video.</span>
+      </video><button class="method-play" type="button" aria-label="Reproducir el video del método"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18l15-9z"/></svg></button>
     </div>
   </div>
 </section>
-
 <section id="nosotros">
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">05</span><h2 class="display">Conócenos</h2></div>
+  <div class="wrap">
+    <div class="shead"><span class="num">07</span><h2 class="display">Conócenos</h2></div>
     <p class="sub">No somos una agencia con un equipo que nunca vas a conocer. Somos tres, y los tres trabajamos en esto.</p>
-    <details class="nosotros">
-      <summary>Ver quiénes somos</summary>
+    <p class="mono">Ver quiénes somos</p>
       <div class="personas">
 
         <article class="persona">
-          <img src="/assets/web/retrato-rodrigo.jpg" alt="Rodrigo González Villalobos" loading="lazy" width="640" height="640">
+          <img data-enter src="/assets/web/retrato-rodrigo.jpg" alt="Rodrigo González Villalobos" loading="lazy" width="640" height="640">
           <p class="persona-cargo">Fundador</p>
-          <h3>Rodrigo González Villalobos</h3>
-          <ul class="persona-datos">
+          <h3 data-enter>Rodrigo González Villalobos</h3>
+          <details class="formacion"><summary>Formación</summary><ul class="persona-datos">
             <li>Ingeniero Civil Industrial, Universidad Central de Chile.</li>
             <li>MBA, Universitat Politècnica de Catalunya.</li>
-          </ul>
+          </ul></details>
           <a class="persona-link" href="https://www.linkedin.com/in/rodrigo-gonzalez-villalobos/" target="_blank" rel="noopener" aria-label="LinkedIn de Rodrigo González Villalobos">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
           </a>
         </article>
 
         <article class="persona">
-          <img src="/assets/web/retrato-rodolfo.jpg" alt="Rodolfo Alfaro" loading="lazy" width="640" height="640">
+          <img data-enter src="/assets/web/retrato-rodolfo.jpg" alt="Rodolfo Alfaro" loading="lazy" width="640" height="640">
           <p class="persona-cargo">Gerente comercial</p>
-          <h3>Rodolfo Alfaro</h3>
-          <ul class="persona-datos">
+          <h3 data-enter>Rodolfo Alfaro</h3>
+          <details class="formacion"><summary>Formación</summary><ul class="persona-datos">
             <li>Ingeniero Comercial, Universidad de Valparaíso.</li>
             <li>Diplomado en Finanzas Corporativas, Universidad de Chile.</li>
-          </ul>
+          </ul></details>
           <a class="persona-link" href="https://www.linkedin.com/in/rodolfoalfaro/" target="_blank" rel="noopener" aria-label="LinkedIn de Rodolfo Alfaro">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
           </a>
         </article>
 
         <article class="persona">
-          <img src="/assets/web/retrato-damian.jpg" alt="Damián Roba Jesset" loading="lazy" width="640" height="640">
+          <img data-enter src="/assets/web/retrato-damian.jpg" alt="Damián Roba Jesset" loading="lazy" width="640" height="640">
           <p class="persona-cargo">Director de cuentas clave</p>
-          <h3>Damián Roba Jesset</h3>
-          <ul class="persona-datos">
+          <h3 data-enter>Damián Roba Jesset</h3>
+          <details class="formacion"><summary>Formación</summary><ul class="persona-datos">
             <li>Administración en Ecoturismo, Duoc UC.</li>
             <li>Francófono; se forma en la Université Toulouse – Jean Jaurès.</li>
-          </ul>
+          </ul></details>
           <a class="persona-link" href="https://www.linkedin.com/in/damian-roba-jesset-7a5907145/" target="_blank" rel="noopener" aria-label="LinkedIn de Damián Roba Jesset">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
           </a>
         </article>
 
       </div>
-    </details>
+
   </div>
 </section>
-
-<!-- ===== TESTIMONIO: pendiente cita real autorizada del piloto. NO publicar sin aprobación.
-<section id="testimonio"> ... </section>
-===== -->
-
-<!-- ===== PLANES: pendiente definición de precio (~24-jul). Estructura sugerida: 1 card por capa,
-precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
-<section id="planes"> ... </section>
-===== -->
-
-<!-- ===== PREGUNTAS FRECUENTES ===== -->
 <section id="preguntas">
-  <div class="wrap reveal">
-    <div class="shead"><span class="num">06</span><h2 class="display">Preguntas frecuentes</h2></div>
+  <div class="wrap">
+    <div class="shead"><span class="num">08</span><h2 class="display">Preguntas frecuentes</h2></div>
     <p class="sub">Lo que nos preguntan antes de agendar el diagnóstico.</p>
     <div class="faqs">
-      <details class="faq">
-        <summary>¿Qué es exactamente un trabajador digital?</summary>
-        <p>Es un agente de inteligencia artificial con un nombre, un cargo y una sola tarea que hace bien. No es un software que tengas que aprender a usar: se contrata como se contrata a una persona, entra a trabajar a tu operación y rinde cuentas de lo que hizo. Antonia contesta el WhatsApp, Matías mueve el presupuesto de los anuncios, Lucas evalúa las reuniones de venta.</p>
+      <details class="faq" data-enter style="--i:0">
+        <summary>¿Qué es exactamente un trabajador digital?</summary><div class="answer"><div><p>Es un agente de inteligencia artificial con un nombre, un cargo y una sola tarea que hace bien. No es un software que tengas que aprender a usar: se contrata como se contrata a una persona, entra a trabajar a tu operación y rinde cuentas de lo que hizo. Antonia contesta el WhatsApp, Matías mueve el presupuesto de los anuncios, Lucas evalúa las reuniones de venta.</p></div></div>
       </details>
-      <details class="faq">
-        <summary>¿En qué se diferencia de un chatbot?</summary>
-        <p>Un chatbot sigue un árbol de respuestas: si el cliente se sale del guion, se cae. Un agente de IA entiende lo que le escriben, califica al lead con tus criterios, consulta tu calendario y agenda. La diferencia práctica es simple: el chatbot deriva a un humano, el agente cierra la reunión.</p>
+      <details class="faq" data-enter style="--i:1">
+        <summary>¿En qué se diferencia de un chatbot?</summary><div class="answer"><div><p>Un chatbot sigue un árbol de respuestas: si el cliente se sale del guion, se cae. Un agente de IA entiende lo que le escriben, califica al lead con tus criterios, consulta tu calendario y agenda. La diferencia práctica es simple: el chatbot deriva a un humano, el agente cierra la reunión.</p></div></div>
       </details>
-      <details class="faq">
-        <summary>¿Sirve para una pyme o solo para empresas grandes?</summary>
-        <p>Está pensado justamente para pymes chilenas que invierten en publicidad y reciben leads por WhatsApp. La regla no es el tamaño: es si estás pagando por leads que después nadie contesta a tiempo. Si ese número resulta ser cero, te lo decimos en el diagnóstico y no te vendemos nada.</p>
+      <details class="faq" data-enter style="--i:2">
+        <summary>¿Sirve para una pyme o solo para empresas grandes?</summary><div class="answer"><div><p>Está pensado justamente para pymes chilenas que invierten en publicidad y reciben leads por WhatsApp. La regla no es el tamaño: es si estás pagando por leads que después nadie contesta a tiempo. Si ese número resulta ser cero, te lo decimos en el diagnóstico y no te vendemos nada.</p></div></div>
       </details>
-      <details class="faq">
-        <summary>¿Para qué industrias funciona?</summary>
-        <p>Para cualquier negocio que pague por leads y los atienda por WhatsApp. El patrón se repite igual en inmobiliarias y corredoras de propiedades, seguros, clínicas y centros dentales, educación y capacitación, automotriz, construcción y servicios profesionales: mucho lead que llega por anuncio o portal, todos preguntando lo mismo, y una demora de respuesta que decide si el interesado sigue contigo o se va al de al lado. Partimos en inmobiliario porque ahí el problema se ve más nítido, pero el equipo no es de un rubro: lo que cambia entre una industria y otra no son los trabajadores digitales, sino las reglas de calificación y la forma de hablar, y eso se configura en el diagnóstico.</p>
+      <details class="faq" data-enter style="--i:3">
+        <summary>¿Para qué industrias funciona?</summary><div class="answer"><div><p>Para cualquier negocio que pague por leads y los atienda por WhatsApp. El patrón se repite igual en inmobiliarias y corredoras de propiedades, seguros, clínicas y centros dentales, educación y capacitación, automotriz, construcción y servicios profesionales: mucho lead que llega por anuncio o portal, todos preguntando lo mismo, y una demora de respuesta que decide si el interesado sigue contigo o se va al de al lado. Partimos en inmobiliario porque ahí el problema se ve más nítido, pero el equipo no es de un rubro: lo que cambia entre una industria y otra no son los trabajadores digitales, sino las reglas de calificación y la forma de hablar, y eso se configura en el diagnóstico.</p></div></div>
       </details>
-      <details class="faq">
-        <summary>¿Cuánto se demora en contestar un lead?</summary>
-        <p>Menos de un minuto, de día, de noche, fin de semana y feriado. No es una promesa de marketing: es lo que se mide cada semana en el reporte de embudo que recibes.</p>
+      <details class="faq" data-enter style="--i:4">
+        <summary>¿Cuánto se demora en contestar un lead?</summary><div class="answer"><div><p>Menos de un minuto, de día, de noche, fin de semana y feriado. No es una promesa de marketing: es lo que se mide cada semana en el reporte de embudo que recibes.</p></div></div>
       </details>
-      <details class="faq">
-        <summary>¿Qué pasa con los datos de mis clientes y la Ley 21.719?</summary>
-        <p>Los datos de quienes le escriben a tu agente son tuyos, no nuestros: los tratamos por encargo, bajo contrato y solo con tus instrucciones. La Ley 21.719 entra en vigencia el 1 de diciembre de 2026 y estamos adecuando a ella nuestros registros de tratamiento, contratos y plazos de conservación antes de esa fecha. Está todo escrito en la <a href="/privacidad/">política de privacidad</a>.</p>
+      <details class="faq" data-enter style="--i:5">
+        <summary>¿Qué pasa con los datos de mis clientes y la Ley 21.719?</summary><div class="answer"><div><p>Los datos de quienes le escriben a tu agente son tuyos, no nuestros: los tratamos por encargo, bajo contrato y solo con tus instrucciones. La Ley 21.719 entra en vigencia el 1 de diciembre de 2026 y estamos adecuando a ella nuestros registros de tratamiento, contratos y plazos de conservación antes de esa fecha. Está todo escrito en la <a href="/privacidad/">política de privacidad</a>.</p></div></div>
       </details>
-      <details class="faq">
-        <summary>¿Qué necesito tener para partir?</summary>
-        <p>Un WhatsApp donde lleguen los leads y disposición a mostrar tus números reales. El diagnóstico mide cuántos leads entran, cuántos contestas y cuántos terminan en reunión. Sin ese número no hay promesa que valga.</p>
+      <details class="faq" data-enter style="--i:6">
+        <summary>¿Qué necesito tener para partir?</summary><div class="answer"><div><p>Un WhatsApp donde lleguen los leads y disposición a mostrar tus números reales. El diagnóstico mide cuántos leads entran, cuántos contestas y cuántos terminan en reunión. Sin ese número no hay promesa que valga.</p></div></div>
       </details>
-      <details class="faq">
-        <summary>¿Domo IA tiene relación con Domo, Inc. o con DomoAI?</summary>
-        <p>No. Domo IA es una empresa chilena —DOMO IA SpA, Santiago— que instala agentes de IA en equipos comerciales. Domo, Inc. (domo.com) es una plataforma estadounidense de business intelligence, y DomoAI (domoai.app) es una herramienta de generación de video. Nombres parecidos, negocios distintos.</p>
+      <details class="faq" data-enter style="--i:7">
+        <summary>¿Domo IA tiene relación con Domo, Inc. o con DomoAI?</summary><div class="answer"><div><p>No. Domo IA es una empresa chilena —DOMO IA SpA, Santiago— que instala agentes de IA en equipos comerciales. Domo, Inc. (domo.com) es una plataforma estadounidense de business intelligence, y DomoAI (domoai.app) es una herramienta de generación de video. Nombres parecidos, negocios distintos.</p></div></div>
       </details>
     </div>
   </div>
 </section>
-
-<!-- ===== CTA FINAL ===== -->
-<section class="final">
-  <div class="wrap reveal">
+</main><div class="closing">
+<section class="final" id="diagnostico"><span class="num final-num">09</span>
+  <div class="wrap">
     <p class="eyebrow">Diagnóstico inicial · una reunión · con tus números</p>
-    <h2 class="display">Parte por saber cuántos leads estás perdiendo hoy</h2>
+    <h2 class="display" data-words>Parte por saber cuántos leads estás perdiendo hoy</h2>
     <p class="sub">Agenda el diagnóstico: medimos tu embudo y te mostramos, con cifras tuyas, qué haría un equipo digital en tu negocio. Si los números no dan, también te lo decimos.</p>
     <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20cu%C3%A1ntos%20leads%20estoy%20perdiendo." target="_blank" rel="noopener">Agendar diagnóstico</a>
   </div>
 </section>
-
 <footer>
   <div class="wrap">
     <span class="mono">DOMO IA · Chile</span>
@@ -885,7 +550,7 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
   <div class="wrap">
     <div class="f-contact">
       <span class="f-lbl">Contacto</span>
-      <span><a href="mailto:rodrigo@domo-ia.com">rodrigo@domo-ia.com</a> · <a href="mailto:rodolfo@domo-ia.com">rodolfo@domo-ia.com</a> · <a href="mailto:damian@domo-ia.com">damian@domo-ia.com</a> · <a href="https://wa.me/56936956065" target="_blank" rel="noopener">+56 9 3695 6065</a> · <a href="/privacidad/">Política de privacidad</a></span>
+      <span><a href="mailto:rodrigo@domo-ia.com">rodrigo@domo-ia.com</a> · <a href="mailto:rodolfo@domo-ia.com">rodolfo@domo-ia.com</a> · <a href="mailto:damian@domo-ia.com">damian@domo-ia.com</a> · <a href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20m%C3%A1s%20sobre%20los%20trabajadores%20digitales." target="_blank" rel="noopener">+56 9 3695 6065</a> · <a href="/privacidad/">Política de privacidad</a></span>
     </div>
     <div class="f-social">
       <a href="https://www.linkedin.com/company/domoia/" target="_blank" rel="noopener" aria-label="LinkedIn de domo IA">
@@ -896,126 +561,12 @@ precio mensual por trabajador instalado, CTA único "Agendar diagnóstico".
       </a>
     </div>
   </div>
-</footer>
-
+<div class="wrap"><a class="aviso-ley" href="/privacidad/">Nos preparamos para la Ley 21.719</a></div></footer></div>
 <div class="sticky-cta" id="stickyCta">
   <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
   <a class="whatsapp-float" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20m%C3%A1s%20sobre%20los%20trabajadores%20digitales." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
   </a>
 </div>
-
-<script>
-  // Video del hero: solo desktop y solo si el usuario no pidió menos movimiento.
-  // Si el navegador bloquea el autoplay, NO se esconde: reintenta al cargar y al primer gesto del usuario.
-  (function(){
-    var mqMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var v = document.getElementById('heroVideo');
-    if (!v || mqMotion.matches) return;
-    var esMovil = window.matchMedia('(max-width:820px)').matches;
-    v.poster = esMovil ? '/assets/web/hero-oficina-vertical-v2.jpg' : '/assets/web/hero-oficina-1920.jpg';
-    v.src    = esMovil ? '/assets/web/video-hero-vertical-v2.mp4'  : '/assets/web/video-hero-oficina.mp4';
-    v.style.display = 'block';
-    function intentar(){ if (v.paused) v.play().catch(function(){}); }
-    v.addEventListener('canplay', intentar);
-    ['pointerdown','touchstart','scroll','keydown'].forEach(function(ev){
-      window.addEventListener(ev, intentar, {once:true, passive:true});
-    });
-    v.load();
-    intentar();
-  })();
-
-  // Header CTA: fantasma sobre el hero, primario después. Sticky CTA mobile igual.
-  (function(){
-    var hero = document.getElementById('top');
-    var headerCta = document.getElementById('headerCta');
-    var sticky = document.getElementById('stickyCta');
-    if (!('IntersectionObserver' in window)) { headerCta.classList.remove('ghost'); return; }
-    new IntersectionObserver(function(entries){
-      var visible = entries[0].isIntersecting;
-      headerCta.classList.toggle('ghost', visible);
-      if (sticky) sticky.classList.toggle('on', !visible);
-    }, {threshold: 0.15}).observe(hero);
-  })();
-
-  // Entrada por sección: fade + 12px, una sola vez (manual §07)
-  (function(){
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var obs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
-      });
-    }, {threshold: 0.12});
-    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
-  })();
-
-  (function(){
-    var tira = document.querySelector('.equipo-tira');
-    if (!tira) return;
-    tira.classList.add('js');
-
-    function girar(art, abrir){
-      document.querySelectorAll('.agente[data-flipped="true"]').forEach(function(o){
-        if (o !== art) o.dataset.flipped = 'false';
-      });
-      art.dataset.flipped = abrir ? 'true' : 'false';
-      art.querySelector('.frente .flip-btn').setAttribute('aria-expanded', String(abrir));
-      art.querySelector(abrir ? '.dorso .flip-btn' : '.frente .flip-btn').focus({preventScroll:true});
-    }
-
-    var abajo = false, movido = false, sx = 0, sy = 0;
-    tira.addEventListener('pointerdown', function(e){ abajo = true; movido = false; sx = e.clientX; sy = e.clientY; }, {passive:true});
-    tira.addEventListener('pointermove', function(e){
-      if (!abajo) return;                                    // ignorar el simple hover
-      if (Math.hypot(e.clientX - sx, e.clientY - sy) > 14) movido = true;
-    }, {passive:true});
-    tira.addEventListener('pointerup', function(){ abajo = false; }, {passive:true});
-    tira.addEventListener('pointercancel', function(){ abajo = false; movido = true; }, {passive:true});
-    tira.addEventListener('click', function(e){
-      var btn = e.target.closest('.flip-btn'); if (!btn) return;
-      var art = btn.closest('.agente');
-      var cerrando = art.dataset.flipped === 'true';
-      if (!cerrando && e.detail !== 0 && movido) return;      // el guard solo bloquea la apertura
-      girar(art, !cerrando);
-    });
-    tira.addEventListener('keydown', function(e){
-      if (e.key !== 'Escape') return;
-      var art = e.target.closest('.agente[data-flipped="true"]'); if (!art) return;
-      girar(art, false);
-    });
-
-    var nav  = document.querySelector('.tira-nav');
-    var btns = nav ? Array.prototype.slice.call(nav.querySelectorAll('.tira-btn')) : [];
-
-    function paso(){
-      var slot = tira.querySelector('.agente-slot');
-      return slot ? slot.getBoundingClientRect().width + 16 : 266;
-    }
-    function estado(){
-      var max = tira.scrollWidth - tira.clientWidth - 1;
-      btns.forEach(function(b){
-        var dir = Number(b.getAttribute('data-dir'));
-        b.disabled = dir < 0 ? tira.scrollLeft <= 0 : tira.scrollLeft >= max;
-      });
-      var barra = document.querySelector('.tira-progreso span');
-      if (barra) {
-        var visible = tira.clientWidth / tira.scrollWidth;
-        var maxScroll = tira.scrollWidth - tira.clientWidth;
-        var avance = maxScroll > 0 ? tira.scrollLeft / maxScroll : 0;
-        barra.style.width = (visible * 100) + '%';
-        barra.style.transform = 'translateX(' + (avance * (1 - visible) / visible * 100) + '%)';
-      }
-    }
-    btns.forEach(function(b){
-      b.addEventListener('click', function(){
-        var suave = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-        tira.scrollBy({left: Number(b.getAttribute('data-dir')) * paso(), behavior: suave});
-      });
-    });
-    tira.addEventListener('scroll', estado, {passive:true});
-    window.addEventListener('resize', estado, {passive:true});
-    estado();
-  })();
-</script>
 </body>
 </html>
