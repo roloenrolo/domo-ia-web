@@ -14,6 +14,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "index.html"
+PREFIX = ""
 TRANSLATIONS = ROOT / "_fuente" / "i18n" / "traducciones.json"
 BASE = "https://domo-ia.com"
 LANGS = {
@@ -464,7 +465,7 @@ def attrs_for_language(token: dict, lang: str, translations: dict, pending: list
                 attrs = set_attr(attrs, "aria-current", "true")
             else:
                 attrs = [(k, v) for k, v in attrs if k.lower() != "aria-current"]
-                attrs = set_attr(attrs, "href", "/" if code == "ES" else f"/{code.lower()}/")
+                attrs = set_attr(attrs, "href", f"{PREFIX}/" if code == "ES" else f"{PREFIX}/{code.lower()}/")
                 attrs = set_attr(attrs, "lang", "es" if code == "ES" else code.lower())
                 attrs = set_attr(attrs, "hreflang", "es" if code == "ES" else code.lower())
             changed = True
@@ -550,7 +551,7 @@ def lang_switch_html(active: str) -> str:
         if lang == active:
             parts.append(f'<span aria-current="true">{code}</span>')
         else:
-            href = "/" if code == "ES" else f"/{lang}/"
+            href = f"{PREFIX}/" if code == "ES" else f"{PREFIX}/{lang}/"
             parts.append(f'<a href="{href}" lang="{lang}" hreflang="{lang}">{code}</a>')
     return "".join(parts)
 
@@ -601,16 +602,23 @@ def build(translations_path: Path, out_root: Path) -> int:
 
 
 def main() -> int:
+    global SOURCE, PREFIX
     ap = argparse.ArgumentParser()
     ap.add_argument("--extract", action="store_true")
+    ap.add_argument("--source", type=Path, default=SOURCE)
     ap.add_argument("--translations", type=Path, default=TRANSLATIONS)
-    ap.add_argument("--out-root", type=Path, default=ROOT)
+    ap.add_argument("--out-root", type=Path)
     args = ap.parse_args()
+    SOURCE = args.source.resolve()
+    relative_folder = SOURCE.parent.relative_to(ROOT)
+    PREFIX = "" if relative_folder == Path(".") else "/" + relative_folder.as_posix()
+    for lang, info in LANGS.items():
+        info["url"] = f"{BASE}{PREFIX}/" + ("" if lang == "es" else f"{lang}/")
     tokens = parse_html(SOURCE.read_text(encoding="utf-8"))
     if args.extract:
         write_census(tokens, args.translations)
         return 0
-    return build(args.translations, args.out_root)
+    return build(args.translations, args.out_root or SOURCE.parent)
 
 
 if __name__ == "__main__":
