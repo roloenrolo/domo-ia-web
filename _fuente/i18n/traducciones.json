@@ -1411,29 +1411,9 @@
   "en": "stated a budget",
   "it": "hanno indicato un budget"
  },
- "calificaron": {
-  "en": "qualified",
-  "it": "qualificati"
- },
  "agendaron": {
   "en": "booked a meeting",
   "it": "hanno fissato"
- },
- "1.026": {
-  "en": "=",
-  "it": "="
- },
- "607": {
-  "en": "=",
-  "it": "="
- },
- "107": {
-  "en": "=",
-  "it": "="
- },
- "75": {
-  "en": "=",
-  "it": "="
  },
  "Cómo se mueve una conversación con Antonia": {
   "en": "How a conversation with Antonia moves",
@@ -1443,16 +1423,36 @@
   "en": "What Clara watches",
   "it": "Cosa sorveglia Clara"
  },
- "7 de 100": {
-  "en": "7 in 100",
-  "it": "7 su 100"
- },
  "conversaciones terminan en reunión. Clara revisa dónde se cae el resto y avisa cuando un mismo anuncio concentra las detenidas.": {
   "en": "conversations end in a meeting. Clara reviews where the rest drop off and flags when one ad concentrates the stalled ones.",
   "it": "conversazioni finiscono in riunione. Clara controlla dove cade il resto e segnala quando un singolo annuncio concentra quelle bloccate."
  },
- "Embudo acumulado de una corredora de propiedades en Santiago. Cada tramo se mide en el CRM del cliente.": {
-  "en": "Cumulative funnel of a real-estate brokerage in Santiago. Each step is measured in the client’s CRM.",
-  "it": "Imbuto cumulativo di un’agenzia immobiliare a Santiago. Ogni passaggio è misurato nel CRM del cliente."
+ "369": {
+  "en": "=",
+  "it": "="
+ },
+ "221": {
+  "en": "=",
+  "it": "="
+ },
+ "105": {
+  "en": "=",
+  "it": "="
+ },
+ "52": {
+  "en": "=",
+  "it": "="
+ },
+ "eligieron horario": {
+  "en": "picked a time slot",
+  "it": "hanno scelto un orario"
+ },
+ "14 de 100": {
+  "en": "14 in 100",
+  "it": "14 su 100"
+ },
+ "Últimos 30 días de una corredora de propiedades en Santiago. Cada tramo se mide en el CRM del cliente.": {
+  "en": "Last 30 days of a real-estate brokerage in Santiago. Each step is measured in the client’s CRM.",
+  "it": "Ultimi 30 giorni di un’agenzia immobiliare a Santiago. Ogni passaggio è misurato nel CRM del cliente."
  }
 }
