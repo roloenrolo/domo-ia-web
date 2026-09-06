@@ -943,10 +943,6 @@
   "en": "Ad analyst · 06:15",
   "it": "Analista pubblicitario · 06:15"
  },
- "Arranca solo al cargar la página. Ver el método completo, 2 min ↓": {
-  "en": "Starts automatically when the page loads. See the full method, 2 min ↓",
-  "it": "Parte automaticamente al caricamento della pagina. Guarda il metodo completo, 2 min ↓"
- },
  "Atiende a tus clientes 24/7": {
   "en": "Serves your customers 24/7",
   "it": "Assiste i tuoi clienti 24/7"
@@ -1018,10 +1014,6 @@
  "El trabajo repetitivo que hoy hace una persona, hecho por un flujo que conecta las herramientas que ya usas. Cada entrega se prueba antes de llegar a ti.": {
   "en": "The repetitive work a person does today, handled by a workflow connecting the tools you already use. Every delivery is tested before it reaches you.",
   "it": "Il lavoro ripetitivo che oggi svolge una persona, eseguito da un flusso che collega gli strumenti che già usi. Ogni consegna viene testata prima di arrivare a te."
- },
- "En bucle, sin sonido · el video del método, más abajo": {
-  "en": "Looping, no sound · the method video is below",
-  "it": "In loop, senza audio · il video del metodo è più sotto"
  },
  "En turno": {
   "en": "On duty",
@@ -1162,5 +1154,9 @@
  "Los cinco frentes se contratan en tres equipos, o todos juntos": {
   "en": "The five fronts are hired as three teams, or all together",
   "it": "I cinque fronti si assumono in tre squadre, o tutti insieme"
+ },
+ "Ver el método completo, 2 min ↓": {
+  "en": "Watch the full method, 2 min ↓",
+  "it": "Guarda il metodo completo, 2 min ↓"
  }
 }
