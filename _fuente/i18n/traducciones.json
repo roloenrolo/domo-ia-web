@@ -1335,10 +1335,6 @@
   "en": "listings read across 27 districts before 06:16, to keep the search engine current.",
   "it": "annunci letti in 27 comuni prima delle 06:16, per tenere aggiornato il motore."
  },
- "La pieza que funciona deja una reunión cada US$4,86; la otra, cada US$167,88. Cuenta de una corredora de propiedades en Santiago, al 6 de septiembre de 2026. El agendamiento se mide en el CRM a 30 días y la inversión en Meta a 28: las ventanas no están alineadas.": {
-  "en": "The creative that works books a meeting for every US$4.86; the other, for every US$167.88. Account of a real-estate brokerage in Santiago, as of 6 September 2026. Bookings are measured in the CRM over 30 days and spend in Meta over 28: the windows are not aligned.",
-  "it": "La creatività che funziona porta una riunione ogni 4,86 US$; l’altra, ogni 167,88 US$. Account di un’agenzia immobiliare a Santiago, al 6 settembre 2026. Le riunioni si misurano nel CRM su 30 giorni e la spesa su Meta su 28: le finestre non sono allineate."
- },
  "Formato real del informe que deja Lucas después de cada reunión, con los datos del cliente ocultos. La rúbrica V-E-N-D-E revisa vincular, explorar, narrar, destrabar y expandir.": {
   "en": "The real format of the report Lucas leaves after each meeting, with the client’s details hidden. The V-E-N-D-E rubric checks connect, explore, narrate, unblock and expand.",
   "it": "Il formato reale del report che Lucas lascia dopo ogni riunione, con i dati del cliente nascosti. La rubrica V-E-N-D-E verifica collegare, esplorare, narrare, sbloccare ed espandere."
@@ -1402,5 +1398,61 @@
  "El trabajo que hoy hace una persona a mano, hecho por un flujo probado.": {
   "en": "The work a person does by hand today, done by a tested flow.",
   "it": "Il lavoro che oggi fa una persona a mano, svolto da un flusso testato."
+ },
+ "La pieza que funciona deja una reunión cada US$4,86; la otra, cada US$167,88. Cuenta de una corredora de propiedades en Santiago.": {
+  "en": "The creative that works books a meeting for every US$4.86; the other, for every US$167.88. Account of a real-estate brokerage in Santiago.",
+  "it": "La creatività che funziona porta una riunione ogni 4,86 US$; l’altra, ogni 167,88 US$. Account di un’agenzia immobiliare a Santiago."
+ },
+ "escribieron": {
+  "en": "wrote in",
+  "it": "hanno scritto"
+ },
+ "declararon presupuesto": {
+  "en": "stated a budget",
+  "it": "hanno indicato un budget"
+ },
+ "calificaron": {
+  "en": "qualified",
+  "it": "qualificati"
+ },
+ "agendaron": {
+  "en": "booked a meeting",
+  "it": "hanno fissato"
+ },
+ "1.026": {
+  "en": "=",
+  "it": "="
+ },
+ "607": {
+  "en": "=",
+  "it": "="
+ },
+ "107": {
+  "en": "=",
+  "it": "="
+ },
+ "75": {
+  "en": "=",
+  "it": "="
+ },
+ "Cómo se mueve una conversación con Antonia": {
+  "en": "How a conversation with Antonia moves",
+  "it": "Come si muove una conversazione con Antonia"
+ },
+ "Lo que Clara vigila": {
+  "en": "What Clara watches",
+  "it": "Cosa sorveglia Clara"
+ },
+ "7 de 100": {
+  "en": "7 in 100",
+  "it": "7 su 100"
+ },
+ "conversaciones terminan en reunión. Clara revisa dónde se cae el resto y avisa cuando un mismo anuncio concentra las detenidas.": {
+  "en": "conversations end in a meeting. Clara reviews where the rest drop off and flags when one ad concentrates the stalled ones.",
+  "it": "conversazioni finiscono in riunione. Clara controlla dove cade il resto e segnala quando un singolo annuncio concentra quelle bloccate."
+ },
+ "Embudo acumulado de una corredora de propiedades en Santiago. Cada tramo se mide en el CRM del cliente.": {
+  "en": "Cumulative funnel of a real-estate brokerage in Santiago. Each step is measured in the client’s CRM.",
+  "it": "Imbuto cumulativo di un’agenzia immobiliare a Santiago. Ogni passaggio è misurato nel CRM del cliente."
  }
 }
