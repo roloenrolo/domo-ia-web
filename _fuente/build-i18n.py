@@ -39,9 +39,11 @@ PROPER_EQUAL = {
     "Domo IA", "domo IA", "domo-ia", "DOMO IA", "Antonia", "Matías", "Sofía",
     "Clara", "Amanda", "Lucas", "Laura", "Diego", "Sebastián",
     "Rodrigo González Villalobos", "Rodolfo Alfaro", "Damián Roba Jesset",
+    "Víctor Calvo",
     "WhatsApp", "LinkedIn", "Método DOMO", "Universidad Central de Chile",
     "Universitat Politècnica de Catalunya", "Universidad de Valparaíso",
     "Universidad de Chile", "Duoc UC", "Université Toulouse – Jean Jaurès",
+    "Universidad Andrés Bello", "Universidad Adolfo Ibáñez",
     "MBA",
     "ES", "EN", "IT",
 }

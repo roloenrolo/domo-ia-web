@@ -719,9 +719,9 @@
   "en": "Meet us",
   "it": "Chi siamo"
  },
- "No somos una agencia con un equipo que nunca vas a conocer. Somos tres, y los tres trabajamos en esto.": {
-  "en": "We're not an agency with a team you'll never meet. There are three of us, and all three of us work on this.",
-  "it": "Non siamo un'agenzia con un team che non conoscerai mai. Siamo in tre, e tutti e tre lavoriamo a questo."
+ "No somos una agencia con un equipo que nunca vas a conocer. Somos cuatro, y los cuatro trabajamos en esto.": {
+  "en": "We're not an agency with a team you'll never meet. There are four of us, and all four of us work on this.",
+  "it": "Non siamo un'agenzia con un team che non conoscerai mai. Siamo in quattro, e tutti e quattro lavoriamo a questo."
  },
  "Ver quiénes somos": {
   "en": "See who we are",
@@ -771,9 +771,9 @@
   "en": "=",
   "it": "="
  },
- "Director de cuentas clave": {
-  "en": "Key accounts director",
-  "it": "Direttore key account"
+ "Director creativo": {
+  "en": "Creative director",
+  "it": "Direttore creativo"
  },
  "Administración en Ecoturismo, Duoc UC.": {
   "en": "Ecotourism Management, Duoc UC.",
@@ -786,6 +786,26 @@
  "LinkedIn de Damián Roba Jesset": {
   "en": "Damián Roba Jesset on LinkedIn",
   "it": "Damián Roba Jesset su LinkedIn"
+ },
+ "Víctor Calvo": {
+  "en": "=",
+  "it": "="
+ },
+ "Gerente de nuevos negocios y TI": {
+  "en": "New business and IT director",
+  "it": "Direttore nuovi business e IT"
+ },
+ "Ingeniero Comercial, Universidad Andrés Bello.": {
+  "en": "Business Administration, Universidad Andrés Bello.",
+  "it": "Economia aziendale, Universidad Andrés Bello."
+ },
+ "Programa en Transformación Digital, Universidad Adolfo Ibáñez.": {
+  "en": "Digital Transformation programme, Universidad Adolfo Ibáñez.",
+  "it": "Programma in Trasformazione digitale, Universidad Adolfo Ibáñez."
+ },
+ "LinkedIn de Víctor Calvo": {
+  "en": "Víctor Calvo on LinkedIn",
+  "it": "Víctor Calvo su LinkedIn"
  },
  "06": {
   "en": "=",
