@@ -915,9 +915,9 @@
   "en": "Contact",
   "it": "Contatti"
  },
- "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Política de privacidad{9}": {
-  "en": "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Privacy policy (in Spanish){9}",
-  "it": "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Informativa sulla privacy (in spagnolo){9}"
+ "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}vito@domo-ia.com{7} · {8}+56 9 3695 6065{9} · {10}Política de privacidad{11}": {
+  "en": "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}vito@domo-ia.com{7} · {8}+56 9 3695 6065{9} · {10}Privacy policy (in Spanish){11}",
+  "it": "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}vito@domo-ia.com{7} · {8}+56 9 3695 6065{9} · {10}Informativa sulla privacy (in spagnolo){11}"
  },
  "LinkedIn de domo IA": {
   "en": "domo IA on LinkedIn",
