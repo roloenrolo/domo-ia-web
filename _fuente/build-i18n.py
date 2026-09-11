@@ -38,7 +38,7 @@ TRANSLATABLE_META = {
 PROPER_EQUAL = {
     "Domo IA", "domo IA", "domo-ia", "DOMO IA", "Antonia", "Matías", "Sofía",
     "Clara", "Amanda", "Lucas", "Laura", "Diego", "Sebastián",
-    "Rodrigo González Villalobos", "Rodolfo Alfaro", "Damián Roba Jesset",
+    "Rodrigo González Villalobos", "Damián Roba Jesset",
     "Víctor Calvo",
     "WhatsApp", "LinkedIn", "Método DOMO", "Universidad Central de Chile",
     "Universitat Politècnica de Catalunya", "Universidad de Valparaíso",

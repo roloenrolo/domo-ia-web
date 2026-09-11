@@ -1474,5 +1474,13 @@
  "Últimas dos semanas de una corredora de propiedades en Santiago, contadas sobre el registro de la propia Antonia. Dos de esas reuniones se cancelaron después.": {
   "en": "Last two weeks of a real-estate brokerage in Santiago, counted from Antonia’s own log. Two of those meetings were cancelled afterwards.",
   "it": "Ultime due settimane di un’agenzia immobiliare a Santiago, contate sul registro di Antonia stessa. Due di quelle riunioni sono state poi annullate."
+ },
+ "No somos una agencia con un equipo que nunca vas a conocer. Somos tres, y los tres trabajamos en esto.": {
+  "en": "We're not an agency with a team you'll never meet. There are three of us, and all three of us work on this.",
+  "it": "Non siamo un'agenzia con un team che non conoscerai mai. Siamo in tre, e tutti e tre lavoriamo a questo."
+ },
+ "{0}rodrigo@domo-ia.com{1} · {2}damian@domo-ia.com{3} · {4}vito@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Política de privacidad{9}": {
+  "en": "{0}rodrigo@domo-ia.com{1} · {2}damian@domo-ia.com{3} · {4}vito@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Privacy policy (in Spanish){9}",
+  "it": "{0}rodrigo@domo-ia.com{1} · {2}damian@domo-ia.com{3} · {4}vito@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Informativa sulla privacy (in spagnolo){9}"
  }
 }
