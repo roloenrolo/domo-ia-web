@@ -4,8 +4,20 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const mobile = matchMedia('(max-width: 820px)');
   const video = document.getElementById('heroVideo');
+  const control = document.querySelector('.video-ctl');
+  const [pauseLabel, playLabel] = control.querySelectorAll('span');
+  let userPaused = false;
+  let heroVisible = true;
+  function syncControl() {
+    pauseLabel.hidden = video.paused;
+    playLabel.hidden = !video.paused;
+  }
+  function playHero() {
+    if (!userPaused && heroVisible && !reduce.matches) video.play().catch(syncControl);
+  }
   function heroVideo() {
     video.poster = mobile.matches ? '/assets/web/hero-oficina-vertical-v2.jpg' : '/assets/web/hero-oficina-1920.jpg';
+    video.autoplay = !userPaused;
     if (reduce.matches) {
       video.pause();
       video.removeAttribute('autoplay');
@@ -13,18 +25,38 @@
       video.load();
       return;
     }
-    video.autoplay = true;
     video.src = mobile.matches ? '/assets/web/v2/hero-vertical.mp4' : '/assets/web/v2/hero-oficina.mp4';
     video.load();
-    video.play().catch(() => {});
+    playHero();
   }
+  control.addEventListener('click', () => {
+    if (video.paused) {
+      userPaused = false;
+      playHero();
+    } else {
+      userPaused = true;
+      video.pause();
+    }
+  });
+  video.addEventListener('play', syncControl);
+  video.addEventListener('pause', syncControl);
   heroVideo();
   mobile.addEventListener('change', heroVideo);
   if (!('IntersectionObserver' in window)) return;
   const header = () => root.classList.toggle('scrolled', scrollY > 40);
   addEventListener('scroll', header, {passive: true});
   header();
-  new IntersectionObserver(([e]) => root.classList.toggle('cta-on', !e.isIntersecting)).observe(document.querySelector('.hero'));
+  new IntersectionObserver(([e]) => {
+    heroVisible = e.isIntersecting;
+    root.classList.toggle('cta-on', !heroVisible);
+    if (heroVisible) playHero();
+    else video.pause();
+  }).observe(document.querySelector('.hero'));
+  const motorClip = document.querySelector('.prueba video');
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) motorClip.play().catch(() => {});
+    else motorClip.pause();
+  }).observe(motorClip);
   if (reduce.matches) return;
   root.classList.add('motion');
   reduce.addEventListener('change', () => { root.classList.toggle('motion', !reduce.matches); heroVideo(); });
@@ -39,12 +71,6 @@
       return span;
     }));
   });
-  const ribbon = document.querySelector('.marquee-track');
-  const mitad = ribbon.firstElementChild;
-  const gemela = mitad.cloneNode(true);
-  gemela.setAttribute('aria-hidden', 'true');
-  ribbon.append(gemela);
-
   /* IO: entradas únicas y fallback temporal (sin motor externo). */
   const native = CSS.supports('animation-timeline: view()');
   root.classList.toggle('native-motion', native);
@@ -100,6 +126,7 @@
   fronts.querySelectorAll('.front-row').forEach(el => frontObserver.observe(el));
 
   const team = document.getElementById('equipo');
+  const win = team.querySelector('.team-window');
   const track = team.querySelector('.team-track');
   const progress = team.querySelector('.team-progress');
   const desktop = matchMedia('(min-width: 1024px) and (min-height: 820px)');
@@ -118,16 +145,9 @@
     track.style.transform = '';
     progress.style.transform = '';
     if (!desktop.matches) return;
-    // Si las viñetas no caben completas, conserva la cuadrícula legible.
-    const room = team.querySelector('.team-window').clientHeight;
-    const fits = [...team.querySelectorAll('.worker')].every(el => el.scrollHeight <= room + 2);
-    if (!fits) {
-      root.classList.remove('gallery', 'native-gallery');
-      return;
-    }
     start = team.getBoundingClientRect().top + scrollY - 72;
     distance = team.offsetHeight - (innerHeight - 72);
-    travel = track.scrollWidth - team.querySelector('.team-window').clientWidth;
+    travel = track.scrollWidth - win.clientWidth;
     team.style.setProperty('--travel', travel + 'px');
     team.style.setProperty('--scroll-start', start + 'px');
     team.style.setProperty('--scroll-end', start + distance + 'px');
@@ -143,6 +163,14 @@
   addEventListener('resize', measure, {passive: true});
   measure();
   document.fonts.ready.then(measure);
+  track.addEventListener('focusin', e => {
+    if (!root.classList.contains('gallery')) return;
+    const card = e.target.closest('.worker');
+    if (!card || travel <= 0) return;
+    const x = card.offsetLeft;
+    const t = Math.max(0, Math.min(travel, x - (win.clientWidth - card.offsetWidth) / 2));
+    scrollTo({top: start + (t / travel) * distance, behavior: 'auto'});
+  });
   const method = document.querySelector('.video-frame');
   const film = method.querySelector('video');
   method.querySelector('button').addEventListener('click', () => film.play().catch(() => {}));

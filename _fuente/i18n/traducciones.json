@@ -47,6 +47,18 @@
   "en": "See the teams",
   "it": "Vedi i team"
  },
+ "Ver funciones": {
+  "en": "View tasks",
+  "it": "Vedi funzioni"
+ },
+ "Pausar": {
+  "en": "Pause",
+  "it": "Pausa"
+ },
+ "Reproducir": {
+  "en": "Play",
+  "it": "Riproduci"
+ },
  "01": {
   "en": "=",
   "it": "="
@@ -955,9 +967,17 @@
   "en": "02 · What the team does",
   "it": "02 · Cosa fa il team"
  },
+ "04 · Qué hace el equipo": {
+  "en": "04 · What the team does",
+  "it": "04 · Cosa fa il team"
+ },
  "03 · El equipo": {
   "en": "03 · The team",
   "it": "03 · Il team"
+ },
+ "02 · El equipo": {
+  "en": "02 · The team",
+  "it": "02 · Il team"
  },
  "Analista de pauta · 06:15": {
   "en": "Ad analyst · 06:15",
@@ -1087,6 +1107,14 @@
   "en": "Nine digital workers with names and roles: they create and manage your marketing campaigns, serve your customers 24/7, audit your sales process, train your salespeople and automate repetitive tasks.",
   "it": "Nove lavoratori digitali con un nome e un ruolo: creano e gestiscono le tue campagne commerciali, assistono i tuoi clienti 24/7, verificano il tuo processo commerciale, allenano i tuoi venditori e automatizzano le attività ripetitive."
  },
+ "Nueve trabajadores digitales con nombre y cargo: crean tus campañas, atienden a tus clientes 24/7, auditan tu proceso comercial, entrenan a tus vendedores y automatizan lo repetitivo.": {
+  "en": "Nine digital workers with names and job titles: they create your campaigns, serve your customers 24/7, audit your sales process, train your salespeople and automate repetitive work.",
+  "it": "Nove lavoratori digitali con nome e ruolo: creano le tue campagne, assistono i tuoi clienti 24/7, verificano il tuo processo commerciale, formano i tuoi venditori e automatizzano il lavoro ripetitivo."
+ },
+ "Gratis · 45 minutos · coordinamos por WhatsApp": {
+  "en": "Free · 45 minutes · we coordinate via WhatsApp",
+  "it": "Gratis · 45 minuti · coordiniamo su WhatsApp"
+ },
  "Nueve. Con nombre, cargo y turno.": {
   "en": "Nine. With names, roles and shifts.",
   "it": "Nove. Con un nome, un ruolo e un turno."
@@ -1170,6 +1198,10 @@
  "Los cinco frentes se contratan en tres equipos, o todos juntos": {
   "en": "The five areas are hired as three teams, or all together",
   "it": "I cinque ambiti si assumono in tre squadre, o tutti insieme"
+ },
+ "Los cinco frentes se contratan en tres equipos, o todos juntos ↑": {
+  "en": "The five areas are hired as three teams, or all together ↑",
+  "it": "I cinque ambiti si assumono in tre squadre, o tutti insieme ↑"
  },
  "Ver el método completo, 2 min ↓": {
   "en": "Watch the full method, 2 min ↓",
