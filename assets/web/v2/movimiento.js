@@ -42,6 +42,48 @@
   video.addEventListener('pause', syncControl);
   heroVideo();
   mobile.addEventListener('change', heroVideo);
+  /* Ticker: las frases traducidas vienen del HTML. */
+  (() => {
+    const tk = document.getElementById('tk');
+    const src = [...document.querySelectorAll('.ticker-src li')].map(el => el.textContent);
+    if (!tk || !src.length) return;
+    const tickerReduced = reduce.matches;
+    let index = 0;
+    function cycle() {
+      if (document.hidden) {
+        setTimeout(cycle, 1500);
+        return;
+      }
+      index = (index + 1) % src.length;
+      if (tickerReduced) {
+        tk.textContent = src[index];
+        setTimeout(cycle, 4000);
+        return;
+      }
+      tk.textContent = '';
+      setTimeout(() => {
+        const phrase = src[index];
+        let char = 0;
+        function type() {
+          tk.textContent = phrase.slice(0, ++char);
+          if (char < phrase.length) setTimeout(type, 28);
+          else setTimeout(cycle, 2600);
+        }
+        type();
+      }, 400);
+    }
+    setTimeout(cycle, tickerReduced ? 4000 : 2600);
+  })();
+  if (!reduce.matches && 'IntersectionObserver' in window) {
+    const lines = new IntersectionObserver((entries, observer) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('on');
+        observer.unobserve(e.target);
+      });
+    }, {threshold: .35});
+    document.querySelectorAll('.linea').forEach(el => lines.observe(el));
+  }
   if (!('IntersectionObserver' in window)) return;
   const header = () => root.classList.toggle('scrolled', scrollY > 40);
   addEventListener('scroll', header, {passive: true});
@@ -145,8 +187,8 @@
     track.style.transform = '';
     progress.style.transform = '';
     if (!desktop.matches) return;
-    start = team.getBoundingClientRect().top + scrollY - 72;
-    distance = team.offsetHeight - (innerHeight - 72);
+    start = team.getBoundingClientRect().top + scrollY - 132;
+    distance = team.offsetHeight - (innerHeight - 132);
     travel = track.scrollWidth - win.clientWidth;
     team.style.setProperty('--travel', travel + 'px');
     team.style.setProperty('--scroll-start', start + 'px');

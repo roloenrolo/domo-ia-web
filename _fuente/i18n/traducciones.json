@@ -935,13 +935,13 @@
   "en": "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}vito@domo-ia.com{7} · {8}+56 9 3695 6065{9} · {10}Privacy policy (in Spanish){11}",
   "it": "{0}rodrigo@domo-ia.com{1} · {2}rodolfo@domo-ia.com{3} · {4}damian@domo-ia.com{5} · {6}vito@domo-ia.com{7} · {8}+56 9 3695 6065{9} · {10}Informativa sulla privacy (in spagnolo){11}"
  },
- "LinkedIn de domo IA": {
-  "en": "domo IA on LinkedIn",
-  "it": "domo IA su LinkedIn"
+ "LinkedIn de Domo IA": {
+  "en": "Domo IA on LinkedIn",
+  "it": "Domo IA su LinkedIn"
  },
- "Instagram de domo IA": {
-  "en": "domo IA on Instagram",
-  "it": "domo IA su Instagram"
+ "Instagram de Domo IA": {
+  "en": "Domo IA on Instagram",
+  "it": "Domo IA su Instagram"
  },
  "Escríbenos por WhatsApp": {
   "en": "Message us on WhatsApp",
@@ -1283,9 +1283,9 @@
   "en": "=",
   "it": "="
  },
- "Conversación de prueba contra la Antonia de domo IA, 6 de septiembre de 2026. Respuestas textuales, sin editar. El lead es de prueba y las horas salen de un calendario real. Nunca publicamos conversaciones de clientes.": {
-  "en": "Test conversation with domo IA’s own Antonia, 6 September 2026. Replies are verbatim, unedited. The lead is a test lead and the times come from a real calendar. We never publish client conversations.",
-  "it": "Conversazione di prova con l’Antonia di domo IA, 6 settembre 2026. Risposte testuali, non modificate. Il lead è di prova e gli orari vengono da un calendario reale. Non pubblichiamo mai conversazioni dei clienti."
+ "Conversación de prueba contra la Antonia de Domo IA, 6 de septiembre de 2026. Respuestas textuales, sin editar. El lead es de prueba y las horas salen de un calendario real. Nunca publicamos conversaciones de clientes.": {
+  "en": "Test conversation with Domo IA’s own Antonia, 6 September 2026. Replies are verbatim, unedited. The lead is a test lead and the times come from a real calendar. We never publish client conversations.",
+  "it": "Conversazione di prova con l’Antonia di Domo IA, 6 settembre 2026. Risposte testuali, non modificate. Il lead è di prova e gli orari vengono da un calendario reale. Non pubblichiamo mai conversazioni dei clienti."
  },
  "Cubre los frentes 01, 02 y 03": {
   "en": "Covers areas 01, 02 and 03",
@@ -1518,5 +1518,133 @@
  "{0}rodrigo@domo-ia.com{1} · {2}damian@domo-ia.com{3} · {4}vito@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Política de privacidad{9}": {
   "en": "{0}rodrigo@domo-ia.com{1} · {2}damian@domo-ia.com{3} · {4}vito@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Privacy policy (in Spanish){9}",
   "it": "{0}rodrigo@domo-ia.com{1} · {2}damian@domo-ia.com{3} · {4}vito@domo-ia.com{5} · {6}+56 9 3695 6065{7} · {8}Informativa sulla privacy (in spagnolo){9}"
+ },
+ "Antonia contesta un WhatsApp que entró de madrugada": {
+  "en": "Antonia answers a WhatsApp message that came in overnight",
+  "it": "Antonia risponde a un WhatsApp arrivato di notte"
+ },
+ "Antonia ofrece tres horarios y agenda la reunión": {
+  "en": "Antonia offers three time slots and books the meeting",
+  "it": "Antonia propone tre orari e fissa l'incontro"
+ },
+ "Matías revisa el rendimiento de la pauta de la mañana": {
+  "en": "Matías reviews this morning's ad performance",
+  "it": "Matías controlla il rendimento delle campagne di stamattina"
+ },
+ "Sofía prepara la pieza nueva para el anuncio de la semana": {
+  "en": "Sofía prepares the new creative for this week's ad",
+  "it": "Sofía prepara la nuova creatività per l'annuncio della settimana"
+ },
+ "Clara audita las conversaciones de ayer": {
+  "en": "Clara audits yesterday's conversations",
+  "it": "Clara verifica le conversazioni di ieri"
+ },
+ "Amanda toma nota de la reunión de la mañana": {
+  "en": "Amanda takes notes at the morning meeting",
+  "it": "Amanda prende appunti della riunione di stamattina"
+ },
+ "Lucas evalúa la reunión con la rúbrica V-E-N-D-E": {
+  "en": "Lucas scores the meeting with the V-E-N-D-E rubric",
+  "it": "Lucas valuta la riunione con la rubrica V-E-N-D-E"
+ },
+ "Diego conecta el CRM con la planilla de seguimiento": {
+  "en": "Diego connects the CRM to the follow-up spreadsheet",
+  "it": "Diego collega il CRM al foglio di follow-up"
+ },
+ "Sebastián arma la automatización que manda el reporte semanal": {
+  "en": "Sebastián builds the automation that sends the weekly report",
+  "it": "Sebastián costruisce l'automazione che invia il report settimanale"
+ },
+ "Demo": {
+  "en": "=",
+  "it": "="
+ },
+ "24/7 {0}· Santiago de Chile{1}": {
+  "en": "=",
+  "it": "="
+ },
+ "V-E-N-D-E": {
+  "en": "=",
+  "it": "="
+ },
+ "Domo IA es {0}tu equipo.{1}": {
+  "en": "Domo IA is {0}your team.{1}",
+  "it": "Domo IA è {0}il tuo team.{1}"
+ },
+ "Domo IA {0}crea y gestiona{1} tus campañas.": {
+  "en": "Domo IA {0}creates and manages{1} your campaigns.",
+  "it": "Domo IA {0}crea e gestisce{1} le tue campagne."
+ },
+ "Domo IA {0}contesta{1} tu WhatsApp a cualquier hora.": {
+  "en": "Domo IA {0}answers{1} your WhatsApp at any hour.",
+  "it": "Domo IA {0}risponde{1} al tuo WhatsApp a qualsiasi ora."
+ },
+ "Domo IA {0}audita{1} cómo vendes.": {
+  "en": "Domo IA {0}audits{1} how you sell.",
+  "it": "Domo IA {0}verifica{1} come vendi."
+ },
+ "Domo IA {0}entrena{1} a tus vendedores.": {
+  "en": "Domo IA {0}trains{1} your salespeople.",
+  "it": "Domo IA {0}forma{1} i tuoi venditori."
+ },
+ "Domo IA {0}automatiza{1} lo repetitivo.": {
+  "en": "Domo IA {0}automates{1} the repetitive work.",
+  "it": "Domo IA {0}automatizza{1} il lavoro ripetitivo."
+ },
+ "Un equipo. Cinco frentes. Se hace cargo de todo.": {
+  "en": "One team. Five areas. It takes care of everything.",
+  "it": "Un solo team. Cinque ambiti. Si occupa di tutto."
+ },
+ "Hablemos por WhatsApp": {
+  "en": "Let's talk on WhatsApp",
+  "it": "Parliamo su WhatsApp"
+ },
+ "En detalle, frente por frente": {
+  "en": "In detail, area by area",
+  "it": "Nel dettaglio, ambito per ambito"
+ },
+ "Propósito": {
+  "en": "Purpose",
+  "it": "Scopo"
+ },
+ "Qué estamos construyendo": {
+  "en": "What we are building",
+  "it": "Cosa stiamo costruendo"
+ },
+ "Hacia dónde vamos": {
+  "en": "Where we are going",
+  "it": "Dove stiamo andando"
+ },
+ "Que nada se pierda.": {
+  "en": "Let nothing slip away.",
+  "it": "Che niente vada perso."
+ },
+ "Domo IA existe para que ninguna oportunidad comercial se pierda por desorden, demora o falta de seguimiento, uniendo inteligencia artificial y criterio humano para hacer crecer negocios con más claridad y confianza.": {
+  "en": "Domo IA exists so that no sales opportunity is lost to disorder, delay or lack of follow-up, combining artificial intelligence and human judgment to grow businesses with more clarity and confidence.",
+  "it": "Domo IA esiste perché nessuna opportunità commerciale vada persa per disordine, ritardi o mancanza di follow-up, unendo intelligenza artificiale e criterio umano per far crescere le aziende con più chiarezza e fiducia."
+ },
+ "Equipos digitales configurados a medida para pymes de Chile que reciben prospectos por WhatsApp.": {
+  "en": "Digital teams tailored for Chilean SMEs that receive leads through WhatsApp.",
+  "it": "Team digitali configurati su misura per le PMI cilene che ricevono contatti via WhatsApp."
+ },
+ "Especialmente inmobiliarias y corredoras de propiedades. Combinamos campañas, atención, calificación, seguimiento, auditoría y automatizaciones conectadas a sus herramientas, sin reemplazar al equipo humano.": {
+  "en": "Especially real estate agencies and property brokers. We combine campaigns, customer service, qualification, follow-up, auditing and automations connected to their tools, without replacing the human team.",
+  "it": "Soprattutto agenzie immobiliari e intermediari. Uniamo campagne, assistenza, qualificazione, follow-up, verifica e automazioni collegate ai loro strumenti, senza sostituire il team umano."
+ },
+ "Imaginamos un mundo donde {0}cada consulta recibe atención oportuna{1}, cada oportunidad tiene un próximo paso claro y cada equipo comercial puede concentrarse en las conversaciones que realmente importan.": {
+  "en": "We imagine a world where {0}every inquiry gets a timely answer{1}, every opportunity has a clear next step and every sales team can focus on the conversations that really matter.",
+  "it": "Immaginiamo un mondo in cui {0}ogni richiesta riceve una risposta tempestiva{1}, ogni opportunità ha un passo successivo chiaro e ogni team commerciale può concentrarsi sulle conversazioni che contano davvero."
+ },
+ "Las empresas dejan de perseguir datos dispersos y empiezan a trabajar con una visión viva de su embudo, mientras la inteligencia artificial se ocupa de lo repetitivo con criterio, trazabilidad y respeto por las personas.": {
+  "en": "Companies stop chasing scattered data and start working with a living view of their funnel, while artificial intelligence handles the repetitive work with judgment, traceability and respect for people.",
+  "it": "Le aziende smettono di inseguire dati sparsi e iniziano a lavorare con una visione viva del loro funnel, mentre l'intelligenza artificiale si occupa del lavoro ripetitivo con criterio, tracciabilità e rispetto per le persone."
+ },
+ "En ese futuro, vender mejor no significa presionar más: significa escuchar mejor, responder con contexto y acompañar cada decisión con confianza.": {
+  "en": "In that future, selling better does not mean pushing harder: it means listening better, answering with context and supporting every decision with confidence.",
+  "it": "In quel futuro, vendere meglio non significa fare più pressione: significa ascoltare meglio, rispondere con contesto e accompagnare ogni decisione con fiducia."
+ },
+ "Domo IA será la capa inteligente que conecta la intención de un prospecto con la {0}acción humana{1} capaz de convertirla en una relación duradera.": {
+  "en": "Domo IA will be the intelligent layer that connects a prospect's intent with the {0}human action{1} able to turn it into a lasting relationship.",
+  "it": "Domo IA sarà lo strato intelligente che collega l'intenzione di un potenziale cliente con l'{0}azione umana{1} capace di trasformarla in una relazione duratura."
  }
 }
