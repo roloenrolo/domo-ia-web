@@ -1599,10 +1599,6 @@
   "en": "Let's talk on WhatsApp",
   "it": "Parliamo su WhatsApp"
  },
- "En detalle, frente por frente": {
-  "en": "In detail, area by area",
-  "it": "Nel dettaglio, ambito per ambito"
- },
  "Propósito": {
   "en": "Purpose",
   "it": "Scopo"
@@ -1646,5 +1642,9 @@
  "Domo IA será la capa inteligente que conecta la intención de un prospecto con la {0}acción humana{1} capaz de convertirla en una relación duradera.": {
   "en": "Domo IA will be the intelligent layer that connects a prospect's intent with the {0}human action{1} able to turn it into a lasting relationship.",
   "it": "Domo IA sarà lo strato intelligente che collega l'intenzione di un potenziale cliente con l'{0}azione umana{1} capace di trasformarla in una relazione duratura."
+ },
+ "04 · Qué hace el equipo, frente por frente": {
+  "en": "04 · What the team does, area by area",
+  "it": "04 · Cosa fa il team, ambito per ambito"
  }
 }
