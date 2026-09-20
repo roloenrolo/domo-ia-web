@@ -94,11 +94,6 @@
     if (heroVisible) playHero();
     else video.pause();
   }).observe(document.querySelector('.hero'));
-  const motorClip = document.querySelector('.prueba video');
-  new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) motorClip.play().catch(() => {});
-    else motorClip.pause();
-  }).observe(motorClip);
   if (reduce.matches) return;
   root.classList.add('motion');
   reduce.addEventListener('change', () => { root.classList.toggle('motion', !reduce.matches); heroVideo(); });
@@ -151,70 +146,4 @@
     }
     requestAnimationFrame(tick);
   }).observe(count);
-
-  const fronts = document.getElementById('frentes');
-  const number = fronts.querySelector('.front-counter');
-  // Un observador común decide el frente visible sin escuchar la rueda.
-  const frontObserver = new IntersectionObserver(entries => {
-    for (const e of entries) if (e.isIntersecting) {
-      if (fronts.dataset.activa === e.target.dataset.front) continue;
-      fronts.dataset.activa = e.target.dataset.front;
-      number.dataset.number = '0' + fronts.dataset.activa;
-      number.classList.remove('wipe');
-      void number.offsetWidth;
-      number.classList.add('wipe');
-    }
-  }, {rootMargin: '-25% 0px -40% 0px'});
-  fronts.querySelectorAll('.front-row').forEach(el => frontObserver.observe(el));
-
-  const team = document.getElementById('equipo');
-  const win = team.querySelector('.team-window');
-  const track = team.querySelector('.team-track');
-  const progress = team.querySelector('.team-progress');
-  const desktop = matchMedia('(min-width: 1024px) and (min-height: 820px)');
-  const nativeGallery = CSS.supports('animation-timeline: scroll(root block)') && CSS.supports('animation-range: 0px 1px');
-  let start = 0, distance = 1, travel = 0, watching = false, queued = false;
-  function frame() {
-    queued = false;
-    if (!root.classList.contains('gallery') || nativeGallery) return;
-    const p = Math.max(0, Math.min(1, (scrollY - start) / distance));
-    track.style.transform = `translateX(${-travel * p}px)`;
-    progress.style.transform = `scaleX(${p})`;
-  }
-  function measure() {
-    root.classList.toggle('gallery', desktop.matches);
-    root.classList.toggle('native-gallery', desktop.matches && nativeGallery);
-    track.style.transform = '';
-    progress.style.transform = '';
-    if (!desktop.matches) return;
-    start = team.getBoundingClientRect().top + scrollY - 132;
-    distance = team.offsetHeight - (innerHeight - 132);
-    travel = track.scrollWidth - win.clientWidth;
-    team.style.setProperty('--travel', travel + 'px');
-    team.style.setProperty('--scroll-start', start + 'px');
-    team.style.setProperty('--scroll-end', start + distance + 'px');
-    frame();
-  }
-  new IntersectionObserver(([e]) => { watching = e.isIntersecting; frame(); }).observe(team);
-  addEventListener('scroll', () => {
-    if (watching && !nativeGallery && !queued) {
-      queued = true;
-      requestAnimationFrame(frame);
-    }
-  }, {passive: true});
-  addEventListener('resize', measure, {passive: true});
-  measure();
-  document.fonts.ready.then(measure);
-  track.addEventListener('focusin', e => {
-    if (!root.classList.contains('gallery')) return;
-    const card = e.target.closest('.worker');
-    if (!card || travel <= 0) return;
-    const x = card.offsetLeft;
-    const t = Math.max(0, Math.min(travel, x - (win.clientWidth - card.offsetWidth) / 2));
-    scrollTo({top: start + (t / travel) * distance, behavior: 'auto'});
-  });
-  const method = document.querySelector('.video-frame');
-  const film = method.querySelector('video');
-  method.querySelector('button').addEventListener('click', () => film.play().catch(() => {}));
-  film.addEventListener('play', () => method.classList.add('playing'));
 })();
