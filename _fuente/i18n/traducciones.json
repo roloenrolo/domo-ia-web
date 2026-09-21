@@ -1646,5 +1646,17 @@
  "04 · Qué hace el equipo, frente por frente": {
   "en": "04 · What the team does, area by area",
   "it": "04 · Cosa fa il team, ambito per ambito"
+ },
+ "Cómo funcionan los agentes de IA por dentro": {
+  "en": "How AI agents work under the hood (in Spanish)",
+  "it": "Come funzionano gli agenti IA (in spagnolo)"
+ },
+ "Agentes de IA": {
+  "en": "AI agents (in Spanish)",
+  "it": "Agenti IA (in spagnolo)"
+ },
+ "Domo IA es DOMO IA SpA, Santiago de Chile. No tiene relación con Domo, Inc. (domo.com) ni con DomoAI (domoai.app).": {
+  "en": "Domo IA is DOMO IA SpA, Santiago, Chile. It is not affiliated with Domo, Inc. (domo.com) or DomoAI (domoai.app).",
+  "it": "Domo IA è DOMO IA SpA, Santiago del Cile. Non ha alcun rapporto con Domo, Inc. (domo.com) né con DomoAI (domoai.app)."
  }
 }

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentes de IA para empresas en Chile | Domo IA</title>
+<meta name="description" content="Instalamos agentes de IA en el equipo comercial de empresas chilenas: contestan el WhatsApp en menos de un minuto, califican al lead y agendan la reunión. Sin licencias ni software que aprender.">
+<link rel="canonical" href="https://domo-ia.com/agentes-de-ia/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Domo IA">
+<meta property="og:locale" content="es_CL">
+<meta property="og:url" content="https://domo-ia.com/agentes-de-ia/">
+<meta property="og:title" content="Agentes de IA para empresas en Chile">
+<meta property="og:description" content="Instalamos agentes de IA en el equipo comercial de empresas chilenas: contestan el WhatsApp en menos de un minuto, califican al lead y agendan la reunión. Sin licencias ni software que aprender.">
+<meta property="og:image" content="https://domo-ia.com/assets/web/og-domo-ia-2026.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agentes de IA para empresas en Chile">
+<meta name="twitter:description" content="Instalamos agentes de IA en el equipo comercial de empresas chilenas: contestan el WhatsApp en menos de un minuto, califican al lead y agendan la reunión. Sin licencias ni software que aprender.">
+<meta name="twitter:image" content="https://domo-ia.com/assets/web/og-domo-ia-2026.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F3EC; --surface:#FFFFFF; --surface2:#F0EBE0;
+    --text:#1C2340; --muted:#5D6478; --border:#E2DCCC;
+    --brand:#33508F; --brand2:#D98E3A; --accent:#0E9F6E; --warn:#D97706;
+    --chip:#F3E8D2; --chipText:#A06A1F;
+    --deep:#1B2340; --deepSurface:#252F55; --deepText:#F2EDE4; --deepMuted:#A7B0CC; --deepBorder:#3D4A7A; --deepBrand:#7E9BDE; --deepAmber:#E8A951;
+    --shadow:0 2px 10px rgba(40,40,80,.08);
+    --radius-pill:99px; --radius-card:14px; --radius-md:12px; --radius-sm:10px; --radius-xs:8px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    font-size:17px; line-height:1.72;
+  }
+  .display{font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 118;letter-spacing:-.02em;line-height:1.08;margin:0}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  :focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px}
+
+  header{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .mark{display:flex;align-items:center;gap:9px;font-family:"Archivo";font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:17px;color:var(--text);text-decoration:none}
+  .mark .ia{color:var(--brand2)}
+  .mark svg{flex:none}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:var(--radius-pill);background:var(--brand);color:#fff;text-decoration:none;font-weight:600;line-height:1.2}
+  .btn:hover{background:var(--deep)}
+
+  main{padding:64px 0 88px}
+  article{max-width:74ch;margin:0 auto}
+  h1{font-size:clamp(38px,6vw,64px);font-weight:800;color:var(--text)}
+  h2{font-size:clamp(24px,3vw,34px);font-weight:700;line-height:1.18;margin:64px 0 16px;color:var(--text)}
+  h3{font-size:clamp(19px,2vw,23px);font-weight:700;line-height:1.25;margin:34px 0 12px;color:var(--text)}
+  p{margin:0 0 18px}
+  ul,ol{margin:0 0 22px;padding-left:1.35em}
+  li{margin:0 0 12px;padding-left:.15em}
+  strong{font-weight:600;color:var(--text)}
+  a{color:var(--brand);text-underline-offset:3px}
+  .intro{font-size:20px;color:var(--text);margin:24px 0 28px}
+  .hero{padding-bottom:28px;border-bottom:1px solid var(--border)}
+  .cta-note{margin:12px 0 0;color:var(--muted);font-size:14px}
+  .table-scroll{width:100%;overflow-x:auto;margin:24px 0;-webkit-overflow-scrolling:touch}
+  table{width:100%;min-width:680px;border-collapse:collapse;background:var(--surface);box-shadow:var(--shadow)}
+  th,td{padding:14px 16px;border:1px solid var(--border);text-align:left;vertical-align:top}
+  thead th{background:var(--deep);color:var(--deepText);font-family:"Archivo",system-ui,sans-serif}
+  tbody th{width:31%;background:var(--surface2);font-weight:600}
+  .metric{margin:24px 0;padding:22px;border:1px solid var(--border);border-radius:var(--radius-card);background:var(--surface);box-shadow:var(--shadow)}
+  .metric p{margin-bottom:10px}
+  .metric strong{font-family:"Archivo",system-ui,sans-serif;font-size:clamp(24px,4vw,38px);font-variation-settings:"wdth" 118}
+  .metric figcaption{padding-top:12px;border-top:1px solid var(--border);color:var(--muted);font-size:14px;line-height:1.55}
+  .agent-list,.industry-list{list-style:none;padding:0}
+  .agent-list li,.industry-list li{padding:14px 0;border-bottom:1px solid var(--border)}
+  .faq{padding:2px 0 14px;border-bottom:1px solid var(--border)}
+  .faq h3{margin-top:28px}
+  .closing{margin-top:64px;padding:32px;border-radius:var(--radius-card);background:var(--deep);color:var(--deepText)}
+  .closing h2{margin:0 0 16px;color:var(--deepText)}
+  .closing p{color:var(--deepMuted)}
+  .closing .btn{background:var(--brand2);color:var(--deep)}
+  footer{padding:40px 0 72px;color:var(--muted);font-size:13px;background:var(--deep)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer .wrap+.wrap{margin-top:16px;align-items:center}
+  footer span{color:var(--deepMuted)}
+  footer a{color:var(--deepMuted);text-decoration:underline;text-underline-offset:3px}
+  footer a:hover{color:var(--deepText)}
+  footer .f-contact{display:flex;flex-direction:column;gap:4px}
+  footer .f-lbl{color:var(--deepText);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:11px}
+  footer .disambiguation{max-width:74ch}
+
+  @media(max-width:640px){
+    body{font-size:16px;line-height:1.68}
+    .wrap{padding:0 20px}
+    .bar{gap:10px}
+    .bar .btn{padding:10px 13px;font-size:13px;white-space:nowrap}
+    main{padding:44px 0 64px}
+    h2{margin-top:46px}
+    h3{margin-top:28px}
+    .intro{font-size:18px}
+    .metric{padding:18px}
+    .closing{padding:24px 20px}
+    footer{padding-bottom:64px}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://domo-ia.com/agentes-de-ia/#webpage",
+      "url": "https://domo-ia.com/agentes-de-ia/",
+      "name": "Agentes de IA para empresas en Chile | Domo IA",
+      "description": "Instalamos agentes de IA en el equipo comercial de empresas chilenas: contestan el WhatsApp en menos de un minuto, califican al lead y agendan la reunión. Sin licencias ni software que aprender.",
+      "isPartOf": {"@id": "https://domo-ia.com/#website"},
+      "about": {"@id": "https://domo-ia.com/#organization"},
+      "inLanguage": "es-CL"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://domo-ia.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Agentes de IA",
+          "item": "https://domo-ia.com/agentes-de-ia/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://domo-ia.com/agentes-de-ia/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es exactamente un trabajador digital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un agente de inteligencia artificial con un nombre, un cargo y una sola tarea que hace bien. No es un software que tengas que aprender a usar: se contrata como se contrata a una persona, entra a trabajar a tu operación y rinde cuentas de lo que hizo. Antonia contesta el WhatsApp, Matías mueve el presupuesto de los anuncios, Lucas evalúa las reuniones de venta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia de un chatbot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un chatbot sigue un árbol de respuestas: si el cliente se sale del guion, se cae. Un agente de IA entiende lo que le escriben, califica al lead con tus criterios, consulta tu calendario y agenda. La diferencia práctica es simple: el chatbot deriva a un humano, el agente cierra la reunión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve para una pyme o solo para empresas grandes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Está pensado justamente para pymes chilenas que invierten en publicidad y reciben leads por WhatsApp. La regla no es el tamaño: es si estás pagando por leads que después nadie contesta a tiempo. Si ese número resulta ser cero, te lo decimos en el diagnóstico y no te vendemos nada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Para qué industrias funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para cualquier negocio que pague por leads y los atienda por WhatsApp. El patrón se repite igual en inmobiliarias y corredoras de propiedades, seguros, clínicas y centros dentales, educación y capacitación, automotriz, construcción y servicios profesionales: mucho lead que llega por anuncio o portal, todos preguntando lo mismo, y una demora de respuesta que decide si el interesado sigue contigo o se va al de al lado. Partimos en inmobiliario porque ahí el problema se ve más nítido, pero el equipo no es de un rubro: lo que cambia entre una industria y otra no son los trabajadores digitales, sino las reglas de calificación y la forma de hablar, y eso se configura en el diagnóstico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto se demora en contestar un lead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Menos de un minuto, de día, de noche, fin de semana y feriado. No es una promesa de marketing: es lo que se mide cada semana en el reporte de embudo que recibes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con los datos de mis clientes y la Ley 21.719?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los datos de quienes le escriben a tu agente son tuyos, no nuestros: los tratamos por encargo, bajo contrato y solo con tus instrucciones. La Ley 21.719 tiene vigencia el 1 de diciembre de 2026, con una postergación a 2027 en trámite en el Congreso, y estamos adecuando a ella nuestros registros de tratamiento, contratos y plazos de conservación. Está todo escrito en la política de privacidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito tener para partir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un WhatsApp donde lleguen los leads y disposición a mostrar tus números reales. El diagnóstico mide cuántos leads entran, cuántos contestas y cuántos terminan en reunión. Sin ese número no hay promesa que valga."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Domo IA tiene relación con Domo, Inc. o con DomoAI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Domo IA es una empresa chilena —DOMO IA SpA, Santiago— que instala agentes de IA en equipos comerciales. Domo, Inc. (domo.com) es una plataforma estadounidense de business intelligence, y DomoAI (domoai.app) es una herramienta de generación de video. Nombres parecidos, negocios distintos."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="/" aria-label="Domo IA — inicio">
+      <svg width="26" height="26" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--text)" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="50" cy="74" r="13" fill="var(--brand2)"/>
+      </svg>
+      <span>DOMO<span class="ia">&nbsp;IA</span></span></a>
+    <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20agentes%20de%20IA%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
+  </div>
+</header>
+
+<main>
+  <article>
+    <section class="hero">
+      <h1 class="display">Agentes de IA para empresas en Chile</h1>
+      <p class="intro">Un agente de IA no es un chatbot con un árbol de respuestas: entiende lo que le escriben, califica al cliente con tus reglas y agenda la reunión en el calendario de tu vendedor. En Domo IA instalamos agentes de inteligencia artificial en el área comercial de pymes y empresas chilenas que invierten en publicidad y reciben leads por WhatsApp. Cada uno tiene un nombre, un cargo y una sola tarea que hace bien.</p>
+      <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20agentes%20de%20IA%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
+      <p class="cta-note mono">Gratis · 45 minutos · coordinamos por WhatsApp</p>
+    </section>
+
+    <section>
+      <h2>Qué es un agente de IA</h2>
+      <p>Es un agente de inteligencia artificial con un nombre, un cargo y una sola tarea que hace bien. No es un software que tengas que aprender a usar: se contrata como se contrata a una persona, entra a trabajar a tu operación y rinde cuentas de lo que hizo. Antonia contesta el WhatsApp, Matías mueve el presupuesto de los anuncios, Lucas evalúa las reuniones de venta.</p>
+      <p>La diferencia con un software tradicional es quién hace el trabajo. Una plataforma te da una herramienta y espera que tú la operes. Un agente de IA opera solo, dentro de las reglas que le diste, y te avisa cuando algo se sale de ellas.</p>
+    </section>
+
+    <section>
+      <h2>Agente de IA o chatbot: la diferencia en la práctica</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Chatbot</th>
+              <th scope="col">Agente de IA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Cuando el cliente se sale del guion</th>
+              <td>Se cae o repite el menú</td>
+              <td>Entiende la pregunta y responde</td>
+            </tr>
+            <tr>
+              <th scope="row">Quién califica al lead</th>
+              <td>Nadie: recoge datos en un formulario</td>
+              <td>El agente, con las reglas que tú definiste</td>
+            </tr>
+            <tr>
+              <th scope="row">Quién agenda la reunión</th>
+              <td>Deriva a un humano</td>
+              <td>Consulta el calendario y agenda</td>
+            </tr>
+            <tr>
+              <th scope="row">Horario</th>
+              <td>24/7, pero solo para lo que está en el árbol</td>
+              <td>24/7, incluidas noches y feriados</td>
+            </tr>
+            <tr>
+              <th scope="row">Cuando no corresponde que siga solo</th>
+              <td>No lo distingue</td>
+              <td>Deriva al humano en los casos que tú marcaste</td>
+            </tr>
+            <tr>
+              <th scope="row">Qué deja después</th>
+              <td>Un log de conversaciones</td>
+              <td>Reuniones agendadas y un embudo medido</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>La diferencia práctica es simple: el chatbot deriva a un humano, el agente cierra la reunión.</p>
+    </section>
+
+    <section>
+      <h2>Qué hace un agente de IA en un equipo comercial</h2>
+      <p>Cinco frentes. En cada uno trabaja un agente distinto, y se pasan el trabajo entre ellos.</p>
+
+      <h3>Crea y gestiona tus campañas</h3>
+      <p>Piezas nuevas cada semana con tu marca, y el presupuesto puesto cada mañana en los avisos que traen conversaciones, no clics baratos.</p>
+      <figure class="metric">
+        <p>Pieza en video: <strong>22,8 %</strong> agenda</p>
+        <p>Pieza de imagen: <strong>1,5 %</strong> agenda</p>
+        <p>Misma cuenta, mismo mes, mismo presupuesto diario.</p>
+        <p><strong>15×</strong> más reuniones agendadas por conversación. Matías movió el presupuesto a la pieza que agenda.</p>
+        <figcaption>La pieza que funciona deja una reunión cada US$ 4,86; la otra, cada US$ 167,88. Cuenta de una corredora de propiedades en Santiago.</figcaption>
+      </figure>
+
+      <h3>Atiende a tus clientes 24/7</h3>
+      <p>Contesta el WhatsApp en menos de un minuto, de día, de noche y en feriados. Califica con tus reglas, agenda en el calendario del vendedor y retoma al lead que quedó tibio.</p>
+
+      <h3>Audita tus procesos comerciales</h3>
+      <p>Revisa todas las conversaciones cada mañana: qué lead se atascó, qué respuesta está funcionando y qué anuncio trae mensajes pero ninguna reunión.</p>
+      <figure class="metric">
+        <p>141 escribieron · 70 dejaron sus datos · 29 pidieron horarios · 28 agendaron</p>
+        <p><strong>20 de 100</strong> conversaciones terminan en reunión. Clara revisa dónde se cae el resto y avisa cuando un mismo anuncio concentra las detenidas.</p>
+        <figcaption>Últimas dos semanas de una corredora de propiedades en Santiago, contadas sobre el registro de la propia Antonia. Dos de esas reuniones se cancelaron después.</figcaption>
+      </figure>
+
+      <h3>Entrena a tus vendedores</h3>
+      <p>Registra cada reunión comercial, la evalúa con una rúbrica profesional y entrena a tu equipo con sus propias reuniones, no con teoría.</p>
+
+      <h3>Automatiza lo repetitivo</h3>
+      <p>Convierte un pedido en palabras simples en un flujo que funciona, conectado a las herramientas que ya usas: WhatsApp, planillas, correo, tu CRM.</p>
+    </section>
+
+    <section>
+      <h2>Los agentes, uno por uno</h2>
+      <ul class="agent-list">
+        <li><strong>Antonia</strong> — Recepcionista, 24/7. Contesta tu WhatsApp en menos de un minuto, califica y agenda.</li>
+        <li><strong>Matías</strong> — Analista de pauta, 06:15. Mueve el presupuesto a los avisos que traen conversaciones.</li>
+        <li><strong>Clara</strong> — Auditora de calidad, 08:30. Revisa todas las conversaciones y avisa qué se atascó.</li>
+        <li><strong>Sofía</strong> — Creativa de anuncios, semanal. Produce las piezas de tus avisos con tu marca.</li>
+        <li><strong>Amanda</strong> — Notas de reunión, mismo día. Deja el registro ordenado de cada reunión comercial.</li>
+        <li><strong>Lucas</strong> — Evaluador, por reunión. Evalúa cada reunión con rúbrica y le pone nota.</li>
+        <li><strong>Laura</strong> — Entrenadora, desde 15 reuniones. Entrena a tus vendedores con tus propias reuniones.</li>
+        <li><strong>Diego</strong> — Ingeniero de automatizaciones. Convierte un pedido en palabras simples en un flujo que funciona.</li>
+        <li><strong>Sebastián</strong> — Control de calidad. Prueba cada automatización antes de que llegue a ti.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Para qué industrias funciona</h2>
+      <p>Para cualquier negocio que pague por leads y los atienda por WhatsApp. El patrón se repite igual: mucho lead que llega por anuncio o portal, todos preguntando lo mismo, y una demora de respuesta que decide si el interesado sigue contigo o se va al de al lado.</p>
+      <ul class="industry-list">
+        <li><strong>Inmobiliarias y corredoras de propiedades</strong> — consultas por una propiedad a cualquier hora: el agente responde, pregunta presupuesto, renta, plazo y comuna, y agenda la visita con el ejecutivo que corresponde.</li>
+        <li><strong>Seguros</strong> — cotizaciones que llegan de a decenas: el agente toma los datos del riesgo, descarta lo que no es asegurable y le pasa al corredor solo lo que vale una llamada.</li>
+        <li><strong>Clínicas y centros dentales</strong> — pacientes que preguntan por hora y valor: el agente informa, confirma previsión y deja la hora agendada sin ocupar a la recepcionista.</li>
+        <li><strong>Educación y capacitación</strong> — postulantes que preguntan por malla, valor y fechas: el agente responde y agenda la entrevista de admisión.</li>
+        <li><strong>Automotriz</strong> — interesados en un modelo: el agente califica forma de pago y plazo, y agenda la prueba de manejo.</li>
+        <li><strong>Construcción y servicios profesionales</strong> — pedidos de cotización: el agente levanta el requerimiento y agenda la visita técnica.</li>
+      </ul>
+      <p>Partimos en el rubro inmobiliario porque ahí el problema se ve más nítido, pero el equipo no es de un rubro: lo que cambia entre una industria y otra no son los agentes, sino las reglas de calificación y la forma de hablar, y eso se configura en el diagnóstico.</p>
+    </section>
+
+    <section>
+      <h2>Cómo se instala</h2>
+      <p>El motor es el mismo; lo que cambia es la configuración para tu negocio.</p>
+      <ol>
+        <li><strong>Diagnóstico</strong> — Medimos tu embudo real: cuántos leads llegan, cuántos contestas y cuántos terminan en reunión. Sin ese número, no hay promesa.</li>
+        <li><strong>Instalación</strong> — Antonia entra a tu WhatsApp con tu forma de hablar y tus reglas de calificación. Tú apruebas cómo responde antes de que atienda sola.</li>
+        <li><strong>Medición semanal</strong> — Cada semana recibes el embudo medido: qué entró, qué se agendó y qué mejorar. Lo que no se mide, no se cobra ni se promete.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Cómo se cobra</h2>
+      <p>Se contrata por agente y por mes, como se contrata a una persona. No hay licencia de software ni pago por mensaje, y no hay costo de implementación separado: la configuración para tu negocio es parte del primer mes. Puedes partir con un solo agente —el que te duela más hoy— y sumar después.</p>
+      <p>El precio depende de cuántos agentes contratas y del volumen que atienden. Sale en el diagnóstico, junto con el número que importa: cuántos leads estás perdiendo hoy.</p>
+    </section>
+
+    <section>
+      <h2>Qué necesitas para partir</h2>
+      <p>Un WhatsApp donde lleguen los leads y disposición a mostrar tus números reales. El diagnóstico mide cuántos leads entran, cuántos contestas y cuántos terminan en reunión. Sin ese número no hay promesa que valga. Si resulta que no estás perdiendo leads, te lo decimos y no te vendemos nada.</p>
+    </section>
+
+    <section>
+      <h2>Preguntas frecuentes sobre agentes de IA</h2>
+      <div class="faq">
+        <h3>¿Qué es exactamente un trabajador digital?</h3>
+        <p>Es un agente de inteligencia artificial con un nombre, un cargo y una sola tarea que hace bien. No es un software que tengas que aprender a usar: se contrata como se contrata a una persona, entra a trabajar a tu operación y rinde cuentas de lo que hizo. Antonia contesta el WhatsApp, Matías mueve el presupuesto de los anuncios, Lucas evalúa las reuniones de venta.</p>
+      </div>
+      <div class="faq">
+        <h3>¿En qué se diferencia de un chatbot?</h3>
+        <p>Un chatbot sigue un árbol de respuestas: si el cliente se sale del guion, se cae. Un agente de IA entiende lo que le escriben, califica al lead con tus criterios, consulta tu calendario y agenda. La diferencia práctica es simple: el chatbot deriva a un humano, el agente cierra la reunión.</p>
+      </div>
+      <div class="faq">
+        <h3>¿Sirve para una pyme o solo para empresas grandes?</h3>
+        <p>Está pensado justamente para pymes chilenas que invierten en publicidad y reciben leads por WhatsApp. La regla no es el tamaño: es si estás pagando por leads que después nadie contesta a tiempo. Si ese número resulta ser cero, te lo decimos en el diagnóstico y no te vendemos nada.</p>
+      </div>
+      <div class="faq">
+        <h3>¿Para qué industrias funciona?</h3>
+        <p>Para cualquier negocio que pague por leads y los atienda por WhatsApp. El patrón se repite igual en inmobiliarias y corredoras de propiedades, seguros, clínicas y centros dentales, educación y capacitación, automotriz, construcción y servicios profesionales: mucho lead que llega por anuncio o portal, todos preguntando lo mismo, y una demora de respuesta que decide si el interesado sigue contigo o se va al de al lado. Partimos en inmobiliario porque ahí el problema se ve más nítido, pero el equipo no es de un rubro: lo que cambia entre una industria y otra no son los trabajadores digitales, sino las reglas de calificación y la forma de hablar, y eso se configura en el diagnóstico.</p>
+      </div>
+      <div class="faq">
+        <h3>¿Cuánto se demora en contestar un lead?</h3>
+        <p>Menos de un minuto, de día, de noche, fin de semana y feriado. No es una promesa de marketing: es lo que se mide cada semana en el reporte de embudo que recibes.</p>
+      </div>
+      <div class="faq">
+        <h3>¿Qué pasa con los datos de mis clientes y la Ley 21.719?</h3>
+        <p>Los datos de quienes le escriben a tu agente son tuyos, no nuestros: los tratamos por encargo, bajo contrato y solo con tus instrucciones. La Ley 21.719 tiene vigencia el 1 de diciembre de 2026, con una postergación a 2027 en trámite en el Congreso, y estamos adecuando a ella nuestros registros de tratamiento, contratos y plazos de conservación. Está todo escrito en la <a href="/privacidad/">política de privacidad</a>.</p>
+      </div>
+      <div class="faq">
+        <h3>¿Qué necesito tener para partir?</h3>
+        <p>Un WhatsApp donde lleguen los leads y disposición a mostrar tus números reales. El diagnóstico mide cuántos leads entran, cuántos contestas y cuántos terminan en reunión. Sin ese número no hay promesa que valga.</p>
+      </div>
+      <div class="faq">
+        <h3>¿Domo IA tiene relación con Domo, Inc. o con DomoAI?</h3>
+        <p>No. Domo IA es una empresa chilena —DOMO IA SpA, Santiago— que instala agentes de IA en equipos comerciales. Domo, Inc. (domo.com) es una plataforma estadounidense de business intelligence, y DomoAI (domoai.app) es una herramienta de generación de video. Nombres parecidos, negocios distintos.</p>
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Parte por saber cuántos leads estás perdiendo hoy</h2>
+      <p>En 45 minutos medimos tu embudo real y te decimos si un agente de IA te sirve o no. Si no te sirve, te lo decimos.</p>
+      <a class="btn" href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20de%20agentes%20de%20IA%20y%20quiero%20agendar%20un%20diagn%C3%B3stico." target="_blank" rel="noopener">Agendar diagnóstico</a>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-contact">
+      <span class="f-lbl">Contacto</span>
+      <span><a href="mailto:rodrigo@domo-ia.com">rodrigo@domo-ia.com</a> · <a href="https://wa.me/56936956065" target="_blank" rel="noopener">+56 9 3695 6065</a></span>
+    </div>
+    <span><a href="/">Inicio</a> · <a href="/privacidad/">Política de privacidad</a></span>
+  </div>
+  <div class="wrap">
+    <span class="disambiguation">Domo IA es DOMO IA SpA, Santiago de Chile. No tiene relación con Domo, Inc. (domo.com) ni con DomoAI (domoai.app).</span>
+  </div>
+</footer>
+
+</body>
+</html>

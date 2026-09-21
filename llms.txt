@@ -64,9 +64,15 @@ comerciales. **No** tiene relación con Domo, Inc. (domo.com, plataforma
 estadounidense de business intelligence) ni con DomoAI (domoai.app, herramienta
 de generación de video y animación).
 
+¿Domo IA tiene relación con Domo, Inc. o con DomoAI?:
+https://domo-ia.com/agentes-de-ia/#faq
+
 ## Páginas
 
 - Home (español): https://domo-ia.com/
+- Agentes de IA para empresas en Chile: https://domo-ia.com/agentes-de-ia/ —
+  qué es un agente de IA, la diferencia con un chatbot, qué hace en un equipo
+  comercial, para qué industrias funciona, cómo se instala y preguntas frecuentes.
 - Home (inglés): https://domo-ia.com/en/
 - Home (italiano): https://domo-ia.com/it/
 - Política de privacidad: https://domo-ia.com/privacidad/
