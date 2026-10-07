@@ -124,6 +124,7 @@ main>section.prop{padding-block:0}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
+.personas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:32px}.persona{padding:24px 32px;border-left:1px solid var(--fg);border-top:1px solid var(--fg);display:flex;flex-direction:column}.persona:first-child{padding-left:0;border-left:0}.persona>img{width:88px;height:88px;object-fit:cover;filter:grayscale(1);margin-bottom:24px}.persona-cargo{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;font-size:12px;color:var(--muted);margin-bottom:12px;min-height:3em}.persona h3{font-size:clamp(22px,2.1vw,30px);max-width:360px;min-height:2.85em}.persona-link{display:inline-flex;margin-top:auto;padding-top:20px;align-self:flex-start}.persona-link svg{width:22px;height:22px;fill:currentColor}.formacion{margin-top:24px}.formacion summary{cursor:pointer;list-style:none;font-size:14px;font-weight:600;padding-right:36px;position:relative}.formacion summary::-webkit-details-marker{display:none}.formacion summary::after{content:"+";position:absolute;right:4px;top:0;font-family:"IBM Plex Mono",monospace;color:var(--accent)}.formacion[open]>summary::after{content:"−"}.formacion summary:focus-visible{outline:3px solid var(--accent);outline-offset:5px}.persona-datos{font-size:14px;padding-left:18px;margin:0}.persona-datos li+li{margin-top:8px}html.motion .persona h3.in{animation-name:word}@media(max-width:1023px){.personas{grid-template-columns:1fr;gap:24px}.persona,.persona:first-child{border-left:0;padding:28px 0}.persona-cargo{min-height:0}.persona h3{font-size:30px;min-height:1.9em}}
 </style>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -168,6 +169,36 @@ main>section.prop{padding-block:0}
       "sameAs": [
         "https://www.linkedin.com/company/domoia/",
         "https://www.instagram.com/domoia.cl/"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Rodrigo González Villalobos",
+        "jobTitle": "Fundador y CEO",
+        "sameAs": "https://www.linkedin.com/in/rodrigo-gonzalez-villalobos/",
+        "image": "https://domo-ia.com/assets/web/retrato-rodrigo.jpg"
+      },
+      "member": [
+        {
+          "@type": "Person",
+          "name": "Damián Roba Jesset",
+          "jobTitle": "Director creativo",
+          "sameAs": "https://www.linkedin.com/in/damian-roba-jesset-7a5907145/",
+          "image": "https://domo-ia.com/assets/web/retrato-damian.jpg"
+        },
+        {
+          "@type": "Person",
+          "name": "Víctor Calvo",
+          "jobTitle": "Gerente de nuevos negocios y TI",
+          "sameAs": "https://www.linkedin.com/in/victor-calvo-9b189b94/",
+          "image": "https://domo-ia.com/assets/web/retrato-victor.jpg"
+        },
+        {
+          "@type": "Person",
+          "name": "Jean Carlos Aldea",
+          "jobTitle": "Líder Técnico",
+          "sameAs": "https://www.linkedin.com/in/jean-carlos-aldea-311852164/",
+          "image": "https://domo-ia.com/assets/web/retrato-jeancarlos.jpg"
+        }
       ]
     },
     {
@@ -423,8 +454,70 @@ main>section.prop{padding-block:0}
 </section>
 
 
+<section id="nosotros">
+  <div class="wrap">
+    <div class="shead"><span class="num">02</span><h2 class="display">Meet us</h2></div>
+    <p class="sub">We're not an agency with a team you'll never meet. There are four of us, and all four of us work on this.</p>
+      <div class="personas">
+
+        <article class="persona">
+          <img data-enter src="/assets/web/retrato-rodrigo.jpg" alt="Rodrigo González Villalobos" loading="lazy" width="640" height="640">
+          <p class="persona-cargo">Founder and CEO</p>
+          <h3 data-enter>Rodrigo González Villalobos</h3>
+          <details class="formacion"><summary>Education</summary><ul class="persona-datos">
+            <li>Industrial Engineering, Universidad Central de Chile.</li>
+            <li>MBA, Universitat Politècnica de Catalunya.</li>
+          </ul></details>
+          <a class="persona-link" href="https://www.linkedin.com/in/rodrigo-gonzalez-villalobos/" target="_blank" rel="noopener" aria-label="Rodrigo González Villalobos on LinkedIn">
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </article>
+
+        <article class="persona">
+          <img data-enter src="/assets/web/retrato-damian.jpg" alt="Damián Roba Jesset" loading="lazy" width="640" height="640">
+          <p class="persona-cargo">Creative director</p>
+          <h3 data-enter>Damián Roba Jesset</h3>
+          <details class="formacion"><summary>Education</summary><ul class="persona-datos">
+            <li>Ecotourism Management, Duoc UC.</li>
+            <li>French speaker; trained at Université Toulouse – Jean Jaurès.</li>
+          </ul></details>
+          <a class="persona-link" href="https://www.linkedin.com/in/damian-roba-jesset-7a5907145/" target="_blank" rel="noopener" aria-label="Damián Roba Jesset on LinkedIn">
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </article>
+
+        <article class="persona">
+          <img data-enter src="/assets/web/retrato-victor.jpg" alt="Víctor Calvo" loading="lazy" width="640" height="640">
+          <p class="persona-cargo">New business and IT director</p>
+          <h3 data-enter>Víctor Calvo</h3>
+          <details class="formacion"><summary>Education</summary><ul class="persona-datos">
+            <li>Business Administration, Universidad Andrés Bello.</li>
+            <li>Digital Transformation programme, Universidad Adolfo Ibáñez.</li>
+          </ul></details>
+          <a class="persona-link" href="https://www.linkedin.com/in/victor-calvo-9b189b94/" target="_blank" rel="noopener" aria-label="Víctor Calvo on LinkedIn">
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </article>
+
+        <article class="persona">
+          <img data-enter src="/assets/web/retrato-jeancarlos.jpg" alt="Jean Carlos Aldea" loading="lazy" width="640" height="640">
+          <p class="persona-cargo">Technical Lead</p>
+          <h3 data-enter>Jean Carlos Aldea</h3>
+          <details class="formacion"><summary>Education</summary><ul class="persona-datos">
+            <li>Duoc UC.</li>
+          </ul></details>
+          <a class="persona-link" href="https://www.linkedin.com/in/jean-carlos-aldea-311852164/" target="_blank" rel="noopener" aria-label="Jean Carlos Aldea on LinkedIn">
+            <svg viewbox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+        </article>
+
+      </div>
+
+  </div>
+</section>
+
 </main><div class="closing">
-<section class="final" id="diagnostico"><span class="num final-num">02</span>
+<section class="final" id="diagnostico"><span class="num final-num">03</span>
   <div class="wrap">
     <p class="eyebrow">Initial assessment · one meeting · with your numbers</p>
     <h2 class="display" data-words>Start by finding out how many leads you're losing today</h2>
@@ -442,7 +535,7 @@ main>section.prop{padding-block:0}
   <div class="wrap">
     <div class="f-contact">
       <span class="f-lbl">Contact</span>
-      <div><span><a href="mailto:rodrigo@domo-ia.com">rodrigo@domo-ia.com</a> · <a href="mailto:damian@domo-ia.com">damian@domo-ia.com</a> · <a href="mailto:vito@domo-ia.com">vito@domo-ia.com</a> · <a href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20m%C3%A1s%20sobre%20los%20trabajadores%20digitales." target="_blank" rel="noopener">+56 9 3695 6065</a> · <a href="/privacidad/">Privacy policy (in Spanish)</a></span> <span aria-hidden="true">·</span> <a href="/agentes-de-ia/" lang="es" hreflang="es">AI agents (in Spanish)</a></div>
+      <div><span><a href="mailto:rodrigo@domo-ia.com">rodrigo@domo-ia.com</a> · <a href="mailto:damian@domo-ia.com">damian@domo-ia.com</a> · <a href="mailto:vito@domo-ia.com">vito@domo-ia.com</a> · <a href="https://wa.me/56936956065?text=Hola%2C%20vengo%20de%20domo-ia.com%20y%20quiero%20saber%20m%C3%A1s%20sobre%20los%20trabajadores%20digitales." target="_blank" rel="noopener">+56 9 3695 6065</a> · <a href="/privacidad/">Privacy policy (in Spanish)</a></span> <span aria-hidden="true">·</span> <a href="/agentes-de-ia/" lang="es" hreflang="es">AI agents (in Spanish)</a> <span aria-hidden="true">·</span> <a href="#nosotros">Meet us</a></div>
     </div>
     <div class="f-social">
       <a href="https://www.linkedin.com/company/domoia/" target="_blank" rel="noopener" aria-label="Domo IA on LinkedIn">
