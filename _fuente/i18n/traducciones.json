@@ -1662,5 +1662,57 @@
  "Domo IA es DOMO IA SpA, Santiago de Chile. No tiene relación con Domo, Inc. (domo.com) ni con DomoAI (domoai.app).": {
   "en": "Domo IA is DOMO IA SpA, Santiago, Chile. It is not affiliated with Domo, Inc. (domo.com) or DomoAI (domoai.app).",
   "it": "Domo IA è DOMO IA SpA, Santiago del Cile. Non ha alcun rapporto con Domo, Inc. (domo.com) né con DomoAI (domoai.app)."
+ },
+ "6": {
+  "en": "=",
+  "it": "="
+ },
+ "Cada equipo resuelve una parte distinta del negocio. Casi todos parten por el equipo comercial —es donde hoy se va la plata— y suman el otro a medida que crecen.": {
+  "en": "Each team solves a different part of the business. Almost everyone starts with the sales team — that's where the money is leaking today — and adds the other one as they grow.",
+  "it": "Ogni team risolve una parte diversa dell'attività. Quasi tutti iniziano dal team commerciale —è lì che oggi se ne vanno i soldi— e aggiungono l'altro man mano che crescono."
+ },
+ "Contrata un equipo, o los dos juntos": {
+  "en": "Hire one team, or both together",
+  "it": "Assumi un team, o entrambi insieme"
+ },
+ "EQUIPO 02 · AUTOMATIZACIONES": {
+  "en": "TEAM 02 · AUTOMATION",
+  "it": "TEAM 02 · AUTOMAZIONI"
+ },
+ "EQUIPO 03 · TODO EL PLANTEL": {
+  "en": "TEAM 03 · THE WHOLE ROSTER",
+  "it": "TEAM 03 · TUTTA LA SQUADRA"
+ },
+ "El circuito completo: desde el aviso que pagas hasta la reunión agendada, con lo repetitivo automatizado.": {
+  "en": "The full circuit: from the ad you pay for to the booked meeting, with the repetitive work automated.",
+  "it": "Il circuito completo: dall'annuncio che paghi fino all'incontro fissato, con il lavoro ripetitivo automatizzato."
+ },
+ "Los 6 trabajadores": {
+  "en": "All 6 workers",
+  "it": "I 6 lavoratori"
+ },
+ "Los 6 trabajadores instalados y configurados para tu negocio.": {
+  "en": "All 6 workers installed and configured for your business.",
+  "it": "I 6 lavoratori installati e configurati per la tua attività."
+ },
+ "Los dos equipos trabajando juntos: del aviso a la reunión, y lo repetitivo hecho por un flujo.": {
+  "en": "Both teams working together: from the ad to the meeting, and the repetitive work handled by a workflow.",
+  "it": "I due team che lavorano insieme: dall'annuncio all'incontro, e il lavoro ripetitivo svolto da un flusso."
+ },
+ "Seis trabajadores digitales con nombre y cargo: crean tus campañas, atienden a tus clientes 24/7, auditan tu proceso comercial y automatizan lo repetitivo.": {
+  "en": "Six digital workers with names and job titles: they create your campaigns, serve your customers 24/7, audit your sales process and automate repetitive work.",
+  "it": "Sei lavoratori digitali con nome e ruolo: creano le tue campagne, assistono i tuoi clienti 24/7, verificano il tuo processo commerciale e automatizzano il lavoro ripetitivo."
+ },
+ "Un equipo de trabajadores digitales con nombre y cargo: traen los leads desde tus anuncios, los atienden en menos de 1 minuto, te agendan la reunión y automatizan lo repetitivo.": {
+  "en": "A team of digital workers with names and job titles: they bring in leads from your ads, answer them in under a minute, book the meeting for you and automate repetitive work.",
+  "it": "Un team di lavoratori digitali con nome e ruolo: portano i lead dai tuoi annunci, rispondono in meno di un minuto, ti fissano l'incontro e automatizzano il lavoro ripetitivo."
+ },
+ "Un equipo. Cuatro frentes. Se hace cargo de todo.": {
+  "en": "One team. Four areas. It takes care of everything.",
+  "it": "Un solo team. Quattro ambiti. Si occupa di tutto."
+ },
+ "Un solo informe semanal con las dos puntas: lo que costó traer el lead y cómo se le atendió.": {
+  "en": "A single weekly report covering both ends: what the lead cost to bring in and how it was handled.",
+  "it": "Un unico report settimanale con i due estremi: quanto è costato portare il lead e come è stato gestito."
  }
 }

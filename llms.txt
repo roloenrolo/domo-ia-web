@@ -3,7 +3,7 @@
 > Empresa chilena que instala equipos de agentes de IA —trabajadores digitales
 > con nombre y cargo— en el área comercial de otras empresas: traen los leads
 > desde los anuncios, los atienden por WhatsApp en menos de un minuto, agendan
-> la reunión y entrenan a los vendedores con esas mismas reuniones.
+> la reunión y automatizan el trabajo repetitivo.
 
 Sitio oficial: https://domo-ia.com/
 Contacto: contacto@domo-ia.com · +56 9 3695 6065
@@ -13,8 +13,8 @@ Domo IA no vende un software ni una licencia: instala trabajadores digitales.
 Cada uno es un agente de inteligencia artificial con un nombre, un cargo y una
 sola tarea que hace bien, y se contrata como se contrata a una persona. La
 propuesta está pensada para pymes y empresas en Chile que invierten en
-publicidad y reciben leads por WhatsApp — con experiencia en el rubro
-inmobiliario y en equipos comerciales con vendedores humanos.
+publicidad y reciben leads por WhatsApp, con experiencia en el rubro
+inmobiliario.
 
 ## Los equipos
 
@@ -22,15 +22,12 @@ inmobiliario y en equipos comerciales con vendedores humanos.
   anuncios, los atiende en menos de un minuto, los califica y agenda la reunión.
   Lo forman Matías (media buyer), Sofía (diseñadora de piezas publicitarias),
   Antonia (recepcionista y SDR de WhatsApp) y Clara (mejora continua).
-- **Equipo de coaching comercial** — que cada reunión deje aprendizaje. Registra
-  cada reunión comercial, la evalúa con una rúbrica de venta profesional y
-  devuelve qué se hizo bien y qué faltó. Lo forman Amanda (notas de reunión),
-  Lucas (evaluador de ventas) y Laura (coach comercial).
 - **Equipo de automatizaciones** — el trabajo repetitivo hecho por un flujo,
   pedido en palabras simples y conectado a las herramientas que la empresa ya
   usa. Lo forman Diego y Sebastián.
-- **Domo completo** — los tres equipos trabajando juntos, del aviso que se paga
-  hasta la reunión evaluada. Se instala por partes.
+- **Domo completo** — los dos equipos trabajando juntos, del aviso que se paga
+  hasta la reunión agendada, con lo repetitivo automatizado. Se instala por
+  partes.
 
 ## Los trabajadores digitales
 
@@ -43,12 +40,6 @@ inmobiliario y en equipos comerciales con vendedores humanos.
   marca del cliente, para que siempre haya algo nuevo que probar.
 - **Clara** — mejora continua. Detecta qué está cambiando en las conversaciones
   y deja mejoras concretas listas para aprobar.
-- **Amanda** — notas de reunión. Deja el registro ordenado de cada reunión
-  comercial el mismo día.
-- **Lucas** — evaluador de ventas. Evalúa cada reunión con rúbrica y le pone
-  nota.
-- **Laura** — coach comercial. Junta los patrones de las reuniones evaluadas y
-  entrena al equipo humano con lo que sí cierra en el rubro del cliente.
 - **Diego y Sebastián** — automatizaciones a medida, probadas antes de entregar.
 
 ## Cómo se empieza

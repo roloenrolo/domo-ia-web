@@ -138,10 +138,11 @@
   new IntersectionObserver((entries, obs) => {
     if (!entries[0].isIntersecting) return;
     obs.disconnect();
+    const total = Number(count.dataset.count) || 0;
     const start = performance.now();
     function tick(now) {
       const p = Math.min(1, (now - start) / 900);
-      count.textContent = Math.round(9 * p);
+      count.textContent = Math.round(total * p);
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
