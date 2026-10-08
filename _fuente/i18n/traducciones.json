@@ -1714,5 +1714,17 @@
  "Un solo informe semanal con las dos puntas: lo que costó traer el lead y cómo se le atendió.": {
   "en": "A single weekly report covering both ends: what the lead cost to bring in and how it was handled.",
   "it": "Un unico report settimanale con i due estremi: quanto è costato portare il lead e come è stato gestito."
+ },
+ "Domo IA es miembro de NVIDIA Inception.": {
+  "en": "Domo IA is a member of NVIDIA Inception.",
+  "it": "Domo IA è membro di NVIDIA Inception."
+ },
+ "NVIDIA Inception Program": {
+  "en": "=",
+  "it": "="
+ },
+ "© 2026 NVIDIA, the NVIDIA logo, and NVIDIA Inception are trademarks and/or registered trademarks of NVIDIA Corporation in the U.S. and other countries.": {
+  "en": "=",
+  "it": "="
  }
 }
