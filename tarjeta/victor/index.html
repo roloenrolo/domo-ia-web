@@ -27,6 +27,7 @@
   --surface:   #FFFFFF;  /* tarjetas y paneles */
   --surface2:  #F0EBE0;  /* superficie secundaria, hover */
   --text:      #1C2340;  /* texto principal */
+  --logo:      #0A0A0A;  /* logo v2: negro en claro */
   --muted:     #5D6478;  /* texto secundario y captions */
   --border:    #E2DCCC;  /* bordes, divisores */
   --brand:     #33508F;  /* primario: acciones, enlaces, notas de auditoría */
@@ -91,6 +92,7 @@
   --surface:  #252F55;
   --surface2: #2D3963;
   --text:     #F2EDE4;
+  --logo:     #FFFFFF;
   --muted:    #A7B0CC;
   --border:   #3D4A7A;
   --brand:    #7E9BDE;
@@ -131,6 +133,7 @@
   --surface:  #252F55;
   --surface2: #2D3963;
   --text:     #F2EDE4;
+  --logo:     #FFFFFF;
   --muted:    #A7B0CC;
   --border:   #3D4A7A;
   --brand:    #7E9BDE;
@@ -169,9 +172,9 @@ a{color:inherit}
 .shell{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto}
 .wrap{width:min(100% - 40px,720px);margin:0 auto}
 .top{padding:20px 0;border-bottom:var(--border-w) solid var(--border)}
-.mark{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:18px;text-decoration:none;color:var(--text)}
+.mark{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-display);font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:.02em;font-size:18px;text-decoration:none;color:var(--logo)}
 .mark svg{flex:none}
-.mark .ia{color:var(--brand2)}
+.mark .ia{color:inherit}
 main{display:grid;align-items:center;padding:36px 0}
 .card{background:var(--surface);border:var(--border-w) solid var(--border);border-radius:var(--radius-card);box-shadow:var(--shadow);padding:28px;display:grid;gap:24px}
 .identity{display:grid;gap:20px;grid-template-columns:auto 1fr;align-items:center}
@@ -223,8 +226,8 @@ footer a{color:var(--muted);text-underline-offset:3px}
     <div class="wrap">
       <a class="mark" href="https://domo-ia.com/" aria-label="domo IA">
         <svg width="32" height="32" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--text)" stroke-width="17" stroke-linecap="round" fill="none"/>
-        <circle cx="50" cy="74" r="13" fill="var(--brand2)"/>
+        <path d="M 15 78 A 42 42 0 1 1 85 78" stroke="var(--logo)" stroke-width="17" stroke-linecap="round" fill="none"/>
+        <circle cx="50" cy="74" r="13" fill="var(--logo)"/>
       </svg>
         <span>DOMO<span class="ia">&nbsp;IA</span></span>
       </a>
