@@ -218,6 +218,19 @@ footer a{color:var(--muted);text-underline-offset:3px}
   .actions{grid-template-columns:1fr}
   .row{display:grid;gap:2px}
 }
+/* Marca v2 (blanco · negro · cobalto, recto, sin modo oscuro). Va al final para ganarle
+   a los tokens v1 de tokens.css, incluido su bloque dark. Fuente: brand-kit/tokens-v2.css. */
+html:root{color-scheme:light;--bg:#FFFFFF;--surface:#FFFFFF;--surface2:#FFFFFF;--text:#0A0A0A;--logo:#0A0A0A;--muted:#6B6B6B;--border:#0A0A0A;--brand:#1F3BFF;--brand2:#1F3BFF;--chip:#FFFFFF;--shadow:none;--radius-card:0;--radius-md:0;--radius-sm:0;--radius-xs:0;--radius-pill:0;--font-display:"Archivo","Arial Black",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){html:not([data-theme="light"]){color-scheme:light}}
+.card{box-shadow:none}
+h1{font-weight:900;font-variation-settings:"wdth" 125;letter-spacing:-.03em;line-height:.95}
+.eyebrow{letter-spacing:.08em;font-weight:600}
+.secondary:hover{background:#0A0A0A;color:#FFFFFF;border-color:#0A0A0A}
+.primary:hover{border-color:#1F3BFF}
+.qr-overlay{background:rgba(10,10,10,.64)}
+.qr-dialog{color:#0A0A0A;border-color:#0A0A0A;padding-top:64px}
+.qr-close{border-color:#0A0A0A;background:#FFFFFF;color:#0A0A0A}
+.qr-frame{border-color:#0A0A0A}
 </style>
 </head>
 <body>
